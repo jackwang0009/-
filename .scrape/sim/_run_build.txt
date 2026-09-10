@@ -1,0 +1,11 @@
+[build] books=74（faloo 46 / zongheng 28 / 17k 0） nearMiss=401
+[build] 自检问题 0 项
+[build] 字数中位数 935008（样本 74）
+[build] 最早 5 本：
+  2019-09-22  faloo    玄幻：我能推演万法
+  2019-12-10  faloo    我有怪物合成模拟器
+  2020-01-17  faloo    洪荒：开局推演出星辰变
+  2020-04-07  faloo    开局推演修仙功法
+  2020-07-25  zongheng 模拟修仙传
+[build] 缺 firstPublishDate 0 本；缺 openingHook 11 本
+[build] 写入 D:\VScodeSpace\小说天团\.scrape\sim\raw_ch5_feilu.json

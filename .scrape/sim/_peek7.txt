@@ -1,0 +1,35 @@
+=== faloo 书页章节区：首章附近原文
+76/" title="洪荒：我能查看人生剧本"><img class="imgcss" src="http://img.faloo.com/Novel/498x705/0/817/000817262.jpg" title="洪荒：我能查看人生剧本" alt="洪荒：我能查看人生剧本" /></a>
+</div><div class="T-L-T-Content"><div class="T-L-T-C-Box1">
+<p>【飞卢小说网独家签约小说：洪荒：我能查看人生剧本】</p><p>穿越洪荒龙汉时期，恰逢凶兽量劫爆发，开局绑定人生剧本系统，本以为走向巅峰，谁曾想……</p>
+<p>【姓名】：元虎</p>
+<p>【种族】：奎木虎一族</p>
+<p>【跟脚】：先天下品跟脚</p>
+<p>【气运】：灰</p>
+<p>【人生剧本】：一百年后，凶兽席卷而来，被凶兽厮杀吞吃，陨落洪荒。</p>
+<p>看着自己的人生剧本，元虎深吸一口气，转头看向天空中飞过的一名老道：</p>
+<p>【姓名】：鸿钧</p>
+<p>【种族】：鸿蒙蛐鳝</p>
+<p>【跟脚】：？？？</p>
+<p>【气运】：青</p>
+<p>【人生剧本】：三千六百年后，会在不周山山脚下，一颗歪脖子柳树下方，找到一处先天禁制，里面有一块造化.......</p>
+<p>..........</p>
+<p>飞卢小说网提醒您：本小说及人物纯属虚构，如有雷同，纯属巧合，切勿模仿。</p>
+</div><div class="T-L-T-C-Box2">
+<a href="//b.faloo.com/1118376_1.html" title="洪荒：我能查看人生剧本"><img src="//s.faloo.com/novel2/Index/yuedu.png" class="img1" />点击阅读</a>
+<a href="javascript:void(0);" title="洪荒：我能查看人生剧本" onclick="ShouCang(1118376,0);"><img src="//s.faloo.com/novel2/Index/shujia.png"  class="img2"/>加入书架</a>
+<a href="//b.faloo.com/buy_1118376.html" title="洪荒：我能查看人生剧本"><img src="//s.faloo.com/novel2/Index/dingyue.png"  class="img2"/>我要订阅</a>
+<a href="//b.faloo.com/html_1118_1118376/" title="洪荒：我能查看人生剧本目录"><img src="//s.faloo.com/novel2/Index/mulu.png" class="img2" />目录</a>
+<a href="//b.faloo.com/d_1118376.html" title="洪荒：我能查看人生剧本"><img src="//s.faloo.com/novel2/Index/xiazai.png" />下载</a>
+</div></div></div><div class="T-L-Three"><div c
+=== faloo 书页里出现的日期形态统计
+  yyyy-mm-dd 共 3 个，最早 2022-02-26，最晚 2026-09-08
+  章节链接数 = 3540
+
+=== 17K 其它面试探
+  200 len=17136 waf=true http://www.17k.com/book/3038645.html
+  200 len=17136 waf=true https://www.17k.com/list/3038645.html
+  200 len=65 waf=false https://api.17k.com/book/3038645
+    title: 
+  FAIL https://book.17k.com/book/3038645.html fetch failed
+  200 len=17136 waf=true https://www.17k.com/top/refactor/top100/06_vipclick/06_click_top_100_pc.html

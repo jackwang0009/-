@@ -1,0 +1,82 @@
+=== faloo robots (www)
+User-agent: *
+Allow: /
+=== zongheng 书库条目：书链接
+  count=50  1593766,1593259,1593779,1593768,1593348,1593669,1593773,1593717,1593192,1593778,1593627,1592654
+=== zongheng 单条原样
+="0"></a>
+            </div>
+        </div>
+        <!-- 书籍列表区 图文模式 -->
+        
+        <div class="store_list_wrap">
+            <div class="store_collist">
+            
+                <div class="bookbox fl">
+                    <div class="bookimg">
+                        <a href="https://book.zongheng.com/book/1593766.html" target="_blank">
+                            <img src="https://static.zongheng.com/upload/cover/f3/b3/f3b3d035ba64c50c2eb4947563c62b5f.jpeg" alt="听见颜色的人">
+                        </a>
+                    </div>
+                    <div class="bookinfo">
+                        <div class="bookname">
+                            <a href="https://book.zongheng.com/book/1593766.html" target="_blank">听见颜色的人</a>
+                        </div>
+                        <div class="bookilnk">
+                            <a href="https://home.zongheng.com/show/userInfo/88415658.html" target="_blank">五菱</a>|
+                            <a href="https://www.zongheng.com/category/8161.html" target="_blank">现代言情</a>|
+                            <span>
+                            	
+                            	连载中
+                            
+                        	</span>|
+                            <span>
+                            更新时间&nbsp;&nbsp;09-08 21:22
+                            </span>
+                        </div>
+                        <div class="bookintro">他修书，她等他，等到的是自己消失的最后一页。</div>
+                        <div class="bookupdate">
+                            <a href="https://book.zongheng.com/chapter/1593766/95226870.html" class="fl">最新章节：第16章 灯火</a>
+                            <span class="rank_d_b_time"></span>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="bookbox fr">
+                    <div class="bookimg">
+                        <a href="https://book.zongheng.com/book/1593259.html" target="_blank">
+                            <img src="https://static.zongheng.com/upload/cover/76/68/7668c2176cdbf17fcd4e453c30d8ff0f.jpeg" alt="全员智商为负一百的修仙界">
+                        </a>
+                    </div>
+                    <div class="bookinfo">
+                        <div class="bookname">
+                            <a href="https://book.zongheng.com/book/1593259.html" target="_blank">全员智商为负一百的修仙界</a>
+                        </d
+=== faloo 单条原样
+iv>
+<div class="centerTwo bodyBorderShadow">
+<div class="TwoBox02" id="BookContent">
+<div class="TwoBox02_01"><div class="TwoBox02_02"><div class="TwoBox02_03"><a href="//b.faloo.com/1547648.html" target="_blank" title="毒蛊天狼"><img class="TYImg" data-original="http://img.faloo.com/Novel/332x470/1/1654/001654207.jpg" src="http://img.faloo.com/Novel/332x470/1/1654/001654207.jpg" / title="毒蛊天狼"></a></div><div class="TwoBox02_04"><div class="TwoBox02_05"><div class="TwoBox02_08"><h1 class="fontSize17andHei" title="毒蛊天狼"><a href="//b.faloo.com/1547648.html" target="_blank" title="毒蛊天狼">毒蛊天狼</a></h1></div><div class="TwoBox02_09"><span class="fontSize14andsHui"><img class="rentoupostion " src="//s.faloo.com/novel2/Index/rentou.png"><a href="//b.faloo.com/l_0_1.html?t=2&k=%c6%bc%cb%ae%cf%e0%b7%e8" title="萍水相疯" target="_blank">萍水相疯</a></span></div></div><div class="TwoBox02_05"><span class="fontSize14andHui"><a href="//b.faloo.com/l_6_25_1.html" title="武侠修真" target="_blank">武侠修真</a><span>|</span><span>总点击：0</span><span>|</span><span>字数：1万</span><span>|</span><span>日期：<font class="fontSize14andChen"><font color="#ff6600">今天</font></font></span></span></div><div class="TwoBox02_06"><a href="//b.faloo.com/1547648.html" target="_blank" title="毒蛊天狼">一个被诅咒动情则疯的戾族少年，从绿林草莽到江湖魔头，从大漠巫疆到魔界杀场。射落天狼星后以毒破万法，以蛊镇群雄，以巫通幽冥，以杀劫证天狼，最终发现......</a></div><div class="TwoBox02_05"><span><span>最新章节：</span><a class="fontSize14andChen" href="//b.faloo.com/1547648_4.html" title="第四章 寨中日月·雷火传薪" target="_blank">第四章 寨中日月·雷火传薪</a></span></div><div class="TwoBox02_07"><div class="TwoBox02_MF" onclick="shidu('//b.faloo.com/1547648.html')">免费试读</div><div class="TwoBox02_SJ" onclick="shujia(1547648,0)">加入书架</div></div></div></div><div class="TwoBox02_02"><div class="TwoBox02_03"><a href="//b.faloo.com/1522778.html" target="_blank" title="综武：天生魔修，张三丰傻眼了"><img class="TYImg" data-original="http://img.faloo.com/Novel/332x470/1/1630/001630306.jpg" src="http://img.faloo.com/Novel/332x470/1/1630/001630306.jpg" / title="综武：天生魔修，张三丰傻眼了"></a></div><div class="TwoBox02_04"><div class="TwoBox02_05"><div class="TwoBox02_08"><h1 class="fontSize17andHei" title="综武：天生魔修，张三丰傻眼了"><a href="//b.faloo.com/1522778.html" target="_blank" title="综武：天生魔修，张三丰傻眼了">综武：天生魔修，张三丰傻眼了</a></h1></div><div class="TwoBox02_09"><span class="fontSize14andsHui"><img class="rentoupostion " src="//s.faloo.com/novel2/Index/rentou.png"><a href="//b.faloo.com/l_0_1.html?t=2&k=%d4%c2%b9%e2%bc%d3%c3%e1" title="月光加冕" target="_blank">月光加冕</a></span></div></div><div class="TwoBox02_05"><span class="fontSize14andHui"><a href="//b.faloo.com/l_6_25_1.html" title="武侠修真" target="_blank">武侠修真</a><span>|</span><span>总点击：386万</span><span>|</span><span>字
+=== faloo 搜索相关字样
+  Search
+  SearchLeft
+  SearchCenter
+  SearchCenterDiv1
+  SearchCenterDiv1-One
+  SearchCenterDiv1-Two
+  SearchCenterDiv1-Three
+  SearchBook()
+  SearchCenterDiv2
+  SearchRight
+  .Search
+  .SearchCenter
+  .SearchCenterDiv1
+  ,function(){showSearchRule();});
+=== 17k 首页链接形态
+  www.17k.com/book  x44
+  author.17k.com/ck  x3
+  zhuanti.17k.com/subject  x2
+  cdn.static.17k.com/material_picture  x2
+  user.17k.com/see  x1
+  v.pinpaibao.com.cn/authenticate  x1

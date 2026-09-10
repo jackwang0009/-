@@ -1,0 +1,16 @@
+rankVersion 1787757000
+--- offset10 type2 cat258 ---
+code=0 msg=success total=0 len=0
+rankTypeText=""
+type=0 code=0 total=0 len=0 text="" first=undefined
+type=1 code=0 total=0 len=0 text="" first=undefined
+type=2 code=0 total=0 len=0 text="" first=undefined
+type=3 code=0 total=0 len=0 text="" first=undefined
+type=4 code=0 total=0 len=0 text="" first=undefined
+type=5 code=0 total=0 len=0 text="" first=undefined
+type=6 code=0 total=0 len=0 text="" first=undefined
+type=7 code=0 total=0 len=0 text="" first=undefined
+type=8 code=0 total=0 len=0 text="" first=undefined
+type=9 code=0 total=0 len=0 text="" first=undefined
+type=10 code=0 total=0 len=0 text="" first=undefined
+limit100 -> len=0 total=0

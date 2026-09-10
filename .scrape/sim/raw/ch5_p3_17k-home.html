@@ -1,0 +1,1162 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+	<meta content="format=html5;url=//h5.17k.com/" name="mobile-agent" />
+	<title>小说_17K小说网|最新小说下载-一起免费看小说</title>
+	<meta content="小说,免费小说,最新小说下载,17K小说网,免费小说阅读" name="keywords" />
+	<meta name="Description" content="17K小说网(17k.com)创建于2006年，原名一起看小说网，是中文在线旗下集创作、阅读于一体的在线阅读网站。我们以“让每个人都享受创作的乐趣”为使命，提供玄幻奇幻、都市言情、武侠仙侠、青春校园、穿越架空、惊悚悬疑、历史军事、爆笑同人、经典文学、二次元等在线阅读以及免费下载。">
+	<link rel="stylesheet"
+	  href='//static.17k.com/skin/main.css?v=0925'>
+
+<script src="//g.alicdn.com/frontend-lib/frontend-lib/2.3.74/antidom.js"></script><script src="//o.alicdn.com/frontend-lib/common-lib/jquery.min.js"></script><script type="text/javascript"
+		src='//static.17k.com/lib/vConsole/vconsole.min.js?v=0925'></script>
+
+<script type="text/javascript"
+		src='//static.17k.com/js/main.js?v=0925'></script>
+
+<script type="text/javascript" src="//static.17k.com/www/Q/Q.js"></script>
+<!--<link href="//static.17k.com/www/skin/main_old.css" rel="stylesheet" type="text/css"/>-->
+<!--重构-->
+<link rel="stylesheet" href='//static.17k.com/www/skin/main.css?v=0922'/>
+<script type="text/javascript" src='//static.17k.com/www/js/main.js?v=0922'></script>
+	<style>
+		.carousel {
+			width: 1000px;
+			height: 90px;
+			overflow: hidden;
+			position: relative;
+		}
+		.carousel-item {
+			display: block;
+			width: 1000px;
+			height: 90px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			opacity: 0;
+			transition: opacity 0.5s ease-in-out;
+		}
+
+		.carousel-item.active {
+			opacity: 1;
+			z-index: 10;
+		}
+
+		.carousel-item img {
+			width: 100%;
+			height: 100%;
+		}
+	</style>
+</head>
+
+<body class="index">
+	
+	<link rel="stylesheet" href="//static.17k.com/www/skin/17k_header.css">
+<div class="Header">
+	<div class="head_nav">
+		<div class="head_box">
+			<a class="now" href="//www.17k.com">17K小说</a>
+			<a target="_blank" href="//www.4yt.net/">四月天女生</a>
+		</div>
+	</div>
+	<div class="cont_box">
+		<dl class="nav">
+			<dd class="login" id="header_login_user">
+				<span class="icon"></span>
+				<a href="javascript:k.login('login')">登录</a> &nbsp;&nbsp;|&nbsp;&nbsp;
+				<a href="javascript:k.login('register')">注册</a>
+			</dd>
+			<dd class="histroy">
+				<div class="tit">
+					<span class="icon"></span>
+					<a target="_blank" href="//user.17k.com/www/bookshelf/read.html">看过</a>
+				</div>
+			</dd>
+			<dd class="booklib">
+				<div class="tit">
+					<span class="icon"></span>
+					<a target="_blank" href="//user.17k.com/www/bookshelf">书架</a>
+				</div>
+			</dd>
+			<dd class="message" id="header_17k_message">
+				<div class="tit">
+					<span class="icon"></span>
+					<a href="javascript:k.userMessage()">消息</a>
+				</div>
+			</dd>
+			<dd class="write">
+				<span class="icon"></span>
+				<a href="javascript:k.login(function(){location.href='//author.17k.com/information/index.html'})">写书</a>
+			</dd>
+			<dd class="recharge">
+				<span class="icon"></span>
+				<a target="_blank" href="//pay.17k.com/">充值</a>
+			</dd>
+		</dl>
+
+		<a class="logo" href="//www.17k.com/"></a>
+
+		<form class="so" target="_blank" action="//search.17k.com/search.xhtml">
+			<input type="hidden" name="c.st" value="0"/>
+			<input value="近战狂兵" class="q" type="text" name="c.q"
+				   onfocus="this.value==this.defaultValue&&this.select()"/>
+			<input class="m" type="submit" value="搜索"/>
+		</form>
+	</div>
+</div>
+<script type="text/javascript" src='//static.17k.com/www/js/17k_header.js?v=22'></script>
+
+	
+	<link href="//static.17k.com/www/skin/17k_nav.css" rel="stylesheet">
+<div class="Nav">
+	<div>
+		<a href="//www.17k.com/" target="_blank"><span>首页</span></a>
+		<a href="//www.17k.com/top/" target="_blank"><span>排行榜</span></a>
+		<a href="//www.17k.com/all" target="_blank"><span>分类</span></a>
+		<a href="//www.17k.com/man/" target="_blank"><span>17K男生</span></a>
+		<a href="//www.17k.com/mm/" target="_blank"><span>17K女生</span></a>
+		<a href="//www.17k.com/ip/" target="_blank"><span>IP改编</span></a>
+		<a href="//www.17k.com/meta/" target="_blank"><span>元宇宙</span></a>
+		<a href="//www.17k.com/mianfei/" target="_blank"><span>免费小说</span></a>
+		<a href="//www.17k.com/quanben/" target="_blank"><span>完本小说</span></a>
+		<a class="mobile" href="//www.17k.com/download/"><span>APP端</span>
+			<img alt="微信二维码"
+				 class="hover"
+				 src="//static.17k.com/www/pic/erweima2.png"
+				 srcset="//static.17k.com/www/pic/erweima2_2x.png 2x">
+		</a>
+		<!--<a href="//wan.17k.com/jump/nyfpl71" target="_blank"><span>游戏中心</span></a>-->
+		<a class="write_book" href="//author.17k.com/information/index.html" target="_blank">
+			<span>我要写书</span>
+		</a>
+		<!--<a class="mobile" href="https://author.17k.com/ck/author/article/content/217.html"><span>官方书友群</span>-->
+		<!--	<img alt="官方书友群"-->
+		<!--		 class="hover"-->
+		<!--		 src="//static.17k.com/www/pic/erweima_commu.jpg"-->
+		<!--		 srcset="//static.17k.com/www/pic/erweima_commu.jpg 2x">-->
+		<!--</a>-->
+		<script type="text/javascript">
+			k('div.Nav div a').forEach(function (a) {
+				if (location.href.indexOf(a.href) === 0) {
+					this.item(0).className = '';
+					a.className = 'now'
+				}
+			})
+			k('div.Nav div a.write_book').style({
+				background: (function (path) {
+					if (path.indexOf('/man') === 0) {
+						return '#025995'
+					} else if (path.indexOf('/mm') === 0) {
+						return '#75A462'
+					} else {
+						return '#E36411'
+					}
+
+				}(location.pathname))
+			})
+		</script>
+	</div>
+</div>
+	<!--停用-->
+	<!--<div class="Banner_ad" id="BAIDU_1105071"></div>-->
+	<!--top1000*90-->
+	<div class="carousel Banner_ad banner-top QUI">
+		<!--for list-->
+		<a href="{{target}}" class="carousel-item" alt="{{target}}">
+			<img src="{{cover}}" alt="{{siteColumnName}}">
+		</a>
+		<!--endfor list-->
+	</div>
+
+	<div class="Main_good">
+		<div class="XWGG">
+			<div class="Title2">
+				<h2 class="tit">新闻公告</h2>
+			</div>
+			<ul class="list">
+				
+				<li><a href="https://product.dangdang.com/30070895.html" target="_blank"><font color="#ff0000">【喜报】《第九特区》实体书即将开售</font></a></li><li><a href="https://product.dangdang.com/30039412.html" target="_blank">【喜报】《日落江湖白·完结篇》开售>></a></li><li><a href="https://mp.weixin.qq.com/s/EfSgc5e0ckxOTF3dcEaaOw" target="_blank">【招募】中文在线AI短剧制作诚邀合作>></a></li><li><a href="https://zhuanti.17k.com/subject/2026/fuli/" target="_blank">【公告】2026全新作家福利上线>></a></li><li><a href="https://author.17k.com/ck/author/article/content/322.html" target="_blank">【公告】本月渠道奖励金发放异常的说明</a></li><li><a href="https://author.17k.com/ck/author/article/content/316.html" target="_blank">【公告】2025年度个税清缴通知及激励</a></li><li><a href="https://zhuanti.17k.com/subject/2025/year-end/pc/index.html" target="_blank">【2025年度盘点】网文星河，爆款为王！</a></li><li><a href="https://v.wjx.cn/vm/m9BRwRq.aspx#" target="_blank">【调研】中国数字阅读用户现状调研>></a></li>
+			</ul>
+			<div class="RBAD">
+				<a href="//zhuanti.17k.com/subject/2026/fuli/index.html" target="blank"><img
+						src="//static.17k.com/pic/fuli_2026.jpg?v=3" style="width: 100%" alt="作家福利"> </a>
+			</div>
+		</div>
+		<div class="BZZD">
+			<div class="Title1">
+				<h2 class="tit">本周主打</h2>
+				<div class="box">
+					<div class="Tab_tit" id="BZZD_TAB">
+						<a class="now" href="">全站</a>
+						| <a href="">男生</a>
+						| <a href="">女生</a>
+						| <a href="">新书</a>
+						| <a href="">完本</a>
+					</div>
+				</div>
+			</div>
+			<div class="BZZD_CONT">
+				<div class="RIGHT">
+					<div class="NewList">
+						
+						<h3><a href="https://www.17k.com/book/3631088.html" target="_blank">炼个丹怎么就玩坏修仙界了！</a></h3><p><a target="_blank" href="https://www.17k.com/book/3631088.html" target="_blank">一觉醒来李玄穿越仙侠世界，身怀先天丹体，本以为是天胡开局，没想到…</a></p><h3><a href="//www.17k.com/book/3618847.html" target="_blank">尸王归来，亿万尸军臣服！</a></h3><p><a target="_blank" href="//www.17k.com/book/3618847.html" target="_blank">身怀尸王内丹，肩负始祖血脉，口宪天师真言，左手万年桃木剑，右手五帝铜钱剑</a></p><h3><a href="https://www.17k.com/book/3632497.html" target="_blank">密室演员当场复活破案！</a></h3><p><a target="_blank" href="https://www.17k.com/book/3632497.html" target="_blank">陈宇发现自己穿越成了一档热门探案综艺里的“尸体演员”，本想配合演出…</a></p><h3 class="hot"><a href="https://www.17k.com/book/3647120.html" target="_blank">白衣天子乱世求生</a></h3><p><a target="_blank" href="https://www.17k.com/book/3647120.html" target="_blank">穿越大乾沦为落魄书生，无系统加持，仅凭理科思维乱世求生！以制度重塑世道，孤身掀翻腐朽门阀，从一无所有一路问鼎九州！</a></p><h3><a href="https://www.17k.com/book/3597196.html" target="_blank">受人间疾苦，参阴阳玄妙</a></h3><p><a target="_blank" href="https://www.17k.com/book/3597196.html" target="_blank">神族天生为神，暗中操控巫师奴役世人，夏帝幼子夏玄参悟道法，开创仙宗，血战九州！</a></p>
+					</div>
+				</div>
+				<div class="LEFT">
+					<div class="EYE">
+						
+						<a href="//www.17k.com/book/3443660.html" target="_blank"><img src="//img.17k.com/cmsimg/recommend/2025/06/1750232509.3229.jpg" alt="大国实业"/><span>为了理想出走，归来全家横死</span></a><a href="//www.17k.com/book/3622820.html" target="_blank"><img src="//img.17k.com/cmsimg/recommend/2025/06/1750321263.8707.jpg" alt="天棺秘藏"/><span>盗墓？不，我开得是天棺。</span></a><a href="//www.17k.com/book/3626025.html" target="_blank"><img src="//img.17k.com/cmsimg/recommend/2025/06/1750318560.8916.jpg" alt="小富即安？不，本公子意在天下"/><span>开局私生子，谁知我诗书满腹</span></a><a href="//www.17k.com/book/3630057.html" target="_blank"><img src="//img.17k.com/cmsimg/recommend/2025/06/1750317738.0146.jpg" alt="南疆走阴人"/><span>南疆走阴人，以灵魂游走阴阳</span></a><a href="//www.17k.com/book/3618847.html" target="_blank"><img src="//img.17k.com/cmsimg/recommend/2025/07/1752736333.7064.jpg" alt="刚成僵尸，你把定僵符当辣条吃？"/><span>尸王归来，亿万尸军臣服！</span></a>
+					</div>
+					<script type="text/javascript">
+						Q.ppt(Q.lastTag('div'), {
+							width: 450,
+							height: 250
+						})
+					</script>
+
+					
+					<dl class="BZZD_TOP">
+                    <dt class="now">
+                        <a href="/top/refactor/top100/01_subscribe/01_subscribe__top_100_pc.html">全站订阅周榜</a>
+                    </dt>
+                    <dt>
+                        <a href="/top/refactor/top100/01_subscribe/01_subscribe_newBook_top_100_pc.html">新书订阅周榜</a>
+                    </dt>
+                    <dt>
+                        <a href="/top/refactor/top100/14_recommend/14_recommend_top_100_pc.html">推荐周榜</a>
+                    </dt>
+                    <dt>
+                        <a href="/top/refactor/top100/16_gift/16_gift_top_100_pc.html">礼物周榜</a>
+                    </dt>
+                    <dd class="top"><ul class="Top1"><li> <span class="num r">1</span> <a href="//www.17k.com/book/3583700.html" title="星痕之门" target="_blank">星痕之门</a></li><li> <span class="num r">2</span> <a href="//www.17k.com/book/3328785.html" title="长生" target="_blank">长生</a></li><li> <span class="num r">3</span> <a href="//www.17k.com/book/3660623.html" title="东北风云：黑血漫..." target="_blank">东北风云：黑血漫...</a></li><li> <span class="num">4</span> <a href="//www.17k.com/book/1398783.html" title="九星霸体诀" target="_blank">九星霸体诀</a></li><li> <span class="num">5</span> <a href="//www.17k.com/book/3597196.html" title="太上无情" target="_blank">太上无情</a></li></ul><ul class="Top1"><li> <span class="num">6</span> <a href="//www.17k.com/book/3006464.html" title="万古第一神" target="_blank">万古第一神</a></li><li> <span class="num">7</span> <a href="//www.17k.com/book/168.html" title="尘缘" target="_blank">尘缘</a></li><li> <span class="num">8</span> <a href="//www.17k.com/book/1741975.html" title="女总裁的全能兵王" target="_blank">女总裁的全能兵王</a></li><li> <span class="num">9</span> <a href="//www.17k.com/book/3618847.html" title="刚成僵尸，你把定..." target="_blank">刚成僵尸，你把定...</a></li><li> <span class="num">10</span> <a href="//www.17k.com/book/450860.html" title="百炼飞升录" target="_blank">百炼飞升录</a></li></ul><ul class="Top1"><li> <span class="num">11</span> <a href="//www.17k.com/book/3381946.html" title="风起龙城" target="_blank">风起龙城</a></li><li> <span class="num">12</span> <a href="//www.17k.com/book/83528.html" title="混沌剑神" target="_blank">混沌剑神</a></li><li> <span class="num">13</span> <a href="//www.17k.com/book/3669552.html" title="娘子，我真不想考..." target="_blank">娘子，我真不想考...</a></li><li> <span class="num">14</span> <a href="//www.17k.com/book/3630118.html" title="全体起立！真龙归..." target="_blank">全体起立！真龙归...</a></li><li> <span class="num">15</span> <a href="//www.17k.com/book/1050747.html" title="龙纹战神" target="_blank">龙纹战神</a></li></ul></dd><dd class="top"><ul class="Top1"><li> <span class="num r">1</span> <a href="//www.17k.com/book/3671225.html" title="武警：兵王之路" target="_blank">武警：兵王之路</a></li><li> <span class="num r">2</span> <a href="//www.17k.com/book/3665801.html" title="都市狂医:寒门崛起" target="_blank">都市狂医:寒门崛起</a></li><li> <span class="num r">3</span> <a href="//www.17k.com/book/3667335.html" title="乾坤一主" target="_blank">乾坤一主</a></li><li> <span class="num">4</span> <a href="//www.17k.com/book/3671115.html" title="沉船后，我带五国..." target="_blank">沉船后，我带五国...</a></li><li> <span class="num">5</span> <a href="//www.17k.com/book/3676430.html" title="乡村小仙医枯井连..." target="_blank">乡村小仙医枯井连...</a></li></ul><ul class="Top1"><li> <span class="num">6</span> <a href="//www.17k.com/book/3670924.html" title="迷彩旧梦又逢君" target="_blank">迷彩旧梦又逢君</a></li><li> <span class="num">7</span> <a href="//www.17k.com/book/3671412.html" title="世子爷把我当恩人..." target="_blank">世子爷把我当恩人...</a></li><li> <span class="num">8</span> <a href="//www.17k.com/book/3383826.html" title="大玄印" target="_blank">大玄印</a></li><li> <span class="num">9</span> <a href="//www.17k.com/book/3668766.html" title="九州成神记" target="_blank">九州成神记</a></li></dd><dd class="top"><ul class="Top1"><li> <span class="num r">1</span> <a href="//www.17k.com/book/3597196.html" title="太上无情" target="_blank">太上无情</a></li><li> <span class="num r">2</span> <a href="//www.17k.com/book/3583700.html" title="星痕之门" target="_blank">星痕之门</a></li><li> <span class="num r">3</span> <a href="//www.17k.com/book/3661094.html" title="分身三地十年约" target="_blank">分身三地十年约</a></li><li> <span class="num">4</span> <a href="//www.17k.com/book/3672220.html" title="一口粮" target="_blank">一口粮</a></li><li> <span class="num">5</span> <a href="//www.17k.com/book/3676241.html" title="重生九零：明天别..." target="_blank">重生九零：明天别...</a></li></ul><ul class="Top1"><li> <span class="num">6</span> <a href="//www.17k.com/book/3006464.html" title="万古第一神" target="_blank">万古第一神</a></li><li> <span class="num">7</span> <a href="//www.17k.com/book/3675055.html" title="飞入寻常百姓家" target="_blank">飞入寻常百姓家</a></li><li> <span class="num">8</span> <a href="//www.17k.com/book/3665489.html" title="全能教学系统" target="_blank">全能教学系统</a></li><li> <span class="num">9</span> <a href="//www.17k.com/book/3648621.html" title="重生后，我的目标..." target="_blank">重生后，我的目标...</a></li><li> <span class="num">10</span> <a href="//www.17k.com/book/3610898.html" title="天魔道圣" target="_blank">天魔道圣</a></li></ul><ul class="Top1"><li> <span class="num">11</span> <a href="//www.17k.com/book/1398783.html" title="九星霸体诀" target="_blank">九星霸体诀</a></li><li> <span class="num">12</span> <a href="//www.17k.com/book/3382094.html" title="灵道纪" target="_blank">灵道纪</a></li><li> <span class="num">13</span> <a href="//www.17k.com/book/3630118.html" title="全体起立！真龙归..." target="_blank">全体起立！真龙归...</a></li><li> <span class="num">14</span> <a href="//www.17k.com/book/3669552.html" title="娘子，我真不想考..." target="_blank">娘子，我真不想考...</a></li><li> <span class="num">15</span> <a href="//www.17k.com/book/3262655.html" title="我的寒门赘婿" target="_blank">我的寒门赘婿</a></li></ul></dd><dd class="top"><ul class="Top1"><li> <span class="num r">1</span> <a href="//www.17k.com/book/3597196.html" title="太上无情" target="_blank">太上无情</a></li><li> <span class="num r">2</span> <a href="//www.17k.com/book/3676241.html" title="重生九零：明天别..." target="_blank">重生九零：明天别...</a></li><li> <span class="num r">3</span> <a href="//www.17k.com/book/3672220.html" title="一口粮" target="_blank">一口粮</a></li><li> <span class="num">4</span> <a href="//www.17k.com/book/3661094.html" title="分身三地十年约" target="_blank">分身三地十年约</a></li><li> <span class="num">5</span> <a href="//www.17k.com/book/3528335.html" title="奇侠仙侣" target="_blank">奇侠仙侣</a></li></ul><ul class="Top1"><li> <span class="num">6</span> <a href="//www.17k.com/book/2809894.html" title="近战狂兵" target="_blank">近战狂兵</a></li><li> <span class="num">7</span> <a href="//www.17k.com/book/3676283.html" title="大明之三十六将" target="_blank">大明之三十六将</a></li><li> <span class="num">8</span> <a href="//www.17k.com/book/3673682.html" title="床底下的算命先生" target="_blank">床底下的算命先生</a></li><li> <span class="num">9</span> <a href="//www.17k.com/book/3630118.html" title="全体起立！真龙归..." target="_blank">全体起立！真龙归...</a></li><li> <span class="num">10</span> <a href="//www.17k.com/book/3666859.html" title="重生九零：凭先知..." target="_blank">重生九零：凭先知...</a></li></ul><ul class="Top1"><li> <span class="num">11</span> <a href="//www.17k.com/book/3396933.html" title="三丫头，顾小敏" target="_blank">三丫头，顾小敏</a></li><li> <span class="num">12</span> <a href="//www.17k.com/book/3386240.html" title="出生于1931年..." target="_blank">出生于1931年...</a></li><li> <span class="num">13</span> <a href="//www.17k.com/book/3669552.html" title="娘子，我真不想考..." target="_blank">娘子，我真不想考...</a></li><li> <span class="num">14</span> <a href="//www.17k.com/book/3676430.html" title="乡村小仙医枯井连..." target="_blank">乡村小仙医枯井连...</a></li><li> <span class="num">15</span> <a href="//www.17k.com/book/3242901.html" title="风三娘" target="_blank">风三娘</a></li></ul></dd>
+                    <script type="text/javascript">
+                        (function() {
+                            var dl = Q.lastTag('dl');
+                            Q.tab(dl.getElementsByTagName('dt'), dl.getElementsByTagName('dd'));
+                        }())
+                    </script>
+                </dl>
+
+				</div>
+			</div>
+			<div class="BZZD_CONT" style="display:none">
+				<div class="RIGHT">
+					<div class="NewList">
+						
+						<h3><a href="https://www.17k.com/book/3631088.html" target="_blank">炼个丹怎么就玩坏修仙界了！</a></h3><p><a target="_blank" href="https://www.17k.com/book/3631088.html" target="_blank">一觉醒来李玄穿越仙侠世界，身怀先天丹体，本以为是天胡开局，没想到…</a></p><h3><a href="//www.17k.com/book/3618847.html" target="_blank">尸王归来，亿万尸军臣服！</a></h3><p><a target="_blank" href="//www.17k.com/book/3618847.html" target="_blank">身怀尸王内丹，肩负始祖血脉，口宪天师真言，左手万年桃木剑，右手五帝铜钱剑</a></p><h3><a href="https://www.17k.com/book/3632497.html" target="_blank">密室演员当场复活破案！</a></h3><p><a target="_blank" href="https://www.17k.com/book/3632497.html" target="_blank">陈宇发现自己穿越成了一档热门探案综艺里的“尸体演员”，本想配合演出…</a></p><h3 class="hot"><a href="https://www.17k.com/book/3647120.html" target="_blank">白衣天子乱世求生</a></h3><p><a target="_blank" href="https://www.17k.com/book/3647120.html" target="_blank">穿越大乾沦为落魄书生，无系统加持，仅凭理科思维乱世求生！以制度重塑世道，孤身掀翻腐朽门阀，从一无所有一路问鼎九州！</a></p><h3><a href="https://www.17k.com/book/3597196.html" target="_blank">受人间疾苦，参阴阳玄妙</a></h3><p><a target="_blank" href="https://www.17k.com/book/3597196.html" target="_blank">神族天生为神，暗中操控巫师奴役世人，夏帝幼子夏玄参悟道法，开创仙宗，血战九州！</a></p>
+					</div>
+				</div>
+				<div class="LEFT">
+					<div class="EYE">
+						
+						<a href="//www.17k.com/book/3420911.html" target="_blank"><img src="//img.17k.com/cmsimg/recommend/2022/04/1650252555.2613.jpg" alt="一品布衣"/><span>穿越遇上兵灾：如何不被吃</span></a><a href="//www.17k.com/book/3479673.html" target="_blank"><img src="//img.17k.com/cmsimg/recommend/2022/10/1666579735.5801.jpg" alt="长生仙游"/><span>身如蜉蝣，长生久视游红尘</span></a><a href="//www.17k.com/book/3490331.html" target="_blank"><img src="//img.17k.com/cmsimg/recommend/2023/01/1673841332.3075.jpg" alt="逍遥小贵婿"/><span>贵婿临门：穿越古代当赘婿</span></a>
+					</div>
+					<script type="text/javascript">
+						Q.ppt(Q.lastTag('div'), {
+							width: 450,
+							height: 250
+						})
+					</script>
+
+					
+					<dl class="BZZD_TOP">
+                    <dt class="now">
+                        <a href="/top/refactor/top100/01_subscribe/01_subscribe__top_100_pc.html">男生订阅周榜</a>
+                    </dt>
+                    <dt>
+                        <a href="/top/refactor/top100/01_subscribe/01_subscribe_newBook_top_100_pc.html">新书订阅周榜</a>
+                    </dt>
+                    <dt>
+                        <a href="/top/refactor/top100/14_recommend/14_recommend_top_100_pc.html">推荐周榜</a>
+                    </dt>
+                    <dt>
+                        <a href="/top/refactor/top100/16_gift/16_gift_top_100_pc.html">礼物周榜</a>
+                    </dt>
+                    <dd class="top"><ul class="Top1"><li> <span class="num r">1</span> <a href="//www.17k.com/book/3583700.html" title="星痕之门" target="_blank">星痕之门</a></li><li> <span class="num r">2</span> <a href="//www.17k.com/book/3328785.html" title="长生" target="_blank">长生</a></li><li> <span class="num r">3</span> <a href="//www.17k.com/book/3660623.html" title="东北风云：黑血漫..." target="_blank">东北风云：黑血漫...</a></li><li> <span class="num">4</span> <a href="//www.17k.com/book/1398783.html" title="九星霸体诀" target="_blank">九星霸体诀</a></li><li> <span class="num">5</span> <a href="//www.17k.com/book/3597196.html" title="太上无情" target="_blank">太上无情</a></li></ul><ul class="Top1"><li> <span class="num">6</span> <a href="//www.17k.com/book/3006464.html" title="万古第一神" target="_blank">万古第一神</a></li><li> <span class="num">7</span> <a href="//www.17k.com/book/168.html" title="尘缘" target="_blank">尘缘</a></li><li> <span class="num">8</span> <a href="//www.17k.com/book/1741975.html" title="女总裁的全能兵王" target="_blank">女总裁的全能兵王</a></li><li> <span class="num">9</span> <a href="//www.17k.com/book/3618847.html" title="刚成僵尸，你把定..." target="_blank">刚成僵尸，你把定...</a></li><li> <span class="num">10</span> <a href="//www.17k.com/book/450860.html" title="百炼飞升录" target="_blank">百炼飞升录</a></li></ul><ul class="Top1"><li> <span class="num">11</span> <a href="//www.17k.com/book/3381946.html" title="风起龙城" target="_blank">风起龙城</a></li><li> <span class="num">12</span> <a href="//www.17k.com/book/83528.html" title="混沌剑神" target="_blank">混沌剑神</a></li><li> <span class="num">13</span> <a href="//www.17k.com/book/3669552.html" title="娘子，我真不想考..." target="_blank">娘子，我真不想考...</a></li><li> <span class="num">14</span> <a href="//www.17k.com/book/3630118.html" title="全体起立！真龙归..." target="_blank">全体起立！真龙归...</a></li><li> <span class="num">15</span> <a href="//www.17k.com/book/1050747.html" title="龙纹战神" target="_blank">龙纹战神</a></li></ul></dd><dd class="top"><ul class="Top1"><li> <span class="num r">1</span> <a href="//www.17k.com/book/3671225.html" title="武警：兵王之路" target="_blank">武警：兵王之路</a></li><li> <span class="num r">2</span> <a href="//www.17k.com/book/3665801.html" title="都市狂医:寒门崛起" target="_blank">都市狂医:寒门崛起</a></li><li> <span class="num r">3</span> <a href="//www.17k.com/book/3667335.html" title="乾坤一主" target="_blank">乾坤一主</a></li><li> <span class="num">4</span> <a href="//www.17k.com/book/3671115.html" title="沉船后，我带五国..." target="_blank">沉船后，我带五国...</a></li><li> <span class="num">5</span> <a href="//www.17k.com/book/3676430.html" title="乡村小仙医枯井连..." target="_blank">乡村小仙医枯井连...</a></li></ul><ul class="Top1"><li> <span class="num">6</span> <a href="//www.17k.com/book/3383826.html" title="大玄印" target="_blank">大玄印</a></li></dd><dd class="top"><ul class="Top1"><li> <span class="num r">1</span> <a href="//www.17k.com/book/3597196.html" title="太上无情" target="_blank">太上无情</a></li><li> <span class="num r">2</span> <a href="//www.17k.com/book/3583700.html" title="星痕之门" target="_blank">星痕之门</a></li><li> <span class="num r">3</span> <a href="//www.17k.com/book/3661094.html" title="分身三地十年约" target="_blank">分身三地十年约</a></li><li> <span class="num">4</span> <a href="//www.17k.com/book/3672220.html" title="一口粮" target="_blank">一口粮</a></li><li> <span class="num">5</span> <a href="//www.17k.com/book/3676241.html" title="重生九零：明天别..." target="_blank">重生九零：明天别...</a></li></ul><ul class="Top1"><li> <span class="num">6</span> <a href="//www.17k.com/book/3006464.html" title="万古第一神" target="_blank">万古第一神</a></li><li> <span class="num">7</span> <a href="//www.17k.com/book/3665489.html" title="全能教学系统" target="_blank">全能教学系统</a></li><li> <span class="num">8</span> <a href="//www.17k.com/book/3648621.html" title="重生后，我的目标..." target="_blank">重生后，我的目标...</a></li><li> <span class="num">9</span> <a href="//www.17k.com/book/3610898.html" title="天魔道圣" target="_blank">天魔道圣</a></li><li> <span class="num">10</span> <a href="//www.17k.com/book/1398783.html" title="九星霸体诀" target="_blank">九星霸体诀</a></li></ul><ul class="Top1"><li> <span class="num">11</span> <a href="//www.17k.com/book/3382094.html" title="灵道纪" target="_blank">灵道纪</a></li><li> <span class="num">12</span> <a href="//www.17k.com/book/3630118.html" title="全体起立！真龙归..." target="_blank">全体起立！真龙归...</a></li><li> <span class="num">13</span> <a href="//www.17k.com/book/3669552.html" title="娘子，我真不想考..." target="_blank">娘子，我真不想考...</a></li><li> <span class="num">14</span> <a href="//www.17k.com/book/3123343.html" title="日月神魔情" target="_blank">日月神魔情</a></li><li> <span class="num">15</span> <a href="//www.17k.com/book/2809894.html" title="近战狂兵" target="_blank">近战狂兵</a></li></ul></dd><dd class="top"><ul class="Top1"><li> <span class="num r">1</span> <a href="//www.17k.com/book/3597196.html" title="太上无情" target="_blank">太上无情</a></li><li> <span class="num r">2</span> <a href="//www.17k.com/book/3676241.html" title="重生九零：明天别..." target="_blank">重生九零：明天别...</a></li><li> <span class="num r">3</span> <a href="//www.17k.com/book/3672220.html" title="一口粮" target="_blank">一口粮</a></li><li> <span class="num">4</span> <a href="//www.17k.com/book/3661094.html" title="分身三地十年约" target="_blank">分身三地十年约</a></li><li> <span class="num">5</span> <a href="//www.17k.com/book/3528335.html" title="奇侠仙侣" target="_blank">奇侠仙侣</a></li></ul><ul class="Top1"><li> <span class="num">6</span> <a href="//www.17k.com/book/2809894.html" title="近战狂兵" target="_blank">近战狂兵</a></li><li> <span class="num">7</span> <a href="//www.17k.com/book/3676283.html" title="大明之三十六将" target="_blank">大明之三十六将</a></li><li> <span class="num">8</span> <a href="//www.17k.com/book/3673682.html" title="床底下的算命先生" target="_blank">床底下的算命先生</a></li><li> <span class="num">9</span> <a href="//www.17k.com/book/3630118.html" title="全体起立！真龙归..." target="_blank">全体起立！真龙归...</a></li><li> <span class="num">10</span> <a href="//www.17k.com/book/3666859.html" title="重生九零：凭先知..." target="_blank">重生九零：凭先知...</a></li></ul><ul class="Top1"><li> <span class="num">11</span> <a href="//www.17k.com/book/3669552.html" title="娘子，我真不想考..." target="_blank">娘子，我真不想考...</a></li><li> <span class="num">12</span> <a href="//www.17k.com/book/3676430.html" title="乡村小仙医枯井连..." target="_blank">乡村小仙医枯井连...</a></li><li> <span class="num">13</span> <a href="//www.17k.com/book/3675375.html" title="大宋三十六将" target="_blank">大宋三十六将</a></li><li> <span class="num">14</span> <a href="//www.17k.com/book/3606924.html" title="超级帅男闯荡社会..." target="_blank">超级帅男闯荡社会...</a></li><li> <span class="num">15</span> <a href="//www.17k.com/book/3123343.html" title="日月神魔情" target="_blank">日月神魔情</a></li></ul></dd>
+                    <script type="text/javascript">
+                        (function() {
+                            var dl = Q.lastTag('dl');
+                            Q.tab(dl.getElementsByTagName('dt'), dl.getElementsByTagName('dd'));
+                        }())
+                    </script>
+                </dl>
+
+				</div>
+			</div>
+			<div class="BZZD_CONT" style="display:none">
+				<div class="RIGHT">
+					<div class="NewList">
+						
+						<h3><a href="https://www.17k.com/book/3631088.html" target="_blank">炼个丹怎么就玩坏修仙界了！</a></h3><p><a target="_blank" href="https://www.17k.com/book/3631088.html" target="_blank">一觉醒来李玄穿越仙侠世界，身怀先天丹体，本以为是天胡开局，没想到…</a></p><h3><a href="//www.17k.com/book/3618847.html" target="_blank">尸王归来，亿万尸军臣服！</a></h3><p><a target="_blank" href="//www.17k.com/book/3618847.html" target="_blank">身怀尸王内丹，肩负始祖血脉，口宪天师真言，左手万年桃木剑，右手五帝铜钱剑</a></p><h3><a href="https://www.17k.com/book/3632497.html" target="_blank">密室演员当场复活破案！</a></h3><p><a target="_blank" href="https://www.17k.com/book/3632497.html" target="_blank">陈宇发现自己穿越成了一档热门探案综艺里的“尸体演员”，本想配合演出…</a></p><h3 class="hot"><a href="https://www.17k.com/book/3647120.html" target="_blank">白衣天子乱世求生</a></h3><p><a target="_blank" href="https://www.17k.com/book/3647120.html" target="_blank">穿越大乾沦为落魄书生，无系统加持，仅凭理科思维乱世求生！以制度重塑世道，孤身掀翻腐朽门阀，从一无所有一路问鼎九州！</a></p><h3><a href="https://www.17k.com/book/3597196.html" target="_blank">受人间疾苦，参阴阳玄妙</a></h3><p><a target="_blank" href="https://www.17k.com/book/3597196.html" target="_blank">神族天生为神，暗中操控巫师奴役世人，夏帝幼子夏玄参悟道法，开创仙宗，血战九州！</a></p>
+					</div>
+				</div>
+				<div class="LEFT">
+					<div class="EYE">
+						
+						<a href="//www.17k.com/book/3444433.html" target="_blank"><img src="//img.17k.com/cmsimg/recommend/2022/08/1659925213.5726.jpg" alt="冥王崽崽三岁半"/><span>惊！奶团子居然是冥王亲闺女</span></a><a href="//www.17k.com/book/3474899.html" target="_blank"><img src="//img.17k.com/cmsimg/recommend/2022/09/1662394470.5371.jpg" alt="刚刚退婚，就被奶凶指挥官拐进民政局"/><span>刚被渣奶凶指挥官把她拐回家</span></a><a href="//www.17k.com/book/3542862.html" target="_blank"><img src="//img.17k.com/cmsimg/recommend/2023/07/1689564665.0949.jpg" alt="重生六零小知青，被痞帅糙汉娇宠了"/><span>娇小知青带着空间重生六零</span></a>
+					</div>
+					<script type="text/javascript">
+						Q.ppt(Q.lastTag('div'), {
+							width: 450,
+							height: 250
+						})
+					</script>
+
+					
+					<dl class="BZZD_TOP">
+                    <dt class="now">
+                        <a href="/top/refactor/top100/01_subscribe/01_subscribe__top_100_pc.html">女生订阅周榜</a>
+                    </dt>
+                    <dt>
+                        <a href="/top/refactor/top100/01_subscribe/01_subscribe_newBook_top_100_pc.html">新书订阅周榜</a>
+                    </dt>
+                    <dt>
+                        <a href="/top/refactor/top100/14_recommend/14_recommend_top_100_pc.html">推荐周榜</a>
+                    </dt>
+                    <dt>
+                        <a href="/top/refactor/top100/16_gift/16_gift_top_100_pc.html">礼物周榜</a>
+                    </dt>
+                    <dd class="top"><ul class="Top1"><li> <span class="num r">1</span> <a href="//www.17k.com/book/3512418.html" title="重回丧夫的那一天..." target="_blank">重回丧夫的那一天...</a></li><li> <span class="num r">2</span> <a href="//www.17k.com/book/3312275.html" title="种田从全家穿越开始" target="_blank">种田从全家穿越开始</a></li><li> <span class="num r">3</span> <a href="//www.17k.com/book/3667350.html" title="带着刑侦技能穿八..." target="_blank">带着刑侦技能穿八...</a></li><li> <span class="num">4</span> <a href="//www.17k.com/book/3239101.html" title="万界倒回重启" target="_blank">万界倒回重启</a></li><li> <span class="num">5</span> <a href="//www.17k.com/book/3670924.html" title="迷彩旧梦又逢君" target="_blank">迷彩旧梦又逢君</a></li></ul><ul class="Top1"><li> <span class="num">6</span> <a href="//www.17k.com/book/3671412.html" title="世子爷把我当恩人..." target="_blank">世子爷把我当恩人...</a></li><li> <span class="num">7</span> <a href="//www.17k.com/book/3542603.html" title="重生归来，真千金..." target="_blank">重生归来，真千金...</a></li><li> <span class="num">8</span> <a href="//www.17k.com/book/3547058.html" title="修罗女帝之绝世无双" target="_blank">修罗女帝之绝世无双</a></li><li> <span class="num">9</span> <a href="//www.17k.com/book/3668766.html" title="九州成神记" target="_blank">九州成神记</a></li><li> <span class="num">10</span> <a href="//www.17k.com/book/3671230.html" title="恶毒女配只想苟，..." target="_blank">恶毒女配只想苟，...</a></li></ul></dd><dd class="top"><ul class="Top1"><li> <span class="num r">1</span> <a href="//www.17k.com/book/3670924.html" title="迷彩旧梦又逢君" target="_blank">迷彩旧梦又逢君</a></li><li> <span class="num r">2</span> <a href="//www.17k.com/book/3671412.html" title="世子爷把我当恩人..." target="_blank">世子爷把我当恩人...</a></li><li> <span class="num r">3</span> <a href="//www.17k.com/book/3668766.html" title="九州成神记" target="_blank">九州成神记</a></li></dd><dd class="top"><ul class="Top1"><li> <span class="num r">1</span> <a href="//www.17k.com/book/3675055.html" title="飞入寻常百姓家" target="_blank">飞入寻常百姓家</a></li><li> <span class="num r">2</span> <a href="//www.17k.com/book/3262655.html" title="我的寒门赘婿" target="_blank">我的寒门赘婿</a></li><li> <span class="num r">3</span> <a href="//www.17k.com/book/3675286.html" title="两百万牵出个意外..." target="_blank">两百万牵出个意外...</a></li><li> <span class="num">4</span> <a href="//www.17k.com/book/3670924.html" title="迷彩旧梦又逢君" target="_blank">迷彩旧梦又逢君</a></li><li> <span class="num">5</span> <a href="//www.17k.com/book/3327814.html" title="药香小农女" target="_blank">药香小农女</a></li></ul><ul class="Top1"><li> <span class="num">6</span> <a href="//www.17k.com/book/3634103.html" title="重生后我靠空间门..." target="_blank">重生后我靠空间门...</a></li><li> <span class="num">7</span> <a href="//www.17k.com/book/3478363.html" title="天枭麒麟之惊天凌云" target="_blank">天枭麒麟之惊天凌云</a></li><li> <span class="num">8</span> <a href="//www.17k.com/book/3670175.html" title="伪白兔真实邪魅" target="_blank">伪白兔真实邪魅</a></li><li> <span class="num">9</span> <a href="//www.17k.com/book/3242901.html" title="风三娘" target="_blank">风三娘</a></li><li> <span class="num">10</span> <a href="//www.17k.com/book/3673036.html" title="哥哥的诱惑" target="_blank">哥哥的诱惑</a></li></ul><ul class="Top1"><li> <span class="num">11</span> <a href="//www.17k.com/book/3055942.html" title="深海恋歌" target="_blank">深海恋歌</a></li><li> <span class="num">12</span> <a href="//www.17k.com/book/3668766.html" title="九州成神记" target="_blank">九州成神记</a></li><li> <span class="num">13</span> <a href="//www.17k.com/book/3239101.html" title="万界倒回重启" target="_blank">万界倒回重启</a></li><li> <span class="num">14</span> <a href="//www.17k.com/book/3617671.html" title="马伏山纪事" target="_blank">马伏山纪事</a></li></dd><dd class="top"><ul class="Top1"><li> <span class="num r">1</span> <a href="//www.17k.com/book/3396933.html" title="三丫头，顾小敏" target="_blank">三丫头，顾小敏</a></li><li> <span class="num r">2</span> <a href="//www.17k.com/book/3386240.html" title="出生于1931年..." target="_blank">出生于1931年...</a></li><li> <span class="num r">3</span> <a href="//www.17k.com/book/3242901.html" title="风三娘" target="_blank">风三娘</a></li><li> <span class="num">4</span> <a href="//www.17k.com/book/3673036.html" title="哥哥的诱惑" target="_blank">哥哥的诱惑</a></li><li> <span class="num">5</span> <a href="//www.17k.com/book/3634103.html" title="重生后我靠空间门..." target="_blank">重生后我靠空间门...</a></li></ul><ul class="Top1"><li> <span class="num">6</span> <a href="//www.17k.com/book/3677184.html" title="王府岁岁皆迟意" target="_blank">王府岁岁皆迟意</a></li></dd>
+                    <script type="text/javascript">
+                        (function() {
+                            var dl = Q.lastTag('dl');
+                            Q.tab(dl.getElementsByTagName('dt'), dl.getElementsByTagName('dd'));
+                        }())
+                    </script>
+                </dl>
+
+				</div>
+			</div>
+			<div class="BZZD_CONT" style="display:none">
+				<div class="RIGHT">
+					<div class="NewList">
+						<!--本周主打 新书 文章-->
+						<h3><a href="https://www.17k.com/book/3631088.html" target="_blank">炼个丹怎么就玩坏修仙界了！</a></h3><p><a target="_blank" href="https://www.17k.com/book/3631088.html" target="_blank">一觉醒来李玄穿越仙侠世界，身怀先天丹体，本以为是天胡开局，没想到…</a></p><h3><a href="//www.17k.com/book/3618847.html" target="_blank">尸王归来，亿万尸军臣服！</a></h3><p><a target="_blank" href="//www.17k.com/book/3618847.html" target="_blank">身怀尸王内丹，肩负始祖血脉，口宪天师真言，左手万年桃木剑，右手五帝铜钱剑</a></p><h3><a href="https://www.17k.com/book/3632497.html" target="_blank">密室演员当场复活破案！</a></h3><p><a target="_blank" href="https://www.17k.com/book/3632497.html" target="_blank">陈宇发现自己穿越成了一档热门探案综艺里的“尸体演员”，本想配合演出…</a></p><h3 class="hot"><a href="https://www.17k.com/book/3647120.html" target="_blank">白衣天子乱世求生</a></h3><p><a target="_blank" href="https://www.17k.com/book/3647120.html" target="_blank">穿越大乾沦为落魄书生，无系统加持，仅凭理科思维乱世求生！以制度重塑世道，孤身掀翻腐朽门阀，从一无所有一路问鼎九州！</a></p><h3><a href="https://www.17k.com/book/3597196.html" target="_blank">受人间疾苦，参阴阳玄妙</a></h3><p><a target="_blank" href="https://www.17k.com/book/3597196.html" target="_blank">神族天生为神，暗中操控巫师奴役世人，夏帝幼子夏玄参悟道法，开创仙宗，血战九州！</a></p>
+					</div>
+				</div>
+				<div class="LEFT">
+					<div class="EYE">
+						<!--本周主打 新书 幻灯-->
+						<a href="//www.17k.com/book/3414023.html" target="_blank"><img src="//img.17k.com/cmsimg/recommend/2022/05/1652062099.7388.jpg" alt="女配修仙，主角祭天"/><span>觉醒后，这恶毒女配她不干了</span></a><a href="//www.17k.com/book/3418316.html" target="_blank"><img src="//img.17k.com/cmsimg/recommend/2022/04/1649042087.2649.jpg" alt="七零小娇媳：我带空间养糙汉"/><span>穿到七十年代，被迫当劳模！</span></a><a href="//www.17k.com/book/3432499.html" target="_blank"><img src="//img.17k.com/cmsimg/recommend/2022/10/1665374368.0676.jpg" alt="重生团宠：又被摄政王宠成了小娇娇"/><span>我又被摄政王宠成了小娇娇</span></a><a href="//www.17k.com/book/3433943.html" target="_blank"><img src="//img.17k.com/cmsimg/recommend/2022/07/1658110968.2786.jpg" alt="农家团宠小福宝是锦鲤吖"/><span>咦？农家团宠小福宝是锦鲤吖</span></a>
+					</div>
+					<script type="text/javascript">
+						Q.ppt(Q.lastTag('div'), {
+							width: 450,
+							height: 250
+						})
+					</script>
+
+					<!--本周主打 新书 榜单-->
+					<dl class="BZZD_TOP">
+                    <dt class="now" style="width:50%;">
+                        <a href="/top/refactor/top100/01_subscribe/01_subscribe_newBook_top_100_pc.html">新书订阅周榜</a>
+                    </dt>
+                    <dt style="width:49%">
+                        <a href="/top/refactor/top100/16_gift/16_gift_top_100_pc.html">礼物周榜</a>
+                    </dt>
+                    <dd class="top"><ul class="Top1"><li> <span class="num r">1</span> <a href="//www.17k.com/book/3671225.html" title="武警：兵王之路" target="_blank">武警：兵王之路</a></li><li> <span class="num r">2</span> <a href="//www.17k.com/book/3665801.html" title="都市狂医:寒门崛起" target="_blank">都市狂医:寒门崛起</a></li><li> <span class="num r">3</span> <a href="//www.17k.com/book/3667335.html" title="乾坤一主" target="_blank">乾坤一主</a></li><li> <span class="num">4</span> <a href="//www.17k.com/book/3671115.html" title="沉船后，我带五国..." target="_blank">沉船后，我带五国...</a></li><li> <span class="num">5</span> <a href="//www.17k.com/book/3676430.html" title="乡村小仙医枯井连..." target="_blank">乡村小仙医枯井连...</a></li></ul><ul class="Top1"><li> <span class="num">6</span> <a href="//www.17k.com/book/3670924.html" title="迷彩旧梦又逢君" target="_blank">迷彩旧梦又逢君</a></li><li> <span class="num">7</span> <a href="//www.17k.com/book/3671412.html" title="世子爷把我当恩人..." target="_blank">世子爷把我当恩人...</a></li><li> <span class="num">8</span> <a href="//www.17k.com/book/3383826.html" title="大玄印" target="_blank">大玄印</a></li><li> <span class="num">9</span> <a href="//www.17k.com/book/3668766.html" title="九州成神记" target="_blank">九州成神记</a></li></dd><dd class="top"><ul class="Top1"><li> <span class="num r">1</span> <a href="//www.17k.com/book/3676241.html" title="重生九零：明天别..." target="_blank">重生九零：明天别...</a></li><li> <span class="num r">2</span> <a href="//www.17k.com/book/3676283.html" title="大明之三十六将" target="_blank">大明之三十六将</a></li><li> <span class="num r">3</span> <a href="//www.17k.com/book/3676430.html" title="乡村小仙医枯井连..." target="_blank">乡村小仙医枯井连...</a></li><li> <span class="num">4</span> <a href="//www.17k.com/book/3673036.html" title="哥哥的诱惑" target="_blank">哥哥的诱惑</a></li><li> <span class="num">5</span> <a href="//www.17k.com/book/3675375.html" title="大宋三十六将" target="_blank">大宋三十六将</a></li></ul><ul class="Top1"><li> <span class="num">6</span> <a href="//www.17k.com/book/3677240.html" title="我以七情炼神丹" target="_blank">我以七情炼神丹</a></li><li> <span class="num">7</span> <a href="//www.17k.com/book/3676518.html" title="异界窥伺" target="_blank">异界窥伺</a></li><li> <span class="num">8</span> <a href="//www.17k.com/book/3672741.html" title="照骨天渊" target="_blank">照骨天渊</a></li></dd>
+                    <script type="text/javascript">
+                        (function() {
+                            var dl = Q.lastTag('dl');
+                            Q.tab(dl.getElementsByTagName('dt'), dl.getElementsByTagName('dd'));
+                        }())
+                    </script>
+                </dl>
+
+				</div>
+			</div>
+			<div class="BZZD_CONT" style="display:none">
+				<div class="RIGHT">
+					<div class="NewList">
+						<!--本周主打 完本-->
+						<h3><a href="https://www.17k.com/book/3631088.html" target="_blank">炼个丹怎么就玩坏修仙界了！</a></h3><p><a target="_blank" href="https://www.17k.com/book/3631088.html" target="_blank">一觉醒来李玄穿越仙侠世界，身怀先天丹体，本以为是天胡开局，没想到…</a></p><h3><a href="//www.17k.com/book/3618847.html" target="_blank">尸王归来，亿万尸军臣服！</a></h3><p><a target="_blank" href="//www.17k.com/book/3618847.html" target="_blank">身怀尸王内丹，肩负始祖血脉，口宪天师真言，左手万年桃木剑，右手五帝铜钱剑</a></p><h3><a href="https://www.17k.com/book/3632497.html" target="_blank">密室演员当场复活破案！</a></h3><p><a target="_blank" href="https://www.17k.com/book/3632497.html" target="_blank">陈宇发现自己穿越成了一档热门探案综艺里的“尸体演员”，本想配合演出…</a></p><h3 class="hot"><a href="https://www.17k.com/book/3647120.html" target="_blank">白衣天子乱世求生</a></h3><p><a target="_blank" href="https://www.17k.com/book/3647120.html" target="_blank">穿越大乾沦为落魄书生，无系统加持，仅凭理科思维乱世求生！以制度重塑世道，孤身掀翻腐朽门阀，从一无所有一路问鼎九州！</a></p><h3><a href="https://www.17k.com/book/3597196.html" target="_blank">受人间疾苦，参阴阳玄妙</a></h3><p><a target="_blank" href="https://www.17k.com/book/3597196.html" target="_blank">神族天生为神，暗中操控巫师奴役世人，夏帝幼子夏玄参悟道法，开创仙宗，血战九州！</a></p>
+					</div>
+				</div>
+				<div class="LEFT">
+					<div class="EYE">
+						<!--本周主打 完本 幻灯-->
+						<a href="//www.17k.com/book/2849619.html" target="_blank"><img src="//img.17k.com/cmsimg/recommend/2019/08/1566533519.4033.jpg" alt="归一"/><span>他的种种谜团，尽在归一。</span></a><a href="//www.17k.com/book/3038645.html" target="_blank"><img src="//img.17k.com/cmsimg/recommend/2019/10/1571623754.2457.jpg" alt="第九特区"/><span>草莽英雄末世崛起：第九特区</span></a><a href="//www.17k.com/book/391013.html" target="_blank"><img src="//img.17k.com/cmsimg/recommend/2019/04/1555937596.3792.jpg" alt="龙血战神"/><span>成就唯一祖龙武者：龙血战神</span></a>
+					</div>
+					<script type="text/javascript">
+						Q.ppt(Q.lastTag('div'), {
+							width: 450,
+							height: 250
+						})
+					</script>
+
+					<!--本周主打 完本 榜单-->
+					<dl class="BZZD_TOP">
+                    <dt class="now" style="width:50%;">
+                        <a href="/top/refactor/top100/01_subscribe/01_subscribe_finished_top_100_pc.html">完本订阅周榜</a>
+                    </dt>
+                    <dt style="width:49%">
+                        <a href="/top/refactor/top100/13_completedbookclick/13_completedbookclick_top_100_pc.html">完本点击周榜</a>
+                    </dt>
+                    <dd class="top"><ul class="Top1"><li> <span class="num r">1</span> <a href="//www.17k.com/book/3328785.html" title="长生" target="_blank">长生</a></li><li> <span class="num r">2</span> <a href="//www.17k.com/book/168.html" title="尘缘" target="_blank">尘缘</a></li><li> <span class="num r">3</span> <a href="//www.17k.com/book/3618847.html" title="刚成僵尸，你把定..." target="_blank">刚成僵尸，你把定...</a></li><li> <span class="num">4</span> <a href="//www.17k.com/book/3381946.html" title="风起龙城" target="_blank">风起龙城</a></li><li> <span class="num">5</span> <a href="//www.17k.com/book/1050747.html" title="龙纹战神" target="_blank">龙纹战神</a></li></ul><ul class="Top1"><li> <span class="num">6</span> <a href="//www.17k.com/book/3532841.html" title="为退婚，我把冰山..." target="_blank">为退婚，我把冰山...</a></li><li> <span class="num">7</span> <a href="//www.17k.com/book/3512418.html" title="重回丧夫的那一天..." target="_blank">重回丧夫的那一天...</a></li><li> <span class="num">8</span> <a href="//www.17k.com/book/3312275.html" title="种田从全家穿越开始" target="_blank">种田从全家穿越开始</a></li><li> <span class="num">9</span> <a href="//www.17k.com/book/3420911.html" title="一品布衣" target="_blank">一品布衣</a></li><li> <span class="num">10</span> <a href="//www.17k.com/book/3352113.html" title="浩劫余生" target="_blank">浩劫余生</a></li></ul><ul class="Top1"><li> <span class="num">11</span> <a href="//www.17k.com/book/2938756.html" title="疯子眼中所谓的江湖" target="_blank">疯子眼中所谓的江湖</a></li><li> <span class="num">12</span> <a href="//www.17k.com/book/3313812.html" title="都市医神狂婿" target="_blank">都市医神狂婿</a></li><li> <span class="num">13</span> <a href="//www.17k.com/book/108821.html" title="超级兵王" target="_blank">超级兵王</a></li><li> <span class="num">14</span> <a href="//www.17k.com/book/327976.html" title="傲世丹神" target="_blank">傲世丹神</a></li><li> <span class="num">15</span> <a href="//www.17k.com/book/753884.html" title="我的26岁女房客" target="_blank">我的26岁女房客</a></li></ul></dd><dd class="top"><ul class="Top1"><li> <span class="num r">1</span> <a href="//www.17k.com/book/3464185.html" title="我的同门不一样" target="_blank">我的同门不一样</a></li><li> <span class="num r">2</span> <a href="//www.17k.com/book/3665093.html" title="年月日历劫记" target="_blank">年月日历劫记</a></li><li> <span class="num r">3</span> <a href="//www.17k.com/book/3664993.html" title="西行纪之寻回玉盘" target="_blank">西行纪之寻回玉盘</a></li><li> <span class="num">4</span> <a href="//www.17k.com/book/3440197.html" title="善良的人生" target="_blank">善良的人生</a></li><li> <span class="num">5</span> <a href="//www.17k.com/book/458754.html" title="少年医仙" target="_blank">少年医仙</a></li></ul><ul class="Top1"><li> <span class="num">6</span> <a href="//www.17k.com/book/3663056.html" title="什么是道，道是什么" target="_blank">什么是道，道是什么</a></li><li> <span class="num">7</span> <a href="//www.17k.com/book/3660847.html" title="预防坏人抵抗诱惑" target="_blank">预防坏人抵抗诱惑</a></li><li> <span class="num">8</span> <a href="//www.17k.com/book/3660688.html" title="锦似寻缘" target="_blank">锦似寻缘</a></li><li> <span class="num">9</span> <a href="//www.17k.com/book/3662421.html" title="二十四节气守护人间" target="_blank">二十四节气守护人间</a></li><li> <span class="num">10</span> <a href="//www.17k.com/book/3660527.html" title="阿知，你回来了吗" target="_blank">阿知，你回来了吗</a></li></ul><ul class="Top1"><li> <span class="num">11</span> <a href="//www.17k.com/book/3661935.html" title="十二生肖守护神之..." target="_blank">十二生肖守护神之...</a></li><li> <span class="num">12</span> <a href="//www.17k.com/book/3662217.html" title="穿成反派大小姐，..." target="_blank">穿成反派大小姐，...</a></li><li> <span class="num">13</span> <a href="//www.17k.com/book/3662971.html" title="穿越洪荒成了太清..." target="_blank">穿越洪荒成了太清...</a></li><li> <span class="num">14</span> <a href="//www.17k.com/book/3038645.html" title="第九特区" target="_blank">第九特区</a></li><li> <span class="num">15</span> <a href="//www.17k.com/book/391013.html" title="龙血战神" target="_blank">龙血战神</a></li></ul></dd>
+                    <script type="text/javascript">
+                        (function() {
+                            var dl = Q.lastTag('dl');
+                            Q.tab(dl.getElementsByTagName('dt'), dl.getElementsByTagName('dd'));
+                        }())
+                    </script>
+                </dl>
+
+				</div>
+			</div>
+			<script type="text/javascript">
+				k.tabs(k('#BZZD_TAB a'), k('.BZZD_CONT'))
+			</script>
+		</div>
+	</div>
+	<!--<div class="Banner_ad" id="BAIDU_BANNER2"></div>-->
+	<!--banner-middle1000*90-->
+	<div class="carousel Banner_ad banner-middle QUI">
+		<!--for list-->
+		<a href="{{target}}" class="carousel-item">
+			<img src="{{cover}}" alt="{{siteColumnName}}">
+		</a>
+		<!--endfor list-->
+	</div>
+	<div class="Main_2">
+
+		<!--全站会员点击榜-->
+		<div class="HYDJB">
+        <div class="Title2">
+            <h2 class="tit">作品点击榜</h2>
+        </div>
+        <div class="Tab2_tit" id="HYDJB_TAB">
+            <a class="now" href="">连载会员点击榜</a> <a href="">超长篇人气榜</a>
+        </div>
+        <div class="HYDJB_CONT">
+            <ul class="Top2">
+                
+                <!--"/v2/rankingtop/06_vipclick/serial_all_pc_count_s30.html" -->
+                <li><span class="click">1109293</span> <a class="sign" href="/all/book/2_22_93______1.html" target="_blank">[架空历史]</a> <a class="title" href="//www.17k.com/book/3669552.html" title="娘子，我真不想考状元" target="_blank">娘子，我真不想考状元</a></li><li><span class="click">41329</span> <a class="sign" href="/all/book/2_3_87______1.html" target="_blank">[都市异能]</a> <a class="title" href="//www.17k.com/book/3661094.html" title="分身三地十年约" target="_blank">分身三地十年约</a></li><li><span class="click">35306</span> <a class="sign" href="/all/book/2_22_4______1.html" target="_blank">[历史穿越]</a> <a class="title" href="//www.17k.com/book/3676283.html" title="大明之三十六将" target="_blank">大明之三十六将</a></li><li><span class="click">34515</span> <a class="sign" href="/all/book/2_22_93______1.html" target="_blank">[架空历史]</a> <a class="title" href="//www.17k.com/book/3675375.html" title="大宋三十六将" target="_blank">大宋三十六将</a></li><li><span class="click">4880</span> <a class="sign" href="/all/book/2_3_3______1.html" target="_blank">[都市生活]</a> <a class="title" href="//www.17k.com/book/3660623.html" title="东北风云：黑血漫过松花江" target="_blank">东北风云：黑血漫过松花江</a></li><li><span class="click">3218</span> <a class="sign" href="/all/book/2_21_83______1.html" target="_blank">[异界大陆]</a> <a class="title" href="//www.17k.com/book/3646683.html" title="天地人殇" target="_blank">天地人殇</a></li><li><span class="click">1664</span> <a class="sign" href="/all/book/2_3_87______1.html" target="_blank">[都市异能]</a> <a class="title" href="//www.17k.com/book/3630118.html" title="全体起立！真龙归来！" target="_blank">全体起立！真龙归来！</a></li><li><span class="click">1368</span> <a class="sign" href="/all/book/2_3_3______1.html" target="_blank">[都市生活]</a> <a class="title" href="//www.17k.com/book/3622820.html" title="天棺秘藏" target="_blank">天棺秘藏</a></li><li><span class="click">1014</span> <a class="sign" href="/all/book/2_21_8______1.html" target="_blank">[东方玄幻]</a> <a class="title" href="//www.17k.com/book/3382094.html" title="灵道纪" target="_blank">灵道纪</a></li><li><span class="click">496</span> <a class="sign" href="/all/book/2_21_8______1.html" target="_blank">[东方玄幻]</a> <a class="title" href="//www.17k.com/book/3674464.html" title="龙神古尊" target="_blank">龙神古尊</a></li><li><span class="click">494</span> <a class="sign" href="/all/book/2_22_94______1.html" target="_blank">[军旅生涯]</a> <a class="title" href="//www.17k.com/book/3671225.html" title="武警：兵王之路" target="_blank">武警：兵王之路</a></li><li><span class="click">493</span> <a class="sign" href="/all/book/2_24_124______1.html" target="_blank">[历史武侠]</a> <a class="title" href="//www.17k.com/book/3668745.html" title="风尘侍卫" target="_blank">风尘侍卫</a></li><li><span class="click">392</span> <a class="sign" href="/all/book/2_3_89______1.html" target="_blank">[都市重生]</a> <a class="title" href="//www.17k.com/book/3676241.html" title="重生九零：明天别出车" target="_blank">重生九零：明天别出车</a></li><li><span class="click">384</span> <a class="sign" href="/all/book/2_3_3______1.html" target="_blank">[都市生活]</a> <a class="title" href="//www.17k.com/book/3653308.html" title="卧虎" target="_blank">卧虎</a></li><li><span class="click">341</span> <a class="sign" href="/all/book/2_3_3______1.html" target="_blank">[都市生活]</a> <a class="title" href="//www.17k.com/book/3650723.html" title="我的江湖岁月" target="_blank">我的江湖岁月</a></li><li><span class="click">290</span> <a class="sign" href="/all/book/3_18_170______1.html" target="_blank">[未来科幻]</a> <a class="title" href="//www.17k.com/book/3670924.html" title="迷彩旧梦又逢君" target="_blank">迷彩旧梦又逢君</a></li><li><span class="click">285</span> <a class="sign" href="/all/book/2_29_179______1.html" target="_blank">[民间奇谈]</a> <a class="title" href="//www.17k.com/book/3619785.html" title="葬活人，抬鬼棺，我为阳间巡逻人" target="_blank">葬活人，抬鬼棺，我为阳间巡逻人</a></li><li><span class="click">238</span> <a class="sign" href="/all/book/3_17_26______1.html" target="_blank">[蜜爱甜宠]</a> <a class="title" href="//www.17k.com/book/3652710.html" title="小军嫂要离婚，冷面首长库库追" target="_blank">小军嫂要离婚，冷面首长库库追</a></li><li><span class="click">210</span> <a class="sign" href="/all/book/2_29_180______1.html" target="_blank">[恐怖悬疑]</a> <a class="title" href="//www.17k.com/book/3581753.html" title="借阴骨，阎王妻" target="_blank">借阴骨，阎王妻</a></li><li><span class="click">201</span> <a class="sign" href="/all/book/3_18_173______1.html" target="_blank">[神话情缘]</a> <a class="title" href="//www.17k.com/book/3673752.html" title="倾世神女逆袭传" target="_blank">倾世神女逆袭传</a></li><li><span class="click">200</span> <a class="sign" href="/all/book/2_22_93______1.html" target="_blank">[架空历史]</a> <a class="title" href="//www.17k.com/book/3647120.html" title="白衣天子" target="_blank">白衣天子</a></li><li><span class="click">199</span> <a class="sign" href="/all/book/2_14_128______1.html" target="_blank">[末世危机]</a> <a class="title" href="//www.17k.com/book/3674723.html" title="高温末世，女神抢着当我女佣" target="_blank">高温末世，女神抢着当我女佣</a></li><li><span class="click">198</span> <a class="sign" href="/all/book/2_21_8______1.html" target="_blank">[东方玄幻]</a> <a class="title" href="//www.17k.com/book/3677240.html" title="我以七情炼神丹" target="_blank">我以七情炼神丹</a></li><li><span class="click">197</span> <a class="sign" href="/all/book/2_3_3______1.html" target="_blank">[都市生活]</a> <a class="title" href="//www.17k.com/book/3622644.html" title="我的心动女邻居" target="_blank">我的心动女邻居</a></li><li><span class="click">194</span> <a class="sign" href="/all/book/2_24_9______1.html" target="_blank">[古典仙侠]</a> <a class="title" href="//www.17k.com/book/3676277.html" title="凡尘斩妖录" target="_blank">凡尘斩妖录</a></li><li><span class="click">186</span> <a class="sign" href="/all/book/2_22_93______1.html" target="_blank">[架空历史]</a> <a class="title" href="//www.17k.com/book/3676833.html" title="穿越黄巾残部，重铸河山" target="_blank">穿越黄巾残部，重铸河山</a></li><li><span class="click">163</span> <a class="sign" href="/all/book/2_22_93______1.html" target="_blank">[架空历史]</a> <a class="title" href="//www.17k.com/book/3620858.html" title="打猎：带甲百万，你说是普通县令？" target="_blank">打猎：带甲百万，你说是普通县令？</a></li><li><span class="click">156</span> <a class="sign" href="/all/book/3_17_134______1.html" target="_blank">[总裁豪门]</a> <a class="title" href="//www.17k.com/book/3657193.html" title="小可怜闪婚带娃大叔，三年后成首富" target="_blank">小可怜闪婚带娃大叔，三年后成首富</a></li><li><span class="click">131</span> <a class="sign" href="/all/book/2_3_3______1.html" target="_blank">[都市生活]</a> <a class="title" href="//www.17k.com/book/3659727.html" title="刚被校花拒绝，中年系统提前觉醒" target="_blank">刚被校花拒绝，中年系统提前觉醒</a></li><li><span class="click">130</span> <a class="sign" href="/all/book/2_3_91______1.html" target="_blank">[现实题材]</a> <a class="title" href="//www.17k.com/book/3676776.html" title="从混子到枭雄：哥几个的燃情岁月" target="_blank">从混子到枭雄：哥几个的燃情岁月</a></li>
+                <li><a class="more" target="_blank" href="/top/refactor/top100/06_vipclick/06_vipclick_serialWithLong_top_100_pc.html"></a></li>
+                <script type="text/javascript">
+                    Q.topPage(Q.lastTag('ul'));
+                </script>
+            </ul>
+        </div>
+        <div class="HYDJB_CONT">
+            <ul class="Top2">
+                
+                <!--"/v2/rankingtop/06_vipclick/long_all_pc_count_s10.html" -->
+                <li><span class="click">65379</span> <a class="sign" href="/all/book/2_21_8______1.html" target="_blank">[东方玄幻]</a> <a class="title" href="//www.17k.com/book/493239.html" title="修罗武神" target="_blank">修罗武神</a></li><li><span class="click">10312</span> <a class="sign" href="/all/book/2_14_130______1.html" target="_blank">[时空穿梭]</a> <a class="title" href="//www.17k.com/book/3583700.html" title="星痕之门" target="_blank">星痕之门</a></li><li><span class="click">8909</span> <a class="sign" href="/all/book/2_21_8______1.html" target="_blank">[东方玄幻]</a> <a class="title" href="//www.17k.com/book/3006464.html" title="万古第一神" target="_blank">万古第一神</a></li><li><span class="click">6544</span> <a class="sign" href="/all/book/2_21_83______1.html" target="_blank">[异界大陆]</a> <a class="title" href="//www.17k.com/book/1398783.html" title="九星霸体诀" target="_blank">九星霸体诀</a></li><li><span class="click">4066</span> <a class="sign" href="/all/book/2_3_92______1.html" target="_blank">[都市激战]</a> <a class="title" href="//www.17k.com/book/1741975.html" title="女总裁的全能兵王" target="_blank">女总裁的全能兵王</a></li><li><span class="click">3735</span> <a class="sign" href="/all/book/2_21_8______1.html" target="_blank">[东方玄幻]</a> <a class="title" href="//www.17k.com/book/450860.html" title="百炼飞升录" target="_blank">百炼飞升录</a></li><li><span class="click">3150</span> <a class="sign" href="/all/book/2_21_83______1.html" target="_blank">[异界大陆]</a> <a class="title" href="//www.17k.com/book/83528.html" title="混沌剑神" target="_blank">混沌剑神</a></li><li><span class="click">1807</span> <a class="sign" href="/all/book/2_3_92______1.html" target="_blank">[都市激战]</a> <a class="title" href="//www.17k.com/book/2809894.html" title="近战狂兵" target="_blank">近战狂兵</a></li><li><span class="click">641</span> <a class="sign" href="/all/book/2_3_89______1.html" target="_blank">[都市重生]</a> <a class="title" href="//www.17k.com/book/814433.html" title="神级插班生" target="_blank">神级插班生</a></li><li><span class="click">555</span> <a class="sign" href="/all/book/2_21_84______1.html" target="_blank">[异术超能]</a> <a class="title" href="//www.17k.com/book/3583749.html" title="禁咒师短命？我拥有不死之身" target="_blank">禁咒师短命？我拥有不死之身</a></li>
+                <li><a target="_blank" class="more" href="/top/refactor/top100/06_vipclick/06_vipclick_serialWithLong_top_100_pc.html"></a></li>
+            </ul>
+        </div>
+        <script type="text/javascript">
+            Q.tab(document.getElementById('HYDJB_TAB').getElementsByTagName('a'), Q('.HYDJB_CONT'))
+        </script>
+    </div>
+
+		<!--新书榜-->
+		<div class="XSB">
+        <div class="Title2">
+            <h2 class="tit">新作品榜</h2>
+        </div>
+        <div class="Tab2_tit" id="XSB_TAB">
+            <a class="now" href="">会员点击榜</a> <a href="">口碑推荐榜</a>
+        </div>
+        <div class="XSB_CONT">
+            <ul class="Top2">
+                
+                <li><span class="click">35306</span> <a class="sign" href="/all/book/2_22_4______1.html" target="_blank">[历史穿越]</a> <a class="title" href="//www.17k.com/book/3676283.html" title="大明之三十六将" target="_blank">大明之三十六将</a></li><li><span class="click">34515</span> <a class="sign" href="/all/book/2_22_93______1.html" target="_blank">[架空历史]</a> <a class="title" href="//www.17k.com/book/3675375.html" title="大宋三十六将" target="_blank">大宋三十六将</a></li><li><span class="click">496</span> <a class="sign" href="/all/book/2_21_8______1.html" target="_blank">[东方玄幻]</a> <a class="title" href="//www.17k.com/book/3674464.html" title="龙神古尊" target="_blank">龙神古尊</a></li><li><span class="click">392</span> <a class="sign" href="/all/book/2_3_89______1.html" target="_blank">[都市重生]</a> <a class="title" href="//www.17k.com/book/3676241.html" title="重生九零：明天别出车" target="_blank">重生九零：明天别出车</a></li><li><span class="click">199</span> <a class="sign" href="/all/book/2_14_128______1.html" target="_blank">[末世危机]</a> <a class="title" href="//www.17k.com/book/3674723.html" title="高温末世，女神抢着当我女佣" target="_blank">高温末世，女神抢着当我女佣</a></li><li><span class="click">198</span> <a class="sign" href="/all/book/2_21_8______1.html" target="_blank">[东方玄幻]</a> <a class="title" href="//www.17k.com/book/3677240.html" title="我以七情炼神丹" target="_blank">我以七情炼神丹</a></li><li><span class="click">194</span> <a class="sign" href="/all/book/2_24_9______1.html" target="_blank">[古典仙侠]</a> <a class="title" href="//www.17k.com/book/3676277.html" title="凡尘斩妖录" target="_blank">凡尘斩妖录</a></li><li><span class="click">186</span> <a class="sign" href="/all/book/2_22_93______1.html" target="_blank">[架空历史]</a> <a class="title" href="//www.17k.com/book/3676833.html" title="穿越黄巾残部，重铸河山" target="_blank">穿越黄巾残部，重铸河山</a></li><li><span class="click">130</span> <a class="sign" href="/all/book/2_3_91______1.html" target="_blank">[现实题材]</a> <a class="title" href="//www.17k.com/book/3676776.html" title="从混子到枭雄：哥几个的燃情岁月" target="_blank">从混子到枭雄：哥几个的燃情岁月</a></li><li><span class="click">105</span> <a class="sign" href="/all/book/2_3_87______1.html" target="_blank">[都市异能]</a> <a class="title" href="//www.17k.com/book/3672164.html" title="校园无敌贴身高手" target="_blank">校园无敌贴身高手</a></li><li><span class="click">82</span> <a class="sign" href="/all/book/3_17_169______1.html" target="_blank">[浪漫纯爱]</a> <a class="title" href="//www.17k.com/book/3675286.html" title="两百万牵出个意外恋人" target="_blank">两百万牵出个意外恋人</a></li><li><span class="click">43</span> <a class="sign" href="/all/book/2_3_87______1.html" target="_blank">[都市异能]</a> <a class="title" href="//www.17k.com/book/3675638.html" title="被逼替兄弟洞房，娶了旱魃当老婆" target="_blank">被逼替兄弟洞房，娶了旱魃当老婆</a></li><li><span class="click">39</span> <a class="sign" href="/all/book/2_21_8______1.html" target="_blank">[东方玄幻]</a> <a class="title" href="//www.17k.com/book/3677097.html" title="恐龙都在修仙，只有我靠科学成神" target="_blank">恐龙都在修仙，只有我靠科学成神</a></li><li><span class="click">38</span> <a class="sign" href="/all/book/3_17_134______1.html" target="_blank">[总裁豪门]</a> <a class="title" href="//www.17k.com/book/3672314.html" title="恋爱从离婚开始" target="_blank">恋爱从离婚开始</a></li><li><span class="click">36</span> <a class="sign" href="/all/book/2_21_8______1.html" target="_blank">[东方玄幻]</a> <a class="title" href="//www.17k.com/book/3672729.html" title="手握斩杀线，大帝都被我一招秒" target="_blank">手握斩杀线，大帝都被我一招秒</a></li><li><span class="click">34</span> <a class="sign" href="/all/book/2_3_87______1.html" target="_blank">[都市异能]</a> <a class="title" href="//www.17k.com/book/3675836.html" title="残物复生" target="_blank">残物复生</a></li><li><span class="click">34</span> <a class="sign" href="/all/book/2_29_180______1.html" target="_blank">[恐怖悬疑]</a> <a class="title" href="//www.17k.com/book/3675660.html" title="天生阴官？阳间叫我大先生" target="_blank">天生阴官？阳间叫我大先生</a></li><li><span class="click">33</span> <a class="sign" href="/all/book/2_21_83______1.html" target="_blank">[异界大陆]</a> <a class="title" href="//www.17k.com/book/3675834.html" title="浊天纪" target="_blank">浊天纪</a></li><li><span class="click">32</span> <a class="sign" href="/all/book/2_22_126______1.html" target="_blank">[战史风云]</a> <a class="title" href="//www.17k.com/book/3676892.html" title="赤血番号" target="_blank">赤血番号</a></li><li><span class="click">26</span> <a class="sign" href="/all/book/2_21_8______1.html" target="_blank">[东方玄幻]</a> <a class="title" href="//www.17k.com/book/3677351.html" title="我欲踏破诸天" target="_blank">我欲踏破诸天</a></li><li><span class="click">24</span> <a class="sign" href="/all/book/2_3_3______1.html" target="_blank">[都市生活]</a> <a class="title" href="//www.17k.com/book/3677166.html" title="她掌法理，他赴沉沦" target="_blank">她掌法理，他赴沉沦</a></li><li><span class="click">24</span> <a class="sign" href="/all/book/2_22_120______1.html" target="_blank">[历史传奇]</a> <a class="title" href="//www.17k.com/book/3675483.html" title="盛唐长歌" target="_blank">盛唐长歌</a></li><li><span class="click">23</span> <a class="sign" href="/all/book/2_21_8______1.html" target="_blank">[东方玄幻]</a> <a class="title" href="//www.17k.com/book/3673753.html" title="玄幻：娶妻延续香火，打造最强家族！" target="_blank">玄幻：娶妻延续香火，打造最强家族！</a></li><li><span class="click">23</span> <a class="sign" href="/all/book/2_24_81______1.html" target="_blank">[现代修真]</a> <a class="title" href="//www.17k.com/book/3649594.html" title="不共天" target="_blank">不共天</a></li><li><span class="click">21</span> <a class="sign" href="/all/book/3_5_139______1.html" target="_blank">[古代重生]</a> <a class="title" href="//www.17k.com/book/3673969.html" title="重生换嫁？罪妻流放海岛吃上糙汉将军了" target="_blank">重生换嫁？罪妻流放海岛吃上糙汉将军了</a></li><li><span class="click">21</span> <a class="sign" href="/all/book/2_24_81______1.html" target="_blank">[现代修真]</a> <a class="title" href="//www.17k.com/book/3671887.html" title="太古通玄录" target="_blank">太古通玄录</a></li><li><span class="click">20</span> <a class="sign" href="/all/book/2_22_93______1.html" target="_blank">[架空历史]</a> <a class="title" href="//www.17k.com/book/3674056.html" title="父亲，儿子教你如何科举中状元？" target="_blank">父亲，儿子教你如何科举中状元？</a></li><li><span class="click">19</span> <a class="sign" href="/all/book/2_21_8______1.html" target="_blank">[东方玄幻]</a> <a class="title" href="//www.17k.com/book/3676468.html" title="蓝猫引主入仙侠" target="_blank">蓝猫引主入仙侠</a></li><li><span class="click">19</span> <a class="sign" href="/all/book/2_21_83______1.html" target="_blank">[异界大陆]</a> <a class="title" href="//www.17k.com/book/3673326.html" title="逆道龙凰，执剑镇万寰" target="_blank">逆道龙凰，执剑镇万寰</a></li><li><span class="click">17</span> <a class="sign" href="/all/book/2_22_93______1.html" target="_blank">[架空历史]</a> <a class="title" href="//www.17k.com/book/3673224.html" title="从将门弃子到摄政天下" target="_blank">从将门弃子到摄政天下</a></li>
+                <li><a target="_blank" class="more" href="/top/refactor/top100/06_vipclick/06_vipclick_new_top_100_pc.html"></a></li>
+                <script type="text/javascript">
+                    Q.topPage(Q.lastTag('ul'));
+                </script>
+            </ul>
+        </div>
+        <div class="XSB_CONT" style="display: none">
+            <ul class="Top2">
+                
+                <!--"/v2/fragment/9/3439.html" -->
+                 <li><a class="author" href="//user.17k.com/see/www/?userId=16439338" target="_blank">风御九秋</a> <a class="sign" href="/all/book/2_24_9_0_0_2_0_0_1.html"target="_blank">[古典仙侠]</a> <a class="title" href="//www.17k.com/book/3328785.html" target="_blank">长生</a></li> <li><a class="author" href="//user.17k.com/see/www/?userId=26716073" target="_blank">伪戒</a> <a class="sign" href="/all/book/2_14_128_0_0_2_0_0_1.html"target="_blank">[末世危机]</a> <a class="title" href="//www.17k.com/book/3381946.html" target="_blank">风起龙城</a></li> <li><a class="author" href="//user.17k.com/see/www/?userId=43399759" target="_blank">方千金</a> <a class="sign" href="/all/book/2_3_3_0_0_2_0_0_1.html"target="_blank">[都市生活]</a> <a class="title" href="//www.17k.com/book/3367713.html" target="_blank">大国上医</a></li> <li><a class="author" href="//user.17k.com/see/www/?userId=38917527" target="_blank">观棋</a> <a class="sign" href="/all/book/2_21_8_0_0_2_0_0_1.html"target="_blank">[东方玄幻]</a> <a class="title" href="//www.17k.com/book/3366816.html" target="_blank">仙穹彼岸</a></li> <li><a class="author" href="//user.17k.com/see/www/?userId=78174915" target="_blank">墨染清辉</a> <a class="sign" href="/all/book/2_22_93_0_0_2_0_0_1.html"target="_blank">[架空历史]</a> <a class="title" href="//www.17k.com/book/3359081.html" target="_blank">逍遥小捕快</a></li> <li><a class="author" href="//user.17k.com/see/www/?userId=59901577" target="_blank">戎笔江山</a> <a class="sign" href="/all/book/2_21_8_0_0_2_0_0_1.html"target="_blank">[东方玄幻]</a> <a class="title" href="//www.17k.com/book/3362538.html" target="_blank">玄幻：我家老祖超无敌</a></li> <li><a class="author" href="//user.17k.com/see/www/?userId=60130849" target="_blank">苗棋淼</a> <a class="sign" href="/all/book/2_29_179_0_0_2_0_0_1.html"target="_blank">[民间奇谈]</a> <a class="title" href="//www.17k.com/book/3304149.html" target="_blank">阳间借命人</a></li> <li><a class="author" href="//user.17k.com/see/www/?userId=54924784" target="_blank">岐峰</a> <a class="sign" href="/all/book/2_14_129_0_0_2_0_0_1.html"target="_blank">[进化变异]</a> <a class="title" href="//www.17k.com/book/3352113.html" target="_blank">浩劫余生</a></li> <li><a class="author" href="//user.17k.com/see/www/?userId=49421669" target="_blank">在下燕十三</a> <a class="sign" href="/all/book/2_21_8_0_0_2_0_0_1.html"target="_blank">[东方玄幻]</a> <a class="title" href="//www.17k.com/book/3329053.html" target="_blank">蜀山签到三千年，出关陆地剑仙</a></li> <li><a class="author" href="//user.17k.com/see/www/?userId=84433178" target="_blank">一魁梧大汉</a> <a class="sign" href="/all/book/2_21_83_0_0_2_0_0_1.html"target="_blank">[异界大陆]</a> <a class="title" href="//www.17k.com/book/3372412.html" target="_blank">邪灵世界：我以肉身横推此世</a></li>
+            </ul>
+        </div>
+        <script type="text/javascript">
+            Q.tab(document.getElementById('XSB_TAB').getElementsByTagName('a'), Q('.XSB_CONT'))
+        </script>
+    </div>
+
+		<div class="QZZJ">
+			<div class="Title1">
+				<h2 class="tit">全站最佳</h2>
+				<div class="box">
+					<div class="Tab_tit" id="QZZJ_TAB">
+						<a class="now" href="">全站</a>
+						| <a href="">男生</a>
+						| <a href="">女生</a>
+					</div>
+				</div>
+			</div>
+			<dl class="QZZJ_CONT BookList">
+				
+				<dd class="one"><a href="//www.17k.com/book/3621881.html" target="_blank"><img src="//cdn.static.17k.com/book/189x272/81/18/3621881.jpg-180x240?v=1742175764000" alt="" /></a><h3><a href="//www.17k.com/book/3621881.html" target="_blank">烧错香，供错魂，女鬼大佬赖上门</a></h3><p class="author">作者：<a href="//user.17k.com/see/www/?userId=75806984" target="_blank">姬道人</a></p><p class="info"><a href="//www.17k.com/book/3621881.html" target="_blank">鬼节上错坟，竟被绝色女鬼半夜赖上门！</a></p></dd><dd><a href="//www.17k.com/book/3558189.html" target="_blank"><img src="//cdn.static.17k.com/book/189x272/89/81/3558189.jpg-180x240?v=1689319836000" alt="" /></a><h3><a href="//www.17k.com/book/3558189.html" target="_blank">这位诗仙要退婚</a></h3><p class="author">作者：<a href="//user.17k.com/see/www/?userId=78389712" target="_blank">人世几春秋</a></p><p class="info"><a href="//www.17k.com/book/3558189.html" target="_blank">开局罪臣之子，惨遭退婚，文道震京师，商道通九州，武道定山河！</a></p></dd><dd><a href="//www.17k.com/book/3626046.html" target="_blank"><img src="//cdn.static.17k.com/book/189x272/46/60/3626046.jpg-180x240?v=1744696546000" alt="" /></a><h3><a href="//www.17k.com/book/3626046.html" target="_blank">这野史，怎么全成真了？</a></h3><p class="author">作者：<a href="//user.17k.com/see/www/?userId=75773141" target="_blank">城神</a></p><p class="info"><a href="//www.17k.com/book/3626046.html" target="_blank"> 江哲穿越获得沙盘演化系统。现实为蓝图，连接过去，完全影响现在。</a></p></dd><dd><a href="//www.17k.com/book/3628519.html" target="_blank"><img src="//cdn.static.17k.com/book/189x272/19/85/3628519.jpg-180x240?v=1747304200000" alt="" /></a><h3><a href="//www.17k.com/book/3628519.html" target="_blank">军婚七零，资本家小姐随军一胎三宝</a></h3><p class="author">作者：<a href="//user.17k.com/see/www/?userId=104112407" target="_blank">仙灵女巫</a></p><p class="info"><a href="//www.17k.com/book/3628519.html" target="_blank">重生七零搬空渣父全家，资本家小姐带空间和读心术，随军一胎三宝</a></p></dd>
+			</dl>
+			<dl class="QZZJ_CONT BookList" style="display: none">
+				
+				<dd class="one"><a href="//www.17k.com/book/3434527.html" target="_blank"><img src="//cdn.static.17k.com/book/189x272/27/45/3434527.jpg-180x240?v=1651832935000" alt="" /></a><h3><a href="//www.17k.com/book/3434527.html" target="_blank">医武狂婿</a></h3><p class="author">作者：<a href="//user.17k.com/see/www/?userId=56200962" target="_blank">青春换糖</a></p><p class="info"><a href="//www.17k.com/book/3434527.html" target="_blank">洞房的时候，才发现新娘竟然是女朋友的堂妹。</a></p></dd><dd><a href="//www.17k.com/book/3455447.html" target="_blank"><img src="//cdn.static.17k.com/book/189x272/47/54/3455447.jpg-180x240?v=1657269343000" alt="" /></a><h3><a href="//www.17k.com/book/3455447.html" target="_blank">大明：家父永乐，永镇山河</a></h3><p class="author">作者：<a href="//user.17k.com/see/www/?userId=77967340" target="_blank">朕闻上古</a></p><p class="info"><a href="//www.17k.com/book/3455447.html" target="_blank">大明:革新财政，整顿吏治，七下西洋，南征北伐，永乐盛世，万国来朝。</a></p></dd><dd><a href="//www.17k.com/book/3453007.html" target="_blank"><img src="//cdn.static.17k.com/book/189x272/07/30/3453007.jpg-180x240?v=1658459184000" alt="" /></a><h3><a href="//www.17k.com/book/3453007.html" target="_blank">逍遥小仙农</a></h3><p class="author">作者：<a href="//user.17k.com/see/www/?userId=76130404" target="_blank">辣条一块钱</a></p><p class="info"><a href="//www.17k.com/book/3453007.html" target="_blank">乡村小伙超无敌，养鱼虾种仙果，万兽臣服，明星富商膜拜，建设桃源仙境</a></p></dd><dd><a href="//www.17k.com/book/3460542.html" target="_blank"><img src="//cdn.static.17k.com/book/189x272/42/05/3460542.jpg-180x240?v=1677832936000" alt="" /></a><h3><a href="//www.17k.com/book/3460542.html" target="_blank">收尸档案</a></h3><p class="author">作者：<a href="//user.17k.com/see/www/?userId=97311319" target="_blank">张无忍</a></p><p class="info"><a href="//www.17k.com/book/3460542.html" target="_blank">每一具尸体里面，其实都藏有很多不为人知的秘密。你，知道多少？</a></p></dd>
+			</dl>
+			<dl class="QZZJ_CONT BookList" style="display: none">
+				
+				<dd class="one"><a href="//www.17k.com/book/3406723.html" target="_blank"><img src="//cdn.static.17k.com/book/189x272/23/67/3406723.jpg-180x240?v=1645062827000" alt="" /></a><h3><a href="//www.17k.com/book/3406723.html" target="_blank">空间存千亿物资，后娘带崽去逃荒</a></h3><p class="author">作者：<a href="//user.17k.com/see/www/?userId=75016528" target="_blank">米花花</a></p><p class="info"><a href="//www.17k.com/book/3406723.html" target="_blank">偏心后娘空间千亿物资，带崽逃荒，生火做饭吃饱饱。</a></p></dd><dd><a href="//www.17k.com/book/3408595.html" target="_blank"><img src="//cdn.static.17k.com/book/189x272/95/85/3408595.jpg-180x240?v=1645710463000" alt="" /></a><h3><a href="//www.17k.com/book/3408595.html" target="_blank">重生七零，带着百亿医疗空间报效祖国</a></h3><p class="author">作者：<a href="//user.17k.com/see/www/?userId=76379836" target="_blank">红鱼籽</a></p><p class="info"><a href="//www.17k.com/book/3408595.html" target="_blank">医药大佬带着百亿医疗空间重生七零年代，带领家人发家致富，报效祖国。</a></p></dd><dd><a href="//www.17k.com/book/3409309.html" target="_blank"><img src="//cdn.static.17k.com/book/189x272/09/93/3409309.jpg-180x240?v=1648865184000" alt="" /></a><h3><a href="//www.17k.com/book/3409309.html" target="_blank">穿越远古携千亿物资帮反派养崽崽</a></h3><p class="author">作者：<a href="//user.17k.com/see/www/?userId=43100473" target="_blank">塔花树</a></p><p class="info"><a href="//www.17k.com/book/3409309.html" target="_blank">穿成兽世炮灰女配，手握千亿物资养崽崽，大反派快洗白白等我来攻略！</a></p></dd><dd><a href="//www.17k.com/book/3411557.html" target="_blank"><img src="//cdn.static.17k.com/book/189x272/57/15/3411557.jpg-180x240?v=1646704817000" alt="" /></a><h3><a href="//www.17k.com/book/3411557.html" target="_blank">农门长姐：我娇养了五个大佬弟弟</a></h3><p class="author">作者：<a href="//user.17k.com/see/www/?userId=60959010" target="_blank">香奈儿不香</a></p><p class="info"><a href="//www.17k.com/book/3411557.html" target="_blank">农门长姐凭空间闷声发大财，斗渣渣，虐极品，顺带培养出五个大佬弟弟！</a></p></dd>
+			</dl>
+			<script type="text/javascript">
+				k.tabs(k('#QZZJ_TAB a'), k('.QZZJ_CONT.BookList'))
+			</script>
+		</div>
+	</div>
+	<div class="Banner_ad" id="BAIDU_BANNER3"></div>
+	<div class="Main_3">
+		<div class="BJTJ">
+			<div class="Title1">
+				<h2 class="tit">编辑推荐</h2>
+			</div>
+			<div class="Tab_tit" id="BJTJ_TAB">
+				<a href="">免费好书</a>
+				|
+				<a class="now" href="">VIP好书</a>
+			</div>
+			<ul class="BJTJ_CONT Top1" style="display:none">
+				
+				<li><a class="sign" href="/all/book/2_21_83_0_0_2_0_0_1.html" target=_blank">[异界大陆] </a><a href="//www.17k.com/book/3454551.html" target="_blank">力道神尊</a></li><li><a class="sign" href="/all/book/2_21_83_0_0_2_0_0_1.html" target=_blank">[异界大陆] </a><a href="//www.17k.com/book/3458795.html" target="_blank">玄幻：上交机缘，…</a></li><li><a class="sign" href="/all/book/2_21_84_0_0_2_0_0_1.html" target=_blank">[异术超能] </a><a href="//www.17k.com/book/3439645.html" target="_blank">道诡提灯人</a></li><li><a class="sign" href="/all/book/2_22_93_0_0_2_0_0_1.html" target=_blank">[架空历史] </a><a href="//www.17k.com/book/3452953.html" target="_blank">我在古代直播带货</a></li><li><a class="sign" href="/all/book/2_21_83_0_0_2_0_0_1.html" target=_blank">[异界大陆] </a><a href="//www.17k.com/book/3437761.html" target="_blank">贸易诸天：一年之…</a></li><li><a class="sign" href="/all/book/2_24_2_0_0_2_0_0_1.html" target=_blank">[传统武侠] </a><a href="//www.17k.com/book/3418653.html" target="_blank">浪起江湖</a></li><li><a class="sign" href="/all/book/2_3_3_0_0_2_0_0_1.html" target=_blank">[都市生活] </a><a href="//www.17k.com/book/3399857.html" target="_blank">潜龙神医</a></li><li><a class="sign" href="/all/book/2_3_87_0_0_2_0_0_1.html" target=_blank">[都市异能] </a><a href="//www.17k.com/book/3447803.html" target="_blank">花都邪医俏总裁</a></li><li><a class="sign" href="/all/book/2_22_93_0_0_2_0_0_1.html" target=_blank">[架空历史] </a><a href="//www.17k.com/book/3436702.html" target="_blank">大明第一纨绔</a></li><li><a class="sign" href="/all/book/3_17_134_0_0_2_0_0_1.html" target=_blank">[总裁豪门] </a><a href="//www.17k.com/book/3457990.html" target="_blank">真千金住狗窝？马…</a></li><li><a class="sign" href="/all/book/3_5_165_0_0_2_0_0_1.html" target=_blank">[空间种田] </a><a href="//www.17k.com/book/3453440.html" target="_blank">重生农女：种田暴…</a></li><li><a class="sign" href="/all/book/3_17_134_0_0_2_0_0_1.html" target=_blank">[总裁豪门] </a><a href="//www.17k.com/book/3412256.html" target="_blank">福宝三岁半，她被…</a></li><li><a class="sign" href="/all/book/3_5_10_0_0_2_0_0_1.html" target=_blank">[宫斗权谋] </a><a href="//www.17k.com/book/3459721.html" target="_blank">退退退！团宠小公…</a></li><li><a class="sign" href="/all/book/3_5_10_0_0_2_0_0_1.html" target=_blank">[宫斗权谋] </a><a href="//www.17k.com/book/3457287.html" target="_blank">清穿：失宠福晋为…</a></li><li><a class="sign" href="/all/book/3_5_133_0_0_2_0_0_1.html" target=_blank">[架空历史] </a><a href="//www.17k.com/book/3446253.html" target="_blank">驸马太野太茶！长…</a></li><li><a class="sign" href="/all/book/3_5_7_0_0_2_0_0_1.html" target=_blank">[豪门宅斗] </a><a href="//www.17k.com/book/3431157.html" target="_blank">医毒双绝拽妃飒翻天</a></li><li><a class="sign" href="/all/book/3_18_171_0_0_2_0_0_1.html" target=_blank">[末世危机] </a><a href="//www.17k.com/book/3397130.html" target="_blank">无限游戏：我靠抽…</a></li><li><a class="sign" href="/all/book/3_5_165_0_0_2_0_0_1.html" target=_blank">[空间种田] </a><a href="//www.17k.com/book/3451418.html" target="_blank">娇滴滴农女一笑，…</a></li>
+
+			</ul>
+			<ul class="BJTJ_CONT Top1">
+				
+				<li><a class="sign" href="/all/book/2_21_83_0_0_2_0_0_1.html" target=_blank">[异界大陆] </a><a href="//www.17k.com/book/1398783.html" target="_blank">九星霸体诀</a></li><li><a class="sign" href="/all/book/2_21_83_0_0_2_0_0_1.html" target=_blank">[异界大陆] </a><a href="//www.17k.com/book/83528.html" target="_blank">混沌剑神</a></li><li><a class="sign" href="/all/book/2_3_3_0_0_2_0_0_1.html" target=_blank">[都市生活] </a><a href="//www.17k.com/book/3622820.html" target="_blank">天棺秘藏</a></li><li><a class="sign" href="/all/book/2_22_93_0_0_2_0_0_1.html" target=_blank">[架空历史] </a><a href="//www.17k.com/book/3626025.html" target="_blank">小富即安？不，本…</a></li><li><a class="sign" href="/all/book/2_21_8_0_0_2_0_0_1.html" target=_blank">[东方玄幻] </a><a href="//www.17k.com/book/3382094.html" target="_blank">灵道纪</a></li><li><a class="sign" href="/all/book/2_21_8_0_0_2_0_0_1.html" target=_blank">[东方玄幻] </a><a href="//www.17k.com/book/69646.html" target="_blank">不灭武尊</a></li><li><a class="sign" href="/all/book/2_22_93_0_0_2_0_0_1.html" target=_blank">[架空历史] </a><a href="//www.17k.com/book/3557184.html" target="_blank">世子凶猛：这个小…</a></li><li><a class="sign" href="/all/book/2_21_8_0_0_2_0_0_1.html" target=_blank">[东方玄幻] </a><a href="//www.17k.com/book/686132.html" target="_blank">道神</a></li><li><a class="sign" href="/all/book/2_21_1_0_0_2_0_0_1.html" target=_blank">[西方奇幻] </a><a href="//www.17k.com/book/590918.html" target="_blank">光灵行传</a></li><li><a class="sign" href="/all/book/3_17_136_0_0_2_0_0_1.html" target=_blank">[年代种田] </a><a href="//www.17k.com/book/3416376.html" target="_blank">重生八零：嫁给退…</a></li><li><a class="sign" href="/all/book/3_5_165_0_0_2_0_0_1.html" target=_blank">[空间种田] </a><a href="//www.17k.com/book/3444435.html" target="_blank">全家穿越后，我靠…</a></li><li><a class="sign" href="/all/book/3_17_166_0_0_2_0_0_1.html" target=_blank">[现代重生] </a><a href="//www.17k.com/book/3441265.html" target="_blank">网红逆袭：直播露…</a></li><li><a class="sign" href="/all/book/3_17_166_0_0_2_0_0_1.html" target=_blank">[现代重生] </a><a href="//www.17k.com/book/3441265.html" target="_blank">网红逆袭：直播露…</a></li><li><a class="sign" href="/all/book/3_17_167_0_0_2_0_0_1.html" target=_blank">[娱乐明星] </a><a href="//www.17k.com/book/3375670.html" target="_blank">选秀综艺后，玄学…</a></li><li><a class="sign" href="/all/book/3_17_167_0_0_2_0_0_1.html" target=_blank">[娱乐明星] </a><a href="//www.17k.com/book/3375670.html" target="_blank">选秀综艺后，玄学…</a></li><li><a class="sign" href="/all/book/3_5_165_0_0_2_0_0_1.html" target=_blank">[空间种田] </a><a href="//www.17k.com/book/3453440.html" target="_blank">重生农女：种田暴…</a></li><li><a class="sign" href="/all/book/3_5_165_0_0_2_0_0_1.html" target=_blank">[空间种田] </a><a href="//www.17k.com/book/3453440.html" target="_blank">重生农女：种田暴…</a></li><li><a class="sign" href="/all/book/3_17_134_0_0_2_0_0_1.html" target=_blank">[总裁豪门] </a><a href="//www.17k.com/book/3441560.html" target="_blank">嫁给植物人老公后…</a></li>
+			</ul>
+			<script type="text/javascript">
+				k.tabs(k('#BJTJ_TAB a'), k('.BJTJ_CONT'), 'onclick')
+			</script>
+		</div>
+		<!--男生会员点击榜-->
+		<div class="NS">
+        <div class="Title1"><h2 class="tit">男生作品点击榜</h2></div>
+        <div class="Tab_tit" id="NS_TAB">
+            <a class="now" href="">全站</a> | <a href="">都市</a> | <a href="">玄幻</a> | <a href="">军史</a> | <a href="">仙侠</a> <br /> <a href="">科幻</a> | <a href="">游戏</a> | <a href="">悬疑</a> | <a href="">轻小说</a>
+        </div>
+  <ul class="NS_CONT Top1"><li><span class="click">1109293</span> <span class="num r">1</span> <a class="sign" href="/all/book/2_22_93______1.html" target="_blank">[架空历史]</a> <a href="//www.17k.com/book/3669552.html" title="娘子，我真不想考..." target="_blank">娘子，我真不想考...</a> <a class="book" href="//www.17k.com/book/3669552.html" target="_blank" class="t1"> <img src="https://cdn.static.17k.com/book/189x272/52/95/3669552.jpg-189x272?v=1785403877000" alt="娘子，我真不想考..."/>    穿越成赘婿，娘子是位绝色美人，可惜她看我的眼神，像在看一块朽木。
+       “夫君，考个功名吧，不然我云家真...</a></li><li><span class="click">65379</span> <span class="num r">2</span> <a class="sign" href="/all/book/2_21_8______1.html" target="_blank">[东方玄幻]</a> <a href="//www.17k.com/book/493239.html" title="修罗武神" target="_blank">修罗武神</a></li><li><span class="click">41329</span> <span class="num r">3</span> <a class="sign" href="/all/book/2_3_87______1.html" target="_blank">[都市异能]</a> <a href="//www.17k.com/book/3661094.html" title="分身三地十年约" target="_blank">分身三地十年约</a></li><li><span class="click">35306</span> <span class="num">4</span> <a class="sign" href="/all/book/2_22_4______1.html" target="_blank">[历史穿越]</a> <a href="//www.17k.com/book/3676283.html" title="大明之三十六将" target="_blank">大明之三十六将</a></li><li><span class="click">34515</span> <span class="num">5</span> <a class="sign" href="/all/book/2_22_93______1.html" target="_blank">[架空历史]</a> <a href="//www.17k.com/book/3675375.html" title="大宋三十六将" target="_blank">大宋三十六将</a></li><li><span class="click">10312</span> <span class="num">6</span> <a class="sign" href="/all/book/2_14_130______1.html" target="_blank">[时空穿梭]</a> <a href="//www.17k.com/book/3583700.html" title="星痕之门" target="_blank">星痕之门</a></li><li><span class="click">8909</span> <span class="num">7</span> <a class="sign" href="/all/book/2_21_8______1.html" target="_blank">[东方玄幻]</a> <a href="//www.17k.com/book/3006464.html" title="万古第一神" target="_blank">万古第一神</a></li><li><span class="click">6544</span> <span class="num">8</span> <a class="sign" href="/all/book/2_21_83______1.html" target="_blank">[异界大陆]</a> <a href="//www.17k.com/book/1398783.html" title="九星霸体诀" target="_blank">九星霸体诀</a></li><li><span class="click">4880</span> <span class="num">9</span> <a class="sign" href="/all/book/2_3_3______1.html" target="_blank">[都市生活]</a> <a href="//www.17k.com/book/3660623.html" title="东北风云：黑血漫..." target="_blank">东北风云：黑血漫...</a></li><li><span class="click">4066</span> <span class="num">10</span> <a class="sign" href="/all/book/2_3_92______1.html" target="_blank">[都市激战]</a> <a href="//www.17k.com/book/1741975.html" title="女总裁的全能兵王" target="_blank">女总裁的全能兵王</a></li><li><a target="_blank" class="more" href="/top/refactor/top100/06_vipclick/06_vipclick_cnl_man_top_100_pc.html"></a></li></ul><ul class="NS_CONT Top1" style="display:none"><li><span class="click">41329</span> <span class="num r">1</span> <a class="sign" href="/all/book/2_3_87______1.html" target="_blank">[都市异能]</a> <a href="//www.17k.com/book/3661094.html" title="分身三地十年约" target="_blank">分身三地十年约</a> <a class="book" href="//www.17k.com/book/3661094.html" target="_blank" class="t1"> <img src="https://cdn.static.17k.com/book/189x272/94/10/3661094.jpg-189x272?v=1783820748000" alt="分身三地十年约"/>          社会青年翁一在杭州灵隐寺游玩时行善遇袭昏迷，醒来后成了老天的宠儿，懵懵懂懂闯入一个不为世人熟知的”江...</a></li><li><span class="click">4880</span> <span class="num r">2</span> <a class="sign" href="/all/book/2_3_3______1.html" target="_blank">[都市生活]</a> <a href="//www.17k.com/book/3660623.html" title="东北风云：黑血漫..." target="_blank">东北风云：黑血漫...</a></li><li><span class="click">4066</span> <span class="num r">3</span> <a class="sign" href="/all/book/2_3_92______1.html" target="_blank">[都市激战]</a> <a href="//www.17k.com/book/1741975.html" title="女总裁的全能兵王" target="_blank">女总裁的全能兵王</a></li><li><span class="click">1807</span> <span class="num">4</span> <a class="sign" href="/all/book/2_3_92______1.html" target="_blank">[都市激战]</a> <a href="//www.17k.com/book/2809894.html" title="近战狂兵" target="_blank">近战狂兵</a></li><li><span class="click">1664</span> <span class="num">5</span> <a class="sign" href="/all/book/2_3_87______1.html" target="_blank">[都市异能]</a> <a href="//www.17k.com/book/3630118.html" title="全体起立！真龙归..." target="_blank">全体起立！真龙归...</a></li><li><span class="click">1368</span> <span class="num">6</span> <a class="sign" href="/all/book/2_3_3______1.html" target="_blank">[都市生活]</a> <a href="//www.17k.com/book/3622820.html" title="天棺秘藏" target="_blank">天棺秘藏</a></li><li><span class="click">641</span> <span class="num">7</span> <a class="sign" href="/all/book/2_3_89______1.html" target="_blank">[都市重生]</a> <a href="//www.17k.com/book/814433.html" title="神级插班生" target="_blank">神级插班生</a></li><li><span class="click">392</span> <span class="num">8</span> <a class="sign" href="/all/book/2_3_89______1.html" target="_blank">[都市重生]</a> <a href="//www.17k.com/book/3676241.html" title="重生九零：明天别..." target="_blank">重生九零：明天别...</a></li><li><span class="click">384</span> <span class="num">9</span> <a class="sign" href="/all/book/2_3_3______1.html" target="_blank">[都市生活]</a> <a href="//www.17k.com/book/3653308.html" title="卧虎" target="_blank">卧虎</a></li><li><span class="click">341</span> <span class="num">10</span> <a class="sign" href="/all/book/2_3_3______1.html" target="_blank">[都市生活]</a> <a href="//www.17k.com/book/3650723.html" title="我的江湖岁月" target="_blank">我的江湖岁月</a></li><li><a target="_blank" class="more" href="/top/refactor/top100/06_vipclick/06_vipclick_cnl_man_top_100_pc.html"></a></li></ul><ul class="NS_CONT Top1" style="display:none"><li><span class="click">65379</span> <span class="num r">1</span> <a class="sign" href="/all/book/2_21_8______1.html" target="_blank">[东方玄幻]</a> <a href="//www.17k.com/book/493239.html" title="修罗武神" target="_blank">修罗武神</a> <a class="book" href="//www.17k.com/book/493239.html" target="_blank" class="t1"> <img src="https://cdn.static.17k.com/book/189x272/39/32/493239.jpg-189x272?v=1657297974000" alt="修罗武神"/>【全网超火爆的网络小说】
+论潜力，不算天才，可玄功武技，皆可无师自通。
+论实力，任凭你有万千至宝，但定不敌我界灵大军。
+...</a></li><li><span class="click">8909</span> <span class="num r">2</span> <a class="sign" href="/all/book/2_21_8______1.html" target="_blank">[东方玄幻]</a> <a href="//www.17k.com/book/3006464.html" title="万古第一神" target="_blank">万古第一神</a></li><li><span class="click">6544</span> <span class="num r">3</span> <a class="sign" href="/all/book/2_21_83______1.html" target="_blank">[异界大陆]</a> <a href="//www.17k.com/book/1398783.html" title="九星霸体诀" target="_blank">九星霸体诀</a></li><li><span class="click">3735</span> <span class="num">4</span> <a class="sign" href="/all/book/2_21_8______1.html" target="_blank">[东方玄幻]</a> <a href="//www.17k.com/book/450860.html" title="百炼飞升录" target="_blank">百炼飞升录</a></li><li><span class="click">3218</span> <span class="num">5</span> <a class="sign" href="/all/book/2_21_83______1.html" target="_blank">[异界大陆]</a> <a href="//www.17k.com/book/3646683.html" title="天地人殇" target="_blank">天地人殇</a></li><li><span class="click">3150</span> <span class="num">6</span> <a class="sign" href="/all/book/2_21_83______1.html" target="_blank">[异界大陆]</a> <a href="//www.17k.com/book/83528.html" title="混沌剑神" target="_blank">混沌剑神</a></li><li><span class="click">1014</span> <span class="num">7</span> <a class="sign" href="/all/book/2_21_8______1.html" target="_blank">[东方玄幻]</a> <a href="//www.17k.com/book/3382094.html" title="灵道纪" target="_blank">灵道纪</a></li><li><span class="click">555</span> <span class="num">8</span> <a class="sign" href="/all/book/2_21_84______1.html" target="_blank">[异术超能]</a> <a href="//www.17k.com/book/3583749.html" title="禁咒师短命？我拥..." target="_blank">禁咒师短命？我拥...</a></li><li><span class="click">496</span> <span class="num">9</span> <a class="sign" href="/all/book/2_21_8______1.html" target="_blank">[东方玄幻]</a> <a href="//www.17k.com/book/3674464.html" title="龙神古尊" target="_blank">龙神古尊</a></li><li><span class="click">376</span> <span class="num">10</span> <a class="sign" href="/all/book/2_21_8______1.html" target="_blank">[东方玄幻]</a> <a href="//www.17k.com/book/569929.html" title="生生不灭" target="_blank">生生不灭</a></li><li><a target="_blank" class="more" href="/top/refactor/top100/06_vipclick/06_vipclick_cnl_man_top_100_pc.html"></a></li></ul><ul class="NS_CONT Top1" style="display:none"><li><span class="click">1109293</span> <span class="num r">1</span> <a class="sign" href="/all/book/2_22_93______1.html" target="_blank">[架空历史]</a> <a href="//www.17k.com/book/3669552.html" title="娘子，我真不想考..." target="_blank">娘子，我真不想考...</a> <a class="book" href="//www.17k.com/book/3669552.html" target="_blank" class="t1"> <img src="https://cdn.static.17k.com/book/189x272/52/95/3669552.jpg-189x272?v=1785403877000" alt="娘子，我真不想考..."/>    穿越成赘婿，娘子是位绝色美人，可惜她看我的眼神，像在看一块朽木。
+       “夫君，考个功名吧，不然我云家真...</a></li><li><span class="click">35306</span> <span class="num r">2</span> <a class="sign" href="/all/book/2_22_4______1.html" target="_blank">[历史穿越]</a> <a href="//www.17k.com/book/3676283.html" title="大明之三十六将" target="_blank">大明之三十六将</a></li><li><span class="click">34515</span> <span class="num r">3</span> <a class="sign" href="/all/book/2_22_93______1.html" target="_blank">[架空历史]</a> <a href="//www.17k.com/book/3675375.html" title="大宋三十六将" target="_blank">大宋三十六将</a></li><li><span class="click">494</span> <span class="num">4</span> <a class="sign" href="/all/book/2_22_94______1.html" target="_blank">[军旅生涯]</a> <a href="//www.17k.com/book/3671225.html" title="武警：兵王之路" target="_blank">武警：兵王之路</a></li><li><span class="click">200</span> <span class="num">5</span> <a class="sign" href="/all/book/2_22_93______1.html" target="_blank">[架空历史]</a> <a href="//www.17k.com/book/3647120.html" title="白衣天子" target="_blank">白衣天子</a></li><li><span class="click">186</span> <span class="num">6</span> <a class="sign" href="/all/book/2_22_93______1.html" target="_blank">[架空历史]</a> <a href="//www.17k.com/book/3676833.html" title="穿越黄巾残部，重..." target="_blank">穿越黄巾残部，重...</a></li><li><span class="click">163</span> <span class="num">7</span> <a class="sign" href="/all/book/2_22_93______1.html" target="_blank">[架空历史]</a> <a href="//www.17k.com/book/3620858.html" title="打猎：带甲百万，..." target="_blank">打猎：带甲百万，...</a></li><li><span class="click">120</span> <span class="num">8</span> <a class="sign" href="/all/book/2_22_93______1.html" target="_blank">[架空历史]</a> <a href="//www.17k.com/book/3626025.html" title="小富即安？不，本..." target="_blank">小富即安？不，本...</a></li><li><span class="click">111</span> <span class="num">9</span> <a class="sign" href="/all/book/2_22_93______1.html" target="_blank">[架空历史]</a> <a href="//www.17k.com/book/3671426.html" title="寒门弃子，自立门..." target="_blank">寒门弃子，自立门...</a></li><li><span class="click">92</span> <span class="num">10</span> <a class="sign" href="/all/book/2_22_4______1.html" target="_blank">[历史穿越]</a> <a href="//www.17k.com/book/3676109.html" title="焚书劫" target="_blank">焚书劫</a></li><li><a target="_blank" class="more" href="/top/refactor/top100/06_vipclick/06_vipclick_cnl_man_top_100_pc.html"></a></li></ul><ul class="NS_CONT Top1" style="display:none"><li><span class="click">493</span> <span class="num r">1</span> <a class="sign" href="/all/book/2_24_124______1.html" target="_blank">[历史武侠]</a> <a href="//www.17k.com/book/3668745.html" title="风尘侍卫" target="_blank">风尘侍卫</a> <a class="book" href="//www.17k.com/book/3668745.html" target="_blank" class="t1"> <img src="https://cdn.static.17k.com/book/189x272/45/87/3668745.jpg-189x272?v=1788521296000" alt="风尘侍卫"/>宣德五年，1430年。
+ 
+这是明宣宗朱瞻基无过废后、朝野哗然的第二年。
+ 
+两年前宣宗以“无子多病”为由，废黜贤德无过...</a></li><li><span class="click">194</span> <span class="num r">2</span> <a class="sign" href="/all/book/2_24_9______1.html" target="_blank">[古典仙侠]</a> <a href="//www.17k.com/book/3676277.html" title="凡尘斩妖录" target="_blank">凡尘斩妖录</a></li><li><span class="click">130</span> <span class="num r">3</span> <a class="sign" href="/all/book/2_24_82______1.html" target="_blank">[奇幻修真]</a> <a href="//www.17k.com/book/3208372.html" title="混沌书" target="_blank">混沌书</a></li><li><span class="click">29</span> <span class="num">4</span> <a class="sign" href="/all/book/2_24_82______1.html" target="_blank">[奇幻修真]</a> <a href="//www.17k.com/book/3651562.html" title="仙道十二极" target="_blank">仙道十二极</a></li><li><span class="click">28</span> <span class="num">5</span> <a class="sign" href="/all/book/2_24_82______1.html" target="_blank">[奇幻修真]</a> <a href="//www.17k.com/book/3615103.html" title="黑木崖抄书百年，..." target="_blank">黑木崖抄书百年，...</a></li><li><span class="click">24</span> <span class="num">6</span> <a class="sign" href="/all/book/2_24_9______1.html" target="_blank">[古典仙侠]</a> <a href="//www.17k.com/book/3636573.html" title="长生：道观五十年..." target="_blank">长生：道观五十年...</a></li><li><span class="click">23</span> <span class="num">7</span> <a class="sign" href="/all/book/2_24_82______1.html" target="_blank">[奇幻修真]</a> <a href="//www.17k.com/book/3670978.html" title="修仙界第一差评师" target="_blank">修仙界第一差评师</a></li><li><span class="click">23</span> <span class="num">8</span> <a class="sign" href="/all/book/2_24_81______1.html" target="_blank">[现代修真]</a> <a href="//www.17k.com/book/3649594.html" title="不共天" target="_blank">不共天</a></li><li><span class="click">21</span> <span class="num">9</span> <a class="sign" href="/all/book/2_24_81______1.html" target="_blank">[现代修真]</a> <a href="//www.17k.com/book/3671887.html" title="太古通玄录" target="_blank">太古通玄录</a></li><li><span class="click">17</span> <span class="num">10</span> <a class="sign" href="/all/book/2_24_2______1.html" target="_blank">[传统武侠]</a> <a href="//www.17k.com/book/3635120.html" title="血日孤锋" target="_blank">血日孤锋</a></li><li><a target="_blank" class="more" href="/top/refactor/top100/06_vipclick/06_vipclick_cnl_man_top_100_pc.html"></a></li></ul><ul class="NS_CONT Top1" style="display:none"><li><span class="click">10312</span> <span class="num r">1</span> <a class="sign" href="/all/book/2_14_130______1.html" target="_blank">[时空穿梭]</a> <a href="//www.17k.com/book/3583700.html" title="星痕之门" target="_blank">星痕之门</a> <a class="book" href="//www.17k.com/book/3583700.html" target="_blank" class="t1"> <img src="https://cdn.static.17k.com/book/189x272/00/37/3583700.jpg-189x272?v=1710150510000" alt="星痕之门"/>世间有星门，入者皆成神。
+在监狱已服刑三年半的任也，突然被一位神秘人接见。
+对方说：“如果你愿意参加一个游戏，现在就可以...</a></li><li><span class="click">199</span> <span class="num r">2</span> <a class="sign" href="/all/book/2_14_128______1.html" target="_blank">[末世危机]</a> <a href="//www.17k.com/book/3674723.html" title="高温末世，女神抢..." target="_blank">高温末世，女神抢...</a></li><li><span class="click">100</span> <span class="num r">3</span> <a class="sign" href="/all/book/2_14_128______1.html" target="_blank">[末世危机]</a> <a href="//www.17k.com/book/3673740.html" title="末日废墟，我靠机..." target="_blank">末日废墟，我靠机...</a></li><li><span class="click">58</span> <span class="num">4</span> <a class="sign" href="/all/book/2_14_128______1.html" target="_blank">[末世危机]</a> <a href="//www.17k.com/book/3674533.html" title="末世狼行天下" target="_blank">末世狼行天下</a></li><li><span class="click">15</span> <span class="num">5</span> <a class="sign" href="/all/book/2_14_128______1.html" target="_blank">[末世危机]</a> <a href="//www.17k.com/book/3673638.html" title="航海求生：我看广..." target="_blank">航海求生：我看广...</a></li><li><span class="click">10</span> <span class="num">6</span> <a class="sign" href="/all/book/2_14_130______1.html" target="_blank">[时空穿梭]</a> <a href="//www.17k.com/book/3676608.html" title="末世轮回：我以时..." target="_blank">末世轮回：我以时...</a></li><li><span class="click">6</span> <span class="num">7</span> <a class="sign" href="/all/book/2_14_95______1.html" target="_blank">[星际战争]</a> <a href="//www.17k.com/book/3545480.html" title="地球人就要入侵我..." target="_blank">地球人就要入侵我...</a></li><li><span class="click">3</span> <span class="num">8</span> <a class="sign" href="/all/book/2_14_130______1.html" target="_blank">[时空穿梭]</a> <a href="//www.17k.com/book/3671278.html" title="万界穿越我把自己..." target="_blank">万界穿越我把自己...</a></li><li><span class="click">3</span> <span class="num">9</span> <a class="sign" href="/all/book/2_14_128______1.html" target="_blank">[末世危机]</a> <a href="//www.17k.com/book/3657843.html" title="末日之铁血征途" target="_blank">末日之铁血征途</a></li><li><span class="click">3</span> <span class="num">10</span> <a class="sign" href="/all/book/2_14_128______1.html" target="_blank">[末世危机]</a> <a href="//www.17k.com/book/3674507.html" title="灰雾锚定" target="_blank">灰雾锚定</a></li><li><a target="_blank" class="more" href="/top/refactor/top100/06_vipclick/06_vipclick_cnl_man_top_100_pc.html"></a></li></ul><ul class="NS_CONT Top1" style="display:none"><li><span class="click">194</span> <span class="num r">1</span> <a class="sign" href="/all/book/2_23_5______1.html" target="_blank">[虚拟网游]</a> <a href="//www.17k.com/book/2726194.html" title="重生之狂暴火法" target="_blank">重生之狂暴火法</a> <a class="book" href="//www.17k.com/book/2726194.html" target="_blank" class="t1"> <img src="https://cdn.static.17k.com/book/189x272/94/61/2726194.jpg-189x272?v=0" alt="重生之狂暴火法"/>带着200级三转大法师的记忆，陆阳重生回到了十年前，命运跟他开了一个玩笑，曾经失去过的，被夺走的，他都要重新拿回来。
+...</a></li><li><span class="click">3</span> <span class="num r">2</span> <a class="sign" href="/all/book/2_23_121______1.html" target="_blank">[游戏异界]</a> <a href="//www.17k.com/book/3502480.html" title="万族图鉴：你管这..." target="_blank">万族图鉴：你管这...</a></li><li><a target="_blank" class="more" href="/top/refactor/top100/06_vipclick/06_vipclick_cnl_man_top_100_pc.html"></a></li></ul><ul class="NS_CONT Top1" style="display:none"><li><span class="click">420</span> <span class="num r">1</span> <a class="sign" href="/all/book/2_29_179______1.html" target="_blank">[民间奇谈]</a> <a href="//www.17k.com/book/3563253.html" title="让你当收尸人，你..." target="_blank">让你当收尸人，你...</a> <a class="book" href="//www.17k.com/book/3563253.html" target="_blank" class="t1"> <img src="https://cdn.static.17k.com/book/189x272/53/32/3563253.jpg-189x272?v=1691044889000" alt="让你当收尸人，你..."/>解剖课上，尸体竟是我前女友……
+从那以后，我经历了许多匪夷所思的事情。
+只上不下，直通水库的停运公交车。
+医院里枝繁叶茂...</a></li><li><span class="click">285</span> <span class="num r">2</span> <a class="sign" href="/all/book/2_29_179______1.html" target="_blank">[民间奇谈]</a> <a href="//www.17k.com/book/3619785.html" title="葬活人，抬鬼棺，..." target="_blank">葬活人，抬鬼棺，...</a></li><li><span class="click">210</span> <span class="num r">3</span> <a class="sign" href="/all/book/2_29_180______1.html" target="_blank">[恐怖悬疑]</a> <a href="//www.17k.com/book/3581753.html" title="借阴骨，阎王妻" target="_blank">借阴骨，阎王妻</a></li><li><span class="click">56</span> <span class="num">4</span> <a class="sign" href="/all/book/2_29_180______1.html" target="_blank">[恐怖悬疑]</a> <a href="//www.17k.com/book/3654077.html" title="都市怪谈：相亲群..." target="_blank">都市怪谈：相亲群...</a></li><li><span class="click">35</span> <span class="num">5</span> <a class="sign" href="/all/book/2_29_182______1.html" target="_blank">[探险揭秘]</a> <a href="//www.17k.com/book/3669093.html" title="直播揭秘：女娲补..." target="_blank">直播揭秘：女娲补...</a></li><li><span class="click">34</span> <span class="num">6</span> <a class="sign" href="/all/book/2_29_180______1.html" target="_blank">[恐怖悬疑]</a> <a href="//www.17k.com/book/3675660.html" title="天生阴官？阳间叫..." target="_blank">天生阴官？阳间叫...</a></li><li><span class="click">10</span> <span class="num">7</span> <a class="sign" href="/all/book/2_29_180______1.html" target="_blank">[恐怖悬疑]</a> <a href="//www.17k.com/book/3447037.html" title="荒村物语" target="_blank">荒村物语</a></li><li><span class="click">10</span> <span class="num">8</span> <a class="sign" href="/all/book/2_29_179______1.html" target="_blank">[民间奇谈]</a> <a href="//www.17k.com/book/3670934.html" title="相亲走错坟，女鬼..." target="_blank">相亲走错坟，女鬼...</a></li><li><span class="click">7</span> <span class="num">9</span> <a class="sign" href="/all/book/2_29_179______1.html" target="_blank">[民间奇谈]</a> <a href="//www.17k.com/book/3675000.html" title="守禁人：民俗生死规" target="_blank">守禁人：民俗生死规</a></li><li><span class="click">7</span> <span class="num">10</span> <a class="sign" href="/all/book/2_29_180______1.html" target="_blank">[恐怖悬疑]</a> <a href="//www.17k.com/book/3666445.html" title="我在殡仪馆写作业" target="_blank">我在殡仪馆写作业</a></li><li><a target="_blank" class="more" href="/top/refactor/top100/06_vipclick/06_vipclick_cnl_man_top_100_pc.html"></a></li></ul><ul class="NS_CONT Top1" style="display:none"><li><span class="click">7</span> <span class="num r">1</span> <a class="sign" href="/all/book/2_30_186______1.html" target="_blank">[萌系小说]</a> <a href="//www.17k.com/book/3596037.html" title="足灵传奇" target="_blank">足灵传奇</a> <a class="book" href="//www.17k.com/book/3596037.html" target="_blank" class="t1"> <img src="https://cdn.static.17k.com/book/189x272/37/60/3596037.jpg-189x272?v=1788587201000" alt="足灵传奇"/>足控少年穿越到了一个裸足少女用脚当武器的世界？在这里，他将逐步结识性格各异、能力独特的伙伴，共同击败强敌，解救被奴役和觊...</a></li><li><a target="_blank" class="more" href="/top/refactor/top100/06_vipclick/06_vipclick_cnl_man_top_100_pc.html"></a></li></ul>
+        <script type="text/javascript">
+            Q.tab(document.getElementById('NS_TAB').getElementsByTagName('a'), Q('.NS_CONT'), 'onclick')
+        </script>
+    </div>
+
+		<!--女生会员点击榜-->
+		<div class="VS">
+        <div class="Title1"><h2 class="tit">女生作品点击榜</h2></div>
+        <div class="Tab_tit" id="VS_TAB">
+            <a class="now" href="">全站</a> | <a href="">古代言情</a> | <a href="">现代言情</a> | <a href="">幻想</a><br /> <a href="">浪漫青春</a>
+        </div>
+<ul class="VS_CONT Top1"><li><span class="click">290</span> <span class="num r">1</span> <a class="sign" href="/all/book/3_18_170______1.html" target="_blank">[未来科幻]</a> <a href="//www.17k.com/book/3670924.html" title="迷彩旧梦又逢君" target="_blank">迷彩旧梦又逢君</a> <a class="book" href="//www.17k.com/book/3670924.html" target="_blank" class="t1"> <img src="https://cdn.static.17k.com/book/189x272/24/09/3670924.jpg-189x272?v=1788686599000" alt="迷彩旧梦又逢君"/>林玲一度以为自己穿越了。
+ 
+她本是W星球中原国赫赫有名的文武大学校长，四十四岁，一生戎马。
+一觉醒来，意识却被困进一具...</a></li><li><span class="click">238</span> <span class="num r">2</span> <a class="sign" href="/all/book/3_17_26______1.html" target="_blank">[蜜爱甜宠]</a> <a href="//www.17k.com/book/3652710.html" title="小军嫂要离婚，冷..." target="_blank">小军嫂要离婚，冷...</a></li><li><span class="click">201</span> <span class="num r">3</span> <a class="sign" href="/all/book/3_18_173______1.html" target="_blank">[神话情缘]</a> <a href="//www.17k.com/book/3673752.html" title="倾世神女逆袭传" target="_blank">倾世神女逆袭传</a></li><li><span class="click">156</span> <span class="num">4</span> <a class="sign" href="/all/book/3_17_134______1.html" target="_blank">[总裁豪门]</a> <a href="//www.17k.com/book/3657193.html" title="小可怜闪婚带娃大..." target="_blank">小可怜闪婚带娃大...</a></li><li><span class="click">112</span> <span class="num">5</span> <a class="sign" href="/all/book/3_5_133______1.html" target="_blank">[架空历史]</a> <a href="//www.17k.com/book/3671230.html" title="恶毒女配只想苟，..." target="_blank">恶毒女配只想苟，...</a></li><li><span class="click">97</span> <span class="num">6</span> <a class="sign" href="/all/book/3_5_139______1.html" target="_blank">[古代重生]</a> <a href="//www.17k.com/book/3670175.html" title="伪白兔真实邪魅" target="_blank">伪白兔真实邪魅</a></li><li><span class="click">92</span> <span class="num">7</span> <a class="sign" href="/all/book/3_17_166______1.html" target="_blank">[现代重生]</a> <a href="//www.17k.com/book/3542603.html" title="重生归来，真千金..." target="_blank">重生归来，真千金...</a></li><li><span class="click">82</span> <span class="num">8</span> <a class="sign" href="/all/book/3_17_169______1.html" target="_blank">[浪漫纯爱]</a> <a href="//www.17k.com/book/3675286.html" title="两百万牵出个意外..." target="_blank">两百万牵出个意外...</a></li><li><span class="click">51</span> <span class="num">9</span> <a class="sign" href="/all/book/3_17_166______1.html" target="_blank">[现代重生]</a> <a href="//www.17k.com/book/3617671.html" title="马伏山纪事" target="_blank">马伏山纪事</a></li><li><span class="click">38</span> <span class="num">10</span> <a class="sign" href="/all/book/3_17_134______1.html" target="_blank">[总裁豪门]</a> <a href="//www.17k.com/book/3672314.html" title="恋爱从离婚开始" target="_blank">恋爱从离婚开始</a></li><li><a target="_blank" class="more" href="/top/refactor/top100/06_vipclick/06_vipclick_cnl_mm_top_100_pc.html"></a></li></ul><ul class="VS_CONT Top1" style="display:none"><li><span class="click">112</span> <span class="num r">1</span> <a class="sign" href="/all/book/3_5_133______1.html" target="_blank">[架空历史]</a> <a href="//www.17k.com/book/3671230.html" title="恶毒女配只想苟，..." target="_blank">恶毒女配只想苟，...</a> <a class="book" href="//www.17k.com/book/3671230.html" target="_blank" class="t1"> <img src="https://cdn.static.17k.com/book/189x272/30/12/3671230.jpg-189x272?v=1783405564000" alt="恶毒女配只想苟，..."/>女配专业户陆婉宁一睁眼，穿成了假冒真千金的恶毒女配。
+原书里，恶毒女配偷了女主的长命锁进京认亲，成了永昌伯府的三小姐，受...</a></li><li><span class="click">97</span> <span class="num r">2</span> <a class="sign" href="/all/book/3_5_139______1.html" target="_blank">[古代重生]</a> <a href="//www.17k.com/book/3670175.html" title="伪白兔真实邪魅" target="_blank">伪白兔真实邪魅</a></li><li><span class="click">21</span> <span class="num r">3</span> <a class="sign" href="/all/book/3_5_139______1.html" target="_blank">[古代重生]</a> <a href="//www.17k.com/book/3673969.html" title="重生换嫁？罪妻流..." target="_blank">重生换嫁？罪妻流...</a></li><li><span class="click">19</span> <span class="num">4</span> <a class="sign" href="/all/book/3_5_133______1.html" target="_blank">[架空历史]</a> <a href="//www.17k.com/book/3671412.html" title="世子爷把我当恩人..." target="_blank">世子爷把我当恩人...</a></li><li><span class="click">14</span> <span class="num">5</span> <a class="sign" href="/all/book/3_5_165______1.html" target="_blank">[空间种田]</a> <a href="//www.17k.com/book/3675351.html" title="流放后，真千金种..." target="_blank">流放后，真千金种...</a></li><li><span class="click">12</span> <span class="num">6</span> <a class="sign" href="/all/book/3_5_140______1.html" target="_blank">[女尊女强]</a> <a href="//www.17k.com/book/3675055.html" title="飞入寻常百姓家" target="_blank">飞入寻常百姓家</a></li><li><span class="click">9</span> <span class="num">7</span> <a class="sign" href="/all/book/3_5_139______1.html" target="_blank">[古代重生]</a> <a href="//www.17k.com/book/3674918.html" title="拜堂日撕婚书，我..." target="_blank">拜堂日撕婚书，我...</a></li><li><span class="click">7</span> <span class="num">8</span> <a class="sign" href="/all/book/3_5_10______1.html" target="_blank">[宫斗权谋]</a> <a href="//www.17k.com/book/3671428.html" title="夫君儿子嫌我出身..." target="_blank">夫君儿子嫌我出身...</a></li><li><span class="click">6</span> <span class="num">9</span> <a class="sign" href="/all/book/3_5_133______1.html" target="_blank">[架空历史]</a> <a href="//www.17k.com/book/3665690.html" title="送爹入赘，这软饭..." target="_blank">送爹入赘，这软饭...</a></li><li><span class="click">6</span> <span class="num">10</span> <a class="sign" href="/all/book/3_5_165______1.html" target="_blank">[空间种田]</a> <a href="//www.17k.com/book/3673463.html" title="流放边关？暴富从..." target="_blank">流放边关？暴富从...</a></li><li><a target="_blank" class="more" href="/top/refactor/top100/06_vipclick/06_vipclick_cnl_mm_top_100_pc.html"></a></li></ul><ul class="VS_CONT Top1" style="display:none"><li><span class="click">238</span> <span class="num r">1</span> <a class="sign" href="/all/book/3_17_26______1.html" target="_blank">[蜜爱甜宠]</a> <a href="//www.17k.com/book/3652710.html" title="小军嫂要离婚，冷..." target="_blank">小军嫂要离婚，冷...</a> <a class="book" href="//www.17k.com/book/3652710.html" target="_blank" class="t1"> <img src="https://cdn.static.17k.com/book/189x272/10/27/3652710.jpg-189x272?v=1766554423000" alt="小军嫂要离婚，冷..."/>女首富许晴穿书成了七零年代小军嫂，
+被亲夫噶了腰子，连同家产都给了白月光！
+军婚几年，他更是明里暗里护着白月光。
+为了保...</a></li><li><span class="click">156</span> <span class="num r">2</span> <a class="sign" href="/all/book/3_17_134______1.html" target="_blank">[总裁豪门]</a> <a href="//www.17k.com/book/3657193.html" title="小可怜闪婚带娃大..." target="_blank">小可怜闪婚带娃大...</a></li><li><span class="click">92</span> <span class="num r">3</span> <a class="sign" href="/all/book/3_17_166______1.html" target="_blank">[现代重生]</a> <a href="//www.17k.com/book/3542603.html" title="重生归来，真千金..." target="_blank">重生归来，真千金...</a></li><li><span class="click">82</span> <span class="num">4</span> <a class="sign" href="/all/book/3_17_169______1.html" target="_blank">[浪漫纯爱]</a> <a href="//www.17k.com/book/3675286.html" title="两百万牵出个意外..." target="_blank">两百万牵出个意外...</a></li><li><span class="click">51</span> <span class="num">5</span> <a class="sign" href="/all/book/3_17_166______1.html" target="_blank">[现代重生]</a> <a href="//www.17k.com/book/3617671.html" title="马伏山纪事" target="_blank">马伏山纪事</a></li><li><span class="click">38</span> <span class="num">6</span> <a class="sign" href="/all/book/3_17_134______1.html" target="_blank">[总裁豪门]</a> <a href="//www.17k.com/book/3672314.html" title="恋爱从离婚开始" target="_blank">恋爱从离婚开始</a></li><li><span class="click">36</span> <span class="num">7</span> <a class="sign" href="/all/book/3_17_136______1.html" target="_blank">[年代种田]</a> <a href="//www.17k.com/book/3667350.html" title="带着刑侦技能穿八..." target="_blank">带着刑侦技能穿八...</a></li><li><span class="click">28</span> <span class="num">8</span> <a class="sign" href="/all/book/3_17_136______1.html" target="_blank">[年代种田]</a> <a href="//www.17k.com/book/3671057.html" title="真千金带崽回归，..." target="_blank">真千金带崽回归，...</a></li><li><span class="click">23</span> <span class="num">9</span> <a class="sign" href="/all/book/3_17_134______1.html" target="_blank">[总裁豪门]</a> <a href="//www.17k.com/book/3666897.html" title="狗哥，你再舔女主..." target="_blank">狗哥，你再舔女主...</a></li><li><span class="click">14</span> <span class="num">10</span> <a class="sign" href="/all/book/3_17_168______1.html" target="_blank">[民国情缘]</a> <a href="//www.17k.com/book/3671698.html" title="乱世负红颜" target="_blank">乱世负红颜</a></li><li><a target="_blank" class="more" href="/top/refactor/top100/06_vipclick/06_vipclick_cnl_mm_top_100_pc.html"></a></li></ul><ul class="VS_CONT Top1" style="display:none"><li><span class="click">290</span> <span class="num r">1</span> <a class="sign" href="/all/book/3_18_170______1.html" target="_blank">[未来科幻]</a> <a href="//www.17k.com/book/3670924.html" title="迷彩旧梦又逢君" target="_blank">迷彩旧梦又逢君</a> <a class="book" href="//www.17k.com/book/3670924.html" target="_blank" class="t1"> <img src="https://cdn.static.17k.com/book/189x272/24/09/3670924.jpg-189x272?v=1788686599000" alt="迷彩旧梦又逢君"/>林玲一度以为自己穿越了。
+ 
+她本是W星球中原国赫赫有名的文武大学校长，四十四岁，一生戎马。
+一觉醒来，意识却被困进一具...</a></li><li><span class="click">201</span> <span class="num r">2</span> <a class="sign" href="/all/book/3_18_173______1.html" target="_blank">[神话情缘]</a> <a href="//www.17k.com/book/3673752.html" title="倾世神女逆袭传" target="_blank">倾世神女逆袭传</a></li><li><span class="click">20</span> <span class="num r">3</span> <a class="sign" href="/all/book/3_18_137______1.html" target="_blank">[古典仙缘]</a> <a href="//www.17k.com/book/3592767.html" title="改修无情道后，师..." target="_blank">改修无情道后，师...</a></li><li><span class="click">19</span> <span class="num">4</span> <a class="sign" href="/all/book/3_18_173______1.html" target="_blank">[神话情缘]</a> <a href="//www.17k.com/book/3547058.html" title="修罗女帝之绝世无双" target="_blank">修罗女帝之绝世无双</a></li><li><span class="click">8</span> <span class="num">5</span> <a class="sign" href="/all/book/3_18_137______1.html" target="_blank">[古典仙缘]</a> <a href="//www.17k.com/book/3668766.html" title="九州成神记" target="_blank">九州成神记</a></li><li><span class="click">5</span> <span class="num">6</span> <a class="sign" href="/all/book/3_18_138______1.html" target="_blank">[奇幻魔法]</a> <a href="//www.17k.com/book/3667038.html" title="每首古诗，都是一..." target="_blank">每首古诗，都是一...</a></li><li><span class="click">3</span> <span class="num">7</span> <a class="sign" href="/all/book/3_18_171______1.html" target="_blank">[末世危机]</a> <a href="//www.17k.com/book/3674621.html" title="末世女王？被逼黑..." target="_blank">末世女王？被逼黑...</a></li><li><span class="click">2</span> <span class="num">8</span> <a class="sign" href="/all/book/3_18_170______1.html" target="_blank">[未来科幻]</a> <a href="//www.17k.com/book/3676467.html" title="星际团宠是假千金..." target="_blank">星际团宠是假千金...</a></li><li><span class="click">1</span> <span class="num">9</span> <a class="sign" href="/all/book/3_18_172______1.html" target="_blank">[时空快穿]</a> <a href="//www.17k.com/book/3671545.html" title="消失的第三十七个" target="_blank">消失的第三十七个</a></li><li><span class="click">1</span> <span class="num">10</span> <a class="sign" href="/all/book/3_18_437______1.html" target="_blank">[唯美纯爱]</a> <a href="//www.17k.com/book/3652363.html" title="藤椅下的落叶与狗" target="_blank">藤椅下的落叶与狗</a></li><li><a target="_blank" class="more" href="/top/refactor/top100/06_vipclick/06_vipclick_cnl_mm_top_100_pc.html"></a></li></ul><ul class="VS_CONT Top1" style="display:none"><li><a target="_blank" class="more" href="/top/refactor/top100/06_vipclick/06_vipclick_cnl_mm_top_100_pc.html"></a></li></ul>
+        <script type="text/javascript">
+            Q.tab(document.getElementById('VS_TAB').getElementsByTagName('a'), Q('.VS_CONT'), 'onclick')
+        </script>
+    </div>
+
+		<!--新人新书榜-->
+		<div class="NS">
+        <div class="Title1"><h2 class="tit">新人作品点击榜</h2></div>
+        <div class="Tab_tit" id="XRXS_TAB">
+            <a class="now" href="javascript:void(0)">全站</a> | <a href="javascript:void(0)">男生</a> | <a href="javascript:void(0)">女生</a>
+        </div>
+  <ul class="XRXS_CONT Top1"><li><span class="click">496</span> <span class="num r">1</span> <a class="sign" href="/all/book/2_21_8______1.html" target="_blank">[东方玄幻]</a> <a href="//www.17k.com/book/3674464.html" title="龙神古尊" target="_blank">龙神古尊</a> <a class="book" href="//www.17k.com/book/3674464.html" target="_blank" class="t1"> <img src="https://cdn.static.17k.com/book/189x272/64/44/3674464.jpg-189x272?v=0" alt="龙神古尊"/>少年南宫问天一脉争权被废为奴，在北云城落入古井，获五爪金龙传承，血脉洗礼，一人肩负全族命运，走出天离皇朝。
+获神秘雷法，...</a></li><li><span class="click">199</span> <span class="num r">2</span> <a class="sign" href="/all/book/2_14_128______1.html" target="_blank">[末世危机]</a> <a href="//www.17k.com/book/3674723.html" title="高温末世，女神抢..." target="_blank">高温末世，女神抢...</a></li><li><span class="click">198</span> <span class="num r">3</span> <a class="sign" href="/all/book/2_21_8______1.html" target="_blank">[东方玄幻]</a> <a href="//www.17k.com/book/3677240.html" title="我以七情炼神丹" target="_blank">我以七情炼神丹</a></li><li><span class="click">194</span> <span class="num">4</span> <a class="sign" href="/all/book/2_24_9______1.html" target="_blank">[古典仙侠]</a> <a href="//www.17k.com/book/3676277.html" title="凡尘斩妖录" target="_blank">凡尘斩妖录</a></li><li><span class="click">186</span> <span class="num">5</span> <a class="sign" href="/all/book/2_22_93______1.html" target="_blank">[架空历史]</a> <a href="//www.17k.com/book/3676833.html" title="穿越黄巾残部，重..." target="_blank">穿越黄巾残部，重...</a></li><li><span class="click">34</span> <span class="num">6</span> <a class="sign" href="/all/book/2_3_87______1.html" target="_blank">[都市异能]</a> <a href="//www.17k.com/book/3675836.html" title="残物复生" target="_blank">残物复生</a></li><li><span class="click">33</span> <span class="num">7</span> <a class="sign" href="/all/book/2_21_83______1.html" target="_blank">[异界大陆]</a> <a href="//www.17k.com/book/3675834.html" title="浊天纪" target="_blank">浊天纪</a></li><li><span class="click">26</span> <span class="num">8</span> <a class="sign" href="/all/book/2_21_8______1.html" target="_blank">[东方玄幻]</a> <a href="//www.17k.com/book/3677351.html" title="我欲踏破诸天" target="_blank">我欲踏破诸天</a></li><li><span class="click">24</span> <span class="num">9</span> <a class="sign" href="/all/book/2_3_3______1.html" target="_blank">[都市生活]</a> <a href="//www.17k.com/book/3677166.html" title="她掌法理，他赴沉沦" target="_blank">她掌法理，他赴沉沦</a></li><li><span class="click">24</span> <span class="num">10</span> <a class="sign" href="/all/book/2_22_120______1.html" target="_blank">[历史传奇]</a> <a href="//www.17k.com/book/3675483.html" title="盛唐长歌" target="_blank">盛唐长歌</a></li><li><a target="_blank" class="more" href="/top/refactor/top100/06_vipclick/06_vipclick_newUser_new_top_100_pc.html"></a></li></ul><ul class="XRXS_CONT Top1" style="display:none"><li><span class="click">496</span> <span class="num r">1</span> <a class="sign" href="/all/book/2_21_8______1.html" target="_blank">[东方玄幻]</a> <a href="//www.17k.com/book/3674464.html" title="龙神古尊" target="_blank">龙神古尊</a> <a class="book" href="//www.17k.com/book/3674464.html" target="_blank" class="t1"> <img src="https://cdn.static.17k.com/book/189x272/64/44/3674464.jpg-189x272?v=0" alt="龙神古尊"/>少年南宫问天一脉争权被废为奴，在北云城落入古井，获五爪金龙传承，血脉洗礼，一人肩负全族命运，走出天离皇朝。
+获神秘雷法，...</a></li><li><span class="click">199</span> <span class="num r">2</span> <a class="sign" href="/all/book/2_14_128______1.html" target="_blank">[末世危机]</a> <a href="//www.17k.com/book/3674723.html" title="高温末世，女神抢..." target="_blank">高温末世，女神抢...</a></li><li><span class="click">198</span> <span class="num r">3</span> <a class="sign" href="/all/book/2_21_8______1.html" target="_blank">[东方玄幻]</a> <a href="//www.17k.com/book/3677240.html" title="我以七情炼神丹" target="_blank">我以七情炼神丹</a></li><li><span class="click">194</span> <span class="num">4</span> <a class="sign" href="/all/book/2_24_9______1.html" target="_blank">[古典仙侠]</a> <a href="//www.17k.com/book/3676277.html" title="凡尘斩妖录" target="_blank">凡尘斩妖录</a></li><li><span class="click">186</span> <span class="num">5</span> <a class="sign" href="/all/book/2_22_93______1.html" target="_blank">[架空历史]</a> <a href="//www.17k.com/book/3676833.html" title="穿越黄巾残部，重..." target="_blank">穿越黄巾残部，重...</a></li><li><span class="click">34</span> <span class="num">6</span> <a class="sign" href="/all/book/2_3_87______1.html" target="_blank">[都市异能]</a> <a href="//www.17k.com/book/3675836.html" title="残物复生" target="_blank">残物复生</a></li><li><span class="click">33</span> <span class="num">7</span> <a class="sign" href="/all/book/2_21_83______1.html" target="_blank">[异界大陆]</a> <a href="//www.17k.com/book/3675834.html" title="浊天纪" target="_blank">浊天纪</a></li><li><span class="click">26</span> <span class="num">8</span> <a class="sign" href="/all/book/2_21_8______1.html" target="_blank">[东方玄幻]</a> <a href="//www.17k.com/book/3677351.html" title="我欲踏破诸天" target="_blank">我欲踏破诸天</a></li><li><span class="click">24</span> <span class="num">9</span> <a class="sign" href="/all/book/2_3_3______1.html" target="_blank">[都市生活]</a> <a href="//www.17k.com/book/3677166.html" title="她掌法理，他赴沉沦" target="_blank">她掌法理，他赴沉沦</a></li><li><span class="click">24</span> <span class="num">10</span> <a class="sign" href="/all/book/2_22_120______1.html" target="_blank">[历史传奇]</a> <a href="//www.17k.com/book/3675483.html" title="盛唐长歌" target="_blank">盛唐长歌</a></li><li><a target="_blank" class="more" href="/top/refactor/top100/06_vipclick/06_vipclick_newUser_new_top_100_pc.html"></a></li></ul><ul class="XRXS_CONT Top1" style="display:none"><li><span class="click">21</span> <span class="num r">1</span> <a class="sign" href="/all/book/3_5_139______1.html" target="_blank">[古代重生]</a> <a href="//www.17k.com/book/3673969.html" title="重生换嫁？罪妻流..." target="_blank">重生换嫁？罪妻流...</a> <a class="book" href="//www.17k.com/book/3673969.html" target="_blank" class="t1"> <img src="https://cdn.static.17k.com/book/189x272/69/39/3673969.jpg-189x272?v=1786008737000" alt="重生换嫁？罪妻流..."/>乐晚棠重生回被充当军妓的第一天。
+上辈子，她是金枝玉叶的尚书千金。
+一朝抄家，成为罪奴，全家都流放到了贫困海岛。
+乐晚棠...</a></li><li><span class="click">14</span> <span class="num r">2</span> <a class="sign" href="/all/book/3_17_168______1.html" target="_blank">[民国情缘]</a> <a href="//www.17k.com/book/3671698.html" title="乱世负红颜" target="_blank">乱世负红颜</a></li><li><span class="click">11</span> <span class="num r">3</span> <a class="sign" href="/all/book/3_17_134______1.html" target="_blank">[总裁豪门]</a> <a href="//www.17k.com/book/3673036.html" title="哥哥的诱惑" target="_blank">哥哥的诱惑</a></li><li><span class="click">9</span> <span class="num">4</span> <a class="sign" href="/all/book/3_5_139______1.html" target="_blank">[古代重生]</a> <a href="//www.17k.com/book/3674918.html" title="拜堂日撕婚书，我..." target="_blank">拜堂日撕婚书，我...</a></li><li><span class="click">9</span> <span class="num">5</span> <a class="sign" href="/all/book/3_17_16______1.html" target="_blank">[婚恋职场]</a> <a href="//www.17k.com/book/3676789.html" title="家有四宝闹翻天" target="_blank">家有四宝闹翻天</a></li><li><span class="click">5</span> <span class="num">6</span> <a class="sign" href="/all/book/3_17_136______1.html" target="_blank">[年代种田]</a> <a href="//www.17k.com/book/3676873.html" title="七零：痛打渣男后..." target="_blank">七零：痛打渣男后...</a></li><li><span class="click">2</span> <span class="num">7</span> <a class="sign" href="/all/book/3_5_133______1.html" target="_blank">[架空历史]</a> <a href="//www.17k.com/book/3673365.html" title="恶毒女配一从良，..." target="_blank">恶毒女配一从良，...</a></li><li><span class="click">1</span> <span class="num">8</span> <a class="sign" href="/all/book/3_5_22______1.html" target="_blank">[兽世王朝]</a> <a href="//www.17k.com/book/3676182.html" title="踹掉妈宝男，我带..." target="_blank">踹掉妈宝男，我带...</a></li><li><span class="click">0</span> <span class="num">9</span> <a class="sign" href="/all/book/3_18_170______1.html" target="_blank">[未来科幻]</a> <a href="//www.17k.com/book/3676379.html" title="星际黑户流放废土..." target="_blank">星际黑户流放废土...</a></li><li><span class="click">0</span> <span class="num">10</span> <a class="sign" href="/all/book/3_17_136______1.html" target="_blank">[年代种田]</a> <a href="//www.17k.com/book/3676979.html" title="副本BOSS懂兽..." target="_blank">副本BOSS懂兽...</a></li><li><a target="_blank" class="more" href="/top/refactor/top100/06_vipclick/06_vipclick_newUser_new_top_100_pc.html"></a></li></ul>
+        <script type="text/javascript">
+            Q.tab(document.getElementById('XRXS_TAB').getElementsByTagName('a'), Q('.XRXS_CONT'), 'onclick')
+        </script>
+    </div>
+
+	</div>
+	<div class="Banner_ad" id="BAIDU_BANNER4"></div>
+	<div class="JPZQ">
+		<div class="Title1">
+			<h2 class="tit">精品专区</h2>
+			<div class="box">
+				<div class="Tab_tit" id="JPZQ_TAB">
+					<a class="now" href="">全站</a>
+					| <a href="">男生</a>
+					| <a href="">女生</a>
+				</div>
+			</div>
+		</div>
+		<div class="JPZQ_CONT">
+			
+			<div class="book">
+	<a href="http://www.17k.com/book/3590989.html" target="_blank"><img src="///cdn.static.17k.com/book/189x272/89/09/3590989.jpg
+
+-189x272
+
+
+
+"  alt="" /></a><h3><a href="http://www.17k.com/book/3590989.html" target="_blank">我的心动老板娘
+
+
+
+
+
+
+
+</a></h3><span>作者：<a href="http://user.17k.com/see/www/66662520
+
+
+
+
+
+
+
+
+
+.html" target="_blank">火烧风
+
+
+
+
+
+
+
+</a></span></div><div class="list"><div class="NewList"><h3><a href="http://www.17k.com/book/3590989
+
+
+
+
+
+
+
+
+.html" target="_blank">余楠，我的故事现在开始！
+</a></h3><p><a href="http://www.17k.com/book/3590989
+
+
+
+
+
+
+.html" target="_blank">和穷人谈钱，和富人谈感情，不信邪的我被践踏的遍体鳞伤... 直到老板娘出现，我才发现我已经陷入一场人性的漩涡... 我叫余楠，我的故事现在开始！ 和穷人谈钱，和富人谈感情，不信邪的我被践踏的遍体鳞伤... 直到老板娘出现，我才发现我已经陷入一场人性的漩涡... 我叫余楠，我的故事现在开始！  </p>
+</div>
+    <dl class="TLTJ">
+      <dt>同类推荐</dt>
+      <dd><a href="//www.17k.com/book/1398783.html" target="_blank">九星霸体诀</a></dd>
+<dd><a href="//www.17k.com/book/3038645.html" target="_blank">第九特区</a></dd>
+<dd><a href="//www.17k.com/book/3597196.html" target="_blank">太上无情</a></dd>
+<dd><a href="//www.17k.com/book/493239.html" target="_blank">修罗武神</a></dd>
+<dd><a href="//www.17k.com/book/849924.html" target="_blank">极限武尊</a></dd>
+<dd><a href="//www.17k.com/book/3188598.html" target="_blank">公子凶猛</a></dd>
+    </dl>
+</div>
+<div class="list NewList">
+  <h3><a href="//www.17k.com/book/3450246.html" target="_blank">重生于异界：开创御兽时代</a></h3><p><a target="_blank" href="//www.17k.com/book/3450246.html" target="_blank">看我一条狗吊打异能天才，一只鸡硬刚绝世武者，御兽时代就此开启！</a></p><h3><a href="//www.17k.com/book/3450693.html" target="_blank">地狱归来，携美纵横都市。</a></h3><p><a target="_blank" href="//www.17k.com/book/3450693.html" target="_blank">我从地狱归来，将整个天下踩在脚下，只为有一天，能够轻轻牵起你的手。</a></p>
+  <h3><a href="//www.17k.com/book/3426967.html" target="_blank">驭兽奶包她萌翻全九天了！</a></h3><p><a target="_blank" href="//www.17k.com/book/3426967.html" target="_blank">驭兽奶包萌翻全九天后，真千金的身份藏不住了，七个大佬哥哥排队宠！</a></p>
+</div>
+<dl class="list BookList">
+  <dd><a href="//www.17k.com/book/3636573.html" target="_blank"><img src="https://cdn.static.17k.com/book/189x272/73/65/3636573.jpg-189x272?v=1762751094000" alt=""/></a><h3><a href="//www.17k.com/book/3636573.html" target="_blank">长生：道观五十年，出山已成仙</a></h3><p class="author">作者：<a href="//user.17k.com/see/www/?userId=75965280" target="_blank">风起重山</a></p><p class="info"><a href="//www.17k.com/book/3636573.html" target="_blank">我的修仙日记：当你看到这篇日记的时候，我已成仙，你也看看吧？</a></p></dd><dd><a href="//www.17k.com/book/3646166.html" target="_blank"><img src="https://cdn.static.17k.com/book/189x272/66/61/3646166.jpg-189x272?v=1781610334000" alt=""/></a><h3><a href="//www.17k.com/book/3646166.html" target="_blank">阿尔卡拉的幻想1黑水晶</a></h3><p class="author">作者：<a href="//user.17k.com/see/www/?userId=45463084" target="_blank">FPT吴教主</a></p><p class="info"><a href="//www.17k.com/book/3646166.html" target="_blank">帝王设下二十年阴谋，老者暗引魔女探寻拉法雷古秘境      </a></p></dd>
+  <dd><a href="//www.17k.com/book/3320894.html" target="_blank"><img src="https://cdn.static.17k.com/book/189x272/94/08/3320894.jpg-189x272?v=1623815332000" alt=""/></a><h3><a href="//www.17k.com/book/3320894.html" target="_blank">重生六零团宠小福宝</a></h3><p class="author">作者：<a href="//user.17k.com/see/www/?userId=76379836" target="_blank">红鱼籽</a></p><p class="info"><a href="//www.17k.com/book/3320894.html" target="_blank">重生六零当团宠，做发家致富小能手，有异能，有颜值，再撩一个美男子！</a></p></dd>
+</dl>
+		</div>
+		<div class="JPZQ_CONT" style="display: none">
+			
+			<div class="book">
+    <a href="//www.17k.com/book/3599686.html" target="_blank"><img src="https://cdn.static.17k.com/book/189x272/86/96/3599686.jpg-189x272?v=1721718773000" alt="" /></a><h3><a href="//www.17k.com/book/3599686.html" target="_blank">寒门天子：开局灾年，我带着全村造反</a></h3><span>作者：<a href="//user.17k.com/see/www/?userId=64008642" target="_blank">三拳莽夫</a></span></div><div class="list"><div class="NewList"><h3><a href="//www.17k.com/book/3599686.html" target="_blank">开局灾年，我带着全村造反</a></h3><p><a href="//www.17k.com/book/3599686.html" target="_blank">大蕲，景元三年。
+
+旱灾席卷，蝗灾四起，天下哀鸿遍野，无数难民流离失所，镐州城下易子而食。
+　　
+　　赵牧穿越而来，一睁眼便差点儿被人吃掉。
+　　
+　　为了填饱肚子，赵牧揭竿而起。
+　　
+　　王侯将相，宁有种乎？
+　　
+　　这天下明君坐的、昏君坐的，我为何坐不得？</a></p></div>
+    <dl class="TLTJ">
+        <dt>同类推荐</dt>
+        <dd><a href="//www.17k.com/book/3298563.html" target="_blank">超级小渔民</a></dd>
+<dd><a href="//www.17k.com/book/1927606.html" target="_blank">逍遥小神农</a></dd>
+<dd><a href="//www.17k.com/book/1721806.html" target="_blank">神级仙医在都市</a></dd>
+<dd><a href="//www.17k.com/book/2219961.html" target="_blank">九绝剑歌</a></dd>
+<dd><a href="//www.17k.com/book/1974174.html" target="_blank">剑王传说</a></dd>
+<dd><a href="//www.17k.com/book/108821.html" target="_blank">超级兵王</a></dd>
+    </dl>
+</div>
+
+<div class="list NewList">
+    <h3><a href="//www.17k.com/book/3455447.html" target="_blank">大明:这个皇帝，狗都不做</a></h3><p><a target="_blank" href="//www.17k.com/book/3455447.html" target="_blank">大明:革新财政，整顿吏治，七下西洋，南征北伐，永乐盛世，万国来朝。</a></p><h3><a href="//www.17k.com/book/3231897.html" target="_blank">人在洪荒，咸鱼妖皇已闭关</a></h3><p><a target="_blank" href="//www.17k.com/book/3231897.html" target="_blank">巫族凶残，十二祖巫拳打三清，脚踹西方二圣。洪荒大能：道尘，当个妖皇</a></p><h3><a href="//www.17k.com/book/3406332.html" target="_blank">读书成圣，被女帝老婆曝光</a></h3><p><a target="_blank" href="//www.17k.com/book/3406332.html" target="_blank">穿书成为配角，绑定读书人系统，从此加点成圣，日常文抄公逗女帝老婆！</a></p>
+</div>
+<dl class="list BookList">
+    <dd><a href="//www.17k.com/book/2726194.html" target="_blank"><img src="https://cdn.static.17k.com/book/189x272/94/61/2726194.jpg-189x272?v=0" alt=""/></a><h3><a href="//www.17k.com/book/2726194.html" target="_blank">重生之狂暴火法</a></h3><p class="author">作者：<a href="//user.17k.com/see/www/?userId=43348930" target="_blank">燃烧的地狱咆哮</a></p><p class="info"><a href="//www.17k.com/book/2726194.html" target="_blank">带着二百级大法师的记忆回到十年前，所有的仇敌都在我的烈焰下颤抖吧！</a></p></dd><dd><a href="//www.17k.com/book/569929.html" target="_blank"><img src="https://cdn.static.17k.com/book/189x272/29/99/569929.jpg-189x272?v=0" alt=""/></a><h3><a href="//www.17k.com/book/569929.html" target="_blank">生生不灭</a></h3><p class="author">作者：<a href="//user.17k.com/see/www/?userId=3464915" target="_blank">狮子东</a></p><p class="info"><a href="//www.17k.com/book/569929.html" target="_blank">没有魔法天赋的少年却是重生剑体，冥想加成，斩尊封圣，称霸混元大陆！</a></p></dd><dd><a href="//www.17k.com/book/3079269.html" target="_blank"><img src="https://cdn.static.17k.com/book/189x272/69/92/3079269.jpg-189x272?v=1583491644000" alt=""/></a><h3><a href="//www.17k.com/book/3079269.html" target="_blank">最强小神农</a></h3><p class="author">作者：<a href="//user.17k.com/see/www/?userId=74064349" target="_blank">荷椒侠</a></p><p class="info"><a href="//www.17k.com/book/3079269.html" target="_blank">坐吃山空，首先要有一座山，春花秋月，悠然南山，做最强的神农。</a></p></dd>
+</dl>
+		</div>
+		<div class="JPZQ_CONT" style="display: none">
+			
+			<div class="book">
+    <a href="//www.17k.com/book/3320894.html" target="_blank"><img src="https://cdn.static.17k.com/book/189x272/94/08/3320894.jpg-189x272?v=1623815332000" alt="" /></a><h3><a href="//www.17k.com/book/3320894.html" target="_blank">重生六零团宠小福宝</a></h3><span>作者：<a href="//user.17k.com/see/www/?userId=76379836" target="_blank">红鱼籽</a></span></div><div class="list"><div class="NewList"><h3><a href="//www.17k.com/book/3320894.html" target="_blank">宝宝有异能，宠我没错的！</a></h3><p><a href="//www.17k.com/book/3320894.html" target="_blank">严小南重生了,重生到了贫穷年代的农户家里，成了这家以奶奶为主的极品团宠；自己的重生福利金手指,竟然是可以沟通动植物思维的异能，山里的宝贝都听我的；
+那一眼就能让眼睛怀孕的男孩是谁，要不撩一个，一起发家致富生包子！</a></p></div>
+    <dl class="TLTJ">
+        <dt>同类推荐</dt>
+        <dd><a href="//www.17k.com/book/2223184.html" target="_blank">缚手成婚</a></dd>
+<dd><a href="//www.17k.com/book/1451752.html" target="_blank">侯门嫡女如珠似宝</a></dd>
+<dd><a href="//www.17k.com/book/2921315.html" target="_blank">农园医锦</a></dd>
+<dd><a href="//www.17k.com/book/2625740.html" target="_blank">毒妇不从良</a></dd>
+<dd><a href="//www.17k.com/book/2999132.html" target="_blank">重生农家小娘子</a></dd>
+<dd><a href="//www.17k.com/book/2420234.html" target="_blank">御史不好当</a></dd>
+    </dl>
+</div>
+
+<div class="list NewList">
+    <h3><a href="//www.17k.com/book/3441846.html" target="_blank">穿成炮灰后，她被宠上了天</a></h3><p><a target="_blank" href="//www.17k.com/book/3441846.html" target="_blank">穿成炮灰前妻后，她果断抱紧铲屎官大腿：“老公，咱不离婚了。“</a></p><h3><a href="//www.17k.com/book/3427202.html" target="_blank">秘境脱困，她成了宗门师祖</a></h3><p><a target="_blank" href="//www.17k.com/book/3427202.html" target="_blank">许意苟了两百年，只想改变自己的结局。不料逆天改命竟苟成了宗门师祖！</a></p><h3><a href="//www.17k.com/book/3450889.html" target="_blank">身为小哑巴的她被陷害误会</a></h3><p><a target="_blank" href="//www.17k.com/book/3450889.html" target="_blank">身为小哑巴的她被陷害误会。 为了保住孩子，她签下离婚协议书远走高飞</a></p>
+</div>
+<dl class="list BookList">
+    <dd><a href="//www.17k.com/book/3330937.html" target="_blank"><img src="https://cdn.static.17k.com/book/189x272/37/09/3330937.jpg-189x272?v=1629776594000" alt=""/></a><h3><a href="//www.17k.com/book/3330937.html" target="_blank">妇可敌国：妾身真不是那有钱人</a></h3><p class="author">作者：<a href="//user.17k.com/see/www/?userId=77765698" target="_blank">彩虹信使</a></p><p class="info"><a href="//www.17k.com/book/3330937.html" target="_blank">不小心攒下了几辈子都吃不完的粮食，不只惹得病秧子王爷跑来为国库借粮</a></p></dd><dd><a href="//www.17k.com/book/3330937.html" target="_blank"><img src="https://cdn.static.17k.com/book/189x272/37/09/3330937.jpg-189x272?v=1629776594000" alt=""/></a><h3><a href="//www.17k.com/book/3330937.html" target="_blank">妇可敌国：妾身真不是那有钱人</a></h3><p class="author">作者：<a href="//user.17k.com/see/www/?userId=77765698" target="_blank">彩虹信使</a></p><p class="info"><a href="//www.17k.com/book/3330937.html" target="_blank">不小心攒下了几辈子都吃不完的粮食，不只惹得病秧子王爷跑来为国库借粮</a></p></dd><dd><a href="//www.17k.com/book/3336435.html" target="_blank"><img src="https://cdn.static.17k.com/book/189x272/35/64/3336435.jpg-189x272?v=1631071893000" alt=""/></a><h3><a href="//www.17k.com/book/3336435.html" target="_blank">绝世双宝，神医娘亲签到虐渣</a></h3><p class="author">作者：<a href="//user.17k.com/see/www/?userId=78210619" target="_blank">不偷懒的蚂蚁</a></p><p class="info"><a href="//www.17k.com/book/3336435.html" target="_blank">异世神医，左手签到系统，右手天才萌宝，神尊求改口喊爹，钱被薅光</a></p></dd>
+</dl>
+		</div>
+		<script type="text/javascript">
+			k.tabs(k('#JPZQ_TAB a'), k('.JPZQ_CONT'))
+		</script>
+	</div>
+	<!--<div class="Banner_ad" id="BAIDU_BANNER5"></div>-->
+
+	<!--bottom1000*90-->
+	<div class="carousel Banner_ad banner-bottom QUI">
+		<!--for list-->
+		<a href="{{target}}" class="carousel-item">
+			<img src="{{cover}}" alt="{{siteColumnName}}">
+		</a>
+		<!--endfor list-->
+	</div>
+	<script type="text/javascript">
+		(function () {
+			function fetchAndRenderBanner(position, selector) {
+				var intervalId;
+
+				k.api('/ckv3/ad/pc/banner').get({ position: position }).send(function (data) {
+					if (data.length > 0) {
+						k(selector).render({ list: data }, function () {
+							var currentIndex = 0;
+							var items = document.querySelectorAll(selector + ' .carousel-item');
+							items[0].classList.add('active');
+
+							if (data.length > 1) {
+								function showNextSlide() {
+									items[currentIndex].classList.remove('active');
+									currentIndex = (currentIndex + 1) % items.length;
+									items[currentIndex].classList.add('active');
+								}
+
+								intervalId = setInterval(showNextSlide, 5000); // Change slide every 5 seconds
+							}
+						});
+					} else {
+						var element = k(selector);
+						if (element) {
+							element.style({ 'display': 'none' });
+						} else {
+							console.log('Element not found for selector:', selector);
+						}
+					}
+				});
+
+				return function destroy() {
+					if (intervalId) {
+						clearInterval(intervalId);
+					}
+				};
+			}
+
+			var destroyTopBanner = fetchAndRenderBanner('top1000x90', '.banner-top');
+			var destroyMiddleBanner = fetchAndRenderBanner('middle1000x90', '.banner-middle');
+			var destroyBottomBanner = fetchAndRenderBanner('bottom1000x90', '.banner-bottom');
+
+			// 当页面离开时调用销毁函数
+			window.addEventListener('beforeunload', function () {
+				destroyTopBanner();
+				destroyMiddleBanner();
+				destroyBottomBanner();
+			});
+		}());
+	</script>
+	<div class="Main_4">
+
+		
+		<div class="DYB">
+        <div class="Title2">
+            <h2 class="tit" id="DYB_TAB">
+                <a target="_blank" href="/top/refactor/top100/01_subscribe/01_subscribe__top_100_pc.html">订阅榜</a> <span class="line">|</span> <a href="javascript:void(0)">包月榜</a>
+            </h2>
+        </div>
+        <ul class="DYB_CONT Top1 DY">
+            
+            <li><span class="click"></span> <span class="num r">1</span> <a class="sign" href="/all/book/2_14_130______1.html" target="_blank">[时空穿梭]</a> <a href="//www.17k.com/book/3583700.html" title="星痕之门" target="_blank">星痕之门</a> <a class="book" href="//www.17k.com/book/3583700.html" target="_blank" class="t1"> <img src="https://cdn.static.17k.com/book/189x272/00/37/3583700.jpg-189x272?v=1710150510000" alt="星痕之门"/>世间有星门，入者皆成神。
+在监狱已服刑三年半的任也，突然被一位神秘人接见。
+对方说：“如果你愿意参加一个游戏，现在就可以...</a></li><li><span class="click"></span> <span class="num r">2</span> <a class="sign" href="/all/book/2_24_9______1.html" target="_blank">[古典仙侠]</a> <a href="//www.17k.com/book/3328785.html" title="长生" target="_blank">长生</a></li><li><span class="click"></span> <span class="num r">3</span> <a class="sign" href="/all/book/2_3_3______1.html" target="_blank">[都市生活]</a> <a href="//www.17k.com/book/3660623.html" title="东北风云：黑血漫..." target="_blank">东北风云：黑血漫...</a></li><li><span class="click"></span> <span class="num">4</span> <a class="sign" href="/all/book/2_21_83______1.html" target="_blank">[异界大陆]</a> <a href="//www.17k.com/book/1398783.html" title="九星霸体诀" target="_blank">九星霸体诀</a></li><li><span class="click"></span> <span class="num">5</span> <a class="sign" href="/all/book/2_24_85______1.html" target="_blank">[洪荒封神]</a> <a href="//www.17k.com/book/3597196.html" title="太上无情" target="_blank">太上无情</a></li><li><span class="click"></span> <span class="num">6</span> <a class="sign" href="/all/book/2_21_8______1.html" target="_blank">[东方玄幻]</a> <a href="//www.17k.com/book/3006464.html" title="万古第一神" target="_blank">万古第一神</a></li><li><span class="click"></span> <span class="num">7</span> <a class="sign" href="/all/book/2_24_9______1.html" target="_blank">[古典仙侠]</a> <a href="//www.17k.com/book/168.html" title="尘缘" target="_blank">尘缘</a></li><li><span class="click"></span> <span class="num">8</span> <a class="sign" href="/all/book/2_3_92______1.html" target="_blank">[都市激战]</a> <a href="//www.17k.com/book/1741975.html" title="女总裁的全能兵王" target="_blank">女总裁的全能兵王</a></li><li><span class="click"></span> <span class="num">9</span> <a class="sign" href="/all/book/2_3_87______1.html" target="_blank">[都市异能]</a> <a href="//www.17k.com/book/3618847.html" title="刚成僵尸，你把定..." target="_blank">刚成僵尸，你把定...</a></li><li><span class="click"></span> <span class="num">10</span> <a class="sign" href="/all/book/2_21_8______1.html" target="_blank">[东方玄幻]</a> <a href="//www.17k.com/book/450860.html" title="百炼飞升录" target="_blank">百炼飞升录</a></li>
+        </ul>
+        <ul class="DYB_CONT Top1 DY" style="display:none">
+            
+            <li><span class="click"></span> <span class="num r">1</span> <a class="sign" href="/all/book/2_23_5______1.html" target="_blank">[虚拟网游]</a> <a href="//www.17k.com/book/88532.html" title="网游之天下无双" target="_blank">网游之天下无双</a> <a class="book" href="//www.17k.com/book/88532.html" target="_blank" class="t1"> <img src="https://cdn.static.17k.com/book/189x272/32/85/88532.jpg-189x272?v=0" alt="网游之天下无双"/>手提地狱魔剑，身穿幽魂神光铠，头戴噬魂紫金盔，脚踏浮云踏浪靴，左搂死亡女神，右抱美丽天使。
+盘踞在极寒死亡之地，一代修...</a></li><li><span class="click"></span> <span class="num r">2</span> <a class="sign" href="/all/book/2_21_8______1.html" target="_blank">[东方玄幻]</a> <a href="//www.17k.com/book/450860.html" title="百炼飞升录" target="_blank">百炼飞升录</a></li><li><span class="click"></span> <span class="num r">3</span> <a class="sign" href="/all/book/2_3_89______1.html" target="_blank">[都市重生]</a> <a href="//www.17k.com/book/814433.html" title="神级插班生" target="_blank">神级插班生</a></li><li><span class="click"></span> <span class="num">4</span> <a class="sign" href="/all/book/2_24_82______1.html" target="_blank">[奇幻修真]</a> <a href="//www.17k.com/book/187420.html" title="仙玉尘缘" target="_blank">仙玉尘缘</a></li><li><span class="click"></span> <span class="num">5</span> <a class="sign" href="/all/book/2_22_4______1.html" target="_blank">[历史穿越]</a> <a href="//www.17k.com/book/179456.html" title="梦醒三国" target="_blank">梦醒三国</a></li><li><span class="click"></span> <span class="num">6</span> <a class="sign" href="/all/book/2_21_8______1.html" target="_blank">[东方玄幻]</a> <a href="//www.17k.com/book/307330.html" title="雷破苍穹" target="_blank">雷破苍穹</a></li><li><span class="click"></span> <span class="num">7</span> <a class="sign" href="/all/book/2_3_3______1.html" target="_blank">[都市生活]</a> <a href="//www.17k.com/book/715640.html" title="紫阳" target="_blank">紫阳</a></li><li><span class="click"></span> <span class="num">8</span> <a class="sign" href="/all/book/2_24_9______1.html" target="_blank">[古典仙侠]</a> <a href="//www.17k.com/book/467707.html" title="灵舟" target="_blank">灵舟</a></li><li><span class="click"></span> <span class="num">9</span> <a class="sign" href="/all/book/2_21_8______1.html" target="_blank">[东方玄幻]</a> <a href="//www.17k.com/book/569929.html" title="生生不灭" target="_blank">生生不灭</a></li><li><span class="click"></span> <span class="num">10</span> <a class="sign" href="/all/book/2_21_83______1.html" target="_blank">[异界大陆]</a> <a href="//www.17k.com/book/554720.html" title="雷武" target="_blank">雷武</a></li>
+        </ul>
+        <script type="text/javascript">
+            Q.tab(document.getElementById('DYB_TAB').getElementsByTagName('a'), Q('.DY'))
+        </script>
+    </div>
+
+		<div class="VIPZQ">
+			<div class="Title1">
+				<h2 class="tit">VIP专区</h2>
+				<div class="box">
+					<div class="Tab_tit" id="VIPZQ_TAB">
+						<a class="now" href="">全站</a>
+						| <a href="">男生</a>
+						| <a href="">女生</a>
+					</div>
+				</div>
+			</div>
+			<div class="VIPZQ_CONT">
+				
+				<div class="RIGHT">
+    <div class="NewList">
+      <h3><a href="//www.17k.com/book/3583700.html" target="_blank">世间有星门，入者皆成神。</a></h3><p><a target="_blank" href="//www.17k.com/book/3583700.html" target="_blank">2024，潮汐将至，行者守岁。许多年后，任也孤身站在星门之中，回望前尘，记忆中许多身影都已经模糊……</a></p><h3><a href="//www.17k.com/book/3668752.html" target="_blank">抢个女帝当老婆很合理吧？</a></h3><p><a target="_blank" href="//www.17k.com/book/3668752.html" target="_blank">重生成虎八年，陈虎感到虎生空虚寂寞，决定抢一头母老虎回家，造几只小老虎玩玩，谁知抢来的母老虎竟是女帝重生？</a></p>
+      <h3><a href="//www.17k.com/book/3425285.html" target="_blank">穿书后，辣妻她有物资空间</a></h3><p><a target="_blank" href="//www.17k.com/book/3425285.html" target="_blank">上大学、办大厂、买四合院、攒小钱钱，掰正儿子当学霸。高岭之花俊老公，不总提要二胎三胎，她不介意疼他一辈子啦！</a></p>
+    </div>
+</div>
+<div class="LEFT">
+    <div class="EYE">
+        <a href="//www.17k.com/book/450860.html" target="_blank"><img src="https://img.17k.com/cmsimg/recommend/2019/04/1554718737.9862.jpg" alt="百炼飞升录"/><span>一个人的战斗：百炼飞升录</span></a><a href="//www.17k.com/book/3433922.html" target="_blank"><img src="https://img.17k.com/cmsimg/recommend/2022/06/1655691401.3866.jpg" alt="绝美总裁的贴身狂医"/><span>真实的职场，对女性的恶意</span></a>
+        <a href="//www.17k.com/book/3444634.html" target="_blank"><img src="https://img.17k.com/cmsimg/recommend/2022/06/1655087437.8898.jpg" alt="沈先生他又渣又撩"/><span>腹黑男主又渣又撩人！！！</span></a><a href="//www.17k.com/book/3417200.html" target="_blank"><img src="https://img.17k.com/cmsimg/recommend/2022/04/1649645059.1507.jpg" alt="出狱后，我爆红娱乐圈"/><span>闪婚没想他爱她入骨   </span></a>
+    </div>
+
+    <script type="text/javascript">
+        Q.ppt(Q.lastTag('div'), {width: 450, height: 250})
+    </script>
+    <dl class="BookList">
+      <dd><a href="//www.17k.com/book/3384668.html" target="_blank"><img src="https://cdn.static.17k.com/book/189x272/68/46/3384668.jpg-189x272?v=1639992695000" alt=""/></a><h3><a href="//www.17k.com/book/3384668.html" target="_blank">娱乐扮演：奖励角色技能</a></h3><p class="author">作者：<a href="//user.17k.com/see/www/?userId=86622542" target="_blank">降龙十七掌</a></p><p class="info"><a href="//www.17k.com/book/3384668.html" target="_blank">开局扮演战狼3，获得30%特种兵能力！扮演学霸角色，考取魔都状元！</a></p></dd>
+      <dd><a href="//www.17k.com/book/3433268.html" target="_blank"><img src="https://cdn.static.17k.com/book/189x272/68/32/3433268.jpg-189x272?v=1651136849000" alt=""/></a><h3><a href="//www.17k.com/book/3433268.html" target="_blank">被卖为丫鬟后，我靠签到系统成为诰命夫人</a></h3><p class="author">作者：<a href="//user.17k.com/see/www/?userId=74654995" target="_blank">妄自嗟叹</a></p><p class="info"><a href="//www.17k.com/book/3433268.html" target="_blank">穿成丫鬟，她靠签到系统攒钱立身，脱籍放良，成就锦绣姻缘，步步高升！</a></p></dd>
+    </dl>
+</div>
+			</div>
+			<div class="VIPZQ_CONT" style="display:none">
+				
+				<div class="RIGHT">
+    <div class="NewList">
+         <h3><a href="//www.17k.com/book/3424413.html" target="_blank">国术高手成都市超品鉴宝师</a></h3><p><a target="_blank" href="//www.17k.com/book/3424413.html" target="_blank">徐青巧获民国奇人传承，练功、鉴宝两不误，被红颜倒追，以一人之力勇闯江湖，成都市超品鉴宝师，铸就无敌传奇人生！</a></p><h3><a href="//www.17k.com/book/3345069.html" target="_blank">御兽时代，我竟养出了神宠</a></h3><p><a target="_blank" href="//www.17k.com/book/3345069.html" target="_blank">全球御兽时代，觉醒系统，我竟能看到隐藏的进化路线，小雪球也能进化为冰雪女王，废宠还是神宠，我说了才算！</a></p><h3><a href="//www.17k.com/book/3439060.html" target="_blank">古神无道，吾辈当登天屠神</a></h3><p><a target="_blank" href="//www.17k.com/book/3439060.html" target="_blank">古人不仁，奴役众仙为棋，圈养众生为畜，转念湮灭人间，吾便只能为生民立命，持刀向天，屠尽诸天古神，以正天道！</a></p>
+    </div>
+</div>
+<div class="LEFT">
+    <div class="EYE">
+        <a href="//www.17k.com/book/3358953.html" target="_blank"><img src="https://img.17k.com/cmsimg/recommend/2022/05/1651494110.3922.jpg" alt="三国之终极进化"/><span>万国争霸，屹立于民族之林</span></a><a href="//www.17k.com/book/3430338.html" target="_blank"><img src="https://img.17k.com/cmsimg/recommend/2022/05/1652669291.2525.jpg" alt="妖孽小书生"/><span>穿越白捡个如花似玉的娘子</span></a>
+    </div>
+
+    <script type="text/javascript">
+        Q.ppt(Q.lastTag('div'), {width: 450, height: 250})
+    </script>
+    <dl class="BookList">
+      <dd><a href="//www.17k.com/book/3430275.html" target="_blank"><img src="https://cdn.static.17k.com/book/189x272/75/02/3430275.jpg-189x272?v=1650510623000" alt=""/></a><h3><a href="//www.17k.com/book/3430275.html" target="_blank">我的倾城大小姐</a></h3><p class="author">作者：<a href="//user.17k.com/see/www/?userId=44640757" target="_blank">烟灰公子本尊</a></p><p class="info"><a href="//www.17k.com/book/3430275.html" target="_blank">逆天医术，惊人武术，超凡玄术，他都信手沾来，他叫林尘，从今崛起！</a></p></dd><dd><a href="//www.17k.com/book/3359081.html" target="_blank"><img src="https://cdn.static.17k.com/book/189x272/81/90/3359081.jpg-189x272?v=1631609869000" alt=""/></a><h3><a href="//www.17k.com/book/3359081.html" target="_blank">逍遥小捕快</a></h3><p class="author">作者：<a href="//user.17k.com/see/www/?userId=78174915" target="_blank">墨染清辉</a></p><p class="info"><a href="//www.17k.com/book/3359081.html" target="_blank">穿越成为小捕快，上司是个黛眉星瞳的俊俏女捕头，许青逍遥又自在</a></p></dd>
+    </dl>
+</div>
+			</div>
+			<div class="VIPZQ_CONT" style="display:none">
+				
+				<div class="RIGHT">
+    <div class="NewList">
+         <h3><a href="//www.17k.com/book/3429979.html" target="_blank">逆天金手指，狂奔致富路。</a></h3><p><a target="_blank" href="//www.17k.com/book/3429979.html" target="_blank">一睁眼穿成了七十年代胖丫头！好吃懒做不说，脑袋还有点一根筋！宠溺她的爷爷一怒之下，去道上捡了个男人给她。</a></p><h3><a href="//www.17k.com/book/3409605.html" target="_blank">驭兽小魔妃她称霸九天了！</a></h3><p><a target="_blank" href="//www.17k.com/book/3409605.html" target="_blank">异能特工穿成小废柴恋爱脑？她爆锤渣男绿茶，闪嫁病娇皇叔，打脸开挂，虐遍新手村，九州天才被虐到痛哭流涕。</a></p><h3><a href="//www.17k.com/book/3444427.html" target="_blank">钓系姐姐撩完就跑不讲爱德</a></h3><p><a target="_blank" href="//www.17k.com/book/3444427.html" target="_blank">一夜情后姐姐想跑路，谁知弟弟惊为天人。姐姐：我要你星途璀璨！弟弟：我不想红你不要过来！N年后，我只想要姐姐…</a></p>
+    </div>
+</div>
+<div class="LEFT">
+    <div class="EYE">
+        <a href="//www.17k.com/book/3441493.html" target="_blank"><img src="https://img.17k.com/cmsimg/recommend/2022/06/1655087375.1501.jpg" alt="毒妃太撩人：王爷休书请拿好"/><span>一不小心成了死对头小娇妻</span></a><a href="//www.17k.com/book/3440062.html" target="_blank"><img src="https://img.17k.com/cmsimg/recommend/2022/06/1655087321.1864.jpg" alt="离婚后，反派大佬和三个幼崽黏上我"/><span>反派前夫和三个崽崽超粘人</span></a>
+    </div>
+
+    <script type="text/javascript">
+        Q.ppt(Q.lastTag('div'), {width: 450, height: 250})
+    </script>
+    <dl class="BookList">
+      <dd><a href="//www.17k.com/book/3432625.html" target="_blank"><img src="https://cdn.static.17k.com/book/189x272/25/26/3432625.jpg-189x272?v=1652674079000" alt=""/></a><h3><a href="//www.17k.com/book/3432625.html" target="_blank">太子妃凶猛，乱葬岗生娃</a></h3><p class="author">作者：<a href="//user.17k.com/see/www/?userId=44593855" target="_blank">云鬓斜簪</a></p><p class="info"><a href="//www.17k.com/book/3432625.html" target="_blank">母胎单身三十年的人，穿越而来却是一个大肚婆，来就要在乱葬岗生娃</a></p></dd><dd><a href="//www.17k.com/book/3388269.html" target="_blank"><img src="https://cdn.static.17k.com/book/189x272/69/82/3388269.jpg-189x272?v=1646879141000" alt=""/></a><h3><a href="//www.17k.com/book/3388269.html" target="_blank">凰途</a></h3><p class="author">作者：<a href="//user.17k.com/see/www/?userId=87179888" target="_blank">一翎</a></p><p class="info"><a href="//www.17k.com/book/3388269.html" target="_blank">亡国公主飞凰图腾，逆袭寻仇敌国霸王，化敌为友生死相随，谋生谋爱安国</a></p></dd>
+    </dl>
+</div>
+			</div>
+			<script type="text/javascript">
+				k.tabs(k('#VIPZQ_TAB a'), k('.VIPZQ_CONT'))
+			</script>
+		</div>
+	</div>
+	<div class="Banner_ad"></div>
+	<div class="Main_4">
+
+		
+		<div class="MFXSB">
+        <div class="Title2">
+            <a class="more" target="_blank" href="/top/refactor/top100/06_vipclick/06_vipclick_noSign_top_100_pc.html"></a>
+            <h2 class="tit">潜力作品榜</h2>
+        </div>
+        <ul class="MFXSB_CONT Top1">
+            <li><span class="click">187</span> <span class="num r">1</span> <a class="sign" href="/all/book/2_29_179______1.html" target="_blank">[民间奇谈]</a> <a href="//www.17k.com/book/3673682.html" title="床底下的算命先生" target="_blank">床底下的算命先生</a> <a class="book" href="//www.17k.com/book/3673682.html" target="_blank" class="t1"> <img src="https://cdn.static.17k.com/book/189x272/82/36/3673682.jpg-189x272?v=1785466434000" alt="床底下的算命先生"/>必安天生盲眼，后来换上了一对牛眼。这对眼睛看不清人心险恶，却能洞穿生死界限，每当眼角淌泪，便是大祸临头的死兆。
+
+他生得...</a></li><li><span class="click">155</span> <span class="num r">2</span> <a class="sign" href="/all/book/2_29_180______1.html" target="_blank">[恐怖悬疑]</a> <a href="//www.17k.com/book/3677358.html" title="别人求生我给诡异..." target="_blank">别人求生我给诡异...</a></li><li><span class="click">127</span> <span class="num r">3</span> <a class="sign" href="/all/book/2_14_130______1.html" target="_blank">[时空穿梭]</a> <a href="//www.17k.com/book/3667326.html" title="宙墟祖元" target="_blank">宙墟祖元</a></li><li><span class="click">124</span> <span class="num">4</span> <a class="sign" href="/all/book/2_22_94______1.html" target="_blank">[军旅生涯]</a> <a href="//www.17k.com/book/3672054.html" title="极北寒虎" target="_blank">极北寒虎</a></li><li><span class="click">119</span> <span class="num">5</span> <a class="sign" href="/all/book/2_22_4______1.html" target="_blank">[历史穿越]</a> <a href="//www.17k.com/book/3675964.html" title="历史星纪年9" target="_blank">历史星纪年9</a></li><li><span class="click">102</span> <span class="num">6</span> <a class="sign" href="/all/book/3_5_140______1.html" target="_blank">[女尊女强]</a> <a href="//www.17k.com/book/3174168.html" title="新白娘子传奇之前..." target="_blank">新白娘子传奇之前...</a></li><li><span class="click">100</span> <span class="num">7</span> <a class="sign" href="/all/book/2_14_95______1.html" target="_blank">[星际战争]</a> <a href="//www.17k.com/book/3675966.html" title="精灵王战纪2" target="_blank">精灵王战纪2</a></li><li><span class="click">96</span> <span class="num">8</span> <a class="sign" href="/all/book/2_21_8______1.html" target="_blank">[东方玄幻]</a> <a href="//www.17k.com/book/3677356.html" title="万妖引" target="_blank">万妖引</a></li><li><span class="click">90</span> <span class="num">9</span> <a class="sign" href="/all/book/2_24_2______1.html" target="_blank">[传统武侠]</a> <a href="//www.17k.com/book/3677079.html" title="苦鸣卷" target="_blank">苦鸣卷</a></li><li><span class="click">82</span> <span class="num">10</span> <a class="sign" href="/all/book/2_3_87______1.html" target="_blank">[都市异能]</a> <a href="//www.17k.com/book/3677426.html" title="我靠打工崛起变强" target="_blank">我靠打工崛起变强</a></li>
+        </ul>
+    </div>
+
+		<div class="QYZP">
+			<div class="Title1">
+				<h2 class="tit">签约作品</h2>
+				<div class="box">
+					<div class="Tab_tit" id="QYZP_TAB">
+						<a href="">全站</a>
+						| <a href="">男生</a>
+						| <a href="">女生</a>
+					</div>
+				</div>
+			</div>
+			<div class="QYZP_CONT">
+				
+				<div class="RIGHT">
+<div class="NewList">
+<h3><a href="//www.17k.com/book/3436782.html" target="_blank">天师游都市，只手定乾坤！</a></h3><p><a target="_blank" href="//www.17k.com/book/3436782.html" target="_blank">有天师之名的顾星辰，下山回家的当晚，发现床上竟然躺着一个陌生的貌美女人，女人还对他提出一个令人脸红的要求！</a></p><h3><a href="//www.17k.com/book/3416474.html" target="_blank">谢邀，人在金马，刚刚领奖</a></h3><p><a target="_blank" href="//www.17k.com/book/3416474.html" target="_blank">记者：请问方影帝你的成功秘诀是什么？——融合了上百位影帝经验条的方淮南淡淡一笑：我不过是站在前人的肩膀上罢了</a></p>
+<h3><a href="//www.17k.com/book/3434147.html" target="_blank">流放路上，她靠异能暴富了</a></h3><p><a target="_blank" href="//www.17k.com/book/3434147.html" target="_blank">开局被抄家，还要流放到寸草不生的黎山开荒，末世大佬文澜手握木系异能，带领全家致富，更把流放地变成了世外桃源！</a></p>
+</div>
+</div>
+<div class="LEFT">
+<div class="EYE">
+<a href="//www.17k.com/book/3406332.html" target="_blank"><img src="https://img.17k.com/cmsimg/recommend/2023/01/1672638397.6966.jpg" alt="我夫人竟是皇朝女帝"/><span>读书成圣，被女帝老婆曝光</span></a><a href="//www.17k.com/book/3378558.html" target="_blank"><img src="https://img.17k.com/cmsimg/recommend/2022/05/1651494147.0741.jpg" alt="名剑英雄传"/><span>武道至尊，只为天下苍生！</span></a><a href="//www.17k.com/book/3348757.html" target="_blank"><img src="https://img.17k.com/cmsimg/recommend/2022/06/1655691343.6288.jpg" alt="让你代管特长班，怎么全成学霸了？"/><span>全员学霸：我是最强班主任</span></a>
+<a href="//www.17k.com/book/3410945.html" target="_blank"><img src="https://img.17k.com/cmsimg/recommend/2022/03/1647829175.1627.jpg" alt="穿到荒年做后娘，影后靠直播带货发家了"/><span>手握灵泉空间,翻身不费力</span></a><a href="//www.17k.com/book/3426967.html" target="_blank"><img src="https://img.17k.com/cmsimg/recommend/2022/04/1650819627.2356.jpg" alt="嗷呜！万兽开道，奶甜兽主四岁半"/><span>驭兽奶包她萌翻全九天了！</span></a><a href="//www.17k.com/book/3439529.html" target="_blank"><img src="https://img.17k.com/cmsimg/recommend/2022/06/1655087152.0688.jpg" alt="种田带崽发家，不如修仙捉鬼富甲天下"/><span>穿成傻丫，修仙赚钱两不误</span></a>
+</div>
+<script type="text/javascript">
+Q.ppt(Q.lastTag('div'), {width: 450, height: 250})
+</script>
+<ul class="BookList">
+<li><a class="gray" href="/all/book/2_22_0_0_0_2_0_0_1.html" target="_blank">[历史]</a><a href="//www.17k.com/book/3455451.html" target="_blank">重生皇帝，从治理后宫开始</a></li><li><a class="gray" href="/all/book/2_21_0_0_0_2_0_0_1.html" target="_blank">[玄幻]</a><a href="//www.17k.com/book/3445896.html" target="_blank">空间魔剑士掌握空间的力量</a></li><li><a class="gray" href="/all/book/2_21_0_0_0_2_0_0_1.html" target="_blank">[玄幻]</a><a href="//www.17k.com/book/3460675.html" target="_blank">我真不是什么绝世高人啊！</a></li><li><a class="gray" href="/all/book/2_21_0_0_0_2_0_0_1.html" target="_blank">[玄幻]</a><a href="//www.17k.com/book/3409035.html" target="_blank">世子，皇帝和百官知道错了</a></li><li><a class="gray" href="/all/book/2_24_0_0_0_2_0_0_1.html" target="_blank">[仙侠]</a><a href="//www.17k.com/book/3208372.html" target="_blank">洛豪，混沌书，混沌万物决</a></li>
+<li><a class="gray" href="/all/book/3_5_0_0_0_2_0_0_1.html" target="_blank">[古代]</a><a href="//www.17k.com/book/3433943.html" target="_blank">农家团宠小福宝是锦鲤吖！</a></li><li><a class="gray" href="/all/book/3_5_0_0_0_2_0_0_1.html" target="_blank">[古代]</a><a href="//www.17k.com/book/3442397.html" target="_blank">惨死重生，王爷追妻火葬场</a></li><li><a class="gray" href="/all/book/3_17_0_0_0_2_0_0_1.html" target="_blank">[现代]</a><a href="//www.17k.com/book/3406538.html" target="_blank">渣男出轨她转身嫁渣男小叔</a></li><li><a class="gray" href="/all/book/3_17_0_0_0_2_0_0_1.html" target="_blank">[现代]</a><a href="//www.17k.com/book/3444634.html" target="_blank">腹黑男主又渣又撩人！！！</a></li><li><a class="gray" href="/all/book/3_17_0_0_0_2_0_0_1.html" target="_blank">[现代]</a><a href="//www.17k.com/book/3441078.html" target="_blank">咸鱼靠三重人格前夫爆火了</a></li> 
+</ul>
+</div>
+			</div>
+			<div class="QYZP_CONT" style="display:none">
+				
+				<div class="RIGHT">
+<div class="NewList">
+<h3><a href="//www.17k.com/book/3380858.html" target="_blank">娘胎修炼，修改万物！！！</a></h3><p><a target="_blank" href="//www.17k.com/book/3380858.html" target="_blank">娘胎修炼，姜凌天眼看着上苍杀劫就要落下了，不行，系统快修改一下！让上苍杀劫变成我老婆！天道：老公么么哒~</a></p><h3><a href="//www.17k.com/book/3270981.html" target="_blank">惊了！我七个姐姐绝世无双</a></h3><p><a target="_blank" href="//www.17k.com/book/3270981.html" target="_blank">罗峰，豪门弃子，偶遇华夏旧时代战力天花板老疯子，还有七位倾城倾国的师姐！卷动江湖风云，走上自证强者之路</a></p><h3><a href="//www.17k.com/book/3414539.html" target="_blank">穿越邪灵世界，获英雄被动</a></h3><p><a target="_blank" href="//www.17k.com/book/3414539.html" target="_blank">陈东穿越邪灵世界，灭杀邪灵就能获得英雄被动和增强被动，锤石被动：拾取灵魂就能变强，被动强化：拾取无上限叠加</a></p>
+</div>
+</div>
+<div class="LEFT">
+<div class="EYE">
+<a href="//www.17k.com/book/3422207.html" target="_blank"><img src="https://img.17k.com/cmsimg/recommend/2022/06/1655087408.4733.jpg" alt="富豪是怎样炼成的"/><span>奋斗少年白手起家成首富。</span></a><a href="//www.17k.com/book/3427454.html" target="_blank"><img src="https://img.17k.com/cmsimg/recommend/2022/06/1655087498.9544.jpg" alt="三国之汉末枭雄"/><span>从士兵到枭雄：王者传奇！</span></a>
+</div>
+<script type="text/javascript">
+Q.ppt(Q.lastTag('div'), {width: 450, height: 250})
+</script>
+<ul class="BookList">
+<li><a class="gray" href="/all/book/2_22_0_0_0_2_0_0_1.html" target="_blank">[历史]</a><a href="//www.17k.com/book/3452878.html" target="_blank">从废物皇子成就万国大帝！</a></li><li><a class="gray" href="/all/book/2_3_0_0_0_2_0_0_1.html" target="_blank">[都市]</a><a href="//www.17k.com/book/3449563.html" target="_blank">重回93，教双马一王赚钱</a></li><li><a class="gray" href="/all/book/2_22_0_0_0_2_0_0_1.html" target="_blank">[历史]</a><a href="//www.17k.com/book/3373573.html" target="_blank">明末庶子：庶子潇洒风流！</a></li><li><a class="gray" href="/all/book/2_21_0_0_0_2_0_0_1.html" target="_blank">[玄幻]</a><a href="//www.17k.com/book/3447474.html" target="_blank">签到万年，我身份被曝光了</a></li><li><a class="gray" href="/all/book/2_14_0_0_0_2_0_0_1.html" target="_blank">[科幻]</a><a href="//www.17k.com/book/3269136.html" target="_blank">末世降临，农场系统降临！</a></li><li><a class="gray" href="/all/book/2_3_0_0_0_2_0_0_1.html" target="_blank">[都市]</a><a href="//www.17k.com/book/3460528.html" target="_blank">荒岛：与美作伴，机智求生</a></li><li><a class="gray" href="/all/book/2_3_0_0_0_2_0_0_1.html" target="_blank">[都市]</a><a href="//www.17k.com/book/3445159.html" target="_blank">相亲走错桌，竟被投资十亿</a></li><li><a class="gray" href="/all/book/2_21_0_0_0_2_0_0_1.html" target="_blank">[玄幻]</a><a href="//www.17k.com/book/3380858.html" target="_blank">娘胎修炼，修改万物！！！</a></li><li><a class="gray" href="/all/book/2_22_0_0_0_2_0_0_1.html" target="_blank">[历史]</a><a href="//www.17k.com/book/3460092.html" target="_blank">“官人，奴家来侍寝了~”</a></li><li><a class="gray" href="/all/book/2_21_0_0_0_2_0_0_1.html" target="_blank">[玄幻]</a><a href="//www.17k.com/book/3359519.html" target="_blank">天地正气在，英雄傲世来。</a></li>
+</ul>
+</div>
+			</div>
+			<div class="QYZP_CONT" style="display:none">
+				
+				<div class="RIGHT">
+<div class="NewList">
+<h3><a href="//www.17k.com/book/3412216.html" target="_blank">丑女逆袭，不要男人只要钱</a></h3><p><a target="_blank" href="//www.17k.com/book/3412216.html" target="_blank">大龄单身的美女设计师，意外重生变成丑八怪，毒舌腹黑，带金手指玩转八零，姐姐不找男人，姐姐只想搞钱创事业！</a></p><h3><a href="//www.17k.com/book/3415700.html" target="_blank">这宿主能处，杀男主她真上</a></h3><p><a target="_blank" href="//www.17k.com/book/3415700.html" target="_blank">姜妩记不起前世今生，一睁眼便在快穿世界打转。渣男为了白月光对我挖肾离婚一条龙，那就让他知道什么叫追妻火葬场。</a></p><h3><a href="//www.17k.com/book/3434018.html" target="_blank">穿成小鹌鹑也能干大事业！</a></h3><p><a target="_blank" href="//www.17k.com/book/3434018.html" target="_blank">穿成小啾啾，依附强大的兽人，做了14年小废物后她决定建功立业，制陶、种田、造肥皂、养殖家禽…建设和谐兽世</a></p>
+</div>
+</div>
+<div class="LEFT">
+<div class="EYE">
+<a href="//www.17k.com/book/3432197.html" target="_blank"><img src="https://img.17k.com/cmsimg/recommend/2022/06/1654482388.7933.jpg" alt="御兽弃妃狂炸了，踏平王府没商量！"/><span>救命！夫君他想日日杀我！</span></a><a href="//www.17k.com/book/3430856.html" target="_blank"><img src="https://img.17k.com/cmsimg/recommend/2022/06/1654482278.1319.jpg" alt="分手后我成了前任的娇软白月光"/><span>分手后偏执江少总想独占我</span></a>
+</div>
+<script type="text/javascript">
+Q.ppt(Q.lastTag('div'), {width: 450, height: 250})
+</script>
+<ul class="BookList">
+<li><a class="gray" href="/all/book/3_17_0_0_0_2_0_0_1.html" target="_blank">[现代]</a><a href="//www.17k.com/book/3385669.html" target="_blank">快穿：年代文炮灰要逆袭！</a></li><li><a class="gray" href="/all/book/3_17_0_0_0_2_0_0_1.html" target="_blank">[现代]</a><a href="//www.17k.com/book/3451557.html" target="_blank">闪婚后四个哥哥跪求我原谅</a></li><li><a class="gray" href="/all/book/3_5_0_0_0_2_0_0_1.html" target="_blank">[古代]</a><a href="//www.17k.com/book/3450493.html" target="_blank">重生恶毒女配她只想苟活！</a></li><li><a class="gray" href="/all/book/3_18_0_0_0_2_0_0_1.html" target="_blank">[幻想]</a><a href="//www.17k.com/book/3448185.html" target="_blank">任务失败后，被病娇黏上了</a></li><li><a class="gray" href="/all/book/3_5_0_0_0_2_0_0_1.html" target="_blank">[古代]</a><a href="//www.17k.com/book/3451057.html" target="_blank">揣了前夫的崽不想要求支招</a></li><li><a class="gray" href="/all/book/3_17_0_0_0_2_0_0_1.html" target="_blank">[现代]</a><a href="//www.17k.com/book/3444427.html" target="_blank">钓系姐姐撩完就跑不讲爱德</a></li><li><a class="gray" href="/all/book/3_17_0_0_0_2_0_0_1.html" target="_blank">[现代]</a><a href="//www.17k.com/book/3436832.html" target="_blank">分手热搜后踹了顶流嫁他哥</a></li><li><a class="gray" href="/all/book/3_5_0_0_0_2_0_0_1.html" target="_blank">[古代]</a><a href="//www.17k.com/book/3414618.html" target="_blank"> 医妃被休后王爷养崽数年</a></li><li><a class="gray" href="/all/book/3_5_0_0_0_2_0_0_1.html" target="_blank">[古代]</a><a href="//www.17k.com/book/3432639.html" target="_blank">冲喜太后，在相国怀里撒野</a></li><li><a class="gray" href="/all/book/3_18_0_0_0_2_0_0_1.html" target="_blank">[幻想]</a><a href="//www.17k.com/book/3441389.html" target="_blank">穿成师娘后徒弟跪地求原谅</a></li>
+</ul>
+</div>
+			</div>
+			<script type="text/javascript">
+				k.tabs(k('#QYZP_TAB a'), k('.QYZP_CONT'))
+			</script>
+		</div>
+	</div>
+	<div class="Banner_ad"></div>
+	<div class="PHB">
+
+		
+		<div class="Title1">
+        <h2 class="tit">排行榜</h2>
+        <div class="box">
+            <div class="Tab_tit" id="PHB_TAB"><a class="now" href="">更新</a> | <a href="">VIP更新</a> | <a href="">推荐</a></div>
+        </div>
+    </div>
+    <div class="PHB_CONT">
+        
+        <ul class="Top1"><li><span class="click">2026-09-08 21:35</span> <span class="num r">1</span> <a  href="//www.17k.com/book/3676191.html"  alt="被戴帽子后，我拯..." title="被戴帽子后，我拯..." target="_blank">被戴帽子后，我拯...</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /></li><li><span class="click">2026-09-08 21:33</span> <span class="num r">2</span> <a  href="//www.17k.com/book/3672953.html"  alt="长生：从拥有一颗..." title="长生：从拥有一颗..." target="_blank">长生：从拥有一颗...</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /> <img src="///static.17k.com/www/pic/icon/i_qian.png" alt="签约" /></li><li><span class="click">2026-09-08 21:33</span> <span class="num r">3</span> <a  href="//www.17k.com/book/3447037.html"  alt="荒村物语" title="荒村物语" target="_blank">荒村物语</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /> <img src="///static.17k.com/www/pic/icon/i_qian.png" alt="签约" /></li><li><span class="click">2026-09-08 21:30</span> <span class="num">4</span> <a  href="//www.17k.com/book/3669451.html"  alt="训犬师弱？可知何..." title="训犬师弱？可知何..." target="_blank">训犬师弱？可知何...</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /> <img src="///static.17k.com/www/pic/icon/i_qian.png" alt="签约" /></li><li><span class="click">2026-09-08 21:30</span> <span class="num">5</span> <a  href="//www.17k.com/book/3670934.html"  alt="相亲走错坟，女鬼..." title="相亲走错坟，女鬼..." target="_blank">相亲走错坟，女鬼...</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /> <img src="///static.17k.com/www/pic/icon/i_qian.png" alt="签约" /></li><li><span class="click">2026-09-08 21:30</span> <span class="num">6</span> <a  href="//www.17k.com/book/3674911.html"  alt="第一版天地" title="第一版天地" target="_blank">第一版天地</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /></li><li><span class="click">2026-09-08 21:29</span> <span class="num">7</span> <a  href="//www.17k.com/book/3667013.html"  alt="逆世隨王" title="逆世隨王" target="_blank">逆世隨王</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /></li><li><span class="click">2026-09-08 21:28</span> <span class="num">8</span> <a  href="//www.17k.com/book/1230655.html"  alt="51世纪" title="51世纪" target="_blank">51世纪</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /></li><li><span class="click">2026-09-08 21:28</span> <span class="num">9</span> <a  href="//www.17k.com/book/3563253.html"  alt="让你当收尸人，你..." title="让你当收尸人，你..." target="_blank">让你当收尸人，你...</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /> <img src="///static.17k.com/www/pic/icon/i_qian.png" alt="签约" /></li><li><span class="click">2026-09-08 21:25</span> <span class="num">10</span> <a  href="//www.17k.com/book/3666639.html"  alt="婴语满级：我在古..." title="婴语满级：我在古..." target="_blank">婴语满级：我在古...</a> <img src="//static.17k.com/www/pic/icon/i_gril.png" alt="女生" /> <img src="///static.17k.com/www/pic/icon/i_qian.png" alt="签约" /></li></ul><ul class="Top1"><li><span class="click">2026-09-08 21:24</span> <span class="num">11</span> <a  href="//www.17k.com/book/3626025.html"  alt="小富即安？不，本..." title="小富即安？不，本..." target="_blank">小富即安？不，本...</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /> <img src="///static.17k.com/www/pic/icon/i_qian.png" alt="签约" /></li><li><span class="click">2026-09-08 21:22</span> <span class="num">12</span> <a  href="//www.17k.com/book/3674467.html"  alt="漫威都市？不，是..." title="漫威都市？不，是..." target="_blank">漫威都市？不，是...</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /> <img src="///static.17k.com/www/pic/icon/i_qian.png" alt="签约" /></li><li><span class="click">2026-09-08 21:20</span> <span class="num">13</span> <a  href="//www.17k.com/book/3613153.html"  alt="科举放牛班，童生..." title="科举放牛班，童生..." target="_blank">科举放牛班，童生...</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /> <img src="///static.17k.com/www/pic/icon/i_qian.png" alt="签约" /></li><li><span class="click">2026-09-08 21:19</span> <span class="num">14</span> <a  href="//www.17k.com/book/3671225.html"  alt="武警：兵王之路" title="武警：兵王之路" target="_blank">武警：兵王之路</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /> <img src="///static.17k.com/www/pic/icon/i_qian.png" alt="签约" /></li><li><span class="click">2026-09-08 21:18</span> <span class="num">15</span> <a  href="//www.17k.com/book/3653988.html"  alt="钱江苏火" title="钱江苏火" target="_blank">钱江苏火</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /> <img src="///static.17k.com/www/pic/icon/i_qian.png" alt="签约" /></li><li><span class="click">2026-09-08 21:18</span> <span class="num">16</span> <a  href="//www.17k.com/book/3526816.html"  alt="末世之三合一系统" title="末世之三合一系统" target="_blank">末世之三合一系统</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /></li><li><span class="click">2026-09-08 21:17</span> <span class="num">17</span> <a  href="//www.17k.com/book/3675424.html"  alt="开局亡国？我大明..." title="开局亡国？我大明..." target="_blank">开局亡国？我大明...</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /> <img src="///static.17k.com/www/pic/icon/i_qian.png" alt="签约" /></li><li><span class="click">2026-09-08 21:17</span> <span class="num">18</span> <a  href="//www.17k.com/book/3672604.html"  alt="武德开荒：我在初..." title="武德开荒：我在初..." target="_blank">武德开荒：我在初...</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /> <img src="///static.17k.com/www/pic/icon/i_qian.png" alt="签约" /></li><li><span class="click">2026-09-08 21:15</span> <span class="num">19</span> <a  href="//www.17k.com/book/3622820.html"  alt="天棺秘藏" title="天棺秘藏" target="_blank">天棺秘藏</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /> <img src="///static.17k.com/www/pic/icon/i_qian.png" alt="签约" /></li><li><span class="click">2026-09-08 21:12</span> <span class="num">20</span> <a  href="//www.17k.com/book/3677099.html"  alt="万道归墟：布衣证..." title="万道归墟：布衣证..." target="_blank">万道归墟：布衣证...</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /> <img src="///static.17k.com/www/pic/icon/i_qian.png" alt="签约" /></li></ul><ul class="Top1"><li><span class="click">2026-09-08 21:10</span> <span class="num">21</span> <a  href="//www.17k.com/book/3671410.html"  alt="上岸斩我？上恋综..." title="上岸斩我？上恋综..." target="_blank">上岸斩我？上恋综...</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /> <img src="///static.17k.com/www/pic/icon/i_qian.png" alt="签约" /></li><li><span class="click">2026-09-08 21:10</span> <span class="num">22</span> <a  href="//www.17k.com/book/3630118.html"  alt="全体起立！真龙归..." title="全体起立！真龙归..." target="_blank">全体起立！真龙归...</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /> <img src="///static.17k.com/www/pic/icon/i_qian.png" alt="签约" /></li><li><span class="click">2026-09-08 21:08</span> <span class="num">23</span> <a  href="//www.17k.com/book/1741975.html"  alt="女总裁的全能兵王" title="女总裁的全能兵王" target="_blank">女总裁的全能兵王</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /> <img src="///static.17k.com/www/pic/icon/i_qian.png" alt="签约" /></li><li><span class="click">2026-09-08 21:08</span> <span class="num">24</span> <a  href="//www.17k.com/book/3673410.html"  alt="从道童开始修炼" title="从道童开始修炼" target="_blank">从道童开始修炼</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /></li><li><span class="click">2026-09-08 21:03</span> <span class="num">25</span> <a  href="//www.17k.com/book/3663490.html"  alt="倾清宫" title="倾清宫" target="_blank">倾清宫</a> <img src="//static.17k.com/www/pic/icon/i_gril.png" alt="女生" /> <img src="///static.17k.com/www/pic/icon/i_qian.png" alt="签约" /></li><li><span class="click">2026-09-08 21:01</span> <span class="num">26</span> <a  href="//www.17k.com/book/3677547.html"  alt="残脉茅山：渡阴人" title="残脉茅山：渡阴人" target="_blank">残脉茅山：渡阴人</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /></li><li><span class="click">2026-09-08 21:01</span> <span class="num">27</span> <a  href="//www.17k.com/book/3677554.html"  alt="奶奶的日记本" title="奶奶的日记本" target="_blank">奶奶的日记本</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /></li><li><span class="click">2026-09-08 21:00</span> <span class="num">28</span> <a  href="//www.17k.com/book/3649330.html"  alt="玄奇战策" title="玄奇战策" target="_blank">玄奇战策</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /> <img src="///static.17k.com/www/pic/icon/i_qian.png" alt="签约" /></li><li><span class="click">2026-09-08 21:00</span> <span class="num">29</span> <a  href="//www.17k.com/book/3677419.html"  alt="桃源神针：从村口..." title="桃源神针：从村口..." target="_blank">桃源神针：从村口...</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /></li><li><span class="click">2026-09-08 21:00</span> <span class="num">30</span> <a  href="//www.17k.com/book/3663041.html"  alt="重回千禧年打造商..." title="重回千禧年打造商..." target="_blank">重回千禧年打造商...</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /> <img src="///static.17k.com/www/pic/icon/i_qian.png" alt="签约" /></li></ul>
+    </div>
+    <div class="PHB_CONT">
+        
+        <ul class="Top1"><li><span class="click">2026-09-08 21:33</span> <span class="num r">1</span> <a  href="//www.17k.com/book/3447037.html"  alt="荒村物语" title="荒村物语" target="_blank">荒村物语</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /> <img src="//static.17k.com/www/pic/icon/i_qian.png" alt="签约" /></li><li><span class="click">2026-09-08 21:28</span> <span class="num r">2</span> <a  href="//www.17k.com/book/3563253.html"  alt="让你当收尸人，你..." title="让你当收尸人，你..." target="_blank">让你当收尸人，你...</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /> <img src="//static.17k.com/www/pic/icon/i_qian.png" alt="签约" /></li><li><span class="click">2026-09-08 21:24</span> <span class="num r">3</span> <a  href="//www.17k.com/book/3626025.html"  alt="小富即安？不，本..." title="小富即安？不，本..." target="_blank">小富即安？不，本...</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /> <img src="//static.17k.com/www/pic/icon/i_qian.png" alt="签约" /></li><li><span class="click">2026-09-08 21:20</span> <span class="num">4</span> <a  href="//www.17k.com/book/3613153.html"  alt="科举放牛班，童生..." title="科举放牛班，童生..." target="_blank">科举放牛班，童生...</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /> <img src="//static.17k.com/www/pic/icon/i_qian.png" alt="签约" /></li><li><span class="click">2026-09-08 21:19</span> <span class="num">5</span> <a  href="//www.17k.com/book/3671225.html"  alt="武警：兵王之路" title="武警：兵王之路" target="_blank">武警：兵王之路</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /> <img src="//static.17k.com/www/pic/icon/i_qian.png" alt="签约" /></li><li><span class="click">2026-09-08 21:18</span> <span class="num">6</span> <a  href="//www.17k.com/book/3653988.html"  alt="钱江苏火" title="钱江苏火" target="_blank">钱江苏火</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /> <img src="//static.17k.com/www/pic/icon/i_qian.png" alt="签约" /></li><li><span class="click">2026-09-08 21:17</span> <span class="num">7</span> <a  href="//www.17k.com/book/3672604.html"  alt="武德开荒：我在初..." title="武德开荒：我在初..." target="_blank">武德开荒：我在初...</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /> <img src="//static.17k.com/www/pic/icon/i_qian.png" alt="签约" /></li><li><span class="click">2026-09-08 21:15</span> <span class="num">8</span> <a  href="//www.17k.com/book/3622820.html"  alt="天棺秘藏" title="天棺秘藏" target="_blank">天棺秘藏</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /> <img src="//static.17k.com/www/pic/icon/i_qian.png" alt="签约" /></li><li><span class="click">2026-09-08 21:10</span> <span class="num">9</span> <a  href="//www.17k.com/book/3630118.html"  alt="全体起立！真龙归..." title="全体起立！真龙归..." target="_blank">全体起立！真龙归...</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /> <img src="//static.17k.com/www/pic/icon/i_qian.png" alt="签约" /></li><li><span class="click">2026-09-08 21:08</span> <span class="num">10</span> <a  href="//www.17k.com/book/1741975.html"  alt="女总裁的全能兵王" title="女总裁的全能兵王" target="_blank">女总裁的全能兵王</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /> <img src="//static.17k.com/www/pic/icon/i_qian.png" alt="签约" /></li></ul><ul class="Top1"><li><span class="click">2026-09-08 21:03</span> <span class="num">11</span> <a  href="//www.17k.com/book/3663490.html"  alt="倾清宫" title="倾清宫" target="_blank">倾清宫</a> <img src="//static.17k.com/www/pic/icon/i_gril.png" alt="女生" /> <img src="//static.17k.com/www/pic/icon/i_qian.png" alt="签约" /></li><li><span class="click">2026-09-08 21:00</span> <span class="num">12</span> <a  href="//www.17k.com/book/3649330.html"  alt="玄奇战策" title="玄奇战策" target="_blank">玄奇战策</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /> <img src="//static.17k.com/www/pic/icon/i_qian.png" alt="签约" /></li><li><span class="click">2026-09-08 21:00</span> <span class="num">13</span> <a  href="//www.17k.com/book/3663041.html"  alt="重回千禧年打造商..." title="重回千禧年打造商..." target="_blank">重回千禧年打造商...</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /> <img src="//static.17k.com/www/pic/icon/i_qian.png" alt="签约" /></li><li><span class="click">2026-09-08 21:00</span> <span class="num">14</span> <a  href="//www.17k.com/book/3665507.html"  alt="都市战神：豪门败..." title="都市战神：豪门败..." target="_blank">都市战神：豪门败...</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /> <img src="//static.17k.com/www/pic/icon/i_qian.png" alt="签约" /></li><li><span class="click">2026-09-08 21:00</span> <span class="num">15</span> <a  href="//www.17k.com/book/3666224.html"  alt="八零返城，我独自..." title="八零返城，我独自..." target="_blank">八零返城，我独自...</a> <img src="//static.17k.com/www/pic/icon/i_gril.png" alt="女生" /> <img src="//static.17k.com/www/pic/icon/i_qian.png" alt="签约" /></li><li><span class="click">2026-09-08 20:59</span> <span class="num">16</span> <a  href="//www.17k.com/book/3620858.html"  alt="打猎：带甲百万，..." title="打猎：带甲百万，..." target="_blank">打猎：带甲百万，...</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /> <img src="//static.17k.com/www/pic/icon/i_qian.png" alt="签约" /></li><li><span class="click">2026-09-08 20:57</span> <span class="num">17</span> <a  href="//www.17k.com/book/3642968.html"  alt="手撕顶流爹地后，..." title="手撕顶流爹地后，..." target="_blank">手撕顶流爹地后，...</a> <img src="//static.17k.com/www/pic/icon/i_gril.png" alt="女生" /> <img src="//static.17k.com/www/pic/icon/i_qian.png" alt="签约" /></li><li><span class="click">2026-09-08 20:56</span> <span class="num">18</span> <a  href="//www.17k.com/book/3413453.html"  alt="雷霆圣帝" title="雷霆圣帝" target="_blank">雷霆圣帝</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /> <img src="//static.17k.com/www/pic/icon/i_qian.png" alt="签约" /></li><li><span class="click">2026-09-08 20:54</span> <span class="num">19</span> <a  href="//www.17k.com/book/3664443.html"  alt="我的小祖宗是女天师" title="我的小祖宗是女天师" target="_blank">我的小祖宗是女天师</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /> <img src="//static.17k.com/www/pic/icon/i_qian.png" alt="签约" /></li><li><span class="click">2026-09-08 20:50</span> <span class="num">20</span> <a  href="//www.17k.com/book/3655397.html"  alt="汉魂天下：兴汉" title="汉魂天下：兴汉" target="_blank">汉魂天下：兴汉</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /> <img src="//static.17k.com/www/pic/icon/i_qian.png" alt="签约" /></li></ul><ul class="Top1"><li><span class="click">2026-09-08 20:50</span> <span class="num">21</span> <a  href="//www.17k.com/book/3675006.html"  alt="契约恋爱，太子爷..." title="契约恋爱，太子爷..." target="_blank">契约恋爱，太子爷...</a> <img src="//static.17k.com/www/pic/icon/i_gril.png" alt="女生" /> <img src="//static.17k.com/www/pic/icon/i_qian.png" alt="签约" /></li><li><span class="click">2026-09-08 20:47</span> <span class="num">22</span> <a  href="//www.17k.com/book/450860.html"  alt="百炼飞升录" title="百炼飞升录" target="_blank">百炼飞升录</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /> <img src="//static.17k.com/www/pic/icon/i_qian.png" alt="签约" /></li><li><span class="click">2026-09-08 20:47</span> <span class="num">23</span> <a  href="//www.17k.com/book/3673200.html"  alt="荒域天枢" title="荒域天枢" target="_blank">荒域天枢</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /> <img src="//static.17k.com/www/pic/icon/i_qian.png" alt="签约" /></li><li><span class="click">2026-09-08 20:43</span> <span class="num">24</span> <a  href="//www.17k.com/book/569929.html"  alt="生生不灭" title="生生不灭" target="_blank">生生不灭</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /> <img src="//static.17k.com/www/pic/icon/i_qian.png" alt="签约" /></li><li><span class="click">2026-09-08 20:40</span> <span class="num">25</span> <a  href="//www.17k.com/book/3663792.html"  alt="不做宋臣，一统万国" title="不做宋臣，一统万国" target="_blank">不做宋臣，一统万国</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /> <img src="//static.17k.com/www/pic/icon/i_qian.png" alt="签约" /></li><li><span class="click">2026-09-08 20:37</span> <span class="num">26</span> <a  href="//www.17k.com/book/3650984.html"  alt="锦鲤崽崽三岁半，..." title="锦鲤崽崽三岁半，..." target="_blank">锦鲤崽崽三岁半，...</a> <img src="//static.17k.com/www/pic/icon/i_gril.png" alt="女生" /> <img src="//static.17k.com/www/pic/icon/i_qian.png" alt="签约" /></li><li><span class="click">2026-09-08 20:37</span> <span class="num">27</span> <a  href="//www.17k.com/book/3665489.html"  alt="全能教学系统" title="全能教学系统" target="_blank">全能教学系统</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /> <img src="//static.17k.com/www/pic/icon/i_qian.png" alt="签约" /></li><li><span class="click">2026-09-08 20:30</span> <span class="num">28</span> <a  href="//www.17k.com/book/3574950.html"  alt="开局一把刀，狂扫..." title="开局一把刀，狂扫..." target="_blank">开局一把刀，狂扫...</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /> <img src="//static.17k.com/www/pic/icon/i_qian.png" alt="签约" /></li><li><span class="click">2026-09-08 20:28</span> <span class="num">29</span> <a  href="//www.17k.com/book/3673113.html"  alt="我写给你的歌还没..." title="我写给你的歌还没..." target="_blank">我写给你的歌还没...</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /> <img src="//static.17k.com/www/pic/icon/i_qian.png" alt="签约" /></li><li><span class="click">2026-09-08 20:24</span> <span class="num">30</span> <a  href="//www.17k.com/book/3672741.html"  alt="照骨天渊" title="照骨天渊" target="_blank">照骨天渊</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /> <img src="//static.17k.com/www/pic/icon/i_qian.png" alt="签约" /></li></ul>
+    </div>
+    <div class="PHB_CONT">
+        
+        <ul class="Top1"><li><span class="click">1215</span> <span class="num r">1</span> <a  href="//www.17k.com/book/3583700.html"  alt="星痕之门" title="星痕之门" target="_blank">星痕之门</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /></li><li><span class="click">631</span> <span class="num r">2</span> <a  href="//www.17k.com/book/3661094.html"  alt="分身三地十年约" title="分身三地十年约" target="_blank">分身三地十年约</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /></li><li><span class="click">520</span> <span class="num r">3</span> <a  href="//www.17k.com/book/3676241.html"  alt="重生九零：明天别..." title="重生九零：明天别..." target="_blank">重生九零：明天别...</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /></li><li><span class="click">326</span> <span class="num">4</span> <a  href="//www.17k.com/book/3006464.html"  alt="万古第一神" title="万古第一神" target="_blank">万古第一神</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /></li><li><span class="click">308</span> <span class="num">5</span> <a  href="//www.17k.com/book/3675055.html"  alt="飞入寻常百姓家" title="飞入寻常百姓家" target="_blank">飞入寻常百姓家</a> <img src="//static.17k.com/www/pic/icon/i_gril.png" alt="女生" /></li><li><span class="click">285</span> <span class="num">6</span> <a  href="//www.17k.com/book/3665489.html"  alt="全能教学系统" title="全能教学系统" target="_blank">全能教学系统</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /></li><li><span class="click">252</span> <span class="num">7</span> <a  href="//www.17k.com/book/3610898.html"  alt="天魔道圣" title="天魔道圣" target="_blank">天魔道圣</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /></li><li><span class="click">233</span> <span class="num">8</span> <a  href="//www.17k.com/book/1398783.html"  alt="九星霸体诀" title="九星霸体诀" target="_blank">九星霸体诀</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /></li><li><span class="click">231</span> <span class="num">9</span> <a  href="//www.17k.com/book/3382094.html"  alt="灵道纪" title="灵道纪" target="_blank">灵道纪</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /></li><li><span class="click">210</span> <span class="num">10</span> <a  href="//www.17k.com/book/3630118.html"  alt="全体起立！真龙归..." title="全体起立！真龙归..." target="_blank">全体起立！真龙归...</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /></li></ul><ul class="Top1"><li><span class="click">158</span> <span class="num">11</span> <a  href="//www.17k.com/book/3669552.html"  alt="娘子，我真不想考..." title="娘子，我真不想考..." target="_blank">娘子，我真不想考...</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /></li><li><span class="click">142</span> <span class="num">12</span> <a  href="//www.17k.com/book/2809894.html"  alt="近战狂兵" title="近战狂兵" target="_blank">近战狂兵</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /></li><li><span class="click">137</span> <span class="num">13</span> <a  href="//www.17k.com/book/450860.html"  alt="百炼飞升录" title="百炼飞升录" target="_blank">百炼飞升录</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /></li><li><span class="click">133</span> <span class="num">14</span> <a  href="//www.17k.com/book/3675286.html"  alt="两百万牵出个意外..." title="两百万牵出个意外..." target="_blank">两百万牵出个意外...</a> <img src="//static.17k.com/www/pic/icon/i_gril.png" alt="女生" /></li><li><span class="click">121</span> <span class="num">15</span> <a  href="//www.17k.com/book/3660623.html"  alt="东北风云：黑血漫..." title="东北风云：黑血漫..." target="_blank">东北风云：黑血漫...</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /></li><li><span class="click">104</span> <span class="num">16</span> <a  href="//www.17k.com/book/493239.html"  alt="修罗武神" title="修罗武神" target="_blank">修罗武神</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /></li><li><span class="click">99</span> <span class="num">17</span> <a  href="//www.17k.com/book/3670924.html"  alt="迷彩旧梦又逢君" title="迷彩旧梦又逢君" target="_blank">迷彩旧梦又逢君</a> <img src="//static.17k.com/www/pic/icon/i_gril.png" alt="女生" /></li><li><span class="click">99</span> <span class="num">18</span> <a  href="//www.17k.com/book/3383826.html"  alt="大玄印" title="大玄印" target="_blank">大玄印</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /></li><li><span class="click">99</span> <span class="num">19</span> <a  href="//www.17k.com/book/3675375.html"  alt="大宋三十六将" title="大宋三十六将" target="_blank">大宋三十六将</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /></li><li><span class="click">97</span> <span class="num">20</span> <a  href="//www.17k.com/book/1741975.html"  alt="女总裁的全能兵王" title="女总裁的全能兵王" target="_blank">女总裁的全能兵王</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /></li></ul><ul class="Top1"><li><span class="click">50</span> <span class="num">21</span> <a  href="//www.17k.com/book/3654950.html"  alt="蛊师秘录" title="蛊师秘录" target="_blank">蛊师秘录</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /></li><li><span class="click">42</span> <span class="num">22</span> <a  href="//www.17k.com/book/3676277.html"  alt="凡尘斩妖录" title="凡尘斩妖录" target="_blank">凡尘斩妖录</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /></li><li><span class="click">42</span> <span class="num">23</span> <a  href="//www.17k.com/book/3626025.html"  alt="小富即安？不，本..." title="小富即安？不，本..." target="_blank">小富即安？不，本...</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /></li><li><span class="click">39</span> <span class="num">24</span> <a  href="//www.17k.com/book/3676283.html"  alt="大明之三十六将" title="大明之三十六将" target="_blank">大明之三十六将</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /></li><li><span class="click">37</span> <span class="num">25</span> <a  href="//www.17k.com/book/3671024.html"  alt="大国制造1987" title="大国制造1987" target="_blank">大国制造1987</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /></li><li><span class="click">35</span> <span class="num">26</span> <a  href="//www.17k.com/book/83528.html"  alt="混沌剑神" title="混沌剑神" target="_blank">混沌剑神</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /></li><li><span class="click">33</span> <span class="num">27</span> <a  href="//www.17k.com/book/3676430.html"  alt="乡村小仙医枯井连..." title="乡村小仙医枯井连..." target="_blank">乡村小仙医枯井连...</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /></li><li><span class="click">28</span> <span class="num">28</span> <a  href="//www.17k.com/book/3672729.html"  alt="手握斩杀线，大帝..." title="手握斩杀线，大帝..." target="_blank">手握斩杀线，大帝...</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /></li><li><span class="click">28</span> <span class="num">29</span> <a  href="//www.17k.com/book/3671225.html"  alt="武警：兵王之路" title="武警：兵王之路" target="_blank">武警：兵王之路</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /></li><li><span class="click">28</span> <span class="num">30</span> <a  href="//www.17k.com/book/3651562.html"  alt="仙道十二极" title="仙道十二极" target="_blank">仙道十二极</a> <img src="//static.17k.com/www/pic/icon/i_man.png" alt="男生" /></li></ul>
+    </div>
+    <script type="text/javascript">
+        Q.tab(document.getElementById('PHB_TAB').getElementsByTagName('a'), Q('.PHB_CONT'))
+    </script>
+
+	</div>
+	<div class="Link">
+		<div class="Title1">
+			<h2 class="tit">友情链接</h2>
+		</div>
+		<div class="Link_cont">
+			
+			<a target="_blank" href="https://www.4yt.net/">四月天</a>
+<a target="_blank" href="http://www.mochiwang.com/">小黑屋</a>
+<a target="_blank" href="http://yc.ireader.com.cn/">掌阅小说网</a>
+<a target="_blank" href="http://book.qq.com/">腾讯文学</a>
+<a target="_blank" href="http://www.zongheng.com/">纵横中文网</a>
+<a target="_blank" href="https://max.book118.com/">原创力文档</a>
+<a target="_blank" href="http://www.ihuaben.com/">话本小说</a>
+<a target="_blank" href="http://www.fbook.net">天下书盟小说网</a>
+<a target="_blank" href="http://zixun.jia.com">齐家网</a>
+<a target="_blank" href="http://b.faloo.com/">飞卢小说网</a>
+<a target="_blank" href="http://www.docin.com/">豆丁网</a>
+<a target="_blank" href="http://www.shuhai.com/">书海小说网</a>
+<a target="_blank" href="https://www.lrts.me/index">懒人听书</a>
+<a target="_blank" href="https://www.kugou.com/ts/">酷狗音乐</a>
+<a target="_blank" href="https://www.kuwo.cn">酷我音乐</a>
+<a target="_blank" href="https://y.qq.com">QQ音乐</a>
+		</div>
+	</div>
+	<script
+			src='//static.17k.com/www/js/index.js?v=0922'
+			type="text/javascript"></script>
+	
+	<link rel="stylesheet" href='//static.17k.com/www/skin/17k_footer.css?v=0922'>
+
+<div class="Footer">
+	<div class="footer_nav">
+		<a rel="nofollow" target="_blank" href="//www.17k.com/aboutus/">关于17k.com</a>&#12288;|&#12288;
+		<a rel="nofollow" target="_blank" href="//www.17k.com/aboutus/Cooperation.html">商务合作</a>&#12288;|&#12288;
+		<a target="_blank" href="//www.17k.com/aboutus/link.html">友情链接</a>&#12288;|&#12288;
+		<a rel="nofollow" target="_blank" href="//www.17k.com/Simple/contents/helpCenter/index.html">帮助中心</a>&#12288;|&#12288;
+		<a rel="nofollow" target="_blank" href="//www.17k.com/Simple/contents/login/Rdme.html">用户守则</a>&#12288;|&#12288;
+		<a target="_blank" href="//www.17k.com/aboutus/sitemap.html">网站地图</a>&#12288;|&#12288;
+		<a target="_blank" href="//www.17k.com/tags">小说标签</a>&#12288;|&#12288;
+		<a target="_blank" href="//www.17k.com/Simple/contents/helpCenter/index.html?typeId=39">动漫专栏</a>&#12288;|&#12288;
+		<a rel="nofollow" target="_blank" href="//www.17k.com/inc/agreement/pc/protectionuserinfo.html">隐私政策</a>&#12288;|&#12288;
+		<a rel="nofollow" target="_blank" href="//www.17k.com/inc/agreement/users.html">用户协议</a>
+
+	</div>
+	<p>
+		Copyright (C) 2006-2022 www.17k.com All Rights Reserved 中文在线版权所有，未经许可不得擅自转载本站内容。<br>
+		17K小说网所收录免费小说作品、社区话题、书友评论、用户上传文字、图片等其他一切内容均属用户个人行为，与17K小说网无关。--17K权利声明。<br>
+		京ICP证010590号　<a target="_blank" href="https://beian.miit.gov.cn">京ICP备09030667号-5</a>　　　京网文（2023)4750-133号　　 （署）网出证（京）字第400号
+		　　<a target="_blank" href="https://cdn.static.17k.com/material_picture/2025/1756716975537.png">营业执照</a>
+		　　<a target="_blank" href="https://cdn.static.17k.com/material_picture/2024/1715161246348.png">出版物经营许可证</a>
+		<br>
+		<img src="//cdn.static.17k.com/material_picture/2022/1654841315108.png" style="vertical-align: middle"/><a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo"  style="vertical-align: middle">京公安网备：11010102000012号</a><br>
+		违法和不良信息举报电话： 400 6175 217 侵权内容及未成年信息举报邮箱：17Kjubao@col.com
+		<br/>
+		公司名称：中文在线集团股份有限公司 地址：北京市东城区安定门东大街28号雍和大厦2号楼6层608
+	</p>
+
+	<p class="linkimg">
+		<!--<a href="https://ss.knet.cn/verifyseal.dll?sn=e13062011010041317xgep000000&amp;ct=df&amp;a=1&amp;pa=0.9085826601367444"
+		   target="_blank" kx_type="图标式">
+			<img src="//rr.knet.cn/static/images/logo/cnnic.png" alt="可信网站">
+		</a>
+		<a href="http://v.pinpaibao.com.cn/authenticate/cert/?site=www.17k.com&at=business" target="_blank">
+			<img src="//static.anquan.org/static/outer/image/hy_124x47.png" alt="安全联盟认证" width="124" height="47">
+		</a>-->
+		<a rel="nofollow" target="_blank" href="https://www.12377.cn/">
+			<img src="//static.17k.com/www/pic/icon_not.jpg" alt="不良网站举报">
+		</a>
+		<a target="_blank" href="https://bzpt.shdf.gov.cn/www/shouye/gzfw/wsjb/index.shtml">
+			<img src="//static.17k.com/www/pic/icon_not2.jpg" alt="扫黄打非举报入口">
+		</a>
+		<a target="_blank" href="https://www.12377.cn/jbxzxq/64d38691937611ebb858c9da04cf59d3_web.html">
+			<img src="//static.17k.com/www/pic/icon_not3.jpg" alt="历史虚无主义">
+		</a>
+	</p>
+</div>
+<script>
+	var _hmt = _hmt || [];
+	(function () {
+		var hm = document.createElement('script');
+		hm.src = 'https://hm.baidu.com/hm.js?9793f42b498361373512340937deb2a0';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(hm, s);
+	})();
+
+	if(k.domain ==='sfmystern.com' || k.domain === 'mixiangjihua.com' || location.href.includes('xuanyi.chineseall.net')){
+	  var headTitleDom = document.getElementsByTagName("title")[0]
+      headTitleDom.innerText =  headTitleDom.innerText.replace("17K小说网","谜想计划")
+	  k('.user-sign .box').style({display: 'none'})
+  }
+
+	if(k.domain ==='qixianghz.com' || location.href.includes('kehuan.chineseall.net')){
+	  var headTitleDom  = document.getElementsByTagName("title")[0]
+    headTitleDom.innerText =  headTitleDom.innerText.replace("17K小说网","奇想宇宙")
+  }
+</script>
+<script type="text/javascript" src="https://zz.bdstatic.com/linksubmit/push.js"></script>
+
+<script src='//static.17k.com/js/count.js?v=20200909'
+		type="text/javascript"></script>
+
+	
+	<script type="text/javascript" src="//static.17k.com/www/js/helpBartool.js?v=1"></script>
+
+	
+	<script type="text/javascript" src="//dup.baidustatic.com/js/ds.js"></script>
+<script type="text/javascript">
+	//首页banner
+	BAIDU_CLB_fillSlotAsync("2064693", "BAIDU_1105071");
+	//banner2
+	BAIDU_CLB_fillSlotAsync("2059898", "BAIDU_BANNER2");
+	//banner3
+	BAIDU_CLB_fillSlotAsync("2059747", "BAIDU_BANNER3");
+	//banner4
+	BAIDU_CLB_fillSlotAsync("2072254", "BAIDU_BANNER4");
+	//banner6
+	BAIDU_CLB_fillSlotAsync("2089093", "BAIDU_BANNER6");
+	//banner5
+	BAIDU_CLB_fillSlotAsync("2072260", "BAIDU_BANNER5");
+	//全局二维码
+	//BAIDU_CLB_fillSlotAsync("2058873", "BAIDU_ERWEIMA");
+	//对联
+	// BAIDU_CLB_preloadSlots("3425361");//, "2823751");
+	// BAIDU_CLB_fillSlot("3425361");
+</script>
+
+</body>
+
+</html>

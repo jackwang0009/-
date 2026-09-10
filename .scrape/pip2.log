@@ -1,0 +1,15 @@
+Collecting fonttools
+  Using cached fonttools-4.63.0-cp313-cp313-win_amd64.whl.metadata (121 kB)
+Downloading fonttools-4.63.0-cp313-cp313-win_amd64.whl (2.3 MB)
+                                            0.0/2.3 MB ? eta -:--:--
+
+WARNING: Connection timed out while downloading.
+WARNING: Attempting to resume incomplete download (0 bytes/2.3 MB, attempt 1)
+Downloading fonttools-4.63.0-cp313-cp313-win_amd64.whl (2.3 MB)
+   ---------------------------------------- 2.3/2.3 MB 17.7 kB/s  0:02:16
+
+Installing collected packages: fonttools
+Successfully installed fonttools-4.63.0
+
+[notice] A new release of pip is available: 26.1.2 -> 26.2.1
+[notice] To update, run: python.exe -m pip install --upgrade pip

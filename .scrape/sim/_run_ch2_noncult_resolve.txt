@@ -1,0 +1,46 @@
+  ~near 系统延迟一坤年，我成了全球股东 | 重开 | 都市脑洞/系统/神豪/穿越/无女主/搞笑轻松
+20/596 resolved=20 hits=0 near=1 err=0 26s eta=12.7min
+  ~near 让你当众写检讨，你作洛神赋？ | 推演 | 都市脑洞/系统/穿越/多女主/打脸/魂穿
+  ★HIT 让你拍节目，你让项羽撕秦始皇？ | abstract 模拟 | 都市脑洞/都市/系统/穿越/搞笑轻松/群像
+40/596 resolved=40 hits=1 near=2 err=0 54s eta=12.4min
+  ~near 游戏女主成真？高冷校花泪流满面 | 模拟 | 都市脑洞/都市/多女主/校花
+60/596 resolved=60 hits=1 near=3 err=0 81s eta=12.1min
+  ~near 我在股市做空全球 | 模拟器,模拟 | 都市脑洞/都市/打脸/神豪/系统
+80/596 resolved=80 hits=1 near=4 err=0 108s eta=11.7min
+100/596 resolved=100 hits=1 near=4 err=0 136s eta=11.2min
+120/596 resolved=120 hits=1 near=4 err=0 163s eta=10.8min
+  ~near 黑暗求生：丢失庇护所后自学成神 | 模拟器,模拟 | 游戏体育/穿越/求生/无女主/升级流/副本
+140/596 resolved=140 hits=1 near=5 err=0 191s eta=10.3min
+160/596 resolved=160 hits=1 near=5 err=0 218s eta=9.9min
+  ~near 第四天灾：我的穿越模拟器 | 模拟器,模拟 | 游戏体育/系统/穿越/无限流/同人/第四天灾
+180/596 resolved=180 hits=1 near=6 err=0 245s eta=9.5min
+  ~near 体育流：足球之冠军教父 | 推演 | 游戏体育/系统/体育/打脸
+200/596 resolved=200 hits=1 near=7 err=0 273s eta=9.0min
+  ~near 全地球都在替宇宙打排位 | 推演 | 游戏体育/系统/无限流
+220/596 resolved=220 hits=1 near=8 err=0 300s eta=8.5min
+240/596 resolved=240 hits=1 near=8 err=0 327s eta=8.1min
+260/596 resolved=260 hits=1 near=8 err=0 354s eta=7.6min
+280/596 resolved=280 hits=1 near=8 err=0 382s eta=7.2min
+300/596 resolved=300 hits=1 near=8 err=0 410s eta=6.7min
+320/596 resolved=320 hits=1 near=8 err=0 437s eta=6.3min
+340/596 resolved=340 hits=1 near=8 err=0 465s eta=5.8min
+  ~near 开局成为留守儿童 | 重开 | 都市种田/都市/乡村/空间/开局/发家致富
+360/596 resolved=360 hits=1 near=9 err=0 492s eta=5.4min
+  ~near 全民求生，获得D级人员模拟器 | 模拟器,模拟 | 科幻末世/穿越/末世/求生/开局/卡牌
+380/596 resolved=380 hits=1 near=10 err=0 519s eta=4.9min
+400/596 resolved=400 hits=1 near=10 err=0 547s eta=4.5min
+420/596 resolved=420 hits=1 near=10 err=0 574s eta=4.0min
+  ~near 星际流：深空星舰指挥官 | 模拟器,模拟 | 科幻末世/星际/末世/打脸/系统/求生
+440/596 resolved=440 hits=1 near=11 err=0 602s eta=3.6min
+460/596 resolved=460 hits=1 near=11 err=0 631s eta=3.1min
+480/596 resolved=480 hits=1 near=11 err=0 659s eta=2.7min
+500/596 resolved=500 hits=1 near=11 err=0 686s eta=2.2min
+  ★HIT 每周金手指，点燃万界星海！ | abstract 模拟器,模拟 | 西方奇幻/玄幻/奇幻仙侠/异世大陆/诸天万界/开局/系统/穿越
+520/596 resolved=520 hits=2 near=11 err=0 714s eta=1.7min
+  ★HIT 天使小姐，不要再乱闯我家了！ | abstract 模拟 | 西方奇幻/奇幻仙侠/奇幻/玄幻/副本/单女主/穿越/异世大陆
+  ★HIT 游戏：转生白龙的我才不会白给 | abstract 模拟 | 西方奇幻/奇幻/玄幻/穿越/奇幻仙侠/网游
+540/596 resolved=540 hits=4 near=11 err=0 741s eta=1.3min
+560/596 resolved=560 hits=4 near=11 err=0 769s eta=0.8min
+580/596 resolved=580 hits=4 near=11 err=0 797s eta=0.4min
+
+步骤B完成（.scrape/sim/ch2_ids_noncult.json）：解析 596 本，命中(A∧B) 4，nearMiss(A∧¬B) 11，错误 0

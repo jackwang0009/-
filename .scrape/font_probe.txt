@@ -1,0 +1,78 @@
+tables: ['CFF ', 'GlyphOrder', 'OS/2', 'cmap', 'head', 'hhea', 'hmtx', 'ltag', 'maxp', 'name', 'post']
+numGlyphs: 363
+cmap size: 362
+first 40 glyph names: ['.notdef', 'gid58670', 'gid58413', 'gid58678', 'gid58371', 'gid58353', 'gid58480', 'gid58359', 'gid58449', 'gid58540', 'gid58692', 'gid58712', 'gid58542', 'gid58575', 'gid58626', 'gid58691', 'gid58561', 'gid58362', 'gid58619', 'gid58430', 'gid58531', 'gid58588', 'gid58440', 'gid58681', 'gid58631', 'gid58376', 'gid58429', 'gid58555', 'gid58498', 'gid58518', 'gid58453', 'gid58397', 'gid58356', 'gid58435', 'gid58514', 'gid58482', 'gid58529', 'gid58515', 'gid58688', 'gid58709']
+codepoint range: E3E8 - E55B
+--- first 60 cmap entries ---
+U+E3E8 -> gid58344
+U+E3E9 -> gid58345
+U+E3EA -> gid58346
+U+E3EB -> gid58347
+U+E3EC -> gid58348
+U+E3ED -> gid58349
+U+E3EE -> gid58350
+U+E3EF -> gid58351
+U+E3F0 -> gid58352
+U+E3F1 -> gid58353
+U+E3F2 -> gid58354
+U+E3F3 -> gid58355
+U+E3F4 -> gid58356
+U+E3F5 -> gid58357
+U+E3F7 -> gid58359
+U+E3F8 -> gid58360
+U+E3F9 -> gid58361
+U+E3FA -> gid58362
+U+E3FB -> gid58363
+U+E3FC -> gid58364
+U+E3FD -> gid58365
+U+E400 -> gid58368
+U+E401 -> gid58369
+U+E402 -> gid58370
+U+E403 -> gid58371
+U+E404 -> gid58372
+U+E405 -> gid58373
+U+E406 -> gid58374
+U+E407 -> gid58375
+U+E408 -> gid58376
+U+E409 -> gid58377
+U+E40A -> gid58378
+U+E40B -> gid58379
+U+E40C -> gid58380
+U+E40D -> gid58381
+U+E40E -> gid58382
+U+E40F -> gid58383
+U+E410 -> gid58384
+U+E411 -> gid58385
+U+E412 -> gid58386
+U+E413 -> gid58387
+U+E414 -> gid58388
+U+E415 -> gid58389
+U+E416 -> gid58390
+U+E417 -> gid58391
+U+E418 -> gid58392
+U+E41A -> gid58394
+U+E41B -> gid58395
+U+E41C -> gid58396
+U+E41D -> gid58397
+U+E41E -> gid58398
+U+E41F -> gid58399
+U+E420 -> gid58400
+U+E421 -> gid58401
+U+E422 -> gid58402
+U+E423 -> gid58403
+U+E424 -> gid58404
+U+E425 -> gid58405
+U+E426 -> gid58406
+U+E427 -> gid58407
+name[9/0]: Ryoko NISHIZUKA 西塚涼子 (kana, bopomofo & ideographs); Paul D. Hunt (Latin, Greek & Cyrillic); Sandoll Communications 산돌커뮤니케이션, Soo-young JANG 장수영 & Joo-yeon KANG 강주연 (hangul elements, letters & syllables)
+name[10/0]: Dr. Ken Lunde (project architect, glyph set definition & overall production); Masataka HATTORI 服部正貴 (production & ideograph elements)
+name[0/1]: This is a subset font of SourceHanSansSC-Normal. © 2014-2020 Adobe (http://www.adobe.com/), with Reserved Font Name 'Source'.
+name[1/1]: SourceHanSansSC
+name[2/1]: Normal
+name[3/1]: Adobe:SourceHanSansSC Normal
+name[4/1]: SourceHanSansSC Normal
+name[5/1]: Version 2.002;hotconv 1.0.116;makeotfexe 2.5.65601
+name[6/1]: SourceHanSansSCNormal
+name[7/1]: Source is a trademark of Adobe in the United States and/or other countries.
+name[8/1]: Adobe
+name[11/1]: http://www.adobe.com/type/

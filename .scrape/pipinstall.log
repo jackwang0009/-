@@ -1,0 +1,7 @@
+Collecting fonttools
+  Downloading fonttools-4.63.0-cp313-cp313-win_amd64.whl.metadata (121 kB)
+ERROR: Could not find a version that satisfies the requirement brotli (from versions: none)
+
+[notice] A new release of pip is available: 26.1.2 -> 26.2.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
+ERROR: No matching distribution found for brotli

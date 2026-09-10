@@ -1,0 +1,41 @@
+合并时间：2026-09-10T13:38:43.776Z
+输入齐全
+
+各份交付状态：
+  ch2 raw_ch2_fanqie.json → partial，46 本
+  ch3 raw_ch3_qidian.json → blocked-by-policy，0 本（0 本是结论不是待办，不要改派重抓）
+  ch3 raw_ch3_alt.json → partial，1 本
+  ch4 raw_ch4_qimao.json → partial，89 本
+  ch5 raw_ch5_feilu.json → partial，166 本
+
+原始记录 302 条 → 去重后 287 本（跨站重复 15 本）
+nearMiss 合计 578 条
+字数中位数（全部 287 本）：567472
+字数中位数（排除沙盘流亚型，259 本）：649620  ← 同题对标用这个
+沙盘流亚型 28 本（SCHEMA 修订 7：向外造世界、时间线不回滚，与模拟流是相反的机制；收录保留、对标排除）
+分平台条数：{
+  "fanqie": 46,
+  "tadu": 1,
+  "qimao": 89,
+  "zongheng": 23,
+  "faloo": 143
+}
+
+字段校验全过
+
+跨站重复（同书多站，合并时首发日期取最早）：
+  模拟模拟就无敌了 / 高 → qimao + zongheng
+  氪命推演，无敌从斩妖开始 / 谦豫 → qimao + zongheng
+  我的模拟器不太对劲 / 爱吃玉米的兔子 → qimao + zongheng
+  玄幻：入赘宗门，我有西游模拟器 / 西乡月 → qimao + zongheng
+  无敌推演，从凡人开始武道登顶 / 羽十七 → qimao + zongheng
+  玄幻：我多重人格被女帝模拟曝光 / 七星吊灯 → qimao + zongheng
+  杀敌涨寿元，我以寿元推演成神！ / 林壹 → qimao + zongheng
+  模拟器：别人修武，我修仙 / 蛮荒散人 → qimao + zongheng
+  高武：我有一个修仙模拟器 / 黄柏山下 → qimao + zongheng
+  凡人修仙：从杂役峰开始推演长生 / 离山小师叔 → qimao + zongheng
+  说好人生模拟，仙子你怎么成真了 / 扑满 → qimao + zongheng
+  武道推演：从宗门杂役开始只手遮天 / 我要上榜一 → qimao + zongheng
+  模拟器：从帮派喽啰成天下霸主 / 五指山 → qimao + zongheng
+  玄幻：悟性逆天，开局推演神级功法 / 钧秋 → qimao + zongheng
+  我有修仙模拟器，开启自动修炼 / 我爱吃番茄面 → qimao + zongheng

@@ -1,0 +1,115 @@
+User-agent: Googlebot
+Allow: /tardis/jm
+Disallow: /appview/
+Disallow: /login
+Disallow: /logout
+Disallow: /resetpassword
+Disallow: /terms
+Disallow: /search
+Disallow: /notifications
+Disallow: /settings
+Disallow: /inbox
+Disallow: /admin_inbox
+Disallow: /*?guide*
+
+User-agent: Googlebot-Image
+Disallow: /appview/
+Disallow: /login
+Disallow: /logout
+Disallow: /resetpassword
+Disallow: /terms
+Disallow: /search
+Disallow: /notifications
+Disallow: /settings
+Disallow: /inbox
+Disallow: /admin_inbox
+Disallow: /*?guide*
+
+User-agent: bingbot
+Allow: /tardis/jm
+Disallow: /appview/
+Disallow: /login
+Disallow: /logout
+Disallow: /resetpassword
+Disallow: /terms
+Disallow: /search
+Disallow: /notifications
+Disallow: /settings
+Disallow: /inbox
+Disallow: /admin_inbox
+Disallow: /*?guide*
+
+User-agent: Baiduspider-news
+Allow: /tardis/jm
+Disallow: /appview/
+Disallow: /login
+Disallow: /logout
+Disallow: /resetpassword
+Disallow: /terms
+Disallow: /search
+Disallow: /notifications
+Disallow: /settings
+Disallow: /inbox
+Disallow: /admin_inbox
+Disallow: /*?guide*
+Disallow: /en/
+
+User-agent: Baiduspider
+Allow: /tardis/jm
+Disallow: /appview/
+Disallow: /login
+Disallow: /logout
+Disallow: /resetpassword
+Disallow: /terms
+Disallow: /search
+Disallow: /notifications
+Disallow: /settings
+Disallow: /inbox
+Disallow: /admin_inbox
+Disallow: /*?guide*
+Disallow: /en/
+
+User-agent: Baiduspider-render
+Allow: /tardis/jm
+Disallow: /appview/
+Disallow: /login
+Disallow: /logout
+Disallow: /resetpassword
+Disallow: /terms
+Disallow: /search
+Disallow: /notifications
+Disallow: /settings
+Disallow: /inbox
+Disallow: /admin_inbox
+Disallow: /*?guide*
+Disallow: /en/
+
+User-agent: Baiduspider-image
+Disallow: /appview/
+Disallow: /login
+Disallow: /logout
+Disallow: /resetpassword
+Disallow: /terms
+Disallow: /search
+Disallow: /notifications
+Disallow: /settings
+Disallow: /inbox
+Disallow: /admin_inbox
+Disallow: /*?guide*
+Disallow: /en/
+
+User-agent: AdsBot-Google
+Allow: /en/
+Disallow: /
+
+User-agent: Sogou web spider
+Allow: /tardis/sogou/
+Disallow: /
+
+User-Agent: Google-Extended
+Allow: /tardis/jm
+Disallow: /
+
+User-Agent: *
+Allow: /tardis/jm
+Disallow: /

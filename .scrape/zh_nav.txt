@@ -1,0 +1,17 @@
+月票榜	https://www.zongheng.com/rank/details.html?rt=1&d=1&i=2
+24小时畅销榜	https://www.zongheng.com/rank/details.html?rt=3&d=1
+新书榜	https://www.zongheng.com/rank/details.html?rt=4&d=1
+点击榜	https://www.zongheng.com/rank/details.html?rt=5&d=1
+推荐榜	https://www.zongheng.com/rank/details.html?rt=6&d=1
+捧场榜	https://www.zongheng.com/rank/details.html?rt=7&d=1
+完结榜	https://www.zongheng.com/rank/details.html?rt=8&d=1
+新书订阅榜	https://www.zongheng.com/rank/details.html?rt=9&d=1
+24小时更新榜	https://www.zongheng.com/rank/details.html?rt=10&d=1
+读者消费榜	https://www.zongheng.com/rank/details.html?rt=11
+作者人气榜	https://www.zongheng.com/rank/details.html?rt=12
+更多	https://www.zongheng.com/rank/details.html?rt=1&d=1
+更多	https://www.zongheng.com/rank/details.html?rt=3&d=1
+更多	https://www.zongheng.com//rank/details.html?rt=4&d=1
+更多	https://www.zongheng.com/rank/details.html?rt=9&d=1
+更多	https://www.zongheng.com/rank/details.html?rt=5&d=1
+更多	https://www.zongheng.com/rank/details.html?rt=6&d=1

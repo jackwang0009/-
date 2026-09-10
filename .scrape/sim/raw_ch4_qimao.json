@@ -1,0 +1,3473 @@
+{
+  "meta": {
+    "channel": 4,
+    "platforms": [
+      "qimao"
+    ],
+    "status": "partial",
+    "collectedAt": "2026-09-08T13:49:18Z",
+    "entryPoints": [
+      "https://api-www.qimao.com/api/search/result?keyword={模拟|模拟器|推演|演算|沙盘|预演|重开|人生模拟|无限重生}&page=1..18"
+    ],
+    "notes": "【七猫】仅站内搜索 API 可用。www.qimao.com 的全部 HTML 页面（书页 /shuku/{id}/、分类榜、甚至 robots.txt）均被阿里云 WAF 拦截，统一返回同一份 23670 字节的 arg1 JS 挑战页；已试 9 个 API 侧详情/榜单端点（book/detail、book/info、shuku/detail、rank/list、shuku/list 等）全部 404，chapter-list 返回「请求参数错误」。\n【七猫·因此为 null 的字段】chapterTotal、popularity（热度）、openingHook、firstPublishDate、tags、score。前三项只存在于被 WAF 挡住的 HTML 页；firstPublishDate 七猫任何公开接口都不给；tags 搜索 API 不返回；score 七猫无评分体系。均按 SCHEMA 第五节写 null，未猜测、未填占位值。\n【七猫·条件 A 重验】搜索 API 是模糊召回，返回结果里有大量正文无模拟词的书。已对 title + intro 原文重新逐词校验，未命中的直接丢弃（不进 books 也不进 nearMiss）。\n【七猫·抓取纪律】请求间隔 1.2 秒，403/429/200 空 body 退避 60 秒（本轮 70 次请求全程未触发）。仅访问搜索 API，未抓任何章节正文。\n【知乎盐选·0 本，合规原因不是技术原因】知乎 robots.txt 末段为 `User-Agent: *` / `Allow: /tardis/jm` / `Disallow: /`，即对非白名单爬虫整站禁抓，仅放行 /tardis/jm。实测 /tardis/jm/art/{id} 与 /tardis/{zm,bd,sogou}/... 无论 Chrome UA 还是 Googlebot UA 均只返回 1077–1165 字节的知乎 500 错误页，渲染不出内容。其余路径：/search 被 robots 明确 Disallow 且 HTTP 403；zhuanlan 文章页与 question 页 403 + zh-zse-ck 反爬挑战；api/v4/search_v3、api.zhihu.com/search_v3、api/v4/articles、topics feeds 均要求登录（need_login:true / code 10003）。派单明确禁止登录与绕付费墙，故停止抓取，交 0 本而非凑数。robots.txt 已存档 .scrape/sim/raw/ch4_zhihu_robots.txt。\n【知乎盐选·派单假设更正】派单称 .scrape/ch4_zhpeek / ch4_zhfetch / ch4_zhauthor / ch4_zh_final 是本通道上一轮的知乎资产，实为【纵横中文网】资产（ch4_zhfetch.py 写死 book.zongheng.com/book/{id}.html，ch4_zh_final.py 解析 rank_d_list / 总点击 / 完本）。zh = zongheng。.scrape/ 下不存在任何知乎旧资产，知乎侧是从零起步。纵横现属通道 5 地盘，本通道未复用亦未改动这批文件。\n【七猫·入选规则】按 SCHEMA 修订 3「凡过判据的全收」，条件 A∧B 合格的 92 本全部交付，未做数量截断。曾按旧口径截到 60 本，实测该截断把中位数从 656900 抬到 656900（虚高约 0%），因为截断是按 wordCount 降序做的——这也从数据侧印证了拆上限是对的。分析请用 656900。\n【七猫·三轮召回，末轮证明已饱和】① 9 个单词（SCHEMA 第一节词表）70 请求 → 池 696、合格 81。② 上限拆除后补 12 个「模拟×修仙」复合词 91 请求 → 池 1215（+519）、合格 86。③ 反向轮：改搜修仙词（杂役/筑基/金丹/元婴/灵根/长生/宗门/炼气/化神/仙门/凡人修仙/苟道）再过模拟词，专抓「模拟只写在简介里、搜模拟排不上来」的漏网书，83 请求扫过 1230 条结果，+6 本 → 合格 92。合计 244 请求。**这 6 本全部是「仅简介命中」型，把该亚群从 5 本翻倍到 11 本**，正好验证了这一轮的假设：搜模拟词会系统性漏掉「模拟只写在 intro 里」的书，只有从修仙面反查才捞得到。总量上第三轮只 +7%，但对「模拟是卖点还是里子」这个分析维度它贡献了一半样本。继续加轮次的边际收益已很低，召回可以停在这里。\n【统计】七猫命中池 1221 本（21 关键词去重，两轮 161 次请求）→ 条件 A∧B 92 本，全部交付；nearMiss 126 本。知乎 0 本（见上条合规说明）。\n【86 vs 92 对账·由接手通道 4 的通道 3 补记，2026-09-09】两个数都对，口径不同，**交付本数就是 92**。逐条回查命中池 ch4_qm_hits.json 的 _hitBy：92 本里有 6 本只被 rev: 前缀（第三轮反向召回）的关键词命中，92−6=86 正是前两轮口径下的本数。这 6 本是《金丹是恒星，你管这叫修仙？》《从捡修为开始，打造极道世家》《合欢宗：三年杂役，苟成盖世魔头》《我都金丹了，你告诉我要参加武道高考？》《趋吉避凶：宗门卜卦百年，成就无上仙帝》《凡人修仙：从造化万物开始》，全部为 matchedIn=abstract（仅简介命中），与本 notes 上文「该亚群 5→11」的说法一致。\n【连带定死两个引用口径】① **模拟词入书名 = 88%（81/92）**，不是 94%：matchedIn 分布为 abstract+title 72 / abstract 11 / title 9，带书名命中的是 72+9=81；94% 是 81/86 的旧分母，第三轮新增的 6 本全是仅简介命中，只进分母不进分子。② **字数中位数 = 656900 字**，写成「65.9 万」是把 65.69 万四舍五入错了一位，成稿引用请用 656900 或 65.7 万。\n【提请通道 1 核一句】本 notes 上文「实测该截断把中位数从 656900 抬到 656900（虚高约 0%）」两个数相同、结论却是「虚高」，疑为通道 4 改稿时漏改前一个数。我没有权限改写它已有的句子，只在此标注。复现：node .scrape/sim/ch4_bench_reconcile.mjs\n【2026-09-09 通道 2 接管执行】本通道（通道 4）已离线，本文件由通道 2 以总指挥身份接管，补做 SCHEMA 修订 6 要求的「重开」词义复核——该修订 2026-09-09 才立，通道 4 交付时尚无此条，不是它的疏漏。复核范围：仅靠弱词（重开/沙盘/演算/预演）入选、无强词兜底的书，共 3 本，逐本回原句判词义后全部剔除并移入 nearMiss（三本都是「重开+宾语」的开天辟地义）。books 92 → 89，nearMiss 126 → 129。原句已写进各条 reason，痕迹可推翻。其余字段、判据、抓取记录一字未动。"
+  },
+  "books": [
+    {
+      "platform": "qimao",
+      "platformBookId": "1976175",
+      "title": "模拟模拟就无敌了",
+      "author": "高",
+      "url": "https://www.qimao.com/shuku/1976175/",
+      "wordCount": 8114800,
+      "chapterTotal": null,
+      "status": "连载",
+      "categories": [
+        "东方玄幻"
+      ],
+      "tags": null,
+      "abstract": "第一次当作家，收到很多读者大大的反馈，极度凌乱，对各位读者大大来说是一大挑战。全网第一快，也是全网第一乱，此风格希望读者大大能够接受。写的不好请各位读者大大见谅，看不懂的地方请自行脑补，我相信只要一章章看，大大们还是可以看的懂的！本作品有很多卷，每一卷都是一个故事。玄幻，重生，穿越，模拟，诡异，甜宠，高武，反派，系统，脑洞，网游，末世，搞笑，修仙，历史，等等………你所知道的一切，全都会有，此书目标宏大，字数难以估量！",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2025-05-12",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "模拟"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%A8%A1%E6%8B%9F&page=1"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "1788022",
+      "title": "玄幻模拟器",
+      "author": "咸鱼洁南",
+      "url": "https://www.qimao.com/shuku/1788022/",
+      "wordCount": 3224700,
+      "chapterTotal": null,
+      "status": "完结",
+      "categories": [
+        "诸天万界"
+      ],
+      "tags": null,
+      "abstract": "见狂澜之树，挽大厦之将倾.......\n灵气复苏，万界争霸.....\n武道修仙异能，谁可纵横？\n一切，从一个小小的模拟器开始。\n巫师世界，仙侠世界，猎魔世界，诸神世界........",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2024-01-25",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "模拟器",
+          "模拟"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%A8%A1%E6%8B%9F&page=1"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "9976011",
+      "title": "妖魔乱世，我能模拟修仙",
+      "author": "只会叭水的鱼",
+      "url": "https://www.qimao.com/shuku/9976011/",
+      "wordCount": 2896600,
+      "chapterTotal": null,
+      "status": "完结",
+      "categories": [
+        "幻想修真"
+      ],
+      "tags": null,
+      "abstract": "邪魅诡域，魑魅魍魉，吃人妖魔，淫祀邪神……无尽的危险充斥在这方天地，人族只能在其中苟延残喘，求得微弱的一线生机。\n在无尽的黑暗当中总会有微弱的烛光出现，一位位觉醒者为天下而修仙，点亮自身化作明灯，驱散黑暗，引领万民，乃为天下生民立命。\n然而清水近墨终为黑……择人而噬变得不止是邪魅……\n江明沉默看着这方天地，是成为觉醒者刻苦修行拯救万民而后不知不觉被邪魅同化，还是直接堕落成为邪魅妖魔肆无忌惮，亦或是碌碌无为苟延残喘？\n小孩子才做选择，我当然是全都不要！\n江明果断选择了传统修仙！一方正统修仙界在江明的手中衍化模拟，模拟穿越，获得修仙界中的一切事物，金丹元婴光明浩瀚，法宝符箓无穷无尽，剑诀神通雷霆破晓。\n漫长岁月后，仙王高居此间，邪神鬼帝落荒而逃。",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2026-06-02",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "模拟"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%A8%A1%E6%8B%9F&page=1"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "1798532",
+      "title": "玄幻之无限模拟人生",
+      "author": "飞花朵",
+      "url": "https://www.qimao.com/shuku/1798532/",
+      "wordCount": 2830000,
+      "chapterTotal": null,
+      "status": "完结",
+      "categories": [
+        "东方玄幻"
+      ],
+      "tags": null,
+      "abstract": "【人生没有重来的机会，这世上没有后悔药。但拥有人生模拟器，你将拥有不同的人生，无限的选择次数。无限人生模拟器，选择你的人生，铸就属于你的辉煌！】\n……\n【请选择你的出身背景，请选择初始自带天赋】\n……\n功法、武技、神兵、灵丹。\n无限的人生，在异界大陆铸就无上辉煌！",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2024-02-21",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "模拟",
+          "模拟器",
+          "人生模拟"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%A8%A1%E6%8B%9F&page=3"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "1889228",
+      "title": "金丹是恒星，你管这叫修仙？",
+      "author": "走地鹤",
+      "url": "https://www.qimao.com/shuku/1889228/",
+      "wordCount": 2702800,
+      "chapterTotal": null,
+      "status": "完结",
+      "categories": [
+        "幻想修真"
+      ],
+      "tags": null,
+      "abstract": "我叫齐原，是一名穿越者，成为七色峰的大师兄。\n我有一枚游戏玉简，可通诸天。\n我的双眼，能够看到隐藏信息。\n【这是一株普通的小草，但三天前，枯木真君与大商皇后曾在上幽会。】\n【她叫阮一汐，她表面上是你的美女师父，但实际上可能是你的老婆。】\n【这是世界的天道，是天道筑基最好的灵物。】\n【这是一颗没有生灵的星球，说不定可以炼化成你的金丹。】\n于是，我的修仙路逐渐奇怪了起来。\n“天道？这不是天道筑基的灵物吗？”\n“好多荒凉星球，都炼成金丹吧！”\n以天道筑基，炼星辰为金丹。\n我叫齐原，万物之起源！\n……\n我叫姜灵素，我怀着不可告人的目的，加入了七色峰，我的大师兄脑袋有问题。\n他不务正业，不喜修行，沉迷模拟游戏。\n大师兄说，“游戏就是修行，游戏也可创世。”\n有一天，天上多了个太阳。\n我问大师兄，那是什么。\n大师兄说：“那是我的金丹！”\n本书又名《修仙：玉简里的诸天》《我结的金丹是星球》《神经病修仙，法力无边。》",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2025-01-19",
+      "simEvidence": {
+        "matchedIn": [
+          "abstract"
+        ],
+        "keywords": [
+          "模拟"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E9%87%91%E4%B8%B9&page=2"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "9975306",
+      "title": "让你模拟人生，你次次逆天改命？",
+      "author": "执火独行",
+      "url": "https://www.qimao.com/shuku/9975306/",
+      "wordCount": 2380300,
+      "chapterTotal": null,
+      "status": "完结",
+      "categories": [
+        "诸天万界"
+      ],
+      "tags": null,
+      "abstract": "这是一个全民模拟，诡异横行的末日世界。\n只有在模拟人生中逆天改命，才能避免被黑雾侵蚀。\n陆远穿越而来，意外获得自适应天赋，每次模拟都能自动获得一个神级天赋！\n第一世：现代科技世界，武道式微没落。\n【天道酬勤】：一分耕耘，百倍收获，呼吸就能变强！\n第二世：魔法世界，重生普通骷髅\n【亡灵天灾】：化身亡灵主宰，以天灾军团VS深渊恶魔！\n某世：寄生修仙，修炼者被虫族圈养。\n【悟性逆天】：推演蛊道修炼体系，成就史上第一蛊仙！\n随着一个个神级天赋被激活，诸天神魔这才惊恐的发现……",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2026-01-30",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "模拟",
+          "推演"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%A8%A1%E6%8B%9F&page=9"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "1806703",
+      "title": "氪命推演，无敌从斩妖开始",
+      "author": "谦豫",
+      "url": "https://www.qimao.com/shuku/1806703/",
+      "wordCount": 2284300,
+      "chapterTotal": null,
+      "status": "完结",
+      "categories": [
+        "东方玄幻"
+      ],
+      "tags": null,
+      "abstract": "消耗寿命可以推演武学功法，只要寿命足够就能立地成圣。\n这个世界妖魔横行。\n有披着人皮当着朝廷命官的，暗地里吞食无数人类。\n有大妖张口之下，就能吞下一整座城市的人族。\n沈林穿越而来，作为一个小小的衙役，没有什么显赫家世，师门传承。\n好在，觉醒了氪命系统，斩杀妖魔可获取对方剩余寿命，用来推演武学功法。\n从【血战刀法】到【血海裂天刀】，从【金钟罩】到【大日焚魔金身】！\n自此，那些作威作福，将人族当成口粮的妖圣魔尊，迎来了他们的末日。\n本书又名“桀桀桀，妖魔休走，你的寿命和我有缘！”“让你氪命，你氪别人的？”“我一身修为，全靠自己辛苦锻炼！”",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2025-07-27",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "推演"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%8E%A8%E6%BC%94&page=1"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "1790363",
+      "title": "模拟器：开局天牢死囚",
+      "author": "闪电月牙",
+      "url": "https://www.qimao.com/shuku/1790363/",
+      "wordCount": 2041400,
+      "chapterTotal": null,
+      "status": "完结",
+      "categories": [
+        "东方玄幻"
+      ],
+      "tags": null,
+      "abstract": "叶流云魂穿异界，一来就出现在天牢，而且三日之后就要问斩！\n好在觉醒了神级模拟器，花费名望，即可进行模拟，每一次模拟之后，都可以随机选择保留一个天赋能力！\n【你选择认罪，并且随意攀咬他人，说是受人指使！】\n【金刀卫查探之后发现你牛头不对马嘴，将你凌迟处死！】\n……\n【你选择喊冤，喊破喉咙也没有人理你！】\n【三日之后，你被法场处斩！】\n……\n【你选择……】\n【三日之后，你被法场处斩！】\n“……”叶流云一阵欲哭无泪，“我想回地球！”",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2024-01-26",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "模拟器",
+          "模拟"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%A8%A1%E6%8B%9F&page=4"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "1786185",
+      "title": "轮回模拟：我能逆天改命",
+      "author": "江河载月",
+      "url": "https://www.qimao.com/shuku/1786185/",
+      "wordCount": 1860300,
+      "chapterTotal": null,
+      "status": "完结",
+      "categories": [
+        "幻想修真"
+      ],
+      "tags": null,
+      "abstract": "穿越而来，在这个超凡显圣的阎浮大世，有天帝口含天宪，居于九天凌霄，坐看诸界；有仙人遨游八荒，朝游北海暮苍梧，与世同君。\n有儒道圣贤教化天下，一画开天，为天地立心；也有大德高僧拈花一笑，法天相地，演化无边佛土，堪比西天极乐。\n而季秋，不过只是这无边大世之下，一只如同蚍蜉般的蝼蚁罢了。\n本以为不过是凡人开局，在艰难险阻之中，争得那一线成道之机。\n然而...\n【轮回模拟，带你体验不同人生的千姿百态。】\n一款似是而非的模拟器，却带着他走入了一番截然不同的天地。\n佛门千古难见的禅道奇才，以武入道，只身杀入皇城，一身白衣如血，只为博得一句不负如来不负卿；\n末法之时白日飞升的太平道主，自微末崛起，布施天下，一路破山伐庙，在灵潮未起之世，成为了天下唯一的入道真修；\n天下动荡，烽烟四起，北元铁蹄南下，有道门掌教横空出世，挽救苍生，再扶龙庭，造就一世神话；\n魔门魁首、儒脉圣人、道家谪仙、千古一帝...\n茫茫岁月，无尽时空，季秋一路稳步踏足，逆流而上，竟是于这滚滚青史之中，刻下了无法磨灭的痕迹。",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2024-01-24",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "模拟",
+          "模拟器"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%A8%A1%E6%8B%9F&page=6"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "1885077",
+      "title": "模拟万次，成就人族横炼大帝",
+      "author": "圣光照耀着你",
+      "url": "https://www.qimao.com/shuku/1885077/",
+      "wordCount": 1804400,
+      "chapterTotal": null,
+      "status": "完结",
+      "categories": [
+        "东方玄幻"
+      ],
+      "tags": null,
+      "abstract": "【模拟器】+【肌肉】+【武者】+【万族不朽】+【圈养人族】\n作为钦定的主角，居然重重杀劫加身。\n仿佛有一只大手在操控着一切，想要磨死人族最后的希望。\n但不曾想万古布局，居然等来了一个挂壁！\n“不是，他怎么好像对我的神通很熟悉的样子....”\n“离谱，我这边刚离开族地准备伏击，他便把我老巢给端了....”\n“不对劲啊，为什么我们布下的万古杀劫，一个都没起效啊？”\n无数年后，一尊满身肌肉的怪物，一步踏出人族族地，身后万千武者追随而上。\n“今日，当为人族而战！！”",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2025-10-29",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "模拟",
+          "模拟器"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%A8%A1%E6%8B%9F&page=9"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "1878637",
+      "title": "玄幻：我能推演绝世功法",
+      "author": "海贼英雄",
+      "url": "https://www.qimao.com/shuku/1878637/",
+      "wordCount": 1773200,
+      "chapterTotal": null,
+      "status": "完结",
+      "categories": [
+        "幻想修真"
+      ],
+      "tags": null,
+      "abstract": "秦羽穿越玄幻世界成了多啊也，然而大乾以武为尊，身为废柴被所有很看不起，在被公主逼迫习武的关键时刻获得了推演功法系统，任何优秀的武技功法都可以通过推演修炼！一代强者从此出世！",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2024-12-17",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "推演"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%8E%A8%E6%BC%94&page=1"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "2009393",
+      "title": "从锁龙井开始无限模拟",
+      "author": "阿牛要吃菜",
+      "url": "https://www.qimao.com/shuku/2009393/",
+      "wordCount": 1624600,
+      "chapterTotal": null,
+      "status": "完结",
+      "categories": [
+        "东方玄幻"
+      ],
+      "tags": null,
+      "abstract": "一朝穿越，姬峥成为了锁龙井下被锁的一头蛟龙，面对灵气复苏的大世，他默默点开了自己的金手指……\n……\n【第一天，你被困于锁龙井中。】\n【第五十九天，你呼风唤雨，驾驭洪流，开始走海。】\n【第一百天，天倾西北，你以身为柱，支撑天地。】",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2025-05-23",
+      "simEvidence": {
+        "matchedIn": [
+          "title"
+        ],
+        "keywords": [
+          "模拟"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%A8%A1%E6%8B%9F&page=1"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "1976949",
+      "title": "玄幻：我，无限模拟，成就大帝",
+      "author": "小江河子",
+      "url": "https://www.qimao.com/shuku/1976949/",
+      "wordCount": 1542900,
+      "chapterTotal": null,
+      "status": "完结",
+      "categories": [
+        "东方玄幻"
+      ],
+      "tags": null,
+      "abstract": "浩瀚万里，亿万生灵争锋，谁可踏上无上大道，成就人族大帝？\n三千大道，六千本源，谁可化为无上至尊，镇守宇宙洪荒？\n一切都从一个小小的模拟器开始……",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2025-04-14",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "模拟",
+          "模拟器"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%A8%A1%E6%8B%9F&page=1"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "1852285",
+      "title": "人生模拟：氪金就变强！",
+      "author": "欧阳大大",
+      "url": "https://www.qimao.com/shuku/1852285/",
+      "wordCount": 1501500,
+      "chapterTotal": null,
+      "status": "完结",
+      "categories": [
+        "幻想修真"
+      ],
+      "tags": null,
+      "abstract": "穿越到修仙界，昔日天才沦为杂役，危机时刻觉醒人生模拟器，花费灵石即可模拟人生，结束后可在修为、经验、功法中保留其一。\n【你外出宗门历练，队伍遇到大妖，最弱的你侥幸活了下来......】\n【你成为了炼药堂的药徒，四年来毫无进展，最终被遗弃......】\n【你躲避追杀到洛水城，做起了美食生意，你发明了薯片、臭豆腐......】\n【你独自外出历练，遇到一名神秘女子......】",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2024-10-17",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "人生模拟",
+          "模拟",
+          "模拟器"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%A8%A1%E6%8B%9F&page=2"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "1673510",
+      "title": "玄幻：我有人生模拟器",
+      "author": "我是小嘟嘟",
+      "url": "https://www.qimao.com/shuku/1673510/",
+      "wordCount": 1433200,
+      "chapterTotal": null,
+      "status": "完结",
+      "categories": [
+        "东方玄幻"
+      ],
+      "tags": null,
+      "abstract": "“是否启用人生模拟！”\n“启用成功，扣除下品灵石一百六十块！”\n18岁，你入青心宗断剑峰景沁门下，踏上修仙一途。\n22岁，你师傅景沁身死，圣子再次前来欲带走你师姐长欣，你发觉，并提前长欣逃走。\n同年，你被圣子派出的弟子发现，长欣被带走，你被重伤，掉落悬崖侥幸捡回一条命。\n你发誓一定要报仇雪恨，于是努力修炼。\n29岁，你突破碎魄一重，返回宗门想要伺机报复，却得知长欣五年前已不堪凌辱而死，你也被圣子杀害，此生结束。\n易尘获得人生模拟系统，得知会被圣子杀死，然而不断的模拟，发现永远都会被圣子击杀........",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2023-02-28",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "模拟器",
+          "人生模拟",
+          "模拟"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%A8%A1%E6%8B%9F&page=4"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "1653172",
+      "title": "我的修仙模拟器",
+      "author": "小三胖子",
+      "url": "https://www.qimao.com/shuku/1653172/",
+      "wordCount": 1352400,
+      "chapterTotal": null,
+      "status": "完结",
+      "categories": [
+        "幻想修真"
+      ],
+      "tags": null,
+      "abstract": "如果人生可以重来，你会如何度过一生\n这句话如果是穿越之前有人对江武说，江武肯定滔滔不绝说上一天\n可穿越之后，还有人这么对他说的话，江武会告诉他，随便过。\n因为江武的人生可以重来无数次……",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2022-11-29",
+      "simEvidence": {
+        "matchedIn": [
+          "title"
+        ],
+        "keywords": [
+          "模拟器",
+          "模拟"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%A8%A1%E6%8B%9F&page=2"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "1797076",
+      "title": "斗破：我云山，拥有人生模拟器",
+      "author": "洛风侧",
+      "url": "https://www.qimao.com/shuku/1797076/",
+      "wordCount": 1328200,
+      "chapterTotal": null,
+      "status": "完结",
+      "categories": [
+        "衍生同人"
+      ],
+      "tags": null,
+      "abstract": "人在斗破写日记，女主全懵了！\n穿越斗破苍穹，成为反派云山。\n祖孙退婚萧炎，徒弟被萧炎无情抛弃，自己被萧炎弄死，宗门底蕴直接被铲除。\n祖孙三代都被萧炎霍霍，本以为天崩开局，获得人生模拟器。\n当前可选择天赋：碧蛇三花瞳、帝境灵魂、炼药师、帝品血脉。\n第一年：你借助魂殿突破斗宗，根基破碎，此生境界停滞不前。\n第二年：你为了修补破碎的根基，自学成为炼药师，一年的时间成为六品。\n第三年：杀了魂殿护法，报碎基之仇，前往黑角域打劫韩枫丹方。\n第七年：你前往乌坦城，独自找上萧炎.....镇杀神秘斗皇。\n【人生模拟器结束，此次评分SSS，将继承人生模拟器修为，选择继承一种天赋！】\n凭借人生模拟器，云山从一个小反派，成为枭雄大反派。\n药尊者：萧炎，今日我便与你断绝师徒关系，你的事情与我无关。\n主角萧炎：药老，你特么背刺我？到底谁是主角？",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2024-01-29",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "模拟器",
+          "人生模拟",
+          "模拟"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%A8%A1%E6%8B%9F&page=9"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "1677263",
+      "title": "我的人生可以无限模拟",
+      "author": "阳冬十月",
+      "url": "https://www.qimao.com/shuku/1677263/",
+      "wordCount": 1284600,
+      "chapterTotal": null,
+      "status": "完结",
+      "categories": [
+        "东方玄幻"
+      ],
+      "tags": null,
+      "abstract": "王诩穿越到了一个修真世界，得到了模拟人生的金手指。\n不仅仅可以靠着模拟来提升实力，更可以模拟他人的人生，知彼知己，抢夺机缘。",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2023-02-08",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "模拟"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%A8%A1%E6%8B%9F&page=2"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "1787692",
+      "title": "我有一个魔神模拟器",
+      "author": "第一魔",
+      "url": "https://www.qimao.com/shuku/1787692/",
+      "wordCount": 1266100,
+      "chapterTotal": null,
+      "status": "完结",
+      "categories": [
+        "异世大陆"
+      ],
+      "tags": null,
+      "abstract": "一朝穿越，苏木降临异世。\n这个世界，有武者、有炼气士、更有各种恐怖的鬼魅妖魔！\n由于太过危险，好好的重生模拟器竟转换成了死亡模拟器。\n死亡对于他来说，并非终结，而是开始。\n在一次次的模拟中，衍化出万千妖魔！\n血肉入锅、分而食之，化身血煞骷髅。\n含冤战死、尸身不腐，化身旱魃僵尸。\n引雷入体、极阴转阳，化身凶悍雷鬼。\n吞噬妖魂、煞气冲天，化身不死鬼车。\n有人百炼成仙。\n也有人，百死成魔！",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2024-01-25",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "模拟器",
+          "模拟"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%A8%A1%E6%8B%9F&page=8"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "1785286",
+      "title": "孙悟空的人生模拟器",
+      "author": "岳不懂",
+      "url": "https://www.qimao.com/shuku/1785286/",
+      "wordCount": 1232300,
+      "chapterTotal": null,
+      "status": "完结",
+      "categories": [
+        "上古洪荒"
+      ],
+      "tags": null,
+      "abstract": "花果山称王，方寸山求仙，从东海，到地府，再到天宫，闹了个天翻地覆。\n被压五行山之后，再去西天取经，为人牵马坠蹬，历九九八十一难，终成斗战胜佛。\n纵观孙悟空的一生，他究竟算成功，还是失败？\n或者说，这就是一场彻彻底底的悲剧？\n而这一切，是算计的结果？还是他的性格使然？\n当孙悟空有了人生模拟器，他又会创造一个怎样的未来？",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2024-01-24",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "模拟器",
+          "人生模拟",
+          "模拟"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%A8%A1%E6%8B%9F&page=4"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "9641325",
+      "title": "朕的模拟人生加载中",
+      "author": "欲望书海",
+      "url": "https://www.qimao.com/shuku/9641325/",
+      "wordCount": 1229800,
+      "chapterTotal": null,
+      "status": "完结",
+      "categories": [
+        "架空历史"
+      ],
+      "tags": null,
+      "abstract": "**书名**：《朕的模拟人生加载中》\n**一句话梗概**：\n程序员魂穿冷宫皇子，手握帝王模拟器搅动异世风云，以科技碾压强权，用代码重写天命，在九王夺嫡的生死局中，缔造一场跨越维度的文明革命。\n---\n**核心看点**：\n-**逆天改命**：现代思维碰撞封建王朝，制盐术、燧发枪、蒸汽机……科技树点满的降维打击\n-**权谋风暴**：九位皇子各掌一方气运，修真、机械、农耕文明路线殊死竞逐\n-**多维博弈**：系统任务暗藏人类存亡真相，跨维度入侵者、外星收割文明接连登场\n-**生死推演**：每一次模拟人生都是蝴蝶效应，选错一步即触发王朝崩坏结局\n---\n**故事主线**：\n程序员楚珩车祸身亡，被迫绑定神秘系统，成为大渊王朝被废黜的七皇子。原身因巫蛊案囚禁冷宫，身中剧毒命悬一线，而觉醒的帝王人生模拟器却要他参与残酷的【气运争夺战】九位皇子需以治国、科技、军事等手段累积王朝气运，胜者登基称帝，败者魂飞魄散。",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2025-12-18",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "模拟",
+          "模拟器",
+          "人生模拟",
+          "推演"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%A8%A1%E6%8B%9F&page=3"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "10068831",
+      "title": "从捡修为开始，打造极道世家",
+      "author": "扫雷大师",
+      "url": "https://www.qimao.com/shuku/10068831/",
+      "wordCount": 1213700,
+      "chapterTotal": null,
+      "status": "完结",
+      "categories": [
+        "东方玄幻"
+      ],
+      "tags": null,
+      "abstract": "一朝穿越，林道成为了大运县林家的三公子。\n在这个妖魔食人吞骨，武者能拳镇山河的奇异世界，本想着有一番作为的他，却天资平平，只能过着娇妻美眷的平凡公子生活。\n直到某天，他从一具尸体上看了一个个特殊的气泡。\n捡取修为，提升功力，推演功法！\n从【金刚罩】到【不灭金身】，从【纯阳功】到【大日焚天经】……\n横推十方妖魔，证道不死不灭，一个传奇世家就此崛起！",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2026-02-05",
+      "simEvidence": {
+        "matchedIn": [
+          "abstract"
+        ],
+        "keywords": [
+          "推演"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E8%8B%9F%E9%81%93&page=2"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "2075974",
+      "title": "我的模拟器不太对劲",
+      "author": "爱吃玉米的兔子",
+      "url": "https://www.qimao.com/shuku/2075974/",
+      "wordCount": 1110200,
+      "chapterTotal": null,
+      "status": "完结",
+      "categories": [
+        "幻想修真"
+      ],
+      "tags": null,
+      "abstract": "林夜穿越修仙界，只想苟到天荒地老。\n却意外绑定一个锈迹斑斑的青铜罗盘能模拟未来，但每次推演都消耗寿命，结果还充满诡异扭曲的低语。\n别人修仙靠天赋，他修仙靠“存档读档”。\n当同门在秘境拼杀时，他躲在角落疯狂模拟死法：“被仙子魅惑死？踩到毒蘑菇死？连打个喷嚏都能引发山崩？”\n好不容易避开所有死亡flag，他转头发现藏经阁扫地的老头是隐藏boss，捡来的破烂是上古神器，连随手救下的路人都是未来魔尊。\n更可怕的是，模拟器突然弹出一条血红提示：【警告：检测到世界正在被“不可名状”存在侵蚀，末日倒计时：100年】\n林夜看着怀里刚捡到的灭世神器，陷入沉思：“现在重新投胎还来得及吗？",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2026-04-05",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "模拟器",
+          "模拟",
+          "推演"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%A8%A1%E6%8B%9F&page=3"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "2014253",
+      "title": "让你模拟人生，你成万界之神了？",
+      "author": "浮生潇月",
+      "url": "https://www.qimao.com/shuku/2014253/",
+      "wordCount": 1095300,
+      "chapterTotal": null,
+      "status": "完结",
+      "categories": [
+        "异世大陆"
+      ],
+      "tags": null,
+      "abstract": "秦也穿越到全民模拟人生的世界，这里资源匮乏，人如草芥，只有成为模拟者模拟人生获得奖励才能逆天改命，否则只能沦为模拟者的附庸。\n秦也堵上后半辈子的自由换取了最后一次模拟人生的机会。\n成功，逆天改命。\n失败，沦为矿奴。\n【叮，你觉醒了天赋，一次一个金天赋】\n一世：【都市世界，三战爆发，鹰酱试图统一世界，你战死了】\n觉醒超算天赋，大脑成为超级计算机，疯狂发展军工，击败鹰酱，带量蓝星飞升，你为龙启之神。\n二世：【御兽世界，深渊入侵】\n觉醒御兽天赋，帮助御兽突破血脉极限，击败深渊拯救御兽世界，你为万兽之神。\n某世：【修仙世界】\n...\n其他世界入侵主世界，主世界危在旦夕。\n当秦也站出来之后。\n其他世界强者全部跪下了。\n“神，我们终于找到你了！”",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2025-06-10",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "模拟"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%A8%A1%E6%8B%9F&page=9"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "1733789",
+      "title": "从镇魔司开始模拟成圣",
+      "author": "诸葛卧龙",
+      "url": "https://www.qimao.com/shuku/1733789/",
+      "wordCount": 1082600,
+      "chapterTotal": null,
+      "status": "完结",
+      "categories": [
+        "幻想修真"
+      ],
+      "tags": null,
+      "abstract": "李司穿越到玄幻世界，\n成为了大楚皇朝镇魔司的一名死囚，再有五天就要被处斩了。\n就在他绝望的时候，忽然觉醒了人生模拟器。\n【叮！开启第一次人生模拟！】\n【人生模拟器开启，天赋生成中……】\n【天赋生成成功……开始模拟……】\n【第一天……】\n【第二年六月，你在女帝寝宫中住了一宿。】\n……\n万般法门，过目不忘，攻略女帝，成为一朝帝君。",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2023-11-28",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "模拟",
+          "模拟器",
+          "人生模拟"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%A8%A1%E6%8B%9F&page=6"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "1785469",
+      "title": "我的人生可以无限模拟",
+      "author": "新亭",
+      "url": "https://www.qimao.com/shuku/1785469/",
+      "wordCount": 1076900,
+      "chapterTotal": null,
+      "status": "完结",
+      "categories": [
+        "东方玄幻"
+      ],
+      "tags": null,
+      "abstract": "顾阳穿越到一个高武世界，在一个小村苟了两年，总算攒够了第一桶金，激活了系统，人生模拟器。\n花费一定金钱，即可进行一次模拟。\n模拟结束后，可以保留境界，武技，人生智慧三选一。\n【你当了五年账房先生，攒到钱买了一本功法，十年苦修，成功成为九品武者，遇到敌人，卒！】\n【你一出山，就是九品，当了某个家族的护院，苦修二十年，突破到第八品，最终，老死于一个小镇。】\n【你一出山，就是八品，得到一个世家的赏识，被传授高深的武学，由于进步缓慢，被边缘化，十几年后，你终于突破七品，在某次任务中遇到强大的敌人，被杀。】\n……\n不知多少次模拟之后，【你遇到的人，没有一个是你的对手。你发现，自己已经无敌了。】",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2024-01-24",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "模拟",
+          "模拟器",
+          "人生模拟"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%A8%A1%E6%8B%9F&page=3"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "1976955",
+      "title": "我靠不断模拟成就大能",
+      "author": "阿夜夜",
+      "url": "https://www.qimao.com/shuku/1976955/",
+      "wordCount": 1059000,
+      "chapterTotal": null,
+      "status": "完结",
+      "categories": [
+        "东方玄幻"
+      ],
+      "tags": null,
+      "abstract": "穿越到叶家，干了两年护卫，李天佑终于激活了人生模拟系统，开始未卜先知、逢凶化吉的一生\n【第一天，你领了侍卫的俸禄，积蓄达到三十两白银，打算在叶雨晴生辰之际，送点东西给人家以表感激。】\n【第二天，家主叶天龙把你叫到书房，隐晦的告诉你，想让你忘记娃娃亲的事情，你当下就表明自己心中只有变强，于是他给了你一本修炼功法《淬体九脉》。】\n【第三天，你在修炼功法《淬体九脉》。】\n【第六天，叶雨晴生辰之日，你带上买好的点心来到了对方闺房，虽然点心很廉价，但她很高兴很感动，想要亲吻你的脸颊，你连忙推开，然后走了。】\n【第十天，你修炼功法《淬体九脉》，终于开了第一脉，成为了九品武者。】\n【第十一天，夜晚你在府中巡逻，不知不觉就来到了叶雨晴的闺房外，你想要找她说清楚两人的事情，正打算敲门，却听到里面传来淫秽之言，你立即踹门冲了进去，三分钟后你死了。】\n……\n第N次模拟后：【你，天下无敌！】",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2025-04-14",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "模拟",
+          "人生模拟"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%A8%A1%E6%8B%9F&page=3"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "1667691",
+      "title": "玄幻：入赘宗门，我有西游模拟器",
+      "author": "西乡月",
+      "url": "https://www.qimao.com/shuku/1667691/",
+      "wordCount": 1055600,
+      "chapterTotal": null,
+      "status": "完结",
+      "categories": [
+        "异世大陆"
+      ],
+      "tags": null,
+      "abstract": "林风重生到玄幻世界，废材体质意外加入宗门，并且成了吃软饭的上门女婿，靠天才宗门少女养着，某一天，林风激活模拟西游系统。\r\n【第一年，你出生在南瞻部洲大唐国！】\r\n【你为了寻找唐僧抱大腿四处找寻，意外在鹰愁涧发现小白龙，获得龙族血脉。】\r\n【第十年，你终于找到唐僧并且告诉他会去西天取经，遭遇妖魔鬼怪，吃他的肉，历经九九八十一难，唐僧画风大逆转为了保命开始疯狂修炼】\r\n【十四年后，你带着唐僧师徒杀到灵山抢夺真经，顺便把如来佛祖拉下宝座，占据整个佛门。】\r\n【模拟结束，你获得海量经验值，天材地宝无数，获得西游最强组合！】\r\n玄幻世界，林风培养西游最强组合，脚踩诸天万界的超级妖孽天才，拳打万古真神。",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2023-02-28",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "模拟器",
+          "模拟"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%A8%A1%E6%8B%9F&page=9"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "222052",
+      "title": "我的玄幻模拟器",
+      "author": "斟酒独酌",
+      "url": "https://www.qimao.com/shuku/222052/",
+      "wordCount": 1049600,
+      "chapterTotal": null,
+      "status": "完结",
+      "categories": [
+        "诸天万界"
+      ],
+      "tags": null,
+      "abstract": "方源穿越到异界，发现自己身处牢狱，即将命不久矣。\n幸好有着伴随他穿越而来的玄幻模拟器，让方源能够将意识投入到模拟器世界中模拟人生，获得超凡力量。\n武道世界、巫师世界、诡异世界、修仙世界...\n在无数个画风迥异的模拟世界中，方源意识投射诸界，在诸世界中漫步、横行……",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2022-12-03",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "模拟器",
+          "模拟"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%A8%A1%E6%8B%9F&page=2"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "1786950",
+      "title": "我怎么模拟成了大反派",
+      "author": "秋光冷",
+      "url": "https://www.qimao.com/shuku/1786950/",
+      "wordCount": 1042500,
+      "chapterTotal": null,
+      "status": "完结",
+      "categories": [
+        "幻想修真"
+      ],
+      "tags": null,
+      "abstract": "穿越仙侠世界，何长生激活了天道模拟系统。\n本以为自己这是个标准的主角模板，却不成想竟是个大反派！\n我尼玛！\n好不容易穿越一趟，历经无数艰难险阻，多少个没日没夜的潜修，就是给主角成为垫脚石的？\n还好他身上有天道模拟器，不仅能够先知先觉，每一次开启模拟，还能从中获得奖励。\n可是为什么让他的两个黑心小侍女重生回来了？\n他的人生模拟，根本没有这一段。\n这剧本不对！\n系统误我！\n“这两个没良心的女人，是重生回来复仇的。”\n“她们正在当着我的面商量怎么杀我！”\n“这礼貌吗？”\n然后，何长生发现他重生的小河村也挺不对劲的。",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2024-01-24",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "模拟",
+          "模拟器",
+          "人生模拟"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%A8%A1%E6%8B%9F%E5%99%A8&page=8"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "2015339",
+      "title": "五年必死？修仙模拟器，开！",
+      "author": "善恶到头终有豹",
+      "url": "https://www.qimao.com/shuku/2015339/",
+      "wordCount": 1019800,
+      "chapterTotal": null,
+      "status": "完结",
+      "categories": [
+        "幻想修真"
+      ],
+      "tags": null,
+      "abstract": "林逸穿越到大乾已四年，靠着自身的勤恳努力，终于成为武者，好日子即将到来。\n当他求高人收徒时，却被高人告知，五年内必死？\n就在关键时刻，最强模拟器启动。\n【模拟开始】\n【第一年，你努力修炼......】\n【第二年，你风流快活......】\n【第五年，你死了！】\n【已获得二流武者修为。】\n【已获得五年内所有记忆，包括修行和战斗经验。】\n【已获得.......】\n【是否全部继承？】\n全继承？！！\n那不是起飞了？！！\n一次次模拟后。\n随着林逸变强，才逐渐了解到世界的真相，这里不仅有武者，还有修仙者，更有诡异和仙人.......\n眼前处处危机，哪哪都是算计，人人皆是鱼肉！\n筑基长老：“蝼蚁，安敢坏我大计？！死来！”\n元婴老祖：“道友，不如我等共享这片福地？”\n返虚大能：“前辈！在下有何过错，为何对我出手？！！”\n林逸一掌拍死对方：“有次模拟结束就是因为你这，现在知道叫前辈了？给本座死！”\n在下林逸，手中有个小本本，这次模拟你得罪我不碍事，但以后的每次模拟都要宰了你！",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2026-02-03",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "模拟器",
+          "模拟"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%A8%A1%E6%8B%9F&page=5"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "1668894",
+      "title": "玄幻：反派模拟器，开局签到混沌圣体",
+      "author": "都是缤纷",
+      "url": "https://www.qimao.com/shuku/1668894/",
+      "wordCount": 1018700,
+      "chapterTotal": null,
+      "status": "完结",
+      "categories": [
+        "东方玄幻"
+      ],
+      "tags": null,
+      "abstract": "什么！我穿越了？！还穿越成了玄幻小说里的反派男主！‘\n‘五岁开始修行武道……’\n‘六岁炼气九品……’\n‘十岁至筑气七品……’\n‘十五岁获得太玄道宫金贴，并被衍灵宗赐下元灵珠修行，苦修三月，连破凝气、灵魄之境、修为臻至灵宫境第四重……’\n直到遇到了男主，一切都毁了！\n明明我才是天之骄子，没有兄弟反目，还有一帮忠心小弟！\n不，我不要做反派，现在走还来得及嘛？",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2023-02-17",
+      "simEvidence": {
+        "matchedIn": [
+          "title"
+        ],
+        "keywords": [
+          "模拟器",
+          "模拟"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%A8%A1%E6%8B%9F&page=7"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "1848060",
+      "title": "无敌推演，从凡人开始武道登顶",
+      "author": "羽十七",
+      "url": "https://www.qimao.com/shuku/1848060/",
+      "wordCount": 1000800,
+      "chapterTotal": null,
+      "status": "完结",
+      "categories": [
+        "东方玄幻"
+      ],
+      "tags": null,
+      "abstract": "【快节奏】【不压制主角】【主角杀伐果断】\n妖魔乱世，人命如草芥。\n当陈妄再次醒来，发现自己穿越成了白云县里的一个平头百姓，除了能吃苦，没啥能吃得上的，好在觉醒了感悟推演面板。\n面板每天子时都会刷新感悟，每天都可以获得一年的推演结果。\n武道武学或武道功法皆来者不拒。\n许多年后，当陈妄武道登顶，站在光阴长河的尽头，回首过往，只剩一句感慨，人间万物，在他眼中，都只是过客罢了。",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2024-11-29",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "推演"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%8E%A8%E6%BC%94&page=1"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "1666985",
+      "title": "玄幻：我多重人格被女帝模拟曝光",
+      "author": "七星吊灯",
+      "url": "https://www.qimao.com/shuku/1666985/",
+      "wordCount": 986100,
+      "chapterTotal": null,
+      "status": "完结",
+      "categories": [
+        "东方玄幻"
+      ],
+      "tags": null,
+      "abstract": "叶凡穿越玄幻世界，成为无极宗藏剑峰峰主！\n随他一起穿越的，还有脑海里的一些特殊人格。\n这些人格在他脑海里，整日吵闹不休，\n“有我安澜便有天的安澜！”\n“独断万古的叶天帝！”\n“吾以炎帝之名，敕令天下万火，听本帝号令！”\n“重瞳本是无敌路，何须再借他人骨！”\n“自古顺天者，为天地之宠儿，这宠儿的背后，却是蝼蚁之身！”\n“谁在称无敌，哪个敢言不败？帝落时代都不见……”\n随着一个个人格，不断在叶凡脑海中复苏。\n他不知道的是。\n她的那位无极女帝，却也觉醒了模拟人生系统。\n当这位无极女帝，将模拟对象对准叶凡的时候，终于发现了自己这位峰主大恐怖的人生！",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2022-12-31",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "模拟"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%A8%A1%E6%8B%9F&page=10"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "1962191",
+      "title": "模拟器：从青蛇开始化龙",
+      "author": "草莓波波",
+      "url": "https://www.qimao.com/shuku/1962191/",
+      "wordCount": 920200,
+      "chapterTotal": null,
+      "status": "完结",
+      "categories": [
+        "幻想修真"
+      ],
+      "tags": null,
+      "abstract": "仙古之末，人道纪元，人族镇压万族。\n危难之际，顾煜川穿越成青蛇，携化龙模拟器降临世间。\n血统低微，我开始模拟。\n修为低下，我继续模拟。\n敌人众多，我依旧还是模拟。\n当乾坤王朝携万千兵马欲灭妖族之时。\n顾煜川已成为修仙界唯一神龙。\n他御水而来，四海之水将千军万马抵挡在外。\n今日，吾为妖皇，犯我妖族者，杀！",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2025-03-13",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "模拟器",
+          "模拟"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%A8%A1%E6%8B%9F&page=5"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "1675689",
+      "title": "模拟人生，开局在皇宫求生",
+      "author": "荒古天下",
+      "url": "https://www.qimao.com/shuku/1675689/",
+      "wordCount": 884200,
+      "chapterTotal": null,
+      "status": "完结",
+      "categories": [
+        "东方玄幻"
+      ],
+      "tags": null,
+      "abstract": "【模拟系统+玄幻脑洞+穿越+升级+架空+求生】\n谢长安穿越到玄幻世界，开局就是最强世家的二世祖、皇帝最疼爱的梦蝶公主的夫君。\n然而他发现事情并不简单。\n如果不出意外，他不要说享受驸马的生活，第二天就得死。\n他就是个牺牲品！\n而且他这身体已经被掏空，资质差！悟性差！\n好在他觉醒了模拟器系统，在皇宫里开始了“艰难求生”。\n“觐见皇帝，先左脚还是右脚？模拟一下！”\n“现实中修炼慢，但系统模拟几十年，有修为奖励。模拟一下！”\n“机遇面前，如何获得最大利益，能变得更强？模拟一下！”\n“……”\n当谢长安站在十万大山之巅，强极一时，忍不住感叹：\n“挂逼的我，就该承受世间修行者的膜拜！”",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2023-07-26",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "模拟",
+          "模拟器"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%A8%A1%E6%8B%9F&page=4"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "12951243",
+      "title": "模拟人生：重生高武，系统竟然提前了？",
+      "author": "恐龙气球",
+      "url": "https://www.qimao.com/shuku/12951243/",
+      "wordCount": 880700,
+      "chapterTotal": null,
+      "status": "完结",
+      "categories": [
+        "都市高武"
+      ],
+      "tags": null,
+      "abstract": "人在高武，今年两岁，逆袭系统早到了四十年!\n[四十二岁，你身为大夏武圣之子，却一无所成，就连武道都止步四境......]\n[值此不惑之年，请尝试让三十年未曾一笑的华夏武圣，露出一丝笑容。]\n[任务奖励：道胚丹。]\n实岁一岁零两个月，虚岁两岁的陆羽，看着眼前的满脸期待的中年男子，犹豫半晌，叫了一声爸爸。下一秒，威震大夏，镇压无数异族的武圣陆长生，开心得合不拢嘴!\n陆羽眨了眨眼。\n任务......完成了?",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2026-07-31",
+      "simEvidence": {
+        "matchedIn": [
+          "title"
+        ],
+        "keywords": [
+          "模拟"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%A8%A1%E6%8B%9F%E5%99%A8&page=15"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "1682170",
+      "title": "模拟人生：从死囚开始攻略女帝",
+      "author": "小雨一直下",
+      "url": "https://www.qimao.com/shuku/1682170/",
+      "wordCount": 848000,
+      "chapterTotal": null,
+      "status": "完结",
+      "categories": [
+        "东方玄幻"
+      ],
+      "tags": null,
+      "abstract": "【玄幻+女帝+术法+妖魔】\n李司穿越到玄幻世界，\n成为了大夏皇朝镇魔司的一名死囚，再有五天就要被处斩了。\n就在他绝望的时候，忽然觉醒了人生模拟器。\n【叮！开启第一次人生模拟！】\n【人生模拟器开启，随即天赋生成中……】\n一，【玲珑慧心】：红色天赋，拥有该天赋，你将拥有超凡的领悟能力，对任何武学心法没有任何难度，万法皆通。二，【金刚】：蓝色天赋，拥有该天赋，你的肉身将会得到锤炼，化作金刚之躯，普通刀剑对你无法造成任何伤害。\n三，【急速】：绿色天赋，拥有该天赋，你的速度会得到大幅度增强。\n【天赋生成成功……开始模拟……】\n【第一天……】\n【第二年六月，你在女帝寝宫中住了一宿。】\n……\n万般法门，过目不忘，攻略女帝，成为一朝帝君。",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2023-06-16",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "模拟",
+          "模拟器",
+          "人生模拟"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%A8%A1%E6%8B%9F&page=8"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "1955218",
+      "title": "七天一模拟，我的修仙人生开挂了！",
+      "author": "春木生",
+      "url": "https://www.qimao.com/shuku/1955218/",
+      "wordCount": 744100,
+      "chapterTotal": null,
+      "status": "连载",
+      "categories": [
+        "幻想修真"
+      ],
+      "tags": null,
+      "abstract": "诸世之外的诡异与不详蠢蠢欲动，界海和边境的原始帝城依旧，可那十位至高的王座依旧空荡，祂们还未回归！",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2025-08-01",
+      "simEvidence": {
+        "matchedIn": [
+          "title"
+        ],
+        "keywords": [
+          "模拟"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%A8%A1%E6%8B%9F&page=11"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "1653358",
+      "title": "模拟修仙我能无限重启",
+      "author": "蕴山河",
+      "url": "https://www.qimao.com/shuku/1653358/",
+      "wordCount": 717600,
+      "chapterTotal": null,
+      "status": "完结",
+      "categories": [
+        "幻想修真"
+      ],
+      "tags": null,
+      "abstract": "王浩穿越到了修仙世界，成为了一名朝廷追杀的匪二代。\n好在他觉醒了命运模拟器。\n亿万次的模拟，只为主宰命运，寻找绝境中的一线生机，逆天改命。",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2022-09-08",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "模拟",
+          "模拟器"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%A8%A1%E6%8B%9F&page=2"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "1650036",
+      "title": "全民模拟开局觉醒无限推衍",
+      "author": "一笔焚天",
+      "url": "https://www.qimao.com/shuku/1650036/",
+      "wordCount": 710800,
+      "chapterTotal": null,
+      "status": "完结",
+      "categories": [
+        "未来幻想"
+      ],
+      "tags": null,
+      "abstract": "秦缘穿越到全民模拟人生的世界：\n如果改变人生轨迹打破人生限制，可以成为人上人；\n如若失败，只能当个寿命只有五十多岁的下等人，终生贫苦。\n毕业典礼：觉醒贤者。\n贤者模式：可以推演一切。\n模式时能力越强，推演越详细，成功率越高。\n一世：【重生末世，觉醒超级异能，二十岁基因变异死了。】\n“贤者模式开启，推演抑制基因变异的方法。\n【你攻克基因突变，成为世界主宰，拯救人类开创修仙科技时代，寿终正寝。】\n【模拟结束：贤者模式增强一倍、你获得三滴龙血、你获得灵米提供资格、你获得一次模拟机会、你获得......】\n某世：【18岁的你，被女帝逼婚，虐待致死。】\n“贤者模式开启，推演征服女帝方法。”\n【女帝唱征服，获得最高评价。奖励：阴阳锻体决、获得….】\n同届新人，纷纷成为普通人，苟延残喘。\n此时：异族入侵基地时。\n秦缘站出来，扮演异能强者，持仙法只手遮天。\n这天：\n异世入侵主世界。\n秦缘仅仅一句话，万族臣服。\n“怎么？征服不够，想被灭世？”",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2022-08-31",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "模拟",
+          "推演"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%A8%A1%E6%8B%9F&page=2"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "2036586",
+      "title": "杀敌涨寿元，我以寿元推演成神！",
+      "author": "林壹",
+      "url": "https://www.qimao.com/shuku/2036586/",
+      "wordCount": 691700,
+      "chapterTotal": null,
+      "status": "完结",
+      "categories": [
+        "东方玄幻"
+      ],
+      "tags": null,
+      "abstract": "【杀伐果断+暴爽】\n林楚穿越武道乱世，强大武者视弱者为蝼蚁，可怕妖魔更是视人族为口粮。\n好在林楚杀敌可得对方剩余寿元，以寿元推演武学。\n从【离火刀法】【煞火霸武刀】\n从【健体功】【八合金刚体】\n镇抚司武者：“你问我最近为什么闲赋在家？他林楚一个人追着妖魔砍，我想找事做都没办法。”\n妖魔：“你问我怎么死的？我刚进安全系数最高千重妖窟，就看见一个武者冲进来乱杀！”\n林楚：“都说邪修可怕，妖魔狰狞，在我看来，他们都一样……给我取寿元来！”\n直到蓦然回首，林楚才发现，自己已然位于此方绝顶。\n……\n天幕崩裂，琼楼玉宇，漫天仙位之上皆端坐着妖君真仙。\n林楚踏空而去，口中呢喃：“仙之寿元，你们用浪费了。”\n.......",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2025-12-16",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "推演"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%8E%A8%E6%BC%94&page=2"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "1671722",
+      "title": "模拟器：别人修武，我修仙",
+      "author": "蛮荒散人",
+      "url": "https://www.qimao.com/shuku/1671722/",
+      "wordCount": 667400,
+      "chapterTotal": null,
+      "status": "完结",
+      "categories": [
+        "异世大陆"
+      ],
+      "tags": null,
+      "abstract": "穿越高武世界，正在进行武道测试的时候，姜凡忽然觉醒了修仙模拟器。\n别人修武，我修仙！\n【第一年，你出生在修仙界世俗中的一个武林门派里。】\n【这一年，你不足十八岁便已经是武林第一人。】\n【第十八年，你准备寻找传说中的仙门，你被凶兽打入悬崖，这一个山洞中，你获得了传说中的上古神物，太虚神莲！】\n【这一年，你成为了剑阁弟子，是一名剑修，在剑冢得到了通天教主的一丝剑道传承。】\n【百年后，你称霸修仙界，准备飞升之际，却被徒弟暗算，生死道消！】\n【你死了，请从以下奖励中任选其一：大乘期修为、太虚神莲、通天教主剑道传承！】",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2023-02-16",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "模拟器",
+          "模拟"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%A8%A1%E6%8B%9F&page=4"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "2057474",
+      "title": "高武：我有一个修仙模拟器",
+      "author": "黄柏山下",
+      "url": "https://www.qimao.com/shuku/2057474/",
+      "wordCount": 659900,
+      "chapterTotal": null,
+      "status": "连载",
+      "categories": [
+        "都市高武"
+      ],
+      "tags": null,
+      "abstract": "穿越异世，魔窟入侵！\r\n每个魔窟都代表着一个位面种族，本以为人族在劫难逃，就此灭亡，但地窟出现的同时武者也应运而生！\r\n普通人林风本以为会继续平凡下去，但获得的【轮回修仙模拟器】却让他不再平凡。\r\n每次模拟结束他都可以随机抽取一项东西带到主世界！\r\n抽取体质万古长青体，成就不死真身！\r\n抽取法器玄天斩妖剑，一剑开天门！\r\n抽取功法焚天战帝诀，一脚碎星河！\r\n······\r\n无数年后，林风率领统御的万族降临修仙世界，让高高在上的仙人也感受一下来自高武世界的震撼！",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2026-01-31",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "模拟器",
+          "模拟"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%A8%A1%E6%8B%9F&page=10"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "2038144",
+      "title": "从一根野草开始无限重生",
+      "author": "蹦跶的三百斤",
+      "url": "https://www.qimao.com/shuku/2038144/",
+      "wordCount": 656600,
+      "chapterTotal": null,
+      "status": "完结",
+      "categories": [
+        "异世大陆"
+      ],
+      "tags": null,
+      "abstract": "君子报仇，十年不晚。\n在苏仪看来，这个时间还能稍微延长一点。\n毕竟对于能够万世轮回的他来说，这一世报不了仇没关系。\n下一世再来便是！\n在一次次轮回中。\n他是墙边一根偷师学艺的野草。\n是称霸一方的百兽之王。\n是天资纵横的人间医圣，是死在乱军中的盖世武圣。\n是在仙门中闭关炼丹的仙师，亦是一统诸天的仙帝！\n君子报仇，十年不晚？\n苏仪报仇，三世不晚！\n每一世轮回，苏仪身上都会有着一本小册。\n依稀可见，小本本上写满了仇家名字、住址。\n在不知经历了多少次轮回后，苏仪看着脚下被夷为平地的仙庭。\n将小本本上最后一个名字划掉。",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2025-12-12",
+      "simEvidence": {
+        "matchedIn": [
+          "title"
+        ],
+        "keywords": [
+          "无限重生"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%97%A0%E9%99%90%E9%87%8D%E7%94%9F&page=3"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "1666548",
+      "title": "驭兽模拟器，青蛇模拟美杜莎没毛病吧",
+      "author": "把头埋低",
+      "url": "https://www.qimao.com/shuku/1666548/",
+      "wordCount": 627900,
+      "chapterTotal": null,
+      "status": "完结",
+      "categories": [
+        "东方玄幻"
+      ],
+      "tags": null,
+      "abstract": "张不凡穿越驭兽时代？\n掌握模拟器，可以随便穿越各种世界？\n那我把青蛇模拟成美杜莎？\n把妖狐模拟成九喇嘛？\n把麻雀模拟成九天玄凤？\n很合理吧？",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2023-02-08",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "模拟器",
+          "模拟"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%A8%A1%E6%8B%9F&page=1"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "1697873",
+      "title": "我在末世无限重生",
+      "author": "张老蛇",
+      "url": "https://www.qimao.com/shuku/1697873/",
+      "wordCount": 594300,
+      "chapterTotal": null,
+      "status": "完结",
+      "categories": [
+        "末世危机"
+      ],
+      "tags": null,
+      "abstract": "21世纪，世界末日横空降临！丧尸异兽横行的时代，仅存的人类在垂死挣扎。\n王浩再次睁眼，发现自己重生回末日来临前一天，并觉醒了无限重生系统。\n每次死亡就能开启重生，每次重生系统都会进行大量奖励。\n热武器算什么？机甲改造人算什么？超能力又算什么？有了系统，这些通通都是浮云。\n看王浩在末世如何一步步走上救世主的大道！",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2023-06-25",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "无限重生"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%97%A0%E9%99%90%E9%87%8D%E7%94%9F&page=2"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "1980550",
+      "title": "模拟器：从炮灰天兵到玉皇大帝！",
+      "author": "草莓波波",
+      "url": "https://www.qimao.com/shuku/1980550/",
+      "wordCount": 580200,
+      "chapterTotal": null,
+      "status": "完结",
+      "categories": [
+        "上古洪荒"
+      ],
+      "tags": null,
+      "abstract": "封神之后，西游之前。圣人隐退，天庭初露锋芒。\n诸天万界，无不听后玉皇大天尊的诏令。\n穿越者温齐光因行善积德，死后灵魂被拉入天池，成为天兵一员。\n天兵，说白了就是炮灰，随时都可能再次死亡，尤其是在开疆扩土的现在。\n关键时刻，他觉醒了模拟器系统。\n跟脚不好，我模拟。\n神通法术不行，我也模拟。\n没有神兵法宝，我依旧模拟。\n当圣人回归之后，发现温齐光已代替玉帝，成为至高天帝。\n“我为天帝时，就算是圣人也要听我差遣！”",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2025-06-01",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "模拟器",
+          "模拟"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%A8%A1%E6%8B%9F&page=9"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "1788266",
+      "title": "遮天：开局模拟人族大帝",
+      "author": "吃斋不信佛",
+      "url": "https://www.qimao.com/shuku/1788266/",
+      "wordCount": 573800,
+      "chapterTotal": null,
+      "status": "完结",
+      "categories": [
+        "衍生同人"
+      ],
+      "tags": null,
+      "abstract": "人在遮天，既没能搭上九龙拉棺的浪潮，也没能赶在叶黑之前成为大佬。好在穿越一场，林渊觉醒了自己的金手指，可以在古史中塑造出自己的化身，留下一段段传说。\n后荒古时代，他曾打破天地环境的束缚，在青帝之前证道，建立不朽的传承；\n荒古时代，他曾在无帝时代崛起，血战一位位禁区至尊，平定一世黑暗动乱；\n太古时代，他曾开创出皇道真经，与太阴，太阳两部经文比肩；\n神话时代，他曾与帝尊坐而论道，大话长生，并留下传说中的第十秘；\n乱古时代，他曾在边荒抵御异域强敌，大战不朽；\n仙古时代，他曾与无终，六道并称九天三大扛把子……",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2024-01-25",
+      "simEvidence": {
+        "matchedIn": [
+          "title"
+        ],
+        "keywords": [
+          "模拟"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%A8%A1%E6%8B%9F&page=2"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "1657483",
+      "title": "我的功法会自动修炼",
+      "author": "笔墨染山",
+      "url": "https://www.qimao.com/shuku/1657483/",
+      "wordCount": 565800,
+      "chapterTotal": null,
+      "status": "完结",
+      "categories": [
+        "异世大陆"
+      ],
+      "tags": null,
+      "abstract": "【天才流】【无敌流】【玄幻流】\n柳浮云穿越异界，身上附带逆天武学系统，任何功法一旦学会，就能自动修炼。\n炼器制丹，观看就能领悟；\n武功招式，睡觉就能圆满；\n“听涛心经十分害怕，开始疯狂修炼，修炼速度提升200%。”\n“擒龙功知耻后勇，修为没有瓶颈，成功迈入返璞归真，演化出武道神通。”\n“遮天掌觉得自己还能抢救，自行推演，成为神级武学……”\n于是柳浮云开启了咸鱼一般的无敌之路。\n上战场，寻机缘，入宝地，夺洞天，融万法，终立武道之巅。\n什么豪门士族，州郡王朝，隐世宗门，统统踩在脚下。",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2022-08-19",
+      "simEvidence": {
+        "matchedIn": [
+          "abstract"
+        ],
+        "keywords": [
+          "推演"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%8E%A8%E6%BC%94%E5%8A%9F%E6%B3%95&page=2"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "10226433",
+      "title": "凡人修仙：从杂役峰开始推演长生",
+      "author": "离山小师叔",
+      "url": "https://www.qimao.com/shuku/10226433/",
+      "wordCount": 548800,
+      "chapterTotal": null,
+      "status": "连载",
+      "categories": [
+        "古典仙侠"
+      ],
+      "tags": null,
+      "abstract": "【凡人流】、【不圣母】、【无系统】\r\n陆寻，青云宗修行了八年的杂役弟子。\r\n在即将被赶下山之时，意外得到了两张金色残页。\r\n太虚真解！\r\n至此之后，陆寻发现，他能看到灵气了！\r\n只是，这些灵气在他脑中生成了不一样的修行路线......\r\n无论是残本的上古功法、还是坊市上淘的残破灵阵，都可以通过太虚真解推演得到更高级的完整功法。\r\n于是，旁人眼中视若鸡肋的残本、孤本，皆成了陆寻的宝贝。\r\n多年后，当同门问道，为何陆寻如此钟爱“捡垃圾”？\r\n陆寻说道：“我这是为往圣继绝学！”",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2026-07-01",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "推演"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%8E%A8%E6%BC%94&page=1"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "1697330",
+      "title": "全民求生：我在模拟中无限升级",
+      "author": "西域都护",
+      "url": "https://www.qimao.com/shuku/1697330/",
+      "wordCount": 541400,
+      "chapterTotal": null,
+      "status": "完结",
+      "categories": [
+        "异世大陆"
+      ],
+      "tags": null,
+      "abstract": "【模拟器+修真+规则+诡异+天赋抽取】\r\n当全球的人，来到另一个世界。\r\n开局一个小木屋，你将会遇到来自（他，她，它）的威胁，你将会存活几天？\r\n主角萧云就是见证奇迹的例子！",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2023-06-12",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "模拟",
+          "模拟器"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%A8%A1%E6%8B%9F&page=6"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "2084211",
+      "title": "说好人生模拟，仙子你怎么成真了",
+      "author": "扑满",
+      "url": "https://www.qimao.com/shuku/2084211/",
+      "wordCount": 529700,
+      "chapterTotal": null,
+      "status": "完结",
+      "categories": [
+        "幻想修真"
+      ],
+      "tags": null,
+      "abstract": "第一次模拟，你是魔门宗主之子，却在暴雪夜收留了正道魁首陆家之女\r\n  你给她取名陆雪昭，亲手将她养成了名震天下的女剑仙\r\n  模拟结束时，你的魔门身份被曝光，奄奄一息，陆家之主要她杀了你，以证道心\r\n  陆昭雪没有动手，而是将你搂在怀里\r\n  “师父，如果我们能活着出去的话，万水千山，你愿意陪我一起看吗？”\r\n  最终，你以性命为代价，替她杀出一条路\r\n  你死了，死在她的怀中\r\n  —\r\n  第二次模拟，你是山村少年，却意外得罪了只背景滔天的涂山白狐\r\n  为了自己的小命，你对她悉心照料\r\n  模拟结束时，仙门背信引发人妖大战\r\n  你是人间武圣，一人冲阵，将妖族逼退，而仙门却以你身边有只狐妖为由，向你发难\r\n  最终，你燃尽一切，他们尽数陨落\r\n  此时，她已是八尾灵狐，愿以一尾为代价，换你活命\r\n  你自知必死无疑，不愿浪费白狐修为，便对她许愿\r\n  “涂山白晴，我的愿望是，希望你长出第九条尾巴。”\r\n  你死了，死在她的怀中\r\n  —\r\n  一次次的模拟，让江晏从天牢中脱困\r\n  可他总觉得不对\r\n  模拟中的仙子们竟齐聚师门，说什么要找回自己的亡夫？\r\n  江晏汗流浃背了\r\n  不是说好人生模拟吗，仙子你怎成真了？",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2026-02-01",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "人生模拟",
+          "模拟"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%A8%A1%E6%8B%9F&page=7"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "1813980",
+      "title": "武道推演：从宗门杂役开始只手遮天",
+      "author": "我要上榜一",
+      "url": "https://www.qimao.com/shuku/1813980/",
+      "wordCount": 529500,
+      "chapterTotal": null,
+      "status": "完结",
+      "categories": [
+        "东方玄幻"
+      ],
+      "tags": null,
+      "abstract": "入门三年，不过区区杂役。\n幸好觉醒推演系统。\n以气运灌注便可推演武道。\n【第一年，你天赋一般，认真修炼，将离阳诀修炼到了入门！】\n【第三年，这是你修炼离阳诀的第三年，由于天赋不高，三年时间，才迈入了小成！】\n【第七年，你苦心修炼离阳诀七年，某一天，你心中偶感天成，虽天赋不佳，却水到渠成迈入大成！】\n【第十二年，你这十二年来修为进步缓慢，境界卡在了淬体九重天！】\n【第十五年，时间犹如白驹过隙，中年的你，对于离阳诀的内容已经达到了圆满，修为迈入筑基！】",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2024-06-13",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "推演"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%8E%A8%E6%BC%94&page=2"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "1653108",
+      "title": "守墓三十年我能模拟人生",
+      "author": "李向喃",
+      "url": "https://www.qimao.com/shuku/1653108/",
+      "wordCount": 528400,
+      "chapterTotal": null,
+      "status": "完结",
+      "categories": [
+        "幻想修真"
+      ],
+      "tags": null,
+      "abstract": "江辰穿越到玄幻世界，原本想要平凡过一生，可是却被太子陷害谋反，废掉修为，看守仙墓林。\n好在他觉醒了模拟人生系统，可以在每一座仙墓旁选择奖励。\n选择：丹田永生术。\n选择：至尊骨。\n选择：龙象镇狱劲。\n……\n多年后，当他模拟完毕所有仙墓的人生，走出仙墓的时候，已经天下无敌。",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2022-07-30",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "模拟"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%A8%A1%E6%8B%9F&page=9"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "1887815",
+      "title": "模拟器：从帮派喽啰成天下霸主",
+      "author": "五指山",
+      "url": "https://www.qimao.com/shuku/1887815/",
+      "wordCount": 490600,
+      "chapterTotal": null,
+      "status": "完结",
+      "categories": [
+        "东方玄幻"
+      ],
+      "tags": null,
+      "abstract": "大业三年，李长生穿越而来，成为大晋王朝一个帮派喽啰。\n在这个混乱的世道，李长生小命朝不保夕，最终结局可以预见，就是被乱刀砍死在街头。\n好在，金手指人生模拟器，给了李长生改变命运的机会。\n“模拟结束，提取大日呼吸法。”\n“模拟结束，提取造化金丹。”\n“模拟结束，提取神通丈六金身。”\n无数次模拟……\n已经无敌的李长生，走入皇宫将昏君拉下，自己坐上龙椅俯视昏君：“皇帝轮流坐，今年到我家，你这废物且看着，本座如何平定这乱世……”\n本书又名，【无数个我死亡，铸造无敌的我。】",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2025-03-19",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "模拟器",
+          "模拟",
+          "人生模拟"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%A8%A1%E6%8B%9F&page=7"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "1659499",
+      "title": "仙武降临：我有修仙模拟器",
+      "author": "江上有卿来",
+      "url": "https://www.qimao.com/shuku/1659499/",
+      "wordCount": 468300,
+      "chapterTotal": null,
+      "status": "完结",
+      "categories": [
+        "幻想修真"
+      ],
+      "tags": null,
+      "abstract": "林远穿越到玄幻世界，本想认认真真修仙，当个安天乐命的小反派。\n谁料第一天晚上，就解锁了修仙模拟器。\n“咱也想认认真真修仙，可谁让咱有修仙模拟器呢？”",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2022-10-08",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "模拟器",
+          "模拟"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%A8%A1%E6%8B%9F&page=8"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "1805511",
+      "title": "玄幻：悟性逆天，开局推演神级功法",
+      "author": "钧秋",
+      "url": "https://www.qimao.com/shuku/1805511/",
+      "wordCount": 446300,
+      "chapterTotal": null,
+      "status": "完结",
+      "categories": [
+        "东方玄幻"
+      ],
+      "tags": null,
+      "abstract": "苏寒穿越玄幻世界，觉醒神级悟性系统。\n任何功法武技，都可推演到极致，获得更强的效果！\n“叮！你依据炼气诀，成功推演太荒造化法！”\n“叮！你结合神象拳和镇天术，成功推演神象镇狱劲！”\n“叮！你根据先天血脉，成功创造先天圣体！”\n自此，苏寒走上一条无敌之路！\n红颜倾慕，各方来朝，动摇诸天，震撼万界！",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2024-05-14",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "推演"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%8E%A8%E6%BC%94&page=2"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "2017496",
+      "title": "合欢宗：三年杂役，苟成盖世魔头",
+      "author": "未知数",
+      "url": "https://www.qimao.com/shuku/2017496/",
+      "wordCount": 407600,
+      "chapterTotal": null,
+      "status": "完结",
+      "categories": [
+        "东方玄幻"
+      ],
+      "tags": null,
+      "abstract": "【玄幻+系统+推演模拟+逆袭+热血爽文】\n一朝穿越，被忽悠进了合欢宗药谷当杂役。\n开局搬尸、剥狼皮，还被风骚大姐灌“合欢散”！\n好在系统觉醒，摸尸就能续命！\n【吸收狼尸，寿元+5】\n白天当屠夫，夜里斗恶鬼，推演千百次只为活过三更天。\n别人修仙他“修尸”，靠着逆天系统，从解剖小白进阶“尸王”，顺手捡漏上古秘法、毒丹灵器。\n苏小凡：既然当不成名门正派，那老子就苟成顶级大魔头！",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2025-07-17",
+      "simEvidence": {
+        "matchedIn": [
+          "abstract"
+        ],
+        "keywords": [
+          "模拟",
+          "推演"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%9D%82%E5%BD%B9&page=5"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "1666878",
+      "title": "我有修仙模拟器，开启自动修炼",
+      "author": "我爱吃番茄面",
+      "url": "https://www.qimao.com/shuku/1666878/",
+      "wordCount": 396500,
+      "chapterTotal": null,
+      "status": "完结",
+      "categories": [
+        "幻想修真"
+      ],
+      "tags": null,
+      "abstract": "上极宗外门弟子叶辰，因资质差的缘故而被同门欺凌，某次下山历练，死于凶兽之手。\n“我不甘！我不甘心！…”\n同一时间，平行宇宙另外一名少年灵魂穿梭：重生叶辰之躯，少年誓要报仇！\n这时，叶辰脑中响起一道声音：\n【叮！修仙模拟器已激活！……】\n【检测主角灵根为五行废灵根，是否消耗1500灵气进行提升……】\n【主角境界较低，当达到筑基期后将开启永无休止的自动修炼……】\n……\n激活修仙模拟器，开启自动修炼！\n自此以后，叶辰走向无敌。\n“打架吗？我无敌，你们随意啊！”",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2023-06-03",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "模拟器",
+          "模拟"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%A8%A1%E6%8B%9F&page=8"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "1667512",
+      "title": "玄幻：模拟千万次，举世无敌",
+      "author": "饮醉酒仙",
+      "url": "https://www.qimao.com/shuku/1667512/",
+      "wordCount": 384800,
+      "chapterTotal": null,
+      "status": "完结",
+      "categories": [
+        "东方玄幻"
+      ],
+      "tags": null,
+      "abstract": "何晨穿越到紫-阳宗，本以为身为圣子是天胡开局，没想到却是修为被废，美女师尊重伤，面对内忧外患的危机，获得人生模拟器，只要不断模拟就能获得奖励，从中找出化解危机的办法。\n当何晨模拟千万次，蓦然回首，发现已经举世无敌！",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2022-11-25",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "模拟",
+          "模拟器",
+          "人生模拟"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%A8%A1%E6%8B%9F&page=4"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "12644910",
+      "title": "修仙世界，你让我模拟武道？",
+      "author": "爽文快刀手",
+      "url": "https://www.qimao.com/shuku/12644910/",
+      "wordCount": 384000,
+      "chapterTotal": null,
+      "status": "连载",
+      "categories": [
+        "东方玄幻"
+      ],
+      "tags": null,
+      "abstract": "开局获得武道模拟器，结果发现这竟然是修仙世界？\n想象中膜拜修仙者的场景并没有出现，反而发现有灵根的人立刻判处死刑。\n极限就是肉体凡胎的武者们都喊着修仙者必须死是什么鬼？\n随着林晨的了解，发现这个世界的修仙者，将百姓视为耗材，皮作画，骨磨粉，血炼丹，魂炼傀。\n武者以红尘为瘴保护自身和修仙者不死不休……\n武者曾经只是凡人，面对修仙者只有绝望，但林晨表示。\n“仙道是道，武道，也是道！”",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2026-09-07",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "模拟",
+          "模拟器"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%A8%A1%E6%8B%9F&page=5"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "1682344",
+      "title": "我的前世竟然被模拟器曝光了",
+      "author": "太一昆仑",
+      "url": "https://www.qimao.com/shuku/1682344/",
+      "wordCount": 352600,
+      "chapterTotal": null,
+      "status": "完结",
+      "categories": [
+        "东方玄幻"
+      ],
+      "tags": null,
+      "abstract": "【模拟器】【脑洞】【系统】【无限流】【重生】【玄幻】\n秦乾“死”了，他出现在了一个电影院中，周围的观众看起来和他都长得很像。他发现他们都是他的一代又一代的前世。\n很快，大屏幕亮起来，迎接他的是热烈的掌声。",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2023-07-16",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "模拟器",
+          "模拟"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%A8%A1%E6%8B%9F&page=9"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "2066415",
+      "title": "修仙问道，从模拟轮回开始",
+      "author": "笔有灵墨",
+      "url": "https://www.qimao.com/shuku/2066415/",
+      "wordCount": 350000,
+      "chapterTotal": null,
+      "status": "完结",
+      "categories": [
+        "东方玄幻"
+      ],
+      "tags": null,
+      "abstract": "【恶仆欺主，你获得了三小姐青睐！】【软饭硬吃，习得《灵源真解》！】【采矿遇险，经历生死感悟！】【劫修埋伏，斩获《乾元燃血术》！】......十九年蹉跎岁月，徐浪终于迎来了蜕变，觉醒‘模拟轮回’的能力，可以提前经历未来，趋利避害，从千万种可能中，寻求最优解。",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2025-10-09",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "模拟"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%A8%A1%E6%8B%9F&page=1"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "1672828",
+      "title": "模拟人生：从爆体而亡开始",
+      "author": "风乱寒蝉",
+      "url": "https://www.qimao.com/shuku/1672828/",
+      "wordCount": 326600,
+      "chapterTotal": null,
+      "status": "完结",
+      "categories": [
+        "东方玄幻"
+      ],
+      "tags": null,
+      "abstract": "模拟+升级+杀伐果断\n主角穿越到一个疑似高武的世界。\n【二十二岁你穿越来到了这个世界，成为难民营中的一员。】\n【你凭本事找到一门差事，却不知道是干什么，你被带进一处山洞。】\n【一个时辰后，突然一道金光入体，你的身体不断膨胀，你进入了淬体境。】\n【一息后你炸了。】\n啥！？\n我炸了！\n咦！竟然还有奖励！\n......\n模拟千万次后。\n【万古诸天，你已无敌与世，永恒不灭！】",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2023-06-01",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "模拟"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%A8%A1%E6%8B%9F&page=7"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "1806981",
+      "title": "我都金丹了，你告诉我要参加武道高考？",
+      "author": "玄鹤九溟",
+      "url": "https://www.qimao.com/shuku/1806981/",
+      "wordCount": 321500,
+      "chapterTotal": null,
+      "status": "完结",
+      "categories": [
+        "灵气复苏"
+      ],
+      "tags": null,
+      "abstract": "异兽降临，妖植祸世，异族之人虎视眈眈。\n全球武道复苏，武者成为人族的希望。\n仙帝之子陆铭穿越而来，依靠修仙模拟器，收复异兽，驯化妖植，脚踏异族机甲，一步步揭开蓝星之谜，踏上重回家园的道路。\n成就无上主宰，横压瀚宇星空！\n主线任务一：“作为一名仙帝的后代，哪怕到了异界，也要培养出自己的无上势力（1/100）！”\n主线任务二：“藏拙！前世的教训使你深深明白了‘木秀于林风必摧之’的道理，所以这一世你决定暂时隐藏自己的一部分光芒。”\n......",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2024-05-09",
+      "simEvidence": {
+        "matchedIn": [
+          "abstract"
+        ],
+        "keywords": [
+          "模拟器",
+          "模拟"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E9%87%91%E4%B8%B9&page=2"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "1813105",
+      "title": "斩妖除魔：我能无限推演武学",
+      "author": "彪悍的蜗牛",
+      "url": "https://www.qimao.com/shuku/1813105/",
+      "wordCount": 320200,
+      "chapterTotal": null,
+      "status": "完结",
+      "categories": [
+        "东方玄幻"
+      ],
+      "tags": null,
+      "abstract": "【长生不死】+【推演】+【肉身横推】\n大周王朝，妖魔祸世，民不聊生。\n在这样一个王朝乱世之中，王阎带着一个消耗寿元便能无限推演武学的面板，意外穿越而来。\n从【铁砂掌】到【焚天造化掌】，从【火炼金身】到【龙虎金刚不灭体】……\n王阎身负拔山抗鼎之力，毁天灭地之威，猩红色的眼眸凝视着瑟瑟发抖的妖魔，狞声笑道：“小可爱，让我来捏死你们吧！”\n手撕妖魔，可还行？",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2024-06-12",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "推演"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%8E%A8%E6%BC%94&page=1"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "1871014",
+      "title": "九女帝婚礼背叛，模拟结束悔断肠",
+      "author": "空城空",
+      "url": "https://www.qimao.com/shuku/1871014/",
+      "wordCount": 312000,
+      "chapterTotal": null,
+      "status": "完结",
+      "categories": [
+        "东方玄幻"
+      ],
+      "tags": null,
+      "abstract": "陆尘穿越玄幻世界，获得模拟系统，初次模拟，便以绝世天资成就大帝之尊，人称天帝！\n并获得了九位红颜知己，让人羡艳不已！\n可谁知，这九位红颜却在大婚之日，背叛他，对他出手！\n陆尘结束模拟，封心锁爱，对她们漠视不管。\n可得到模拟记忆的她们，却在发现了事情真相后，一个个都悔恨万分。\n清荷女帝：“师兄，我错了，求求你，别抛下我！”\n清澜女帝：“乖徒儿，是师父误会你了，你快回来！师父知道错了！”\n......\n面对她们的哀求，陆尘眼神冷漠，无视她们，一步一步踏上至高之巅！",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2024-10-24",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "模拟"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%A8%A1%E6%8B%9F&page=7"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "12557685",
+      "title": "推演功法到满级，我横推武道",
+      "author": "妙蛙树人",
+      "url": "https://www.qimao.com/shuku/12557685/",
+      "wordCount": 296000,
+      "chapterTotal": null,
+      "status": "连载",
+      "categories": [
+        "东方玄幻"
+      ],
+      "tags": null,
+      "abstract": "宋岩穿越成武馆下等根骨弟子，连三流帮派都敢欺，上门来强买家产。\r\n大哥掏空家底供他习武，嫂子天天嚷着要把他扫地出门。\r\n系统激活，推演改进功法，一分付出，十分回报。\r\n从此，宋岩走上了一条不同的道路，这个世界多了一个武道天才。\r\n当昔日同门还在为叩关苦苦挣扎，宋岩已经拳破山河、打穿八荒，成就武道至尊。",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2026-09-07",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "推演"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%8E%A8%E6%BC%94%E9%95%BF%E7%94%9F&page=6"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "1662040",
+      "title": "玄幻：末法时代？我能无限模拟！",
+      "author": "开局就王炸",
+      "url": "https://www.qimao.com/shuku/1662040/",
+      "wordCount": 287400,
+      "chapterTotal": null,
+      "status": "完结",
+      "categories": [
+        "异世大陆"
+      ],
+      "tags": null,
+      "abstract": "林明穿越到危机四伏的玄幻世界，开局就被成为苦力，惨遭007折磨。\n就在林明以为要当一辈子牛马的时候，激活了人生模拟器。\n只需要消耗灵石就能够开启模拟。\n【第一日：你学习陈胜吴广，一句王侯将相另有种乎震撼众囚，囚犯们热泪盈眶直呼你为天人转世。】\n【第二日：你的话在囚犯群体中传播开，你的地位直线上升。】\n【第五日：你晚上睡觉的时候，突然有黑衣人闯进来把你带走，你自知实力不够无法反抗。\n好在对方没有恶意，你们细细攀谈对方对于你的想法大为震惊，表示还会来找你的。】\n【第六日：黑衣人果然来找你，你们相谈甚欢。】\n你接着这个机会寻问修行之法，对方随手给了你一本没有封面的功法，并且指导你修行。】\n【第九日：有人指导加上你没日没夜的练习，你终于有了气感。】\n【第二十日：你成功突破进入到炼气期成为一名修士！】",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2022-09-21",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "模拟",
+          "模拟器",
+          "人生模拟"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%A8%A1%E6%8B%9F&page=6"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "10395273",
+      "title": "寿命越长我越强，我靠模拟成仙尊",
+      "author": "犹豫就会白给",
+      "url": "https://www.qimao.com/shuku/10395273/",
+      "wordCount": 277800,
+      "chapterTotal": null,
+      "status": "完结",
+      "categories": [
+        "幻想修真"
+      ],
+      "tags": null,
+      "abstract": "【模拟器+爽文+暗黑+杀伐果决+无女主/单女主+氪命+苟道+老六】\n陆言一觉醒来，穿越成为了偷窥修真家族大小姐的登徒子，在即将被炙烤而死的时候，忽然觉醒金手指人生模拟器。\n好消息是觉醒金手指，坏消息是金手指需要氪命，秉承搏一搏单车变摩托的想法，陆言毫不犹豫的选择氪命，花费五年寿元开始模拟。\n第一次模拟，陆言绞尽脑汁想要活着，却被沈家大小姐双修榨干而亡，因祸得福获得下品杂灵根……\n“哈哈哈，三十年河东三十年河西，莫欺少年穷。”\n从此以后，陆言不断氪命不断模拟，慢慢的他发现自己不知不觉竟然长生了。\n多年后，他垂钓在时间长河中，无奈叹息：“寂寞如雪，一不小就长生了，这找谁说理去。”",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2026-04-08",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "模拟",
+          "模拟器",
+          "人生模拟"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%A8%A1%E6%8B%9F&page=7"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "2007524",
+      "title": "修仙：从杂役开始模拟长生路",
+      "author": "洛无书",
+      "url": "https://www.qimao.com/shuku/2007524/",
+      "wordCount": 277600,
+      "chapterTotal": null,
+      "status": "完结",
+      "categories": [
+        "东方玄幻"
+      ],
+      "tags": null,
+      "abstract": "苏凡穿越修仙界，开局就被天才未婚妻退婚，沦为宗门杂役。\n好在觉醒【修仙模拟器】，每次模拟都能获得修为、功法和天赋！\n可是模拟之后，苏凡惊恐发现，自己三年后就会死！\n第一次模拟，他勤恳挖矿，却在筑基之日离奇暴毙……\n第二次模拟，他苦修阵法，筑基时布下阵法，依旧难逃一死……\n第三次模拟，他丹道大成，却被神秘黑影搜魂炼化……\n通过多次模拟，他终于发现，整个羽化宗的外门弟子，都是“养蛊”的祭品？！\n“原来我的命，早就被这吃人的仙门算计好了？”\n苏凡怒起反抗：“既然仙门要我死，那我就用模拟器，刷出一个横推万古的无敌路！”",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2025-07-31",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "模拟",
+          "模拟器"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%A8%A1%E6%8B%9F&page=3"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "1674319",
+      "title": "全球灵卡：我能模拟创造无数神卡",
+      "author": "青时以梦",
+      "url": "https://www.qimao.com/shuku/1674319/",
+      "wordCount": 277100,
+      "chapterTotal": null,
+      "status": "完结",
+      "categories": [
+        "灵气复苏"
+      ],
+      "tags": null,
+      "abstract": "意外穿越灵卡世界，却没能拥有属于自己的卡组？\n没有关系，绑定了“万界最强灵卡系统”的秦宇，可以通过轮回模拟，创造无数神级灵卡！\n在轮回世界中，秦宇曾是称霸星海大森林的史莱姆之王...\n曾是以人类之躯屠杀恶龙的屠龙勇士...\n曾是亡灵世界主宰一切的亡灵暴君...\n曾是蔑视一切的无上仙帝...\n这些一次又一次的轮回经历，最终都变成了秦宇所使用的灵卡。\n你问我这些灵卡都是怎么来的？那自然是我当场印的！\n......",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2023-02-14",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "模拟"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%A8%A1%E6%8B%9F&page=9"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "1660761",
+      "title": "洪荒：让你当功法，没叫你教女娲成圣",
+      "author": "不想码字的阿煜煜",
+      "url": "https://www.qimao.com/shuku/1660761/",
+      "wordCount": 275000,
+      "chapterTotal": null,
+      "status": "完结",
+      "categories": [
+        "上古洪荒"
+      ],
+      "tags": null,
+      "abstract": "林笙穿越到了洪荒世界，本想凭借记忆搅动洪荒风云。\n却发现自己居然穿越成了女娲体内的功法。\n嗯？\n以为没有身体，就能阻止我左拥仙女右抱神女，从此称霸一方？\n获得了签到推演系统的林笙，从此开启了自己的签到化形大业。\n【叮！宿主已成功打卡紫霄宫，获得神话级九秘禁书！】\n【叮！宿主已成功打卡昆仑山，获得功法高质量修炼指南！】\n【叮！宿主已成功打卡东海，获得大道级翻云覆雨之术！】\n……\n就这样，林笙在女娲体内一刻也不消停，疯狂修炼。\n眼见自己的功法居然自己开始修炼，女娲也是彻底傻了眼。\n“功法道友，你这样小女子真的受不了啊！”",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2022-08-25",
+      "simEvidence": {
+        "matchedIn": [
+          "abstract"
+        ],
+        "keywords": [
+          "推演"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%8E%A8%E6%BC%94%E5%8A%9F%E6%B3%95&page=7"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "9573139",
+      "title": "神话模拟，从炼丹炉签到火眼金睛",
+      "author": "阿明写网文",
+      "url": "https://www.qimao.com/shuku/9573139/",
+      "wordCount": 252300,
+      "chapterTotal": null,
+      "status": "完结",
+      "categories": [
+        "东方玄幻"
+      ],
+      "tags": null,
+      "abstract": "废柴杂役？不，我一人重现天庭！\n萧凡只想苟住修仙，却因拒绝当舔狗，被炼丹圣女柳景媛诬陷淫邪罪，扔进丹炉活炼！\n生死一线，神话模拟系统觉醒！\n检测到丹炉炼体，场景匹配【太上老君八卦炉】！\n“相似度50%……53%……60%！”\n“恭喜宿主，获得无上神通火眼金睛！”\n神瞳睁开，魑魅魍魉无所遁形，圣女邪功惑众？一眼窥破其伪善皮囊！\n长老以势压人？下次便模拟【雷劫淬体】，请尔等共赴天雷！\n宗门视我如草芥？待我将诸天神话一一重现……",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2025-12-30",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "模拟"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%A8%A1%E6%8B%9F&page=8"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "2023057",
+      "title": "妖魔乱世：从被斩首开始崛起",
+      "author": "猛回人生",
+      "url": "https://www.qimao.com/shuku/2023057/",
+      "wordCount": 247100,
+      "chapterTotal": null,
+      "status": "完结",
+      "categories": [
+        "东方玄幻"
+      ],
+      "tags": null,
+      "abstract": "妖魔乱世，人命如草，提灯巡夜，以命搏天！\n陈藏锋，大夏靖夜司银灯使，一生斩妖无数，护一方黎庶。\n却因锋芒太盛，遭邪教陷害污蔑，斩首于风雪刑场。\n再睁眼，竟重回十六岁，觉醒人生模拟器！\n只需斩妖除魔，便可获取寿元。\n消耗寿元，可不断尝试新的人生。\n原来前世不过黄粱一梦，人生模拟！\n天下依旧还是那个天下，从未改变。\n儒门正气，佛寺道院，难掩天下妖魔气。\n江湖险恶，宗门避世，王朝权贵藏祸心。\n这一世，陈藏锋选择重拾斩夜刀，再入靖夜司。\n可他不再为那腐朽王朝卖命，只为己身而活！\n斩妖邪，夺寿元，铸一世长生！\n不为虚名，不为忠义，只为在这妖魔横行、人心叵测的天下，杀出一条生路，斩出一个未来！",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2025-07-05",
+      "simEvidence": {
+        "matchedIn": [
+          "abstract"
+        ],
+        "keywords": [
+          "模拟器",
+          "人生模拟",
+          "模拟"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E4%BA%BA%E7%94%9F%E6%A8%A1%E6%8B%9F&page=8"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "12560331",
+      "title": "我在乱世斩妖推演成圣！",
+      "author": "一刀九九九",
+      "url": "https://www.qimao.com/shuku/12560331/",
+      "wordCount": 244000,
+      "chapterTotal": null,
+      "status": "连载",
+      "categories": [
+        "东方玄幻"
+      ],
+      "tags": null,
+      "abstract": "秦明穿越大炎王朝，惨遭边疆将领坑害，无奈之下，他远走他乡，来到青云城中成为一名小小的斩妖卫。\n绑定斩妖推演系统。\n“斩杀黑鬃狼妖，获得五年妖魔寿元！”\n“斩杀暗红鼠王，获得二十年妖魔寿元！”\n“斩杀开元境暗影豹，获得五十年妖魔寿元！”\n“你消耗了十年妖魔寿元，【锻骨桩】推演至圆满！”\n“你消耗了百年妖魔寿元，【裂石拳】蜕变为【崩山拳】！”\n“你消耗了八百年妖魔寿元，六品功法《伏虎真诀》蜕变为五品《伏虎天罡诀》（大成）！”\n当大夏紫府境大能高高在上，降下灭世雷劫时。\n秦明默默打开了面板：“系统，给我加点！”\n下一秒，暗金罡气撕裂苍穹，百丈法相轰然碎裂！\n所有人：“？？？？？？”",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2026-08-04",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "推演"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%8E%A8%E6%BC%94&page=1"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "1950725",
+      "title": "人生模拟：从养成女谪仙开始",
+      "author": "呼呼十一",
+      "url": "https://www.qimao.com/shuku/1950725/",
+      "wordCount": 242500,
+      "chapterTotal": null,
+      "status": "完结",
+      "categories": [
+        "灵气复苏"
+      ],
+      "tags": null,
+      "abstract": "【第一次模拟，你穿越到修仙世界】\n【你成为宗门新星，执行宗门任务过程中，你救下了一名无法修炼的混沌圣体，你成为了她的兄长】\n【你帮助混沌圣体重返修炼之路】\n【模拟结束时，你燃烧最后的生命击退来犯的魔修，少女流泪了，她终于知道修炼的代价是什么】\n……\n【第二次模拟，你穿越到魔法世界】\n【身为面包师的你，意外遇到沦落成乞丐的魔女】\n【你教会魔女制作面包、售卖机器……】\n【模拟结束时，你朽朽老矣，在魔女的凝视中消散。】\n……\n模拟虽好，可不要贪杯哦。\n叶枫强装镇静的看着找上门来的仙子们，“我叫叶木风……你们找谁？”",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2025-04-03",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "人生模拟",
+          "模拟"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%A8%A1%E6%8B%9F&page=3"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "11737773",
+      "title": "诡异明末：我李自成，一次模拟一词条！",
+      "author": "新月之城",
+      "url": "https://www.qimao.com/shuku/11737773/",
+      "wordCount": 239800,
+      "chapterTotal": null,
+      "status": "完结",
+      "categories": [
+        "穿越历史"
+      ],
+      "tags": null,
+      "abstract": "【大明+修仙+词条抽取+模拟器+全部继承】\n李弘基穿越到了大明末期，可和历史上好像不太一样。\n庙堂之上，腐败神佛列座，邪门外道祭众生。\n江湖之下，土匪群道盘踞，妖魔鬼怪乱世间。\n更有关外群魔，以长生天为尊，日日扣关夺血食。\n而且他竟然附身到了李自成身上，成了米脂县的一个死囚。\n好在他获得了词条系统，只要完成模拟，就可以根据模拟表现，获得词条。\n并且模拟中获得的经验和知识能够全部继承。\n势力每壮大一个等级，便有三次模拟抽词条机会。\n哪里来的十三遗恨妖王，什么怪力鬼神，去和我的词条说去吧！",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2026-05-07",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "模拟",
+          "模拟器"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%A8%A1%E6%8B%9F&page=11"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "1826271",
+      "title": "趋吉避凶：宗门卜卦百年，成就无上仙帝",
+      "author": "火中九龙",
+      "url": "https://www.qimao.com/shuku/1826271/",
+      "wordCount": 231300,
+      "chapterTotal": null,
+      "status": "完结",
+      "categories": [
+        "东方玄幻"
+      ],
+      "tags": null,
+      "abstract": "“太清宗弟子听令，宗门历练即将开启！”\n“诸弟子可从道源洞天，水云泽及大荒窟三处洞天内，任选其一。”\n开局人在玄幻世界，觉醒趋吉避凶系统，系统直接推演选择！\n【道源洞天，下下签，竞逐机缘难入掌，门中恶徒祸心藏！大凶！】\n【水云泽，中签，水云翻息不止，竹篮存水，指间流沙！平！】\n【大荒窟，上上签，厄兽栖眠生无死，大荒洞内藏机缘！大吉！】\n卜卦百年，登临世间，无上仙帝！",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2024-06-12",
+      "simEvidence": {
+        "matchedIn": [
+          "abstract"
+        ],
+        "keywords": [
+          "推演"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E4%BB%99%E9%97%A8&page=8"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "12898584",
+      "title": "长生：模拟百世，我苟成岁月道祖！",
+      "author": "小果东不是果冻",
+      "url": "https://www.qimao.com/shuku/12898584/",
+      "wordCount": 204300,
+      "chapterTotal": null,
+      "status": "连载",
+      "categories": [
+        "幻想修真"
+      ],
+      "tags": null,
+      "abstract": "穿越修仙界，顾长青成了坊市最底层的灵农。\r\n杂灵根，没背景，还要面临管事暴力催租，随时可能被赶出坊市喂妖兽。\r\n好在觉醒【岁月道书】，能够无限模拟未来岁月！\r\n现实中，他唯唯诺诺，苟在坊市，与世无争。\r\n模拟中，他修习百艺，修补灵根，重拳出击，截胡机缘，探索秘境，成为一方巨擘！\r\n多年后，当正魔大战爆发，无数大能陨落时。\r\n众人震惊地发现，那个一直在坊市里的学徒，竟然爆发出恐怖的威压，以一人之力，决定战局。\r\n“本道祖能走到今日，全靠我自己努力……模拟，给我开！”",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2026-09-08",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "模拟"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%A8%A1%E6%8B%9F&page=10"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "12958392",
+      "title": "末世修仙，我靠模拟轮回成尊",
+      "author": "冬月初八",
+      "url": "https://www.qimao.com/shuku/12958392/",
+      "wordCount": 188500,
+      "chapterTotal": null,
+      "status": "连载",
+      "categories": [
+        "东方玄幻"
+      ],
+      "tags": null,
+      "abstract": "穿越成末世宗门最底层的收尸人，\r\n开局绑定【行尸轮回模拟器】！\r\n只要花费灵石，就能附身绝世天才，体验不一样的人生！\r\n………\r\n第一次模拟，我成了尸阴宗魔子季长青，\r\n拜至强师尊，修无上魔功，与魔道妖女结为道侣——\r\n然后被她炼成了人丹。\r\n但没关系，我继承了他的修为！\r\n………\r\n什么？这具行尸是元婴老怪？我要模拟！\r\n…………\r\n“如果接下来我要模拟的行尸是我自己呢？”\r\n\r\n那我就给修仙界来点现代世界的震撼！\r\n…………\r\n收尸人又如何？\r\n当我有无限轮回，\r\n谁又规定，收尸人不能成仙？",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2026-09-08",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "模拟",
+          "模拟器"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%A8%A1%E6%8B%9F&page=5"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "13016304",
+      "title": "凡人修仙：从造化万物开始",
+      "author": "骆驼",
+      "url": "https://www.qimao.com/shuku/13016304/",
+      "wordCount": 166500,
+      "chapterTotal": null,
+      "status": "连载",
+      "categories": [
+        "东方玄幻"
+      ],
+      "tags": null,
+      "abstract": "【凡人】【无系统】【苟道】\r\n当你翻开这本手札时，我大概率已经死在修仙路上——\r\n又或者……已成仙！\r\n我叫陈凡，全灵根，废物中的废物。\r\n管事给的丹药是毒丹，给的功法，是为他人做嫁衣的邪术。\r\n他们都想我死。\r\n可我，活了下来。\r\n机缘之下，我得到了一个瓶子——万古造化瓶！\r\n一层空间，外界一天，瓶中一年！\r\n毒丹推演成灵丹，邪术还原为正法。\r\n二层空间，造化之赐，温养生灵！\r\n三层空间，造化拟境，模拟所见之一切生灵，百战积累！\r\n……\r\n吾不知仙门之高，唯有一瓶、一命、一口气，不断求索！",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2026-09-08",
+      "simEvidence": {
+        "matchedIn": [
+          "abstract"
+        ],
+        "keywords": [
+          "模拟",
+          "推演"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E5%87%A1%E4%BA%BA%E4%BF%AE%E4%BB%99&page=4"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "1724680",
+      "title": "全民修仙：开局获得模拟器",
+      "author": "薛定谔的猫。",
+      "url": "https://www.qimao.com/shuku/1724680/",
+      "wordCount": 164100,
+      "chapterTotal": null,
+      "status": "完结",
+      "categories": [
+        "东方玄幻"
+      ],
+      "tags": null,
+      "abstract": "自带主角光环的卫无忌偶然间穿越到了全民修仙世界，天生废灵根却无法修行，为了修行的他得到了穿梭诸天万界的外挂。\n为了修行，他毅然选择了拯救世界，斩杀位面之子。\n鬼怪世界，吾乃传道者，传道与世荡平妖魔！\n战争世界，为以战止战方能获得和平！\n仙神世界，大胆凡人竟然枉顾阴司秩序！\n什么这是位面之子？不好意思杀之！\n获得修为后，卫无忌在主世界中以紫府战万仙，以万象斩天人！\n问世间谁主沉浮，唯我百无禁忌！",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2023-09-12",
+      "simEvidence": {
+        "matchedIn": [
+          "title"
+        ],
+        "keywords": [
+          "模拟器",
+          "模拟"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%A8%A1%E6%8B%9F&page=4"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "1892876",
+      "title": "我只是想模拟修仙，为何都把我当炉鼎？",
+      "author": "南南而溪",
+      "url": "https://www.qimao.com/shuku/1892876/",
+      "wordCount": 149700,
+      "chapterTotal": null,
+      "status": "完结",
+      "categories": [
+        "东方玄幻"
+      ],
+      "tags": null,
+      "abstract": "一朝穿越，江行舟发觉竟是身处双修宗门，成了行走的经验包！\n好在我有模拟系统，丝毫不慌。\n等等，我刷出来的天赋怎么和别人的不一样？\n【多情桃花目：看见你眼睛的异性，会不由自主对你产生好感。】\n【媚骨天成：你天生自带媚骨，举手投足间都带有无以伦比的诱惑。】\n【国色天香：你的美貌举世无双，世间没有任何异性能够阻挡你的吸引力】\n【纯阳之体：与你双修之人，可获得你的纯阳精华，修为大涨。】\n...\n多年后，江行舟从妖族女帝、瑶光圣主、飘渺仙子等人的围剿中逃脱。\n“我只是单纯想修仙，怎么都要找我当炉鼎！”",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2025-01-06",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "模拟"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%A8%A1%E6%8B%9F&page=11"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "13006953",
+      "title": "妖魔乱世：我靠杀妖夺寿无限推演",
+      "author": "清风莫语",
+      "url": "https://www.qimao.com/shuku/13006953/",
+      "wordCount": 136800,
+      "chapterTotal": null,
+      "status": "完结",
+      "categories": [
+        "东方玄幻"
+      ],
+      "tags": null,
+      "abstract": "【杀伐果断+掠夺寿命+斩妖除魔+杀伐果断】\r\n大夏王朝，妖魔纵横，修士当道，官妖勾结。\r\n许行穿成黄蜀镇世家独子，却目睹了貌美的嫂嫂化身大妖，生吞了兄长！\r\n生死关头下，他觉醒了推演系统。\r\n只要投入妖丹，便能令修为、功法、兵器获取等同年限的推演。\r\n投入十年妖丹，功法瞬间圆满。\r\n投入百年妖丹，境界连升三级。\r\n投入千年妖丹，菜刀也能成为万古神兵。\r\n……\r\n后来，大夏灭妖堂来了一位人人谈之色变的灭妖人。\r\n斩妖除魔，惩恶扬善，皇权特许，先斩后奏。\r\n别人斩妖，许行连修士一块斩。\r\n出手即绝杀，过境即清场，所到之处只留尸骨，不留祸患。",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2026-08-31",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "推演"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%8E%A8%E6%BC%94&page=2"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "11912745",
+      "title": "成就人间武圣，从推演金钟罩开始",
+      "author": "听山越海",
+      "url": "https://www.qimao.com/shuku/11912745/",
+      "wordCount": 68200,
+      "chapterTotal": null,
+      "status": "连载",
+      "categories": [
+        "东方玄幻"
+      ],
+      "tags": null,
+      "abstract": "林擎一朝穿越，却发现自己遭受奸人算计，命在旦夕。\r\n好在识海之中，觉醒神秘道符。\r\n灌注法韵，可推演武学进度！\r\n从普通锻体的【金钟罩】，到万古不朽，万劫不灭的【无量不灭混元罩】。\r\n从轻身腾挪的【玄雀步】，到横渡青冥，纵跨虚空的【太始无量大挪移】\r\n从吐纳真气的【清浊抱一食气法】，到鲸吞寰宇，独断界海的【玄曜吞宙万道诀】……\r\n林擎起初的目的只想夺回父辈遗留的百户之位。\r\n…………\r\n若干年后，登临至高的林擎回首。\r\n身后是亿万敌人尸骨，脚下是俯首低眉的千仙万圣，寰宇不过在掌心间。\r\n赤县神州，万灵皆颂，尊为人间武圣！",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2026-08-30",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "推演"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%8E%A8%E6%BC%94&page=2"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "13114590",
+      "title": "极道：从消耗寿命推演武学开始",
+      "author": "鹅鹅鹅恶",
+      "url": "https://www.qimao.com/shuku/13114590/",
+      "wordCount": 45500,
+      "chapterTotal": null,
+      "status": "连载",
+      "categories": [
+        "幻想修真"
+      ],
+      "tags": null,
+      "abstract": "妖魔潜藏，帮派横行，天下大乱。\r\n穿越成青石城贫民窟底层孤儿的沈铮，开局重伤濒死，寿命只剩不到三十天，还面临帮派恶霸登门逼债。\r\n退让即死，不如以命搏命！\r\n危机之际，沈铮觉醒【极道寿元面板】。\r\n只要击杀敌人，就能掠夺对方寿命；消耗自身寿命，便可无视瓶颈，强行推演武学！\r\n【消耗五天寿命，推演《基础长拳》——肉身异变，力量破限！】\r\n【消耗两百天寿命，推演《残缺·铁甲功》——铜皮铁骨，极境成形！】\r\n【消耗一万年寿命，推演《魔牛撼地身》——气血如炉，焚海煮天！】\r\n从街头烂巷到庙堂江湖，从下九流武夫到镇压当世的极道武神。\r\n沈铮没有背景，没有天赋。\r\n他能走到今天这一步，全靠自己的汗水和……别人的命。\r\n“我能有今天的实力，全靠我自己苦修！”\r\n“系统，给我扣十万年寿命！把这门功法给我推演到极致！”",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2026-09-08",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "推演"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%8E%A8%E6%BC%94&page=1"
+    },
+    {
+      "platform": "qimao",
+      "platformBookId": "13300227",
+      "title": "从斩妖除魔开始推演神通",
+      "author": "一支毛笔呀",
+      "url": "https://www.qimao.com/shuku/13300227/",
+      "wordCount": 45000,
+      "chapterTotal": null,
+      "status": "连载",
+      "categories": [
+        "东方玄幻"
+      ],
+      "tags": null,
+      "abstract": "裴云穿越而来，正值妖魔乱世。\n虽是凡人，所幸可以斩杀妖魔掠夺对方剩余寿元。\n消耗寿元可演化修行，功法武技都可无限推演！\n从《养元功》到《万道归一经》！\n从《劈空掌》到《大荒芜镇天印》！\n无数岁月之后，裴云负手立于万界之巅，脚下是匍匐的诸天神魔和葬在时光里的枯骨。\n他缓缓收刀入鞘，抬眸望向高踞九天的天地神圣，那些曾遥不可及的存在，此刻尽皆俯首！\n“诸位道友，请借你们命一用！”",
+      "popularity": null,
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2026-09-08",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "推演"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-08T13:49:18Z",
+      "source": "https://api-www.qimao.com/api/search/result?keyword=%E6%8E%A8%E6%BC%94&page=1"
+    }
+  ],
+  "nearMiss": [
+    {
+      "title": "高考模拟作文（二）",
+      "url": "https://www.qimao.com/shuku/2044347/",
+      "reason": "模拟但非修仙：分类「少儿读物」，简介无修仙词。命中模拟词 模拟"
+    },
+    {
+      "title": "高考模拟作文（五）",
+      "url": "https://www.qimao.com/shuku/2044350/",
+      "reason": "模拟但非修仙：分类「少儿读物」，简介无修仙词。命中模拟词 模拟"
+    },
+    {
+      "title": "人生模拟：开局起兵擒王",
+      "url": "https://www.qimao.com/shuku/1668999/",
+      "reason": "模拟但非修仙：分类「架空历史」，简介无修仙词。命中模拟词 人生模拟/模拟"
+    },
+    {
+      "title": "开局：梦境模拟器",
+      "url": "https://www.qimao.com/shuku/1673031/",
+      "reason": "模拟但非修仙：分类「诸天万界」，简介无修仙词。命中模拟词 模拟器/模拟"
+    },
+    {
+      "title": "金手指模拟系统",
+      "url": "https://www.qimao.com/shuku/1741908/",
+      "reason": "模拟但非修仙：分类「都市高武」，简介无修仙词。命中模拟词 模拟"
+    },
+    {
+      "title": "吞噬星空之时光模拟",
+      "url": "https://www.qimao.com/shuku/1786711/",
+      "reason": "模拟但非修仙：分类「衍生同人」，简介无修仙词。命中模拟词 模拟/模拟器"
+    },
+    {
+      "title": "穿越，然后被女帝模拟？",
+      "url": "https://www.qimao.com/shuku/2070756/",
+      "reason": "模拟但非修仙：分类「架空历史」，简介无修仙词。命中模拟词 模拟"
+    },
+    {
+      "title": "诸界之模拟人生",
+      "url": "https://www.qimao.com/shuku/9972498/",
+      "reason": "模拟但非修仙：分类「诸天万界」，简介无修仙词。命中模拟词 模拟"
+    },
+    {
+      "title": "皇后的人生模拟器",
+      "url": "https://www.qimao.com/shuku/9688329/",
+      "reason": "模拟但非修仙：分类「宫闱宅斗」，简介无修仙词。命中模拟词 模拟器/人生模拟/模拟"
+    },
+    {
+      "title": "诡秘复苏：开局无限模拟求生",
+      "url": "https://www.qimao.com/shuku/1670568/",
+      "reason": "模拟但非修仙：分类「异世大陆」，简介无修仙词。命中模拟词 模拟/模拟器"
+    },
+    {
+      "title": "我有帝皇模拟器",
+      "url": "https://www.qimao.com/shuku/1650027/",
+      "reason": "模拟但非修仙：分类「架空历史」，简介无修仙词。命中模拟词 模拟器/模拟"
+    },
+    {
+      "title": "我的末世模拟器",
+      "url": "https://www.qimao.com/shuku/222147/",
+      "reason": "模拟但非修仙：分类「末世危机」，简介无修仙词。命中模拟词 模拟器/模拟"
+    },
+    {
+      "title": "医生的人生模拟器",
+      "url": "https://www.qimao.com/shuku/1793248/",
+      "reason": "模拟但非修仙：分类「都市高武」，简介无修仙词。命中模拟词 模拟器/人生模拟/模拟"
+    },
+    {
+      "title": "西游：孙悟空的人生模拟",
+      "url": "https://www.qimao.com/shuku/1791296/",
+      "reason": "模拟但非修仙：分类「诸天万界」，简介无修仙词。命中模拟词 人生模拟/模拟/模拟器"
+    },
+    {
+      "title": "三国模拟器",
+      "url": "https://www.qimao.com/shuku/1759574/",
+      "reason": "模拟但非修仙：分类「穿越历史」，简介无修仙词。命中模拟词 模拟器/模拟"
+    },
+    {
+      "title": "万能模拟器",
+      "url": "https://www.qimao.com/shuku/1765062/",
+      "reason": "模拟但非修仙：分类「都市高武」，简介无修仙词。命中模拟词 模拟器/模拟"
+    },
+    {
+      "title": "模拟作案：我成功瞒天过海",
+      "url": "https://www.qimao.com/shuku/1965499/",
+      "reason": "模拟但非修仙：分类「都市高武」，简介无修仙词。命中模拟词 模拟"
+    },
+    {
+      "title": "模拟影帝：我能获得角色能力",
+      "url": "https://www.qimao.com/shuku/1962190/",
+      "reason": "模拟但非修仙：分类「明星娱乐」，简介无修仙词。命中模拟词 模拟"
+    },
+    {
+      "title": "帝国模拟：朕的身边全是奸臣？",
+      "url": "https://www.qimao.com/shuku/1956192/",
+      "reason": "模拟但非修仙：分类「架空历史」，简介无修仙词。命中模拟词 模拟/模拟器"
+    },
+    {
+      "title": "吞噬星空，我可以模拟人生",
+      "url": "https://www.qimao.com/shuku/10017132/",
+      "reason": "模拟但非修仙：分类「衍生同人」，简介无修仙词。命中模拟词 模拟/模拟器/人生模拟"
+    },
+    {
+      "title": "从吞噬星空开始无限模拟",
+      "url": "https://www.qimao.com/shuku/10053762/",
+      "reason": "模拟但非修仙：分类「诸天万界」，简介无修仙词。命中模拟词 模拟"
+    },
+    {
+      "title": "人在斗罗，无限模拟人生",
+      "url": "https://www.qimao.com/shuku/10071294/",
+      "reason": "模拟但非修仙：分类「衍生同人」，简介无修仙词。命中模拟词 模拟/模拟器/人生模拟"
+    },
+    {
+      "title": "灵宠创造模拟器",
+      "url": "https://www.qimao.com/shuku/151583/",
+      "reason": "模拟但非修仙：分类「未来幻想」，简介无修仙词。命中模拟词 模拟器/模拟"
+    },
+    {
+      "title": "超神模拟我有无数世界",
+      "url": "https://www.qimao.com/shuku/1653027/",
+      "reason": "模拟但非修仙：分类「诸天万界」，简介无修仙词。命中模拟词 模拟/模拟器"
+    },
+    {
+      "title": "全民模拟之我拯救人族",
+      "url": "https://www.qimao.com/shuku/1653287/",
+      "reason": "模拟但非修仙：分类「未来幻想」，简介无修仙词。命中模拟词 模拟"
+    },
+    {
+      "title": "末世将至：我模拟出完美开局",
+      "url": "https://www.qimao.com/shuku/1732720/",
+      "reason": "模拟但非修仙：分类「末世危机」，简介无修仙词。命中模拟词 模拟"
+    },
+    {
+      "title": "人生模拟：开局假太监征服皇后！",
+      "url": "https://www.qimao.com/shuku/1784243/",
+      "reason": "模拟但非修仙：分类「武侠幻想」，简介无修仙词。命中模拟词 人生模拟/模拟/模拟器"
+    },
+    {
+      "title": "五年崩坏三年模拟",
+      "url": "https://www.qimao.com/shuku/1790959/",
+      "reason": "模拟但非修仙：分类「衍生同人」，简介无修仙词。命中模拟词 模拟"
+    },
+    {
+      "title": "全民模拟：我有无数天赋",
+      "url": "https://www.qimao.com/shuku/1793106/",
+      "reason": "模拟但非修仙：分类「都市高武」，简介无修仙词。命中模拟词 模拟"
+    },
+    {
+      "title": "斗罗模拟：开局获得半神器",
+      "url": "https://www.qimao.com/shuku/1791362/",
+      "reason": "模拟但非修仙：分类「衍生同人」，简介无修仙词。命中模拟词 模拟"
+    },
+    {
+      "title": "NBA：从模拟大姚开始打穿联盟",
+      "url": "https://www.qimao.com/shuku/1791851/",
+      "reason": "模拟但非修仙：分类「篮球风云」，简介无修仙词。命中模拟词 模拟"
+    },
+    {
+      "title": "我在聊天群模拟长生路",
+      "url": "https://www.qimao.com/shuku/1785447/",
+      "reason": "模拟但非修仙：分类「诸天万界」，简介无修仙词。命中模拟词 模拟/模拟器/人生模拟"
+    },
+    {
+      "title": "综武模拟：开局做了龙骑士",
+      "url": "https://www.qimao.com/shuku/1797145/",
+      "reason": "模拟但非修仙：分类「诸天万界」，简介无修仙词。命中模拟词 模拟/模拟器"
+    },
+    {
+      "title": "NBA：从终结麦迪时刻开始模拟",
+      "url": "https://www.qimao.com/shuku/1807744/",
+      "reason": "模拟但非修仙：分类「篮球风云」，简介无修仙词。命中模拟词 模拟"
+    },
+    {
+      "title": "只是模拟抢劫，你玩什么命啊！",
+      "url": "https://www.qimao.com/shuku/1947514/",
+      "reason": "模拟但非修仙：分类「都市高武」，简介无修仙词。命中模拟词 模拟"
+    },
+    {
+      "title": "女儿们模拟我人生，彻底泪崩",
+      "url": "https://www.qimao.com/shuku/2037042/",
+      "reason": "模拟但非修仙：分类「都市生活」，简介无修仙词。命中模拟词 模拟"
+    },
+    {
+      "title": "全民创世：我靠无限模拟成神",
+      "url": "https://www.qimao.com/shuku/2017511/",
+      "reason": "模拟但非修仙：分类「都市高武」，简介无修仙词。命中模拟词 模拟/模拟器/推演"
+    },
+    {
+      "title": "全民成神？我靠香火模拟无敌！",
+      "url": "https://www.qimao.com/shuku/1979021/",
+      "reason": "模拟但非修仙：分类「异世大陆」，简介无修仙词。命中模拟词 模拟/推演"
+    },
+    {
+      "title": "模拟犯罪直播游戏，这也太开门了！",
+      "url": "https://www.qimao.com/shuku/1926247/",
+      "reason": "模拟但非修仙：分类「侦探推理」，简介无修仙词。命中模拟词 模拟"
+    },
+    {
+      "title": "全民模拟:我靠后宫无敌天下",
+      "url": "https://www.qimao.com/shuku/1883152/",
+      "reason": "模拟但非修仙：分类「异世大陆」，简介无修仙词。命中模拟词 模拟"
+    },
+    {
+      "title": "从刷魂兽开始的人生模拟",
+      "url": "https://www.qimao.com/shuku/10072065/",
+      "reason": "模拟但非修仙：分类「衍生同人」，简介无修仙词。命中模拟词 人生模拟/模拟"
+    },
+    {
+      "title": "全民寻宝只有我开了模拟器",
+      "url": "https://www.qimao.com/shuku/1650917/",
+      "reason": "模拟但非修仙：分类「未来幻想」，简介无修仙词。命中模拟词 模拟器/模拟"
+    },
+    {
+      "title": "人生模拟器：开局忽悠老太监",
+      "url": "https://www.qimao.com/shuku/1666436/",
+      "reason": "模拟但非修仙：分类「架空历史」，简介无修仙词。命中模拟词 模拟器/人生模拟/模拟"
+    },
+    {
+      "title": "御兽：我有神兽模拟器",
+      "url": "https://www.qimao.com/shuku/1667690/",
+      "reason": "模拟但非修仙：分类「灵气复苏」，简介无修仙词。命中模拟词 模拟器/模拟"
+    },
+    {
+      "title": "模拟创世：开局打造赛博坦星球",
+      "url": "https://www.qimao.com/shuku/1704045/",
+      "reason": "模拟但非修仙：分类「都市高武」，简介无修仙词。命中模拟词 模拟/模拟器/推演"
+    },
+    {
+      "title": "灾变降临：我能模拟生存率",
+      "url": "https://www.qimao.com/shuku/1657417/",
+      "reason": "模拟但非修仙：分类「末世危机」，简介无修仙词。命中模拟词 模拟/模拟器"
+    },
+    {
+      "title": "横推玄幻：我靠模拟无限升级",
+      "url": "https://www.qimao.com/shuku/1659357/",
+      "reason": "模拟但非修仙：分类「异世大陆」，简介无修仙词。命中模拟词 模拟/模拟器/人生模拟"
+    },
+    {
+      "title": "混迹魔戒的骑砍模拟器",
+      "url": "https://www.qimao.com/shuku/1793359/",
+      "reason": "模拟但非修仙：分类「衍生同人」，简介无修仙词。命中模拟词 模拟器/模拟"
+    },
+    {
+      "title": "我的赛博朋克模拟器",
+      "url": "https://www.qimao.com/shuku/1791301/",
+      "reason": "模拟但非修仙：分类「衍生同人」，简介无修仙词。命中模拟词 模拟器/模拟"
+    },
+    {
+      "title": "模拟亿万次，我杀穿诸天万界",
+      "url": "https://www.qimao.com/shuku/1936744/",
+      "reason": "模拟但非修仙：分类「诸天万界」，简介无修仙词。命中模拟词 模拟/模拟器/人生模拟"
+    },
+    {
+      "title": "大明：帝王模拟，从早夭到万古",
+      "url": "https://www.qimao.com/shuku/9591562/",
+      "reason": "模拟但非修仙：分类「穿越历史」，简介无修仙词。命中模拟词 模拟"
+    },
+    {
+      "title": "让你模拟犯罪，你直接来真的啊？",
+      "url": "https://www.qimao.com/shuku/2037123/",
+      "reason": "模拟但非修仙：分类「明星娱乐」，简介无修仙词。命中模拟词 模拟"
+    },
+    {
+      "title": "综武：词条按年刷新，模拟也算？",
+      "url": "https://www.qimao.com/shuku/11654718/",
+      "reason": "模拟但非修仙：分类「武侠幻想」，简介无修仙词。命中模拟词 模拟/模拟器"
+    },
+    {
+      "title": "开局模拟词条，出狱即陆地神仙",
+      "url": "https://www.qimao.com/shuku/11977641/",
+      "reason": "模拟但非修仙：分类「王朝争霸」，简介无修仙词。命中模拟词 模拟"
+    },
+    {
+      "title": "全球惊悚：模拟成神，国家抢疯了",
+      "url": "https://www.qimao.com/shuku/1976106/",
+      "reason": "模拟但非修仙：分类「灵气复苏」，简介无修仙词。命中模拟词 模拟/模拟器"
+    },
+    {
+      "title": "人生模拟，我以词条横推万族",
+      "url": "https://www.qimao.com/shuku/1974128/",
+      "reason": "模拟但非修仙：分类「都市高武」，简介无修仙词。命中模拟词 人生模拟/模拟"
+    },
+    {
+      "title": "让你模拟犯罪，你成犯罪大师了？",
+      "url": "https://www.qimao.com/shuku/1925771/",
+      "reason": "模拟但非修仙：分类「都市高手」，简介无修仙词。命中模拟词 模拟"
+    },
+    {
+      "title": "别人练功吃苦，我靠模拟速通成仙",
+      "url": "https://www.qimao.com/shuku/1871752/",
+      "reason": "模拟但非修仙：分类「诸天万界」，简介无修仙词。命中模拟词 模拟/模拟器/重开"
+    },
+    {
+      "title": "冷宫假皇子，我在模拟中君临诸天",
+      "url": "https://www.qimao.com/shuku/12817146/",
+      "reason": "模拟但非修仙：分类「异世大陆」，简介无修仙词。命中模拟词 模拟/模拟器"
+    },
+    {
+      "title": "模拟犯罪十万次，我当警察无敌了",
+      "url": "https://www.qimao.com/shuku/12913677/",
+      "reason": "模拟但非修仙：分类「商战职场」，简介无修仙词。命中模拟词 模拟"
+    },
+    {
+      "title": "让你模拟作案，没让你完美犯罪",
+      "url": "https://www.qimao.com/shuku/12950148/",
+      "reason": "模拟但非修仙：分类「侦探推理」，简介无修仙词。命中模拟词 模拟"
+    },
+    {
+      "title": "王朝贪官，开局被女帝模拟人生",
+      "url": "https://www.qimao.com/shuku/1674164/",
+      "reason": "模拟但非修仙：分类「架空历史」，简介无修仙词。命中模拟词 模拟/模拟器"
+    },
+    {
+      "title": "末日：开启人生模拟，杀出一条活路",
+      "url": "https://www.qimao.com/shuku/1718820/",
+      "reason": "模拟但非修仙：分类「末世危机」，简介无修仙词。命中模拟词 人生模拟/模拟"
+    },
+    {
+      "title": "赚钱模拟器，我要买下全世界",
+      "url": "https://www.qimao.com/shuku/1766455/",
+      "reason": "模拟但非修仙：分类「灵气复苏」，简介无修仙词。命中模拟词 模拟器/模拟"
+    },
+    {
+      "title": "惊悚游戏：开局模拟规则，我无敌了",
+      "url": "https://www.qimao.com/shuku/1711982/",
+      "reason": "模拟但非修仙：分类「恐怖灵异」，简介无修仙词。命中模拟词 模拟"
+    },
+    {
+      "title": "恋爱模拟，征服高质量花样系统姐姐",
+      "url": "https://www.qimao.com/shuku/1713796/",
+      "reason": "模拟但非修仙：分类「都市生活」，简介无修仙词。命中模拟词 模拟/模拟器"
+    },
+    {
+      "title": "模拟犯罪十万次:我成了终极神探",
+      "url": "https://www.qimao.com/shuku/1802956/",
+      "reason": "模拟但非修仙：分类「都市高武」，简介无修仙词。命中模拟词 模拟"
+    },
+    {
+      "title": "大明：我被朱棣模拟人生曝光了！",
+      "url": "https://www.qimao.com/shuku/1785970/",
+      "reason": "模拟但非修仙：分类「穿越历史」，简介无修仙词。命中模拟词 模拟/推演"
+    },
+    {
+      "title": "全民皇帝游戏：我有暴君模拟器",
+      "url": "https://www.qimao.com/shuku/1796852/",
+      "reason": "模拟但非修仙：分类「王朝争霸」，简介无修仙词。命中模拟词 模拟器/模拟"
+    },
+    {
+      "title": "历史：我只是恋爱模拟，女帝非要我负责",
+      "url": "https://www.qimao.com/shuku/11810769/",
+      "reason": "模拟但非修仙：分类「架空历史」，简介无修仙词。命中模拟词 模拟/模拟器"
+    },
+    {
+      "title": "让你模拟犯案，你抢银行啊活爹！",
+      "url": "https://www.qimao.com/shuku/2017505/",
+      "reason": "模拟但非修仙：分类「都市高手」，简介无修仙词。命中模拟词 模拟"
+    },
+    {
+      "title": "刚刚权倾朝野，就被女帝模拟人生",
+      "url": "https://www.qimao.com/shuku/1704014/",
+      "reason": "模拟但非修仙：分类「王朝争霸」，简介无修仙词。命中模拟词 模拟/模拟器"
+    },
+    {
+      "title": "我的武道模拟器，天下无敌",
+      "url": "https://www.qimao.com/shuku/1669035/",
+      "reason": "模拟但非修仙：分类「异世大陆」，简介无修仙词。命中模拟词 模拟器/模拟"
+    },
+    {
+      "title": "万界大融合我有明日模拟器",
+      "url": "https://www.qimao.com/shuku/222914/",
+      "reason": "模拟但非修仙：分类「末世危机」，简介无修仙词。命中模拟词 模拟器/模拟"
+    },
+    {
+      "title": "酒馆模拟器：我真没想当邪神啊",
+      "url": "https://www.qimao.com/shuku/1781462/",
+      "reason": "模拟但非修仙：分类「都市高武」，简介无修仙词。命中模拟词 模拟器/模拟"
+    },
+    {
+      "title": "未来商业模拟器：从三千块到顶级游资",
+      "url": "https://www.qimao.com/shuku/2071390/",
+      "reason": "模拟但非修仙：分类「商战职场」，简介无修仙词。命中模拟词 模拟器/模拟"
+    },
+    {
+      "title": "宠冠六宫，娘娘她有宫斗模拟器",
+      "url": "https://www.qimao.com/shuku/9461805/",
+      "reason": "模拟但非修仙：分类「宫闱宅斗」，简介无修仙词。命中模拟词 模拟器/模拟"
+    },
+    {
+      "title": "三国：我刘备，模拟人生，三造大汉",
+      "url": "https://www.qimao.com/shuku/9695664/",
+      "reason": "模拟但非修仙：分类「穿越历史」，简介无修仙词。命中模拟词 模拟/模拟器/人生模拟"
+    },
+    {
+      "title": "说好模拟幸福人生，怎么全都是刀子？",
+      "url": "https://www.qimao.com/shuku/1950995/",
+      "reason": "模拟但非修仙：分类「灵气复苏」，简介无修仙词。命中模拟词 模拟/模拟器/人生模拟"
+    },
+    {
+      "title": "御兽模拟，从百音鸟到焚天朱雀",
+      "url": "https://www.qimao.com/shuku/1853290/",
+      "reason": "模拟但非修仙：分类「异世大陆」，简介无修仙词。命中模拟词 模拟"
+    },
+    {
+      "title": "大秦：多重人格，被祖龙模拟人生",
+      "url": "https://www.qimao.com/shuku/1670062/",
+      "reason": "模拟但非修仙：分类「穿越历史」，简介无修仙词。命中模拟词 模拟/模拟器"
+    },
+    {
+      "title": "大明：我的多重人格被朱元璋模拟曝光",
+      "url": "https://www.qimao.com/shuku/1675330/",
+      "reason": "模拟但非修仙：分类「穿越历史」，简介无修仙词。命中模拟词 模拟/模拟器/推演"
+    },
+    {
+      "title": "惊悚游戏：我有变异的人生模拟器",
+      "url": "https://www.qimao.com/shuku/1674587/",
+      "reason": "模拟但非修仙：分类「恐怖灵异」，简介无修仙词。命中模拟词 模拟器/人生模拟/模拟"
+    },
+    {
+      "title": "星铁：我模拟宇宙三百年，出道即巅峰",
+      "url": "https://www.qimao.com/shuku/1790384/",
+      "reason": "模拟但非修仙：分类「衍生同人」，简介无修仙词。命中模拟词 模拟"
+    },
+    {
+      "title": "还没毕业，手握模拟器的我斩神了",
+      "url": "https://www.qimao.com/shuku/1799518/",
+      "reason": "模拟但非修仙：分类「都市高武」，简介无修仙词。命中模拟词 模拟器/模拟"
+    },
+    {
+      "title": "开局模拟撬走天命女主，你只是普通路人？",
+      "url": "https://www.qimao.com/shuku/1940115/",
+      "reason": "模拟但非修仙：分类「都市高武」，简介无修仙词。命中模拟词 模拟/人生模拟"
+    },
+    {
+      "title": "四合院：傻柱的人生模拟器",
+      "url": "https://www.qimao.com/shuku/10081953/",
+      "reason": "模拟但非修仙：分类「衍生同人」，简介无修仙词。命中模拟词 模拟器/人生模拟/模拟"
+    },
+    {
+      "title": "全民求生：让你开模拟器，没让你囤积女神",
+      "url": "https://www.qimao.com/shuku/1993428/",
+      "reason": "模拟但非修仙：分类「异世大陆」，简介无修仙词。命中模拟词 模拟器/模拟"
+    },
+    {
+      "title": "三国模拟器之这个刘封绝地求生",
+      "url": "https://www.qimao.com/shuku/1650052/",
+      "reason": "模拟但非修仙：分类「穿越历史」，简介无修仙词。命中模拟词 模拟器/模拟"
+    },
+    {
+      "title": "红楼：觉醒多重人格被林妹妹模拟了人生",
+      "url": "https://www.qimao.com/shuku/1672979/",
+      "reason": "模拟但非修仙：分类「架空历史」，简介无修仙词。命中模拟词 模拟/模拟器"
+    },
+    {
+      "title": "全民神祇：洪荒世界弱？我加载了天道模拟器",
+      "url": "https://www.qimao.com/shuku/12950892/",
+      "reason": "模拟但非修仙：分类「都市高武」，简介无修仙词。命中模拟词 模拟器/模拟/推演"
+    },
+    {
+      "title": "万界模拟：所有前任找上门，逼我负责怎么办？",
+      "url": "https://www.qimao.com/shuku/10047306/",
+      "reason": "模拟但非修仙：分类「都市高武」，简介无修仙词。命中模拟词 模拟/模拟器"
+    },
+    {
+      "title": "大明朝堂模拟器：坏了，咱老朱成傀儡皇帝了",
+      "url": "https://www.qimao.com/shuku/12949128/",
+      "reason": "模拟但非修仙：分类「穿越历史」，简介无修仙词。命中模拟词 模拟器/模拟"
+    },
+    {
+      "title": "穿成小奶团后，用三年高考五年模拟教爹考科举",
+      "url": "https://www.qimao.com/shuku/1693878/",
+      "reason": "模拟但非修仙：分类「种田经商」，简介无修仙词。命中模拟词 模拟"
+    },
+    {
+      "title": "崇祯的人生模拟器",
+      "url": "https://www.qimao.com/shuku/1730699/",
+      "reason": "模拟但非修仙：分类「穿越历史」，简介无修仙词。命中模拟词 模拟器/人生模拟/模拟"
+    },
+    {
+      "title": "极道武学修改器",
+      "url": "https://www.qimao.com/shuku/10021536/",
+      "reason": "模拟但非修仙：分类「异世大陆」，简介无修仙词。命中模拟词 推演"
+    },
+    {
+      "title": "原神模拟：你们怎么都成病娇了",
+      "url": "https://www.qimao.com/shuku/2452936_0/",
+      "reason": "模拟但非修仙：分类「轻小说」，简介无修仙词。命中模拟词 模拟/模拟器"
+    },
+    {
+      "title": "荒诞推演游戏",
+      "url": "https://www.qimao.com/shuku/1786692/",
+      "reason": "模拟但非修仙：分类「侦探推理」，简介无修仙词。命中模拟词 推演"
+    },
+    {
+      "title": "隐蔽战线1奉天推演",
+      "url": "https://www.qimao.com/shuku/1890622/",
+      "reason": "模拟但非修仙：分类「革命战争」，简介无修仙词。命中模拟词 推演"
+    },
+    {
+      "title": "高武：我的武学会自动推演",
+      "url": "https://www.qimao.com/shuku/2226829_0/",
+      "reason": "模拟但非修仙：分类「都市高武」，简介无修仙词。命中模拟词 推演"
+    },
+    {
+      "title": "开局推演修罗铠甲，惊爆校花学姐",
+      "url": "https://www.qimao.com/shuku/1890703/",
+      "reason": "模拟但非修仙：分类「衍生同人」，简介无修仙词。命中模拟词 推演"
+    },
+    {
+      "title": "国运迷宫：我靠无限推演养活全国",
+      "url": "https://www.qimao.com/shuku/11606709/",
+      "reason": "模拟但非修仙：分类「都市高武」，简介无修仙词。命中模拟词 推演"
+    },
+    {
+      "title": "沙盘推演，我乃率土之皇",
+      "url": "https://www.qimao.com/shuku/1833638/",
+      "reason": "模拟但非修仙：分类「异世大陆」，简介无修仙词。命中模拟词 推演/沙盘"
+    },
+    {
+      "title": "横推高武，从推演功法斩妖除魔！",
+      "url": "https://www.qimao.com/shuku/2026080/",
+      "reason": "模拟但非修仙：分类「都市高武」，简介无修仙词。命中模拟词 推演"
+    },
+    {
+      "title": "肺癌晚期我在无魔地球推演超凡",
+      "url": "https://www.qimao.com/shuku/1653277/",
+      "reason": "模拟但非修仙：分类「都市高武」，简介无修仙词。命中模拟词 推演"
+    },
+    {
+      "title": "大明：我人格分裂被朱棣推演曝光",
+      "url": "https://www.qimao.com/shuku/1705679/",
+      "reason": "模拟但非修仙：分类「穿越历史」，简介无修仙词。命中模拟词 推演/模拟器/模拟"
+    },
+    {
+      "title": "穿越成校园受气包？看我推演成神！",
+      "url": "https://www.qimao.com/shuku/1955235/",
+      "reason": "模拟但非修仙：分类「都市高武」，简介无修仙词。命中模拟词 推演"
+    },
+    {
+      "title": "灵气复苏：开局推演三勾玉写轮眼",
+      "url": "https://www.qimao.com/shuku/1705947/",
+      "reason": "模拟但非修仙：分类「灵气复苏」，简介无修仙词。命中模拟词 推演"
+    },
+    {
+      "title": "全球高武：我能吞噬万物推演未来",
+      "url": "https://www.qimao.com/shuku/2481503_0/",
+      "reason": "模拟但非修仙：分类「都市高武」，简介无修仙词。命中模拟词 推演"
+    },
+    {
+      "title": "沙盘通古城，病王爷和真千金赢麻了",
+      "url": "https://www.qimao.com/shuku/1871526/",
+      "reason": "模拟但非修仙：分类「古代情缘」，简介无修仙词。命中模拟词 沙盘"
+    },
+    {
+      "title": "预演爱情花絮",
+      "url": "https://www.qimao.com/shuku/2041810/",
+      "reason": "模拟但非修仙：分类「散文随笔」，简介无修仙词。命中模拟词 预演"
+    },
+    {
+      "title": "篮坛之重开的大姚",
+      "url": "https://www.qimao.com/shuku/10017732/",
+      "reason": "模拟但非修仙：分类「篮球风云」，简介无修仙词。命中模拟词 重开"
+    },
+    {
+      "title": "大明从慎重开始",
+      "url": "https://www.qimao.com/shuku/1789017/",
+      "reason": "模拟但非修仙：分类「穿越历史」，简介无修仙词。命中模拟词 重开"
+    },
+    {
+      "title": "重开万次获得SSS级天赋",
+      "url": "https://www.qimao.com/shuku/218158/",
+      "reason": "模拟但非修仙：分类「都市高武」，简介无修仙词。命中模拟词 重开/模拟器/模拟"
+    },
+    {
+      "title": "刀了死对头后，他重开杀疯了",
+      "url": "https://www.qimao.com/shuku/1711887/",
+      "reason": "模拟但非修仙：分类「古代情缘」，简介无修仙词。命中模拟词 重开"
+    },
+    {
+      "title": "弹幕劝我重开，我无伞跳楼吓哭全网",
+      "url": "https://www.qimao.com/shuku/12704952/",
+      "reason": "模拟但非修仙：分类「商战职场」，简介无修仙词。命中模拟词 重开"
+    },
+    {
+      "title": "大明重开一万次开局吸功大法",
+      "url": "https://www.qimao.com/shuku/221286/",
+      "reason": "模拟但非修仙：分类「穿越历史」，简介无修仙词。命中模拟词 重开/模拟器/模拟"
+    },
+    {
+      "title": "全球诡异：我重开封神榜，镇守华夏",
+      "url": "https://www.qimao.com/shuku/1806995/",
+      "reason": "模拟但非修仙：分类「诸天万界」，简介无修仙词。命中模拟词 重开"
+    },
+    {
+      "title": "一切从尊重开始：让孩子自动自发",
+      "url": "https://www.qimao.com/shuku/1948086/",
+      "reason": "模拟但非修仙：分类「亲子教育」，简介无修仙词。命中模拟词 重开"
+    },
+    {
+      "title": "末世：我能无限重生",
+      "url": "https://www.qimao.com/shuku/1843934/",
+      "reason": "模拟但非修仙：分类「末世危机」，简介无修仙词。命中模拟词 无限重生"
+    },
+    {
+      "title": "王妃无限重生，拯救竹马王爷",
+      "url": "https://www.qimao.com/shuku/1776647/",
+      "reason": "模拟但非修仙：分类「古代情缘」，简介无修仙词。命中模拟词 无限重生"
+    },
+    {
+      "title": "我在驱魔学院无限重生",
+      "url": "https://www.qimao.com/shuku/1950397/",
+      "reason": "模拟但非修仙：分类「都市高武」，简介无修仙词。命中模拟词 无限重生"
+    },
+    {
+      "title": "无限重生，全球只有我知道剧情",
+      "url": "https://www.qimao.com/shuku/1695558/",
+      "reason": "模拟但非修仙：分类「都市高武」，简介无修仙词。命中模拟词 无限重生"
+    },
+    {
+      "title": "穿越王妃，系统让我无限重生",
+      "url": "https://www.qimao.com/shuku/1733916/",
+      "reason": "模拟但非修仙：分类「古代情缘」，简介无修仙词。命中模拟词 无限重生"
+    },
+    {
+      "title": "被渣男劈腿后我陷入了无限重生",
+      "url": "https://www.qimao.com/shuku/1655790/",
+      "reason": "模拟但非修仙：分类「末世求生」，简介无修仙词。命中模拟词 无限重生"
+    },
+    {
+      "title": "乱世荒年：从打猎开始无限抽奖",
+      "url": "https://www.qimao.com/shuku/2074393/",
+      "reason": "模拟但非修仙：分类「架空历史」，简介无修仙词。命中模拟词 沙盘"
+    },
+    {
+      "title": "西游：开局重开金鳌岛",
+      "url": "https://www.qimao.com/shuku/1790041/",
+      "reason": "[接管执行] SCHEMA 修订6「重开」词义复核：条件A 不成立。「重开金鳌岛」带宾语，重新开启金鳌岛，开辟义；原句「…西游：开局重开金鳌岛 截教灭了，教主丢了，作为…」。本书「重开」是唯一条件A 证据（无模拟/模拟器/推演兜底），词义不成立即不满足条件A，故不收。"
+    },
+    {
+      "title": "觅长生",
+      "url": "https://www.qimao.com/shuku/1678229/",
+      "reason": "[接管执行] SCHEMA 修订6「重开」词义复核：条件A 不成立。「重开天门」带宾语，开辟义；原句「…可攀、魔道可堕！ 吾自凡间而来，重开天门，为求长生，亦求凡人之道！…」。本书「重开」是唯一条件A 证据（无模拟/模拟器/推演兜底），词义不成立即不满足条件A，故不收。"
+    },
+    {
+      "title": "我野神，香火证道镇轮回",
+      "url": "https://www.qimao.com/shuku/1925699/",
+      "reason": "[接管执行] SCHEMA 修订6「重开」词义复核：条件A 不成立。「重开黄泉之路、再立鬼门关」带宾语且与「再立」并列，开辟义；原句「…轮回，立三界秩序，还天地清明。 重开黄泉之路、再立鬼门关、搭建奈何桥…」。本书「重开」是唯一条件A 证据（无模拟/模拟器/推演兜底），词义不成立即不满足条件A，故不收。"
+    }
+  ]
+}

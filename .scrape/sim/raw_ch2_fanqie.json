@@ -1,0 +1,1953 @@
+{
+  "meta": {
+    "channel": 2,
+    "platforms": [
+      "fanqie"
+    ],
+    "status": "partial",
+    "collectedAt": "2026-09-09T14:48:11Z",
+    "entryPoints": [
+      "https://fanqienovel.com/api/library/book_list?gender=1&category_id={1140|258|257|124|511|259|66|7}&creation_status=-1&word_count=-1&sort={0|1}&page_index=0..11&page_count=20",
+      "https://fanqienovel.com/api/book/info?bookId={id}",
+      "https://fanqienovel.com/page/{id}",
+      "本地种子 .scrape/fq_books.json（360 本既有番茄榜单采样）"
+    ],
+    "notes": "robots.txt 为 `User-agent: * / Allow:/`，无禁抓路径。\n站内搜索未能使用：/api/author/search/search_book/v1 确为官方搜索端点（已从 Search.53ebdaa2.js 确认参数形态 filter/page_count/page_index/query_type/query_word），但搜索页挂载了 secsdk/captcha 安全 SDK，裸请求一律返回 HTTP 200 + 空 body；绕过它属于破反爬保护，未做。/search?q= 与 /searchPage 均 404，/search/{kw} 是 SPA 壳（search.loading=true, searchBookList=null，不 SSR 结果）。因此本通道的扩池改走分类浏览端点 /api/library/book_list。\n列表接口 /api/library/book_list 的文本字段被私有字体混淆，实测 20 本样本：abstract 20/20 脏（PUA 占比 29–48%）、book_name 18/20、author 14/20、word_count 与 read_count 20/20；book_id、creation_status、last_chapter_time 干净。故列表层只取 bookId，书名/简介/字数一律以 /api/book/info?bookId=（返回干净文本）为准，未做任何字体反解。\nopeningHook 全部为 null：SCHEMA 第 4 节要求不抓正文章节内容，本通道据此未请求任何试读/阅读页，不是抓取失败。\nscore 全部为 null：番茄书页与 book/info 均不提供评分字段，平台不公开评分。\nchapterTotal 与 firstPublishDate 来自书页 __INITIAL_STATE__.page（chapterTotal 与首章 firstPassTime）；book/info 不含这两项。个别书页取不到时写 null。\nstatus 映射经实测校验：creationStatus=\"1\" 的书页渲染为「连载中」，故 1→连载、0→完结。\nwordCount 取 book/info 的 wordNumber（已是「字」的整数），未做万字折算。\npopularity.metric 固定为「在读」，raw 为 book/info 的 readCount 原始值，未折算。\n番茄 260 个分类节点（/api/author/book/category_list/v0/）中没有「模拟/模拟器/推演/重开」任何一个标签——平台没有为这一题材设标签（同级别的 系统 19、无限流 70、升级流 830、副本 864 都有）。因此 simEvidence.matchedIn 在番茄这一侧只可能是 title 与 abstract，tag 结构上不可能命中。\ncategories / tags 的切分依据分类表的 label 字段：label=「主分类」入 categories，「主题」「角色」「情节」入 tags。\n抽样口径：主池为八个仙侠/玄幻系分类 × 两种排序 × 12 页，去重得 1844 个 bookId，再逐本解析判定。这是头部抽样而非全站普查，番茄该题材的绝对存量高于本文件的收录数。\nnearMiss 曾经为 0，原因不是判定代码漏了 A∧¬B 分支，而是候选池在打条件A 之前就已经被条件B 过滤过一遍：主池可用 1842 本里 condB 为真的有 1842 本（其中 1842 本靠分类成立），因为步骤A 枚举的八个入口分类——东方仙侠/传统玄幻/玄幻脑洞/都市修真/东方玄幻/奇幻仙侠/洪荒/玄幻——分类名本身就命中条件B。在这个池子上 A∧¬B 是数学上不可能的事件，0 不是数据的形状。核验脚本 ch2_nearcheck.mjs（纯离线）：_near 与 _judge 字段 1842/1842 条齐全，落盘没有问题。\n因此按 SCHEMA 第 5 节补了一轮反向召回，方向与主池相反：枚举五个非修仙分类（都市脑洞 262 / 游戏体育 746 / 都市种田 263 / 科幻末世 8 / 西方奇幻 1141）× 两种排序 × 3 页，得补池 596 本，再用同一个 judge() 判定。SCHEMA 举的三个 nearMiss 例子（都市模拟、足球模拟、种田模拟）正好落在前三个分类里。补池是有界探针，用于量化「模拟但非修仙」这个亚群并给出边界样本，不是这五个分类的普查。\n补召回的结果：nearMiss 从 0 变成 11 条，全部出自补池；books 增加 0 本（分类不在仙侠/玄幻系、靠简介里的修仙词满足条件B，是主池按分类枚举系统性够不到的那一类，其 source 字段可见来源分类）。补池另有 3 本命中书与主池重复（西方奇幻类同时挂着奇幻仙侠/玄幻分类），已按 bookId 去重。\n一本边界样本经通道 1 裁定降级，已从 books 移入 nearMiss：「让你拍节目，你让项羽撕秦始皇？」（bookId 7646237483482483774）。它是本文件唯一一本分类不属仙侠系、仅靠简介词满足条件B 的书，触发处是简介里独立成行的节目单「【第六期·修仙模拟之战】」。裁定口径：条件B 那句「或简介中出现修仙…」是用来捞回分类标错、但主线确实是修仙的书，不是用来收某一期节目题材碰巧是修仙的书，故属 SCHEMA 第1节「只满足 A 不收」。原句已留在该条 nearMiss 的 reason 里，痕迹可推翻。此裁定已立为 SCHEMA 修订 6 判例，本文件按 bookId 逐本登记执行，未修改 judge() 的判据本身——把它一般化成「仅靠简介词成立就降级」会误伤将来真正分类标错的修仙书。\n另做过一次假阳性审计（ch2_report.mjs）：条件B 的简介词表里「大道」是宽词，「大道理」「大道上」都含它，主池靠分类满足B 会把这个风险掩盖掉。审计逐条摊开了所有「仅靠简介词入选」的书，实测 0 本是靠「大道」单独成立的，故本文件不含该类假阳性。\n两池溯源：每条 books 与 nearMiss 的 source / reason 开头都带池名标签——[主池] 为仙侠/玄幻八分类枚举，[补池] 为非修仙五分类反向召回，[主池+补池] 为两轮都枚举到、已按 bookId 去重的书。两池召回方式不同，合成一个数之后不要当成一次均匀抽样；按池分开统计的口径见下一条。\n按池分列的命中方式分布（本文件唯一未被召回方式污染的比例口径）：全部 46 本：仅title 0 / 仅abstract 31 / 两者都 15；主池 46 本：仅title 0 / 仅abstract 31 / 两者都 15；补池 0 本：仅title 0 / 仅abstract 0 / 两者都 0。这个比例在番茄侧不存在同义反复：站内搜索被验证码挡死，入池走的是分类浏览端点，与书名里有没有模拟词完全无关——按书名搜再去数书名命中率的那种偏差，这一格没有。\nmeta.status=partial 的三个理由：① 站内搜索整条路被 secsdk 验证码挡死，召回只能靠分类浏览，是头部抽样不是全站普查；② openingHook 与 score 两个字段整列为 null；③ 1 本书（逆道拾尘）书页返回 404，chapterTotal 与 firstPublishDate 为 null。都不构成整站放弃，故不是 blocked-by-policy。"
+  },
+  "books": [
+    {
+      "platform": "fanqie",
+      "platformBookId": "7583949514948496409",
+      "title": "一年抽取一词条，模拟的也可以？",
+      "author": "六大六子",
+      "url": "https://fanqienovel.com/page/7583949514948496409",
+      "wordCount": 1279718,
+      "chapterTotal": 603,
+      "status": "连载",
+      "categories": [
+        "玄幻脑洞"
+      ],
+      "tags": [
+        "玄幻",
+        "系统",
+        "穿越",
+        "架空",
+        "东方玄幻"
+      ],
+      "abstract": "【词条抽取+模拟器+全部继承+仙武】（漫剧已上线）\n陈奕穿越武道世界，获得了一个一年抽一个词条的系统。\n可惜抽到的全是没啥用的白色词条，高品质词条概率很低，最高的神话词条甚至只有0.001%！\n要提升概率必须提升武道境界，可他没有根骨无法修炼。\n十八岁这年，陈奕不幸落入黑帮手中，被迫做苦力。\n眼看这辈子就要这么凄凉下去，人生的第18个词条，竟抽出了神话词条——模拟器！\n模拟里每过一年竟然也能抽一个词条，模拟结束会继承全部词条和武道境界！\n第一次模拟，陈奕拼了命的活着，多活一年就能多一个词条！\n终于，满头华发时，抽到了梦寐以求的词条——低阶根骨！\n“哈哈哈！莫欺老年穷，开始修炼，继承修为！”\n……\n从此，陈奕不断模拟不断抽，武道境界节节高！\n史诗、传说，乃至神话词条纷纷收入囊中！\n“什么妖族魔族？什么黑暗动乱？我不知道啊，他们喊着‘凭什么你能成仙啊’就冲上来了，粘在我拳头上甩也甩不开，视野盲区，减速带，和我的模拟器说吧，我们都在用力的活着，我都这么用力了他们怎么还活着？”",
+      "popularity": {
+        "metric": "在读",
+        "raw": 488692
+      },
+      "score": null,
+      "firstPublishDate": "2025-12-15",
+      "lastUpdateDate": "2026-09-07",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "模拟",
+          "模拟器"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-09T14:48:11Z",
+      "source": "[主池] https://fanqienovel.com/api/library/book_list (玄幻脑洞(257) sort=0; 东方玄幻(511) sort=0; 玄幻(7) sort=0)"
+    },
+    {
+      "platform": "fanqie",
+      "platformBookId": "7649681549998181401",
+      "title": "变身仙子后，模拟的我浪翻修仙界",
+      "author": "广顺猛虎",
+      "url": "https://fanqienovel.com/page/7649681549998181401",
+      "wordCount": 698943,
+      "chapterTotal": 326,
+      "status": "连载",
+      "categories": [
+        "玄幻脑洞"
+      ],
+      "tags": [
+        "玄幻",
+        "系统",
+        "穿越",
+        "架空",
+        "东方玄幻",
+        "魂穿"
+      ],
+      "abstract": "【变身文+现实（单）正道仙子+模拟有底线但不多+道心坚定+杀伐果断】\n林不凡：三十年河东，三十年河西…\n韩玄：退至林姐身后…\n柳贯之：一把抓住，顷刻…\n本书又名：\n《下次模拟还是好女孩》\n《想要人前显圣的我，只能苦一苦模拟的自己了》",
+      "popularity": {
+        "metric": "在读",
+        "raw": 178372
+      },
+      "score": null,
+      "firstPublishDate": "2026-06-10",
+      "lastUpdateDate": "2026-09-08",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "模拟"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-09T14:48:11Z",
+      "source": "[主池] https://fanqienovel.com/api/library/book_list (玄幻脑洞(257) sort=0; 东方玄幻(511) sort=0; 玄幻(7) sort=0)"
+    },
+    {
+      "platform": "fanqie",
+      "platformBookId": "7413010908697349145",
+      "title": "人生模拟：让女剑仙抱憾终身",
+      "author": "离焕",
+      "url": "https://fanqienovel.com/page/7413010908697349145",
+      "wordCount": 1007800,
+      "chapterTotal": 486,
+      "status": "完结",
+      "categories": [
+        "玄幻脑洞"
+      ],
+      "tags": [
+        "玄幻",
+        "系统",
+        "穿越",
+        "诸天万界",
+        "剑道"
+      ],
+      "abstract": "【第一次模拟，你穿越到修仙世界】\n【你成为逃荒的难民，逃荒途中，你救下了一名被遗弃的女婴，你成为了她的兄长】\n【你们相依为命，成为彼此的依靠】\n【模拟结束时，你护在长大的少女身前，舍命挡住诸多魔修，你死了，少女眼中的光也消失了】\n……\n【第二次模拟，你穿越到蒸汽与魔法并存的世界】\n【你日夜钻研魔法，痴迷于对魔法的研究，一次外出时，你遇见流落街头血脉不纯的魔族少女，你将她收为学生】\n【你教会魔女何为人性，带她感受人世的美好，将她培养成超越神明的奇迹】\n【模拟结束时，你因凡人有限的寿命，老死于近乎永生的魔女面前】\n……\n一次次的模拟，一次次的邂逅。\n许系突然感觉哪里不对：“等等，你们说来现实找我是怎么回事？”",
+      "popularity": {
+        "metric": "在读",
+        "raw": 171626
+      },
+      "score": null,
+      "firstPublishDate": "2024-09-10",
+      "lastUpdateDate": "2026-05-12",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "模拟",
+          "人生模拟"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-09T14:48:11Z",
+      "source": "[主池] https://fanqienovel.com/api/library/book_list (玄幻脑洞(257) sort=0; 玄幻(7) sort=0)"
+    },
+    {
+      "platform": "fanqie",
+      "platformBookId": "7641506817385712665",
+      "title": "开局模拟被打爆，金丹爆星什么鬼",
+      "author": "弹弓打水漂",
+      "url": "https://fanqienovel.com/page/7641506817385712665",
+      "wordCount": 245304,
+      "chapterTotal": 120,
+      "status": "连载",
+      "categories": [
+        "玄幻脑洞"
+      ],
+      "tags": [
+        "玄幻",
+        "系统",
+        "穿越",
+        "架空",
+        "开局"
+      ],
+      "abstract": "（评分刚出，后续会涨）【模拟器】+【全继承】+【筑基老祖】+【金丹大能】+【善恶分明】+【杀伐果断】\n\n　　穿越群雄逐鹿的乱世，林霄横空出世，20年登顶武道之巅，一统天下！\n\n　　登基之日，人生模拟系统绑定。\n\n　　林霄本以为自己天下无敌，不曾想天上来敌，第一次模拟就被练气期修士打爆。\n\n　　直到这时，他才知道这是个修仙世界。\n\n　　但坑爹的是，这世界的战力似乎有点不对劲。\n\n　　“谁家练气期有千丈法相啊！”\n\n　　……\n\n　　练气期：炼化寰宇之气，孕育先天祖炁，寿万载。\n\n　　筑基期：凝聚本命神通，铸就大道之基，寿十万载。\n\n　　金丹期：证道恒星金丹，衍化乾坤世界，理论寿元无限。\n\n　　……\n\n　　第一次模拟，被练气真人打爆。\n\n　　第二次模拟，被筑基真君打爆。\n\n　　第三次模拟，被金丹大能打爆。\n\n　　直到第四次模拟，林霄抽中天赋【光明，赐予我力量吧！】\n\n　　可调动恒星之力。\n\n　　“直径百万公里的太阳，和直径一万亿公里的太阳，都是恒星！”\n\n　　林霄本以为凭此天赋要走上无敌之路，直到面对元婴巨头……",
+      "popularity": {
+        "metric": "在读",
+        "raw": 140073
+      },
+      "score": null,
+      "firstPublishDate": "2026-07-14",
+      "lastUpdateDate": "2026-09-08",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "模拟",
+          "模拟器",
+          "人生模拟"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-09T14:48:11Z",
+      "source": "[主池] https://fanqienovel.com/api/library/book_list (玄幻脑洞(257) sort=0; 玄幻(7) sort=0)"
+    },
+    {
+      "platform": "fanqie",
+      "platformBookId": "7574420934489017369",
+      "title": "西游：请叫我白骨大圣",
+      "author": "千年后的我",
+      "url": "https://fanqienovel.com/page/7574420934489017369",
+      "wordCount": 1221971,
+      "chapterTotal": 579,
+      "status": "连载",
+      "categories": [
+        "玄幻脑洞"
+      ],
+      "tags": [
+        "玄幻",
+        "系统",
+        "穿越",
+        "西游衍生",
+        "东方玄幻"
+      ],
+      "abstract": "【非西游原著】\n重生成了骷髅怎么办？\n不要慌，先看看是个什么情况。\n西游记，白虎岭，原来我是白骨精？\n哦。\n不好意思搞错了，原来我只是个骷髅兵。\n得知自身处境的云昭欲哭无泪。\n此时不跑更待何时，真想等猴子的金箍棒把他扬成灰么。\n【叮，拦路模拟器加载中】\n嗯？\n什么逼动静。\n好像是自己的金手指到账了，桀桀，既然如此，怕个卵，我剑也未尝不利！\n云昭开启了他的模拟人生。\n叮，模拟结束，拦住唐僧师徒半分钟，奖励一年道行修为。\n模拟结束，拦住唐僧师徒一个时辰，奖励千年道行修为。\n模拟结束，恭喜你成功擒住唐僧，奖励后天灵宝一件。\n……\n无数次模拟后。\n“不行不行，这妖魔太恐怖了，师父咱们分了行李，我回高老庄，师弟回流沙河，猴哥回花果山吧，这经是取不成了。”\n唐僧一脸凝重，漫天神佛都过不去这一难，真经怎会如此难求？\n模拟结束，你成功劝退唐僧师徒，奖励鸿蒙紫气一道。\n轰隆！\n九万里紫气席卷八荒，世间竟再添一位圣人？\n云昭：我这一身修为全凭努力。系统，给我模拟！",
+      "popularity": {
+        "metric": "在读",
+        "raw": 137074
+      },
+      "score": null,
+      "firstPublishDate": "2025-11-19",
+      "lastUpdateDate": "2026-09-07",
+      "simEvidence": {
+        "matchedIn": [
+          "abstract"
+        ],
+        "keywords": [
+          "模拟器",
+          "模拟"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-09T14:48:11Z",
+      "source": "[主池] https://fanqienovel.com/api/library/book_list (玄幻脑洞(257) sort=0; 东方玄幻(511) sort=0; 玄幻(7) sort=0)"
+    },
+    {
+      "platform": "fanqie",
+      "platformBookId": "7658524822380481598",
+      "title": "模拟，怎么成了系统流主角大乱斗",
+      "author": "胜天半子xx",
+      "url": "https://fanqienovel.com/page/7658524822380481598",
+      "wordCount": 235231,
+      "chapterTotal": 115,
+      "status": "连载",
+      "categories": [
+        "玄幻脑洞"
+      ],
+      "tags": [
+        "系统",
+        "穿越",
+        "架空",
+        "东方玄幻",
+        "魂穿"
+      ],
+      "abstract": "【评分刚出，后面应该会涨点】\n【主模拟，中后期现实描写才会多一些+各类型系统流主角乱斗+现实斩杀主角获得相对应天赋词条】\n撞大运的王玄穿越了，胎穿，还获得了一个模拟系统。\n只是，这模拟怎么越模拟越不对劲嘞？\n怎么刚开始模拟就被模拟中的人物发现有系统？\n怎么附近一个王朝有将军叫什么赵云？\n怎么还有七老八十的老家伙老而弥坚猛纳三百妾室活出第二春？\n越模拟，王玄越发觉得，这个世界不就是他妈的系统流主角们大乱斗嘛！！！\n还好，他有模拟系统，他还能苟！\n趁着系统流主角们尚且弱小，王玄依靠模拟提前预知，斩杀系统流主角，夺取一缕系统本源化为自身天赋。\n于是，王玄在模拟中越走越远，最后，成为唯一至高。",
+      "popularity": {
+        "metric": "在读",
+        "raw": 131313
+      },
+      "score": null,
+      "firstPublishDate": "2026-07-06",
+      "lastUpdateDate": "2026-09-08",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "模拟"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-09T14:48:11Z",
+      "source": "[主池] https://fanqienovel.com/api/library/book_list (玄幻脑洞(257) sort=0; 东方玄幻(511) sort=0)"
+    },
+    {
+      "platform": "fanqie",
+      "platformBookId": "7589077128222624793",
+      "title": "凡人修仙，捡个仙子做老婆",
+      "author": "落笔乾坤",
+      "url": "https://fanqienovel.com/page/7589077128222624793",
+      "wordCount": 1520391,
+      "chapterTotal": 686,
+      "status": "连载",
+      "categories": [
+        "东方仙侠"
+      ],
+      "tags": [
+        "玄幻",
+        "仙侠",
+        "多女主",
+        "腹黑",
+        "奇幻仙侠"
+      ],
+      "abstract": "无系统+稳健修仙+腹黑+杀伐流+多女主+热血\n“爷爷给你改命了。”\n爷爷临终前的呓语，困了周元三年。\n三年后，周元在后山捡到了身中欲毒的绝美仙子。\n自此，周元以凡人之躯缔结仙缘，以平凡之资叩问仙门。\n没天赋？没资源？没背景？\n我能凝炼命血，推演大道。\n一滴命血可照破山河万朵，一滴命血可夺九天造化，一滴命血可窥长生大道，一滴命血可压黄金万族！\n机缘因果天注定？\n我以命血换天缘！\n吾辈凡修，亦可问天。",
+      "popularity": {
+        "metric": "在读",
+        "raw": 121374
+      },
+      "score": null,
+      "firstPublishDate": "2025-12-29",
+      "lastUpdateDate": "2026-09-08",
+      "simEvidence": {
+        "matchedIn": [
+          "abstract"
+        ],
+        "keywords": [
+          "推演"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-09T14:48:11Z",
+      "source": "[主池] https://fanqienovel.com/api/library/book_list (东方仙侠(1140) sort=0; 奇幻仙侠(259) sort=0; 玄幻(7) sort=0)"
+    },
+    {
+      "platform": "fanqie",
+      "platformBookId": "7645278216826932249",
+      "title": "词条修仙模拟器，修为全继承",
+      "author": "桃花飞神",
+      "url": "https://fanqienovel.com/page/7645278216826932249",
+      "wordCount": 530208,
+      "chapterTotal": 235,
+      "status": "连载",
+      "categories": [
+        "玄幻脑洞"
+      ],
+      "tags": [
+        "玄幻",
+        "系统",
+        "穿越",
+        "架空",
+        "开局",
+        "东方玄幻"
+      ],
+      "abstract": "【模拟器】+【词条】+【苟道】+【不无脑】\n别人穿越都是混沌圣体、觉醒金手指。\n许安穿越，开局只穿了一条海绵宝宝大裤衩。\n更绝望的是，修仙界随便一个大爷，都能单手倒拔垂杨柳！\n许安本以为自己要成为史上第一个饿死的穿越者，直到——【词条修仙模拟器，激活！】\n每天一次模拟机会，开局抽取随机天赋词条，模拟结束更是能无条件全额继承修为与实物！\n",
+      "popularity": {
+        "metric": "在读",
+        "raw": 108690
+      },
+      "score": null,
+      "firstPublishDate": "2026-05-29",
+      "lastUpdateDate": "2026-09-08",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "模拟器",
+          "模拟"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-09T14:48:11Z",
+      "source": "[主池] https://fanqienovel.com/api/library/book_list (玄幻脑洞(257) sort=0; 东方玄幻(511) sort=0)"
+    },
+    {
+      "platform": "fanqie",
+      "platformBookId": "7636228848463399998",
+      "title": "在修行界，觉醒办公室生存模拟器",
+      "author": "老鱼还能挣扎一下",
+      "url": "https://fanqienovel.com/page/7636228848463399998",
+      "wordCount": 525019,
+      "chapterTotal": 254,
+      "status": "连载",
+      "categories": [
+        "玄幻脑洞"
+      ],
+      "tags": [
+        "玄幻",
+        "系统",
+        "穿越",
+        "架空",
+        "东方玄幻"
+      ],
+      "abstract": "（漫剧正在制作中，敬请期待！）\n【模拟器+词条+词条、修为、法宝全部继承！】\n好消息，陆平穿越了。\n坏消息，陆平穿越的地方，是个人命不如草芥的修行世界。\n好消息，陆平觉醒了系统。\n坏消息，系统给的技能，包括且不限于：\n带薪拉屎，工位养花，千杯不醉，溜须拍马，踢皮球，背锅侠……\n清一色的办公室生存技能。\n因为，陆平觉醒的就是办公室生存模拟器。\n手握系统的陆平，看着迎面劈下来的鞭子，心中慌得一批。\n……\n当陆平九死一生进入宗门后。\n迎面而来的，是九个大字，\n修仙资本主义欢迎你！\n灵石要靠手搓，丹药全被垄断。\n所有修士，都是宗门打工仔。\n这一刻，\n模拟器的DNA，动了。\n陆平的心，死了……\n这破班，是非上不可吗！！！",
+      "popularity": {
+        "metric": "在读",
+        "raw": 104620
+      },
+      "score": null,
+      "firstPublishDate": "2026-05-06",
+      "lastUpdateDate": "2026-09-08",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "模拟器",
+          "模拟"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-09T14:48:11Z",
+      "source": "[主池] https://fanqienovel.com/api/library/book_list (玄幻脑洞(257) sort=0; 东方玄幻(511) sort=0)"
+    },
+    {
+      "platform": "fanqie",
+      "platformBookId": "7546124483543698457",
+      "title": "藏书阁中百万年，我成仙帝了",
+      "author": "咖啡里的甜",
+      "url": "https://fanqienovel.com/page/7546124483543698457",
+      "wordCount": 1053434,
+      "chapterTotal": 515,
+      "status": "连载",
+      "categories": [
+        "玄幻脑洞"
+      ],
+      "tags": [
+        "玄幻",
+        "系统",
+        "架空",
+        "东方玄幻",
+        "剑修"
+      ],
+      "abstract": "谁说读书无用，读书也可以读出仙帝境！\n叮！\n你读书十卷，获得一年修为！\n获得剑道推演机会一次！\n获得毁灭本源感悟机会一次！\n……\n万族林立，人族羸弱的玄黄大世界，一位青年于藏书阁中成道化仙，当有一日，万族来攻，有剑出藏书阁，一剑光寒十九洲！",
+      "popularity": {
+        "metric": "在读",
+        "raw": 103094
+      },
+      "score": null,
+      "firstPublishDate": "2025-09-04",
+      "lastUpdateDate": "2026-09-08",
+      "simEvidence": {
+        "matchedIn": [
+          "abstract"
+        ],
+        "keywords": [
+          "推演"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-09T14:48:11Z",
+      "source": "[主池] https://fanqienovel.com/api/library/book_list (东方玄幻(511) sort=0)"
+    },
+    {
+      "platform": "fanqie",
+      "platformBookId": "7651384067501329433",
+      "title": "灵气复苏？前世女帝老婆也复苏了",
+      "author": "黑白之月",
+      "url": "https://fanqienovel.com/page/7651384067501329433",
+      "wordCount": 534129,
+      "chapterTotal": 165,
+      "status": "连载",
+      "categories": [
+        "都市修真"
+      ],
+      "tags": [
+        "都市",
+        "诸天万界",
+        "多女主",
+        "女帝",
+        "无敌",
+        "灵气复苏"
+      ],
+      "abstract": "【爽文+无敌+杀伐果断+多红颜+伪模拟器】\n现代灵气复苏，秦子君得《万世仙书》，只要历经万世红尘，就可成‘万世仙尊’，长生久视，万劫不磨！\n历经‘9999世’，只差最后一世就可修成正果，秦子君回到现代，作为转世者的他只想安安稳稳渡过这一世。\n《万世仙书》有一能力，只要写出那一世的故事，就可得到那一世的神通，秦子君发表了多篇大作——\n他曾助大燕公主登临帝位，最后挥手而去，让未来仙朝女帝寻他万年。\n他曾为天地立心，为生民立命，夺天下气运助月神望舒重归神位，让神女等他一生。\n他曾欺骗羲和感情，自毁道途助她成道，让这位太阳女神悔恨终身。\n他曾自诩为‘天’，成东皇太一，横压万世，独断万古，天上天下莫可与敌。\n秦子君的转世经历一出，世人震动！\n只是秦子君没想到，除了他以外，还有众多诸天大能也跟着转世，他的那些红颜知己们，全都活出了第二世！",
+      "popularity": {
+        "metric": "在读",
+        "raw": 101018
+      },
+      "score": null,
+      "firstPublishDate": "2026-06-15",
+      "lastUpdateDate": "2026-09-08",
+      "simEvidence": {
+        "matchedIn": [
+          "abstract"
+        ],
+        "keywords": [
+          "模拟器",
+          "模拟"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-09T14:48:11Z",
+      "source": "[主池] https://fanqienovel.com/api/library/book_list (都市修真(124) sort=0)"
+    },
+    {
+      "platform": "fanqie",
+      "platformBookId": "7601405901446057022",
+      "title": "模拟长生，我能结算天赋词条",
+      "author": "捞仙人",
+      "url": "https://fanqienovel.com/page/7601405901446057022",
+      "wordCount": 782030,
+      "chapterTotal": 377,
+      "status": "连载",
+      "categories": [
+        "玄幻脑洞"
+      ],
+      "tags": [
+        "玄幻",
+        "系统",
+        "重生",
+        "架空",
+        "东方玄幻"
+      ],
+      "abstract": "【模拟器+人生结算+词条抽取+全部继承+仙武】\n　　温禹重生仙武世界，殷实家庭，无忧成长，却在十六岁这年，遭遇灭门之祸。\n　　万幸获得模拟器结算系统，模拟中每隔十年，都能结算一次人生经历，获得天赋词条。\n　　模拟经历越波澜壮阔，登临仙武境界越高，对世界影响越深远，天赋词条等级就越高。\n　　模拟结束，能继承模拟人生中的一切。\n　　第一次模拟。\n　　【你从朽木棺材中爬出，结算之前十六年人生，获得金色天赋词条「大难不死」】\n　　【大难不死：时逢灾祸而不死，化致命攻击为己用。】\n　　【天赋词条效果，能避免一次死亡灾祸，并将敌人的致死攻击铭刻，化作自身能力，现实冷却时间一年，每次模拟人生仅此一次。】\n　　于是，温禹现世低调隐藏，不断模拟结算人生，抽取天赋词条，修为境界一日千里。\n　　为提高人生结算质量，模拟中他曾高呼“苍天已死，黄天当立”，请大苍皇朝赴死。\n　　曾战尽千万仙武者，缚手擒龙压妖界。\n　　曾执剑望天：“试问天上仙人，谁敢接吾一剑。”",
+      "popularity": {
+        "metric": "在读",
+        "raw": 96692
+      },
+      "score": null,
+      "firstPublishDate": "2026-01-31",
+      "lastUpdateDate": "2026-09-07",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "模拟",
+          "模拟器"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-09T14:48:11Z",
+      "source": "[主池] https://fanqienovel.com/api/library/book_list (玄幻脑洞(257) sort=0; 东方玄幻(511) sort=0)"
+    },
+    {
+      "platform": "fanqie",
+      "platformBookId": "7385271736305994777",
+      "title": "皇室潜修二十年，开局陆地神仙",
+      "author": "七月飞星",
+      "url": "https://fanqienovel.com/page/7385271736305994777",
+      "wordCount": 1000106,
+      "chapterTotal": 434,
+      "status": "完结",
+      "categories": [
+        "传统玄幻"
+      ],
+      "tags": [
+        "玄幻",
+        "穿越",
+        "无敌",
+        "开局",
+        "大佬"
+      ],
+      "abstract": "【开局无敌+战力天花板+皇朝大帝+大佬】\n  陆辰穿越转世了，这一世的他是大虞皇朝的五皇子，并拥有了恐怖的悟性与根骨。\n  当别人还在为突破青天不易诀第九层烦恼时，他早已将功法进一步推演，达到了前无古人后无来者的第十一层。\n  当别人还在为突破武道天人而挣扎时，他早已水到渠成踏破天人桎梏，晋升陆地神仙。\n  于是，就这样，潜修二十年的他，不知不觉竟已天下无敌！",
+      "popularity": {
+        "metric": "在读",
+        "raw": 93326
+      },
+      "score": null,
+      "firstPublishDate": "2024-06-27",
+      "lastUpdateDate": "2025-12-01",
+      "simEvidence": {
+        "matchedIn": [
+          "abstract"
+        ],
+        "keywords": [
+          "推演"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-09T14:48:11Z",
+      "source": "[主池] https://fanqienovel.com/api/library/book_list (传统玄幻(258) sort=0)"
+    },
+    {
+      "platform": "fanqie",
+      "platformBookId": "7617875643132300312",
+      "title": "武圣：开局乱世，听见吹牛就变强",
+      "author": "塞外风雪迟",
+      "url": "https://fanqienovel.com/page/7617875643132300312",
+      "wordCount": 254445,
+      "chapterTotal": 108,
+      "status": "完结",
+      "categories": [
+        "玄幻脑洞"
+      ],
+      "tags": [
+        "玄幻",
+        "系统",
+        "穿越",
+        "架空",
+        "开局"
+      ],
+      "abstract": "【杀伐果断+不压战力+系统加点+绝不圣母】\n（评分刚开，后续会涨，不用在意评分。）\n项云穿越到危机四伏的玄幻世界，且开局便附体在一名先天不足的病秧子身上。\n不仅手无缚鸡之力，还无法修炼任何内功心法，横练法门。\n但项云却表示，自己一点也不慌。\n原因无他，只因穿越后。\n他身上还有个无限传闻具现系统。\n只要听见有人吹牛就能无限变强。\n路人甲：“听说了吗？王大侠最近练成一门飞剑之术，一经施展，千里之外取人首级就如探囊取物般轻而易举，端是厉害非凡。”\n路人乙：“切！这算啥？要说剑术高超，还得看连云宗的澹台明月仙子，当年我就有幸在怒江边上看到明月仙子与一头蛮荒巨兽交战，她只用了一剑，顷刻间便山河崩裂，天门大开。”\n系统：“检测到两条虚构传闻，正在为宿主推演及具现飞剑之术，一剑开天门。”\n项云：“我就喜欢听你们吹牛时一副煞有其事的样子，快继续吹，千万别停，只要你们再多吹几条，马上我就能一拳干崩天道规则了。”\n吹牛王：“卧槽！怎么我们吹过的牛逼，全在你身上实现了？”",
+      "popularity": {
+        "metric": "在读",
+        "raw": 90972
+      },
+      "score": null,
+      "firstPublishDate": "2026-03-26",
+      "lastUpdateDate": "2026-09-01",
+      "simEvidence": {
+        "matchedIn": [
+          "abstract"
+        ],
+        "keywords": [
+          "推演"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-09T14:48:11Z",
+      "source": "[主池] https://fanqienovel.com/api/library/book_list (玄幻(7) sort=0)"
+    },
+    {
+      "platform": "fanqie",
+      "platformBookId": "7567555048218053657",
+      "title": "从镇魔司开始长生不死",
+      "author": "望月净土",
+      "url": "https://fanqienovel.com/page/7567555048218053657",
+      "wordCount": 1329432,
+      "chapterTotal": 640,
+      "status": "完结",
+      "categories": [
+        "玄幻脑洞"
+      ],
+      "tags": [
+        "玄幻",
+        "穿越",
+        "架空",
+        "东方玄幻"
+      ],
+      "abstract": "【杀伐果断+世界观宏大+无女主+长生！】\n洛尘穿越而来，正值妖魔乱世。\n收割入品生灵便可掠夺寿元，那我岂不是长生不死？\n消耗寿元可演化修行，修为境界，功法武技都可无限推演！\n从《枯荣诀》到《岁月轮回经》！\n从《金刚身》到《镇狱地藏法相》！\n无数年后，洛尘抽刀出鞘，看着盘踞世间的天地神圣，得道真修！\n“诸位道友，请祝我一臂之力！”",
+      "popularity": {
+        "metric": "在读",
+        "raw": 81144
+      },
+      "score": null,
+      "firstPublishDate": "2025-11-01",
+      "lastUpdateDate": "2026-08-08",
+      "simEvidence": {
+        "matchedIn": [
+          "abstract"
+        ],
+        "keywords": [
+          "推演"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-09T14:48:11Z",
+      "source": "[主池] https://fanqienovel.com/api/library/book_list (玄幻脑洞(257) sort=0; 东方玄幻(511) sort=0)"
+    },
+    {
+      "platform": "fanqie",
+      "platformBookId": "7540948834482932761",
+      "title": "我定海神珠，拐走人族后六圣懵了",
+      "author": "邪渊",
+      "url": "https://fanqienovel.com/page/7540948834482932761",
+      "wordCount": 1442115,
+      "chapterTotal": 679,
+      "status": "完结",
+      "categories": [
+        "玄幻脑洞"
+      ],
+      "tags": [
+        "玄幻",
+        "系统",
+        "穿越",
+        "洪荒",
+        "诸天万界"
+      ],
+      "abstract": "【洪荒＋选择题＋布局人族＋不阴谋论】\n林苍去国道cos减速带穿越到洪荒，并成为了一颗定海神珠。\n传闻定海神珠有三十六颗，组合成套堪比先天至宝！\n林苍以定海神珠化形，得天地赐名：沧源！\n恰此时，『命运的抉择』系统觉醒，只要沧源做做选择题就能获得奖励。\n『选择拐走极品先天灵宝净世白莲，奖励：蓬莱仙岛坐标，终得后天功德至宝——鸿蒙量天尺！』\n『选择拜师通天加入截教，成为外门第五弟子，奖励：上品先天灵宝——先天水灵珠！』\n『选择为人族截取一线生机，将全体人族拐进体内诸天，奖励：遮天大阵（可遮蔽天道级别的推演感知）！』\n『选择救下小金乌，奖励：周天星斗大阵！』\n『选择…………』\n沧源最终融合了三十六颗定海神珠本源，跟脚提升到顶级先天神圣，并于体内开辟出三十六诸天世界！\n并在人族劫难来临前把人族转移到三十六诸天世界中。\n当妖族天庭准备大规模屠杀人族时懵逼了，偌大的洪荒竟然找不到人族了？\n六圣得知也懵逼了。\n辣么多的人族哪去了？\n沧源：“不道啊，哪里了呢。”\n东皇赠宝，崆峒自投。\n谋划三皇五帝，人族当自强！\n最终封神大战时天地失声：“你什么时候证道的混元道果？”\n沧源：“我不道啊。”",
+      "popularity": {
+        "metric": "在读",
+        "raw": 77677
+      },
+      "score": null,
+      "firstPublishDate": "2025-09-12",
+      "lastUpdateDate": "2026-07-28",
+      "simEvidence": {
+        "matchedIn": [
+          "abstract"
+        ],
+        "keywords": [
+          "推演"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-09T14:48:11Z",
+      "source": "[主池] https://fanqienovel.com/api/library/book_list (玄幻脑洞(257) sort=0; 洪荒(66) sort=0)"
+    },
+    {
+      "platform": "fanqie",
+      "platformBookId": "7663349366794505278",
+      "title": "每周金手指，点燃万界星海！",
+      "author": "坐着8759",
+      "url": "https://fanqienovel.com/page/7663349366794505278",
+      "wordCount": 211406,
+      "chapterTotal": 97,
+      "status": "连载",
+      "categories": [
+        "西方奇幻"
+      ],
+      "tags": [
+        "玄幻",
+        "奇幻仙侠",
+        "异世大陆",
+        "诸天万界",
+        "开局",
+        "系统",
+        "穿越"
+      ],
+      "abstract": "每周都会切换一个全新金手指，旧的金手指消失之前还会根据评价打分，留下临别的馈赠。\n赵征感觉自己这天胡开局，能不笑出来都可以确诊抑郁症了。\n只是……西幻世界出现精灵、矮人、巨龙、恶魔、兽人，甚至是植物人，他都能咬牙接受。\n毕竟精灵不也是生命母树生的嘛！\n可这后边出现的燃烧军团的投影、克苏鲁的眷族、虫族的巢穴都是些什么鬼？\n还有什么叫我在亚空间也有投影了？\n好好好，这么玩是吧！\n我也不管了，让星海尽情燃烧！\n情报系统：前方100米有宝贝。\n争霸系统：砍死前方10W魔界军。\n千世模拟器：千生万世只为谋取最后的胜利。\n……\n神话系统：此时此刻，你将化身最初的神话起源！\n【应该算是西幻种田文……吧？】",
+      "popularity": {
+        "metric": "在读",
+        "raw": 76406
+      },
+      "score": null,
+      "firstPublishDate": "2026-07-26",
+      "lastUpdateDate": "2026-09-07",
+      "simEvidence": {
+        "matchedIn": [
+          "abstract"
+        ],
+        "keywords": [
+          "模拟器",
+          "模拟"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-09T14:48:11Z",
+      "source": "[主池+补池] https://fanqienovel.com/api/library/book_list (奇幻仙侠(259) sort=0; 西方奇幻(1141) sort=0)"
+    },
+    {
+      "platform": "fanqie",
+      "platformBookId": "7647417635633630270",
+      "title": "无限制模拟：一不小心干碎大道",
+      "author": "木门没锁",
+      "url": "https://fanqienovel.com/page/7647417635633630270",
+      "wordCount": 414850,
+      "chapterTotal": 192,
+      "status": "连载",
+      "categories": [
+        "玄幻脑洞"
+      ],
+      "tags": [
+        "架空",
+        "东方玄幻"
+      ],
+      "abstract": "【模拟器+词条抽取+全部继承+仙武+无固定女主】\n许承觉醒了前世记忆，富可敌城，还有一个千娇百媚的未婚妻。\n人生似乎已经到了巅峰。\n结果未婚妻家要吃绝户，连跟他拜堂的都只是侍女，俨然要敲骨吸髓，吃干抹净。\n还好他觉醒记忆时，还获得了模拟器，模拟无限制，零消耗，模拟中每年还能抽一个词条。\n许承：听说有人要吃我绝户？连汤都不给我留？连当狗的机会都不给？",
+      "popularity": {
+        "metric": "在读",
+        "raw": 74274
+      },
+      "score": null,
+      "firstPublishDate": "2026-06-07",
+      "lastUpdateDate": "2026-09-07",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "模拟",
+          "模拟器"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-09T14:48:11Z",
+      "source": "[主池] https://fanqienovel.com/api/library/book_list (玄幻脑洞(257) sort=0)"
+    },
+    {
+      "platform": "fanqie",
+      "platformBookId": "7634432409525570584",
+      "title": "性转：穿进女频虐文我模拟杀疯了",
+      "author": "百泽归海",
+      "url": "https://fanqienovel.com/page/7634432409525570584",
+      "wordCount": 676250,
+      "chapterTotal": 317,
+      "status": "连载",
+      "categories": [
+        "玄幻脑洞"
+      ],
+      "tags": [
+        "玄幻",
+        "系统",
+        "穿越",
+        "架空",
+        "东方玄幻",
+        "魂穿"
+      ],
+      "abstract": "【变身单身（但模拟中会有部分嫁人等比较颠的剧情，介意者慎入）】+【95%都是模拟剧情，无废话】+【残酷山海经修仙体系，从凡俗界一步一步往上爬】+【节奏偏慢偏真实，但绝对爽！】\n穿越十六年，林霜晚终于等来了她的金手指。\n【叮——命运模拟器激活。】\n【宿主可在模拟空间中预演未来一切事件，模拟中的经历、修为、功法均可继承。】\n第一次模拟，她看穿了县令、黑虎帮、几人等人设下的死局。\n第三次模拟，她偷学武功，成功突破先天。\n第五次模拟，她杀入皇城，血洗龙椅前的百级台阶。\n第七次模拟，她斩杀修仙者，震惊整个大庆。\n……\n【模拟结算】\n【奖励：紫色词条·天生剑体】\n【奖励：金色词条·极品雷灵根】\n凡人武道，她一年走完别人一辈子的路。\n修仙之路，她每一步都踩在所有人的预料之外。\n庆国皇室：“她到底有多强？！”\n修仙界大能：“不可能……这个女人怎么什么都会？！”\n林霜晚抽出剑，桃花眼微眯：“不好意思，你们的未来，我已经预演过了。”",
+      "popularity": {
+        "metric": "在读",
+        "raw": 73044
+      },
+      "score": null,
+      "firstPublishDate": "2026-04-30",
+      "lastUpdateDate": "2026-09-08",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "模拟",
+          "模拟器",
+          "预演"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-09T14:48:11Z",
+      "source": "[主池] https://fanqienovel.com/api/library/book_list (东方玄幻(511) sort=0)"
+    },
+    {
+      "platform": "fanqie",
+      "platformBookId": "7643994120951712792",
+      "title": "我都大道圣人了，你们怎么才炼气",
+      "author": "清风仗剑天涯",
+      "url": "https://fanqienovel.com/page/7643994120951712792",
+      "wordCount": 560507,
+      "chapterTotal": 259,
+      "status": "连载",
+      "categories": [
+        "玄幻脑洞"
+      ],
+      "tags": [
+        "玄幻",
+        "穿越",
+        "洪荒",
+        "诸天万界",
+        "架空",
+        "东方玄幻"
+      ],
+      "abstract": "【模拟器+超爽文+纯手打】\n三百多年前，万界通道降临蓝星，天赋觉醒者可进入万界，习得武功与长生仙法，五帝七仙望族主宰一切，将亿万人民圈养为提供天赋的牲畜。\n凌枫穿越而来，觉醒‘未来模拟器’，洪荒世界通道降临，他被送入其中当探路炮灰，五帝七仙的丧门钟也正式敲响。\n当所有人在洪荒残酷求生时，他就已经跟后土女娲对饮高歌，入紫霄宫与鸿钧论道，笑谈巫妖弹指化量劫。\n返回蓝星之后，一尊最严厉的大道圣人降临了！",
+      "popularity": {
+        "metric": "在读",
+        "raw": 69309
+      },
+      "score": null,
+      "firstPublishDate": "2026-05-26",
+      "lastUpdateDate": "2026-09-07",
+      "simEvidence": {
+        "matchedIn": [
+          "abstract"
+        ],
+        "keywords": [
+          "模拟器",
+          "模拟"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-09T14:48:11Z",
+      "source": "[主池] https://fanqienovel.com/api/library/book_list (洪荒(66) sort=0)"
+    },
+    {
+      "platform": "fanqie",
+      "platformBookId": "7436677545807842328",
+      "title": "天使小姐，不要再乱闯我家了！",
+      "author": "归位深渊",
+      "url": "https://fanqienovel.com/page/7436677545807842328",
+      "wordCount": 2616783,
+      "chapterTotal": 1019,
+      "status": "连载",
+      "categories": [
+        "西方奇幻"
+      ],
+      "tags": [
+        "奇幻仙侠",
+        "奇幻",
+        "玄幻",
+        "副本",
+        "单女主",
+        "穿越",
+        "异世大陆"
+      ],
+      "abstract": "（西幻+剑与魔法+魔导文明+神秘主义+原创副本+阴间魔法+初生的东曦+单女主+宏大世界观）\n【穿越进这破游戏，连卸载键都失灵了怎么办？在线等，急！】\n苏恩穿越西幻游戏世界，面对十二神灵、七十二神孽的豪华“求生套餐”，他发现自己是个魔法废柴——唯一能点的技能，居然是毫无攻击力的【反制魔法】？\n被动挨打，还不能弹近战？这什么SSR级坑爹天赋！\n直到他意外反弹了一份“主仆契约”……\n——那天起，苏恩的求生之道驶入了一条不可回头的铁路，路上还顺便碾死了一些螳臂当车的大聪明。\n司辰、司命、执金…十二位神灵，已然为自己的算盘，操控了整个世界。\n魔导科技，新神与旧神，神代余孽的复苏，魔法力量的空前繁盛……新的时代，契合着历史与未来滚滚而来，而神灵们没想到的是，迎头而上的，是手里捏着超绝顺爆闪光术的苏恩。\n“直视我！闸种！我让你直视我！”\n“神灵很能打吗？你能打有个鸡毛用啊！眼睛瞎了我看你还怎么视监这个世界！”\n昔日仇敌银发天使咬牙切齿杀上门来，却被迫面红耳赤动弹不得。\n“你……你要做什么！”\n“跪下！给我做！”\n“呜呜呜呜不要……”\n现在全校都在等他们回来，而苏恩正在家里，强迫那位输掉自己的天使……\n对《五年魔法三年模拟》答案。",
+      "popularity": {
+        "metric": "在读",
+        "raw": 57707
+      },
+      "score": null,
+      "firstPublishDate": "2024-11-13",
+      "lastUpdateDate": "2026-09-07",
+      "simEvidence": {
+        "matchedIn": [
+          "abstract"
+        ],
+        "keywords": [
+          "模拟"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-09T14:48:11Z",
+      "source": "[主池+补池] https://fanqienovel.com/api/library/book_list (奇幻仙侠(259) sort=0; 西方奇幻(1141) sort=0)"
+    },
+    {
+      "platform": "fanqie",
+      "platformBookId": "7582332108945771544",
+      "title": "模拟！随机抽取金手指！",
+      "author": "尸香四溢",
+      "url": "https://fanqienovel.com/page/7582332108945771544",
+      "wordCount": 559828,
+      "chapterTotal": 250,
+      "status": "连载",
+      "categories": [
+        "玄幻脑洞"
+      ],
+      "tags": [
+        "玄幻",
+        "系统",
+        "穿越",
+        "多女主",
+        "无敌"
+      ],
+      "abstract": "【模拟器+各种金手指+无敌+后宫但是无女主】\n楚河穿越了，觉醒了传说中的模拟器。\n【叮，恭喜宿主，觉醒至高模拟器。】\n就在他以为自己觉醒的只是一个普通模拟器系统的时候，没想到模拟器每次模拟都可以随机获得各种金手指，作为本次模拟的天赋。\n【叮，本次模拟金手指抽取成功。】\n【恭喜宿主，获得每日一个死士。】\n…\n【恭喜宿主，获得一个签到系统。】\n…\n【恭喜宿主，获得一个老爷爷。】",
+      "popularity": {
+        "metric": "在读",
+        "raw": 54059
+      },
+      "score": null,
+      "firstPublishDate": "2026-03-13",
+      "lastUpdateDate": "2026-09-08",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "模拟",
+          "模拟器"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-09T14:48:11Z",
+      "source": "[主池] https://fanqienovel.com/api/library/book_list (玄幻脑洞(257) sort=1)"
+    },
+    {
+      "platform": "fanqie",
+      "platformBookId": "7531676690381016088",
+      "title": "娘胎模拟：我出生就是魅魔始祖",
+      "author": "叫我机长",
+      "url": "https://fanqienovel.com/page/7531676690381016088",
+      "wordCount": 976363,
+      "chapterTotal": 459,
+      "status": "连载",
+      "categories": [
+        "西方奇幻"
+      ],
+      "tags": [
+        "奇幻",
+        "玄幻",
+        "穿越",
+        "奇幻仙侠",
+        "无敌"
+      ],
+      "abstract": "【模拟器+出世无敌+全继承+无限次数+剧情流】\n来自水蓝星的莱伊意外穿越到了这个西幻世界，不过……画风有些不对，因为，他此时的状态还不是个完整的生命体……\n还好有系统金手指，为了活命他拼了命模拟，并从模拟中获取足够的奖励壮大自己，当他出生的那刻，整个大陆都会在他的脚下颤抖！\n【恭喜宿主成为史莱姆！】\n【恭喜宿主成为哥布林！】\n【恭喜宿主成为精灵！】\n【恭喜宿主成为巨龙！！】\n【恭喜宿主成为天使！】\n不同的种族，不同的故事，却由同一个人写就，这本名为异世界的诗篇会永远铭记他的传奇.........",
+      "popularity": {
+        "metric": "在读",
+        "raw": 50836
+      },
+      "score": null,
+      "firstPublishDate": "2025-11-17",
+      "lastUpdateDate": "2026-09-07",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "模拟",
+          "模拟器"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-09T14:48:11Z",
+      "source": "[主池] https://fanqienovel.com/api/library/book_list (奇幻仙侠(259) sort=0)"
+    },
+    {
+      "platform": "fanqie",
+      "platformBookId": "7640550080809815064",
+      "title": "洪荒：我的悟性把天道整不会了",
+      "author": "爱吃青菜的西红柿",
+      "url": "https://fanqienovel.com/page/7640550080809815064",
+      "wordCount": 1117122,
+      "chapterTotal": 362,
+      "status": "连载",
+      "categories": [
+        "玄幻脑洞"
+      ],
+      "tags": [
+        "玄幻",
+        "系统",
+        "穿越",
+        "洪荒",
+        "开局"
+      ],
+      "abstract": "穿越洪荒，林萧觉醒逆天悟性，开局推演神通、自创功法。手持混沌珠，脚踏三光神水，他以煞气转灵术搅动量劫，猎凶兽、斩龙族、夺至宝，在鸿钧眼皮底下偷家。当神逆怒吼围剿时，他早已默默把洪荒薅秃，准备回家钓鱼了……",
+      "popularity": {
+        "metric": "在读",
+        "raw": 49349
+      },
+      "score": null,
+      "firstPublishDate": "2026-05-17",
+      "lastUpdateDate": "2026-09-08",
+      "simEvidence": {
+        "matchedIn": [
+          "abstract"
+        ],
+        "keywords": [
+          "推演"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-09T14:48:11Z",
+      "source": "[主池] https://fanqienovel.com/api/library/book_list (洪荒(66) sort=0)"
+    },
+    {
+      "platform": "fanqie",
+      "platformBookId": "7645680218362891288",
+      "title": "命灯修仙，从血奴开始",
+      "author": "土豆抹茶花",
+      "url": "https://fanqienovel.com/page/7645680218362891288",
+      "wordCount": 482528,
+      "chapterTotal": 195,
+      "status": "连载",
+      "categories": [
+        "东方仙侠"
+      ],
+      "tags": [
+        "穿越",
+        "架空",
+        "东方玄幻",
+        "魂穿"
+      ],
+      "abstract": "本书又名《修仙：我的命灯能推演万法》、《修行：从血奴开始加点》\n柳安穿越到修仙界时，成了血罗洞最底层的血奴。\n直至他在识海中看见了一盏命灯，集天地灵光可凝聚灯油。\n焚油加点，功法、丹术、符道皆能逐步提升。\n逃出生天后，从灵农开始，他种田、制符、炼丹、筑基问道……\n只要活得足够久，世间万法皆可圆满，本源灵根皆可补足，长生也未必遥不可及。",
+      "popularity": {
+        "metric": "在读",
+        "raw": 44616
+      },
+      "score": null,
+      "firstPublishDate": "2026-06-01",
+      "lastUpdateDate": "2026-09-08",
+      "simEvidence": {
+        "matchedIn": [
+          "abstract"
+        ],
+        "keywords": [
+          "推演"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-09T14:48:11Z",
+      "source": "[主池] https://fanqienovel.com/api/library/book_list (东方仙侠(1140) sort=0)"
+    },
+    {
+      "platform": "fanqie",
+      "platformBookId": "7422216436786940990",
+      "title": "修仙：第二灵根助我长生",
+      "author": "乱世一书生",
+      "url": "https://fanqienovel.com/page/7422216436786940990",
+      "wordCount": 2858630,
+      "chapterTotal": 1254,
+      "status": "连载",
+      "categories": [
+        "东方仙侠"
+      ],
+      "tags": [
+        "奇幻仙侠",
+        "仙侠",
+        "玄幻",
+        "东方玄幻",
+        "架空",
+        "穿越",
+        "魂穿"
+      ],
+      "abstract": "筑基老者对着下方一群孩童道：灵根即是修仙资格，大道无形，灵根亦无形···\n年幼的易泽盯着自己体内的青藤：我这灵根怎么跟他说的不一样···\n穿越到幽澜修仙界上天衍大陆的易泽，体内伴生着一株神秘的青藤，成为了他的第二灵根，能辅助修炼，推演功法，提纯灵药···\n500年后，在青藤的帮助下，易泽顺利成为一位风烛残年的结丹修士。\n鸟语花香的一片山谷内，年老的易泽与道侣在小湖边相互依偎，小声地说着话：\n“今天我给你变个戏法怎么样，来点久违的震撼？”\n“可以啊，是什么样的震撼？”\n“嗯，就来个朝入元婴暮化神吧！”",
+      "popularity": {
+        "metric": "在读",
+        "raw": 40437
+      },
+      "score": null,
+      "firstPublishDate": "2024-10-05",
+      "lastUpdateDate": "2026-09-07",
+      "simEvidence": {
+        "matchedIn": [
+          "abstract"
+        ],
+        "keywords": [
+          "推演"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-09T14:48:11Z",
+      "source": "[主池] https://fanqienovel.com/api/library/book_list (东方仙侠(1140) sort=0)"
+    },
+    {
+      "platform": "fanqie",
+      "platformBookId": "7669441514971335704",
+      "title": "洪荒：吾帝俊功德成圣，誓不争霸",
+      "author": "战神来了",
+      "url": "https://fanqienovel.com/page/7669441514971335704",
+      "wordCount": 236443,
+      "chapterTotal": 95,
+      "status": "连载",
+      "categories": [
+        "东方仙侠"
+      ],
+      "tags": [
+        "玄幻",
+        "奇幻仙侠",
+        "仙侠",
+        "洪荒",
+        "魂穿",
+        "穿越"
+      ],
+      "abstract": "【洪荒＋稳健流＋功德成圣＋改变宿命＋幕后布局】\n周狄骏一觉醒来，成了太阳星上尚未化形的帝俊。\n按照原本的命运，他将建立妖庭、统御万族，与巫族争夺天地霸权，最终兄弟陨落，身死道消。\n知晓结局的帝俊当场决定：这妖皇，谁爱当谁当！\n争霸只会招来因果，功德才是真正的护身之本。\n于是，洪荒逐渐出现了一个不太对劲的帝俊。\n梳理太阳星，完善天地运转；庇护量劫众生，化解万族因果；助青龙归位四象，修复洪荒山河；就连鸿钧传下的斩三尸之法，也被他重新推演完善。\n太一：“兄长，妖族愿奉你为皇！”\n帝俊：“不当。”\n白泽：“陛下若登高一呼，洪荒万族必然归附！”\n帝俊：“让它们别来。”\n直到巫妖量劫将至，各方大能才骇然发现——\n当所有人都在争夺天地霸权时，帝俊早已凭借无量功德、众生气运与帝道法则，走出了一条无人能够阻挡的成圣之路。\n谁说身为金乌，就一定要争霸？",
+      "popularity": {
+        "metric": "在读",
+        "raw": 40241
+      },
+      "score": null,
+      "firstPublishDate": "2026-08-02",
+      "lastUpdateDate": "2026-09-08",
+      "simEvidence": {
+        "matchedIn": [
+          "abstract"
+        ],
+        "keywords": [
+          "推演"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-09T14:48:11Z",
+      "source": "[主池] https://fanqienovel.com/api/library/book_list (洪荒(66) sort=0)"
+    },
+    {
+      "platform": "fanqie",
+      "platformBookId": "7622681030222154814",
+      "title": "洪荒：先天人族，为人族护道封神",
+      "author": "见利忘义的白姬彼方",
+      "url": "https://fanqienovel.com/page/7622681030222154814",
+      "wordCount": 963070,
+      "chapterTotal": 319,
+      "status": "连载",
+      "categories": [
+        "东方仙侠"
+      ],
+      "tags": [
+        "玄幻",
+        "仙侠",
+        "穿越",
+        "洪荒",
+        "奇幻仙侠"
+      ],
+      "abstract": "如果你穿越成女娲亲手捏出的第一批先天人族——\n\n手握能学习一切、复制万法的混沌至宝“万象天书”，你会怎么做？\n\n姜昊元的答案是：潜伏幕后，布局天下，改写人族注定被踩进泥里的命运。\n\n封神之后，人王成天子。\n\n九九至尊，变成天的儿子。\n\n这口气，他咽不下去。\n\n所以他要——\n\n偷学巫族九转玄功，暗改妖族无上神通，以万象天书模拟三千大道。\n\n在暗处，打造一支永不现世的人族底蕴。\n\n在明处，推演改命之局，等着封神那场大戏开场。\n\n他不要人族跪着当天地主角。\n\n他要人族站着，让诸圣也得正眼相看。\n\n可问题是——\n\n女娲娘娘已经注意到他了。\n\n道祖鸿钧推演不出他的来历。\n\n三清、接引、准提，也在暗中窥探这个“变数”。\n\n而他那位自称“姐姐”的知生氏，似乎……并不想只当姐姐。\n\n更麻烦的是——\n\n十二祖巫不知道，他们引以为傲的九转玄功，已经被人族偷学了。\n\n东皇太一也不知道，他视若珍宝的太阳真火，已经被人族用万象天书模拟了出来。\n\n一个身怀混沌至宝的先天人族，悄然入局，要为人族逆天改命。",
+      "popularity": {
+        "metric": "在读",
+        "raw": 39399
+      },
+      "score": null,
+      "firstPublishDate": "2026-03-30",
+      "lastUpdateDate": "2026-09-08",
+      "simEvidence": {
+        "matchedIn": [
+          "abstract"
+        ],
+        "keywords": [
+          "模拟",
+          "推演"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-09T14:48:11Z",
+      "source": "[主池] https://fanqienovel.com/api/library/book_list (洪荒(66) sort=0)"
+    },
+    {
+      "platform": "fanqie",
+      "platformBookId": "7667482986807299096",
+      "title": "封神量劫：从青州诸侯开始证道",
+      "author": "韩爆宝",
+      "url": "https://fanqienovel.com/page/7667482986807299096",
+      "wordCount": 407765,
+      "chapterTotal": 129,
+      "status": "连载",
+      "categories": [
+        "玄幻脑洞"
+      ],
+      "tags": [
+        "玄幻",
+        "洪荒",
+        "重生",
+        "穿越",
+        "东方玄幻",
+        "架空"
+      ],
+      "abstract": "封神大势席卷洪荒，仙神博弈苍生为棋。现代青年杨玉重生为大商青州嫡侯，濒死觉醒混沌道心，手握冠绝洪荒的推演能力。入门即破武道桎梏，自创顶级功法，革新农耕商贸，富民强军稳固州域。偶遇逃亡的杨戬兄妹，揽绝世机缘，步步破局，挣脱量劫宿命，护青州万民，证无上大道。",
+      "popularity": {
+        "metric": "在读",
+        "raw": 30912
+      },
+      "score": null,
+      "firstPublishDate": "2026-07-28",
+      "lastUpdateDate": "2026-09-07",
+      "simEvidence": {
+        "matchedIn": [
+          "abstract"
+        ],
+        "keywords": [
+          "推演"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-09T14:48:11Z",
+      "source": "[主池] https://fanqienovel.com/api/library/book_list (洪荒(66) sort=0)"
+    },
+    {
+      "platform": "fanqie",
+      "platformBookId": "7652252712070810649",
+      "title": "洪荒：逆天悟性，三霄跪求我收徒",
+      "author": "慕斯雨",
+      "url": "https://fanqienovel.com/page/7652252712070810649",
+      "wordCount": 751896,
+      "chapterTotal": 358,
+      "status": "连载",
+      "categories": [
+        "东方仙侠"
+      ],
+      "tags": [
+        "玄幻",
+        "仙侠",
+        "穿越",
+        "洪荒",
+        "奇幻仙侠",
+        "架空",
+        "东方玄幻",
+        "魂穿"
+      ],
+      "abstract": "穿洪荒成弃婴，被三霄捡回当亲传。\n逆天悟性加身，功法自创、灵宝自投、圣人震惊。\n通天：\"此子，当与我同席！\"\n我：\"老师稍等，我先推演一下斩三尸。\"",
+      "popularity": {
+        "metric": "在读",
+        "raw": 23101
+      },
+      "score": null,
+      "firstPublishDate": "2026-06-17",
+      "lastUpdateDate": "2026-09-08",
+      "simEvidence": {
+        "matchedIn": [
+          "abstract"
+        ],
+        "keywords": [
+          "推演"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-09T14:48:11Z",
+      "source": "[主池] https://fanqienovel.com/api/library/book_list (洪荒(66) sort=0)"
+    },
+    {
+      "platform": "fanqie",
+      "platformBookId": "7669237375146413080",
+      "title": "洪荒：废除仙功，我创人族武道",
+      "author": "闻恪",
+      "url": "https://fanqienovel.com/page/7669237375146413080",
+      "wordCount": 188348,
+      "chapterTotal": 85,
+      "status": "连载",
+      "categories": [
+        "玄幻脑洞"
+      ],
+      "tags": [
+        "玄幻",
+        "洪荒",
+        "穿越",
+        "打脸",
+        "东方玄幻",
+        "系统"
+      ],
+      "abstract": "顾长生穿越成女娲捏出的第一批人族。此时人族新生，被万族视为血食，太上老君立人教传下金丹大道，看似指引修行，实则锁死了人族肉身极限，将人族气运彻底绑定。\n顾长生觉醒“推演神碑”，一眼看出金丹道是圣人收割信仰与气运的阴谋。\n他当众自废金丹修为，誓不承太上因果，引得太上震怒，直言人族不尊圣人必遭天遣。\n面对圣人冷眼、妖族屠戮，顾长生于大荒之中推演肉身极境，开创“神魔武道”！\n不修元神不敬天，只炼肉身碎虚空！一重换血，两重金身，九重可手撕先天神魔！\n巫妖量劫起，屠人剑出世，妖族亿万大军压境。顾长生率亿万武道人仙冲霄而起，一拳轰碎东皇太一的混沌钟。\n那一刻，太上傻眼了，女娲后悔了，整个洪荒都在人族武夫的拳头下颤抖！",
+      "popularity": {
+        "metric": "在读",
+        "raw": 20088
+      },
+      "score": null,
+      "firstPublishDate": "2026-08-05",
+      "lastUpdateDate": "2026-09-08",
+      "simEvidence": {
+        "matchedIn": [
+          "abstract"
+        ],
+        "keywords": [
+          "推演"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-09T14:48:11Z",
+      "source": "[主池] https://fanqienovel.com/api/library/book_list (洪荒(66) sort=0)"
+    },
+    {
+      "platform": "fanqie",
+      "platformBookId": "7600431067673136152",
+      "title": "游戏：转生白龙的我才不会白给",
+      "author": "诗的终章",
+      "url": "https://fanqienovel.com/page/7600431067673136152",
+      "wordCount": 546935,
+      "chapterTotal": 224,
+      "status": "连载",
+      "categories": [
+        "西方奇幻"
+      ],
+      "tags": [
+        "奇幻",
+        "玄幻",
+        "穿越",
+        "奇幻仙侠",
+        "网游"
+      ],
+      "abstract": "(网游+西幻+巨龙+变身+变嫁+双穿+BOSS)\n“少年！幻想过异世界的生活吗！少年！不来试试《天选》游戏！少年！想当亡灵骑士，龙骑士，各种骑士吗！快来试试《天选》吧！100%真实体验，跨时代虚幻引擎，超级模拟现实的NPC反应以及超高自由度！在《天选》都能给你！”\n这是跨时代的游戏，100%真实度的游戏《天选》的宣传词，是当下最火热的一句话。\n少年也幻想过穿越到异世界，当勇者，当龙骑士什么的，可当他和好友约好一起玩，进入游戏舱的那一刻，傻眼了。\n什么叫做没有退出键？什么叫做真穿越了？什么叫做初始种族是白龙？什么叫做性别为雌性！！！什么叫做被龙妈抛弃了？\n不过还好，身边还有一头黑龙相伴。\n等等？什么叫做黑龙是雄性？什么？黑龙是我好兄弟穿越的？那没事了。什么叫做他就好这一口？你别过来啊！",
+      "popularity": {
+        "metric": "在读",
+        "raw": 12156
+      },
+      "score": null,
+      "firstPublishDate": "2026-01-31",
+      "lastUpdateDate": "2026-09-08",
+      "simEvidence": {
+        "matchedIn": [
+          "abstract"
+        ],
+        "keywords": [
+          "模拟"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-09T14:48:11Z",
+      "source": "[主池+补池] https://fanqienovel.com/api/library/book_list (奇幻仙侠(259) sort=1; 玄幻(7) sort=1; 西方奇幻(1141) sort=1)"
+    },
+    {
+      "platform": "fanqie",
+      "platformBookId": "7646081678242221080",
+      "title": "模拟会死档，是你们先不当人的！",
+      "author": "z1的鱼",
+      "url": "https://fanqienovel.com/page/7646081678242221080",
+      "wordCount": 533118,
+      "chapterTotal": 215,
+      "status": "连载",
+      "categories": [
+        "玄幻脑洞"
+      ],
+      "tags": [
+        "玄幻",
+        "系统",
+        "架空",
+        "东方玄幻"
+      ],
+      "abstract": "【评分刚开+玄幻+模拟词条+全员恶人+金丹果位体系】\n玄黄大舞台，没挂你别来！\n陈明开局蹲大牢，明日问斩，连狱卒看他也是风韵犹存。\n“我男的啊！！！”\n绝境中，模拟器到账。\n虽然只有一百次机会，但模拟里的自己走走路就能刷词条。\n词条分白蓝紫金红，干英雄救美就能刷出英雄救美词条，长得帅就能刷出帅气词条，词条一直爆！\n第一次模拟：和三姐成婚，修炼功法，迈入修行之路，开药铺，日子红红火火。\n谁想结算时被黑龙帮帮主秒杀，诛十族满门加刨坟！\n陈明：“？？？说好的苦尽甘来呢？”\n第二次模拟：他学聪明了，搭上陈镖头，娶了白夫人，左手靠山右手娇妻，恩爱几十年，功法大成。\n结算时才知有惊天大阴谋！\n连老大哥给的功法也不靠谱，修了就会被大能万里追杀！\n随便出门遇到老怪转世，只是一眼，将自己祖宗十八代悉数算出！\n在这里没有技巧，全是数值和机制！\n这分明就是老叟戏顽童，全都在炸鱼！\n“什么破世道，破世道！！！”\n“还好，老子有挂！”",
+      "popularity": {
+        "metric": "在读",
+        "raw": 11265
+      },
+      "score": null,
+      "firstPublishDate": "2026-05-31",
+      "lastUpdateDate": "2026-09-08",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "模拟",
+          "模拟器"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-09T14:48:11Z",
+      "source": "[主池] https://fanqienovel.com/api/library/book_list (玄幻脑洞(257) sort=1; 东方玄幻(511) sort=1)"
+    },
+    {
+      "platform": "fanqie",
+      "platformBookId": "7622737310106258494",
+      "title": "洪荒：我黄龙！以天地混沌为鼎炉",
+      "author": "天下一支松",
+      "url": "https://fanqienovel.com/page/7622737310106258494",
+      "wordCount": 1238643,
+      "chapterTotal": 354,
+      "status": "连载",
+      "categories": [
+        "东方仙侠"
+      ],
+      "tags": [
+        "玄幻",
+        "仙侠",
+        "穿越",
+        "洪荒",
+        "奇幻仙侠"
+      ],
+      "abstract": "传统洪荒里，他是“十二金仙之耻”——四无道人，废物一个。\n但这一世，穿越者带着系统和主角光环前来夺舍，反被黄龙炼化！\n他截获未来记忆，降服“诸天万界炼化系统”，铸成至宝——吞元葫芦。\n天材地宝？炼成源液，修为暴涨。\n敌人尸体？剥夺道纹，推演神通。\n先天五行之气？炼化融合，逆改根脚，直追祖龙！\n地脉崩坏？修补西方五千年，功德加身，天道青睐！\n别人苦熬，黄龙只靠炼！\n鸿钧何时成圣？我知道。\n阐教元始嫌弃我？阐教？不去！\n紫霄宫争座？让三清去抢，我独吞西方功德。\n巫妖大劫将至？趁大能不在，提前布局。\n自创“元灵圣体”，法力碾压同阶。\n抱山印一出，大地之力镇压一切。\n坐骑是白鹤萝莉，洞府藏满灵根。\n鸿钧成圣那一刻，黄龙后背发凉——未来记忆，竟然是真的！\n元始莫名心慌：“有什么本该属于我的东西正在远去……”\n以天地为炉，以万物为柴——\n不争圣位，炼出一条属于自己的大道！\n“贫道黄龙，今日开炉。待炉中火起，便是超脱之时！”\n\n",
+      "popularity": {
+        "metric": "在读",
+        "raw": 4521
+      },
+      "score": null,
+      "firstPublishDate": "2026-03-31",
+      "lastUpdateDate": "2026-09-08",
+      "simEvidence": {
+        "matchedIn": [
+          "abstract"
+        ],
+        "keywords": [
+          "推演"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-09T14:48:11Z",
+      "source": "[主池] https://fanqienovel.com/api/library/book_list (洪荒(66) sort=1)"
+    },
+    {
+      "platform": "fanqie",
+      "platformBookId": "7664549346574076953",
+      "title": "这是衍梦珠，不是快活珠",
+      "author": "祖安掌门",
+      "url": "https://fanqienovel.com/page/7664549346574076953",
+      "wordCount": 26900,
+      "chapterTotal": 13,
+      "status": "连载",
+      "categories": [
+        "传统玄幻"
+      ],
+      "tags": [
+        "玄幻",
+        "多女主"
+      ],
+      "abstract": "【多美女】\n李醒被衍梦珠砸中，穿越到玄幻世界，发现自己可以通过梦境推演趋吉避凶，梦中他可以为所欲为，于是他从恶毒嫂嫂开始推演……",
+      "popularity": {
+        "metric": "在读",
+        "raw": 43
+      },
+      "score": null,
+      "firstPublishDate": "2026-08-18",
+      "lastUpdateDate": "2026-09-08",
+      "simEvidence": {
+        "matchedIn": [
+          "abstract"
+        ],
+        "keywords": [
+          "推演"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-09T14:48:11Z",
+      "source": "[主池] https://fanqienovel.com/api/library/book_list (传统玄幻(258) sort=1)"
+    },
+    {
+      "platform": "fanqie",
+      "platformBookId": "7646047504424766526",
+      "title": "废丹炉里爬出的宗门弃徒，一掌炸",
+      "author": "一盏孤灯黄",
+      "url": "https://fanqienovel.com/page/7646047504424766526",
+      "wordCount": 71327,
+      "chapterTotal": 34,
+      "status": "连载",
+      "categories": [
+        "东方仙侠"
+      ],
+      "tags": [
+        "玄幻",
+        "奇幻仙侠",
+        "仙侠",
+        "打脸",
+        "东方玄幻",
+        "架空"
+      ],
+      "abstract": "被丢进废丹炉七年的弃徒焦九，从灰烬中爬出，一掌炸碎仙盟三十六峰灵脉。他体内焚心蛊吞噬万灵，却唯独对执法堂判官云烬的血无动于衷。哑婢柳哑娘以毒纹为引，天机鸦谢天机暗中推演，圣女白璃在禁忌中觉醒，而半人半兽的雷枭，正一步步撕开那场被掩埋的丹毒血案。他们不是为复仇而来——是为重写天道的规则。",
+      "popularity": {
+        "metric": "在读",
+        "raw": 40
+      },
+      "score": null,
+      "firstPublishDate": "2026-05-31",
+      "lastUpdateDate": "2026-09-08",
+      "simEvidence": {
+        "matchedIn": [
+          "abstract"
+        ],
+        "keywords": [
+          "推演"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-09T14:48:11Z",
+      "source": "[主池] https://fanqienovel.com/api/library/book_list (东方仙侠(1140) sort=1; 东方玄幻(511) sort=1; 奇幻仙侠(259) sort=1; 玄幻(7) sort=1)"
+    },
+    {
+      "platform": "fanqie",
+      "platformBookId": "7647885772179115033",
+      "title": "死回仙尊",
+      "author": "花宝1314",
+      "url": "https://fanqienovel.com/page/7647885772179115033",
+      "wordCount": 48592,
+      "chapterTotal": 21,
+      "status": "连载",
+      "categories": [
+        "都市修真"
+      ],
+      "tags": [
+        "都市",
+        "重生",
+        "灵气复苏"
+      ],
+      "abstract": "末法时代，灵气枯竭，修仙者沦为传说，林家旁支少爷林烬被当成废物，逼婚、夺产、羞辱接踵而至。可没人知道，他是上古镇天仙宗宗主转世归来，祖宅地窖里还埋着前世留下的空间戒指。戒指一开，九重秘库重现，星辰真火、因果天书、先天灵液尽数归位。更离谱的是，他死一次就能原地复活，修为还能回潮重开。别人拼命抢机缘，他靠死回收割天下；别人怕因果，他拿因果当绳索套人；别人还在筑基，他已经掀桌收徒、镇压家族、横扫帝国、硬刚异族、正面踩碎系统宿主的气运。末法已乱，灵气复苏开启，林烬只做一件事：谁敢挡路，谁就先死。",
+      "popularity": {
+        "metric": "在读",
+        "raw": 14
+      },
+      "score": null,
+      "firstPublishDate": "2026-06-22",
+      "lastUpdateDate": "2026-09-08",
+      "simEvidence": {
+        "matchedIn": [
+          "abstract"
+        ],
+        "keywords": [
+          "重开"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-09T14:48:11Z",
+      "source": "[主池] https://fanqienovel.com/api/library/book_list (都市修真(124) sort=1)"
+    },
+    {
+      "platform": "fanqie",
+      "platformBookId": "7681584661465680958",
+      "title": "入局：从试镜乌龙开始",
+      "author": "喜欢曼荼罗的妖灵儿",
+      "url": "https://fanqienovel.com/page/7681584661465680958",
+      "wordCount": 26014,
+      "chapterTotal": 16,
+      "status": "连载",
+      "categories": [
+        "东方仙侠"
+      ],
+      "tags": [
+        "玄幻",
+        "奇幻仙侠",
+        "仙侠",
+        "打脸",
+        "东方玄幻",
+        "架空"
+      ],
+      "abstract": "沧澜剑宗三年一度开镜试镜，入镜者，皆为戏局中人。\n卢问舟本是替人顶包的市井凡人，进镜只为混一顿灵膳。谁知试镜第一日，镜灵认错、幻境暴走，他被迫站上内门考核台。身无半点修为，却凭一双能看穿“棋局因果”的异瞳临场推演，步步占先，破解十大迷局，被满门长老惊为天人。\n宗门以为天降奇才，视若栋梁。只有卢问舟自己知道，他连初窥境都没踏入——所谓的运筹帷幄，全靠一边冒冷汗一边硬撑。\n叛门长老晏无咎潜藏暗处，借试镜吞噬弟子根骨。一个个鲜活之人入镜为棋，出镜却已不是自己。卢问舟被卷入谜局：陆灵薇为何被调包？试镜名单中为何会有他的名字？\n外有杀局，内有暗鬼。卢问舟只能将每个陷阱反挖成自己的底牌，以凡人之身，在仙宗棋局中落子无悔。可他越赢，越接近一个尘封二十年的真相——\n当年送他进试镜的那封邀帖，究竟出自何人之手？\n台前，卢问舟从容执棋；幕后，他慌得瑟瑟发抖。\n但既然入了局，他就要做那个最后翻盘的人。",
+      "popularity": {
+        "metric": "在读",
+        "raw": 6
+      },
+      "score": null,
+      "firstPublishDate": "2026-09-04",
+      "lastUpdateDate": "2026-09-08",
+      "simEvidence": {
+        "matchedIn": [
+          "abstract"
+        ],
+        "keywords": [
+          "推演"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-09T14:48:11Z",
+      "source": "[主池] https://fanqienovel.com/api/library/book_list (东方仙侠(1140) sort=1; 东方玄幻(511) sort=1; 奇幻仙侠(259) sort=1; 玄幻(7) sort=1)"
+    },
+    {
+      "platform": "fanqie",
+      "platformBookId": "7555751410696997913",
+      "title": "红眼仙尊：我真的不想修仙了",
+      "author": "慕容不富",
+      "url": "https://fanqienovel.com/page/7555751410696997913",
+      "wordCount": 50030,
+      "chapterTotal": 24,
+      "status": "连载",
+      "categories": [
+        "东方仙侠"
+      ],
+      "tags": [
+        "玄幻",
+        "奇幻仙侠",
+        "东方玄幻",
+        "系统",
+        "重生"
+      ],
+      "abstract": "修仙界最残酷的规矩：五十岁不筑基，终身为奴。\n中品灵根废柴谢无书，绑定伴生灵兽江白，觉醒 \"人犬合一\"—— 以寿元换算力，推演万物，逆天改命。\n功法？算出来的。\n丹药？配出来的。\n阵法？推出来的。\n当别人还在为一枚筑基丹打破头时，谢无书已经用算力算出了一条前所未有的修仙之路。\n只是每次用完，头发又白了几分……\n以及，那只狗，能不能别在我脑子里叫了！",
+      "popularity": {
+        "metric": "在读",
+        "raw": 1
+      },
+      "score": null,
+      "firstPublishDate": "2026-01-14",
+      "lastUpdateDate": "2026-09-08",
+      "simEvidence": {
+        "matchedIn": [
+          "abstract"
+        ],
+        "keywords": [
+          "推演"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-09T14:48:11Z",
+      "source": "[主池] https://fanqienovel.com/api/library/book_list (东方仙侠(1140) sort=1; 东方玄幻(511) sort=1; 奇幻仙侠(259) sort=1; 玄幻(7) sort=1)"
+    },
+    {
+      "platform": "fanqie",
+      "platformBookId": "7680998703867366424",
+      "title": "我的修仙老师系统",
+      "author": "流浪狗的一天",
+      "url": "https://fanqienovel.com/page/7680998703867366424",
+      "wordCount": 61300,
+      "chapterTotal": 35,
+      "status": "连载",
+      "categories": [
+        "玄幻脑洞"
+      ],
+      "tags": [
+        "玄幻",
+        "系统",
+        "穿越",
+        "东方玄幻"
+      ],
+      "abstract": "穿越修仙界，张凡激活【老师系统】。\n他当场就懵了——刚毕业脱离考试，这就又要开始“上课考试”了？\n原主是废材，根本接触不到高阶功法，连系统都把原主的功法给卸载了，张凡只能靠现代知识配合系统推演功法。\n宗门大比，他的路数没人看得懂，都当他是运气王。\n系统无偏科，修为、肉身、灵魂、心境四维同步提升。",
+      "popularity": {
+        "metric": "在读",
+        "raw": 1
+      },
+      "score": null,
+      "firstPublishDate": "2026-09-03",
+      "lastUpdateDate": "2026-09-08",
+      "simEvidence": {
+        "matchedIn": [
+          "abstract"
+        ],
+        "keywords": [
+          "推演"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-09T14:48:11Z",
+      "source": "[主池] https://fanqienovel.com/api/library/book_list (玄幻脑洞(257) sort=1; 东方玄幻(511) sort=1; 玄幻(7) sort=1)"
+    },
+    {
+      "platform": "fanqie",
+      "platformBookId": "7634582822149180441",
+      "title": "节气情绪书",
+      "author": "away安安",
+      "url": "https://fanqienovel.com/page/7634582822149180441",
+      "wordCount": 67339,
+      "chapterTotal": 31,
+      "status": "连载",
+      "categories": [
+        "东方仙侠"
+      ],
+      "tags": [
+        "玄幻",
+        "奇幻仙侠",
+        "东方玄幻",
+        "架空"
+      ],
+      "abstract": "故事发生在二十四节气界中的“谷雨界”，五十二岁的落魄书生孟因果，因偶然救下一名垂死修士，意外觉醒“情绪感知”天赋，能吸收他人喜怒哀乐修炼。他凭借中年人的沉稳与阅历，从最底层的“情绪采撷者”起步，在雨水界结识了坚守农耕之道的女修“禾雨”，在惊蛰界遭遇了修炼血祭真解的宿敌“祭骨老人”。孟因果利用“周天神算盘”推演天机，逐渐发现自己的天赋与失传的“节气情绪道”有关——上古修士曾以众生情绪为养分，滋养二十四节气本源。他的快速成长引来了“平衡维护者”的注视，一位自称“时序监察使”的古老存在欲废其修为以维持天道平衡。同时，因孟因果改变历史轨迹而失去存在的上古大能残魂“寂灭星君”也从时光长河中苏醒，誓要将其抹杀。孟因果在“光阴重演镜”中目睹了不同修真文明的选择，最终在“天地造化炉”前顿悟。他放弃以血祭或窃运成就自身，而是以自身情绪为引，调和二十四节气界的失衡，让农耕文明与修真文明得以共生，自身则化作维系节气轮转的“情绪之锚”，永镇时序。",
+      "popularity": {
+        "metric": "在读",
+        "raw": null
+      },
+      "score": null,
+      "firstPublishDate": "2026-04-30",
+      "lastUpdateDate": "2026-09-08",
+      "simEvidence": {
+        "matchedIn": [
+          "abstract"
+        ],
+        "keywords": [
+          "推演"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-09T14:48:11Z",
+      "source": "[主池] https://fanqienovel.com/api/library/book_list (东方仙侠(1140) sort=1; 奇幻仙侠(259) sort=1)"
+    },
+    {
+      "platform": "fanqie",
+      "platformBookId": "7650413891041643545",
+      "title": "九霄大陆我靠反派模拟器夺回气运",
+      "author": "一纪元成仙",
+      "url": "https://fanqienovel.com/page/7650413891041643545",
+      "wordCount": 807028,
+      "chapterTotal": null,
+      "status": "连载",
+      "categories": [
+        "玄幻脑洞"
+      ],
+      "tags": [
+        "玄幻",
+        "反派",
+        "系统"
+      ],
+      "abstract": "九霄大陆，万族林立，血脉为尊。叶无痕本是帝族少主，身负至尊骨，天赋绝伦。却被亲弟叶天策与未婚妻秦红袖联手挖骨，坠崖成废。濒死之际，觉醒反派模拟器，可推演恶人行径，反向掠夺气运。从人人践踏的废柴，到逆天改命，修为暴涨。预判对手，打脸逆袭，一战惊天下。真相浮出冰山一角，复仇之路才刚开始。强者归位，谁才是真正的天命之子？",
+      "popularity": {
+        "metric": "在读",
+        "raw": null
+      },
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2026-09-08",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "模拟器",
+          "模拟",
+          "推演"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-09T14:48:11Z",
+      "source": "[主池] https://fanqienovel.com/api/library/book_list (玄幻脑洞(257) sort=1; 玄幻(7) sort=1)"
+    },
+    {
+      "platform": "fanqie",
+      "platformBookId": "7679706093102042137",
+      "title": "杀敌爆源点，从杂役杀成天帝",
+      "author": "风抒",
+      "url": "https://fanqienovel.com/page/7679706093102042137",
+      "wordCount": 72499,
+      "chapterTotal": 19,
+      "status": "连载",
+      "categories": [
+        "玄幻脑洞"
+      ],
+      "tags": [
+        "玄幻",
+        "穿越",
+        "系统",
+        "东方玄幻"
+      ],
+      "abstract": "林渊穿越到玄幻世界，成了青云宗一名卑微的杂役弟子。\n因拒绝替管事顶包，他被下毒打断肋骨，像死狗一样扔在乱葬岗。\n濒死之际，【万道推演系统】觉醒！\n只要拥有源点，世间万物皆可推演！\n残缺的《青木吐纳诀》？推演成无上神功《太上造化诀》！\n垫桌角的《落叶剑谱》？推演成杀伐第一的《万叶剑诀》！\n残破的护宗大阵？推演成镇压万古的诛仙剑阵！\n……\n多年后，当域外神魔降临，众生绝望之际。\n林渊一剑开天，独断万古。\n面对诸天神魔的颤抖质问，林渊淡然一笑：\n“我不过是个杂役，会亿点推演很合理吧？”",
+      "popularity": {
+        "metric": "在读",
+        "raw": null
+      },
+      "score": null,
+      "firstPublishDate": "2026-08-30",
+      "lastUpdateDate": "2026-09-08",
+      "simEvidence": {
+        "matchedIn": [
+          "abstract"
+        ],
+        "keywords": [
+          "推演"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-09T14:48:11Z",
+      "source": "[主池] https://fanqienovel.com/api/library/book_list (玄幻脑洞(257) sort=1; 玄幻(7) sort=1)"
+    },
+    {
+      "platform": "fanqie",
+      "platformBookId": "7634584673800162329",
+      "title": "经纬囚仙传",
+      "author": "温酒叙美食",
+      "url": "https://fanqienovel.com/page/7634584673800162329",
+      "wordCount": 68385,
+      "chapterTotal": 31,
+      "status": "连载",
+      "categories": [
+        "玄幻脑洞"
+      ],
+      "tags": [
+        "玄幻",
+        "东方玄幻",
+        "穿越",
+        "系统"
+      ],
+      "abstract": "昕量子，一位43岁的虚拟现实游戏设计师，在测试自己设计的修仙游戏《维度飞升》终极版本时，意外穿越，游戏系统“天衍道枢”竟化为真实修炼体系加载于身。他以中年之躯，从“观剑”之境起步，凭借对游戏机制（实为世界底层规则）的深刻理解，将技能、任务、地图系统巧妙转化为修炼法门与机缘指引。他结识了守护“混元一气鹤”的灵兽使暮云归，以及钻研“周天星轨阵”却困于认知障的阵法师星轨子。然而，他很快陷入虚实困境：所见所感是真实世界，还是超级模拟？他的“修炼”是在进步，还是在按某个未知剧本运行？更大的危机接踵而至：身负“万鬼噬心咒”的转世剑修凌无涯，认定昕量子持有的“周天星斗珠”是其前世本命法宝，誓要夺回；而寻宝世家传人南宫采薇，为完成先祖收集“周天星斗珠”等九大宝物的遗愿，也将他卷入纷争。昕量子被迫在维度迷宫、光阴片段中周旋，利用“乾坤倒悬拳经”与“大圆满光明咒”对抗内外劫难。",
+      "popularity": {
+        "metric": "在读",
+        "raw": null
+      },
+      "score": null,
+      "firstPublishDate": "2026-04-30",
+      "lastUpdateDate": "2026-09-08",
+      "simEvidence": {
+        "matchedIn": [
+          "abstract"
+        ],
+        "keywords": [
+          "模拟"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-09T14:48:11Z",
+      "source": "[主池] https://fanqienovel.com/api/library/book_list (玄幻脑洞(257) sort=1)"
+    },
+    {
+      "platform": "fanqie",
+      "platformBookId": "7660821460730006552",
+      "title": "我的AI女友，竟是上古剑仙",
+      "author": "钩钩搭",
+      "url": "https://fanqienovel.com/page/7660821460730006552",
+      "wordCount": 246499,
+      "chapterTotal": 65,
+      "status": "连载",
+      "categories": [
+        "都市修真"
+      ],
+      "tags": [
+        "都市",
+        "单女主"
+      ],
+      "abstract": "梓魁，天机集团最底层的数据标注员，每天给AI喂数据、打标签，被同事嘲笑、被总监羞辱，连暗恋的女神都没正眼看过他。\n被开除那晚，他独自坐在路边发呆。\n手机突然亮了——他喂了三年的AI程序弹出一句话：\n“别哭了，我带你修仙。”\n梓魁以为AI坏了。\n直到他随手一指，行道树的叶子哗啦啦掉了一地。\n直到他在网上随手发了个APP，一夜爆红，特管局连夜上门。\n直到所有人发现——这个被开除的废物码农，正在用AI推演失传万年的上古剑诀。\n而那个自称“花粉婉婉”的AI程序，真实身份是……\n“傻徒弟，为师等你很久了。”",
+      "popularity": {
+        "metric": "在读",
+        "raw": null
+      },
+      "score": null,
+      "firstPublishDate": "2026-07-10",
+      "lastUpdateDate": "2026-09-08",
+      "simEvidence": {
+        "matchedIn": [
+          "abstract"
+        ],
+        "keywords": [
+          "推演"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-09T14:48:11Z",
+      "source": "[主池] https://fanqienovel.com/api/library/book_list (都市修真(124) sort=1)"
+    },
+    {
+      "platform": "fanqie",
+      "platformBookId": "7361737039638711358",
+      "title": "模拟修仙：我只想好好活着",
+      "author": "zdc",
+      "url": "https://fanqienovel.com/page/7361737039638711358",
+      "wordCount": 1230,
+      "chapterTotal": 4,
+      "status": "连载",
+      "categories": [
+        "都市修真"
+      ],
+      "tags": [],
+      "abstract": "一个普普通通的人穿越到修仙界，意外获得模拟系统，但这个模拟系统好像跟我们所知道的不一样，他究竟会给这个世界带来怎么样的变化，让我们移步正文，",
+      "popularity": {
+        "metric": "在读",
+        "raw": null
+      },
+      "score": null,
+      "firstPublishDate": "2026-09-08",
+      "lastUpdateDate": "2026-09-08",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "模拟"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-09T14:48:11Z",
+      "source": "[主池] https://fanqienovel.com/api/library/book_list (都市修真(124) sort=1)"
+    }
+  ],
+  "nearMiss": [
+    {
+      "title": "系统延迟一坤年，我成了全球股东",
+      "url": "https://fanqienovel.com/page/7663023246102514712",
+      "reason": "[补池] 命中模拟词 重开（abstract），但不满足修仙条件：分类为 都市脑洞/系统/神豪/穿越/无女主/搞笑轻松，简介无修仙/炼气/筑基一类词"
+    },
+    {
+      "title": "让你当众写检讨，你作洛神赋？",
+      "url": "https://fanqienovel.com/page/7657401918917987352",
+      "reason": "[补池] 命中模拟词 推演（abstract），但不满足修仙条件：分类为 都市脑洞/系统/穿越/多女主/打脸/魂穿，简介无修仙/炼气/筑基一类词"
+    },
+    {
+      "title": "让你拍节目，你让项羽撕秦始皇？",
+      "url": "https://fanqienovel.com/page/7646237483482483774",
+      "reason": "[补池][裁定降级] 通道1 裁定（SCHEMA 修订 6 判例）：条件A 成立（简介含「模拟」），条件B 不成立。分类为都市脑洞/都市/系统/穿越/搞笑轻松/群像，全书主线是综艺节目脑洞；触发条件B 的是简介里独立成行的一句节目单原文「【第六期·修仙模拟之战】」——修仙只是其中一期节目的题材，不是主线。属 SCHEMA 第1节「只满足 A 不收」。"
+    },
+    {
+      "title": "游戏女主成真？高冷校花泪流满面",
+      "url": "https://fanqienovel.com/page/7572473701766024216",
+      "reason": "[补池] 命中模拟词 模拟（abstract），但不满足修仙条件：分类为 都市脑洞/都市/多女主/校花，简介无修仙/炼气/筑基一类词"
+    },
+    {
+      "title": "全民求生，获得D级人员模拟器",
+      "url": "https://fanqienovel.com/page/7460027275388390462",
+      "reason": "[补池] 命中模拟词 模拟器/模拟（title+abstract），但不满足修仙条件：分类为 科幻末世/穿越/末世/求生/开局/卡牌，简介无修仙/炼气/筑基一类词"
+    },
+    {
+      "title": "诡异乱世：大乾第一巡夜人",
+      "url": "https://fanqienovel.com/page/7663036049270000702",
+      "reason": "[主池][裁定降级] SCHEMA 修订6「重开」词义复核：条件A 不成立。原句「斩邪神、诛仇敌，重开轮回」——带宾语「轮回」，重新开启轮回，开天辟地义。本书「重开」是唯一条件A 证据，词义不成立即不满足条件A，故不收。"
+    },
+    {
+      "title": "黑暗求生：丢失庇护所后自学成神",
+      "url": "https://fanqienovel.com/page/7544056509261433918",
+      "reason": "[补池] 命中模拟词 模拟器/模拟（abstract），但不满足修仙条件：分类为 游戏体育/穿越/求生/无女主/升级流/副本，简介无修仙/炼气/筑基一类词"
+    },
+    {
+      "title": "让你救世，你把三千仙帝全吃了？",
+      "url": "https://fanqienovel.com/page/7669021476468558873",
+      "reason": "[主池][裁定降级] SCHEMA 修订6「重开」词义复核：条件A 不成立。原句「他撕裂混沌，重开天地」——带宾语「天地」，标准开天辟地义。本书「重开」是唯一条件A 证据，词义不成立即不满足条件A，故不收。"
+    },
+    {
+      "title": "封印神源百万年，悟性每天翻倍",
+      "url": "https://fanqienovel.com/page/7656806334385376280",
+      "reason": "[主池][裁定降级] SCHEMA 修订6「重开」词义复核：条件A 不成立。原句「只为等待仙路重开」——「仙路」重新开启，重启仙路义。本书「重开」是唯一条件A 证据，词义不成立即不满足条件A，故不收。"
+    },
+    {
+      "title": "第四天灾：我的穿越模拟器",
+      "url": "https://fanqienovel.com/page/7088578978524433422",
+      "reason": "[补池] 命中模拟词 模拟器/模拟（title+abstract），但不满足修仙条件：分类为 游戏体育/系统/穿越/无限流/同人/第四天灾，简介无修仙/炼气/筑基一类词"
+    },
+    {
+      "title": "绝世道君",
+      "url": "https://fanqienovel.com/page/6903349659985513479",
+      "reason": "[主池][裁定降级] SCHEMA 修订6「重开」词义复核：条件A 不成立。原句「自天地重开，灵气重现」——带宾语「天地」，开天辟地义。本书「重开」是唯一条件A 证据，词义不成立即不满足条件A，故不收。"
+    },
+    {
+      "title": "凡人修仙从夺舍师尊开始",
+      "url": "https://fanqienovel.com/page/7533671107010776126",
+      "reason": "[主池][裁定降级] SCHEMA 修订6「重开」词义复核：条件A 不成立。原句「看石来如何重开天路，再续仙缘」——带宾语「天路」，开辟义。本书「重开」是唯一条件A 证据，词义不成立即不满足条件A，故不收。"
+    },
+    {
+      "title": "开局成为留守儿童",
+      "url": "https://fanqienovel.com/page/7585226574790659134",
+      "reason": "[补池] 命中模拟词 重开（abstract），但不满足修仙条件：分类为 都市种田/都市/乡村/空间/开局/发家致富，简介无修仙/炼气/筑基一类词"
+    },
+    {
+      "title": "全球高武：别人练武我修仙",
+      "url": "https://fanqienovel.com/page/7622126325096008766",
+      "reason": "[主池][裁定降级] SCHEMA 修订6「重开」词义复核：条件A 不成立。原句「既然旧路已断，那便以身为界，重开新天」——带宾语「新天」，开辟义。本书「重开」是唯一条件A 证据，词义不成立即不满足条件A，故不收。"
+    },
+    {
+      "title": "星际流：深空星舰指挥官",
+      "url": "https://fanqienovel.com/page/7654751519589288985",
+      "reason": "[补池] 命中模拟词 模拟器/模拟（abstract），但不满足修仙条件：分类为 科幻末世/星际/末世/打脸/系统/求生，简介无修仙/炼气/筑基一类词"
+    },
+    {
+      "title": "全地球都在替宇宙打排位",
+      "url": "https://fanqienovel.com/page/7680093069248564249",
+      "reason": "[补池] 命中模拟词 推演（abstract），但不满足修仙条件：分类为 游戏体育/系统/无限流，简介无修仙/炼气/筑基一类词"
+    },
+    {
+      "title": "山村少年：开局一枚登天钱",
+      "url": "https://fanqienovel.com/page/7679100063531944985",
+      "reason": "[主池][裁定降级] SCHEMA 修订6「重开」词义复核：条件A 不成立。原句「集齐九钱的人，能重开天路」——带宾语「天路」，开辟义。本书「重开」是唯一条件A 证据，词义不成立即不满足条件A，故不收。"
+    },
+    {
+      "title": "我在股市做空全球",
+      "url": "https://fanqienovel.com/page/7657424728348445720",
+      "reason": "[补池] 命中模拟词 模拟器/模拟（abstract），但不满足修仙条件：分类为 都市脑洞/都市/打脸/神豪/系统，简介无修仙/炼气/筑基一类词"
+    },
+    {
+      "title": "体育流：足球之冠军教父",
+      "url": "https://fanqienovel.com/page/7647131251408653337",
+      "reason": "[补池] 命中模拟词 推演（abstract），但不满足修仙条件：分类为 游戏体育/系统/体育/打脸，简介无修仙/炼气/筑基一类词"
+    },
+    {
+      "title": "逆道拾尘",
+      "url": "https://fanqienovel.com/page/7683144122986662937",
+      "reason": "[主池][裁定降级] SCHEMA 修订6「重开」词义复核：条件A 不成立。原句「那便由我，重开一条拾尘逆道」——带宾语「逆道」，开辟义。本书「重开」是唯一条件A 证据，词义不成立即不满足条件A，故不收。"
+    },
+    {
+      "title": "沧墟剑烬",
+      "url": "https://fanqienovel.com/page/7683155600150154264",
+      "reason": "[主池][裁定降级] SCHEMA 修订6「重开」词义复核：条件A 不成立。原句「有人欲碎神界重开魔渊」——带宾语「魔渊」，开启义。本书「重开」是唯一条件A 证据，词义不成立即不满足条件A，故不收。"
+    },
+    {
+      "title": "祖灯长明",
+      "url": "https://fanqienovel.com/page/7682327502844349502",
+      "reason": "[主池][裁定降级] SCHEMA 修订6「重开」词义复核：条件A 不成立。原句「药铺重开，灵田复种，镖局走线」——**店铺重新开张**，与修仙机制全无关系，本批最干净的假阳性。本书「重开」是唯一条件A 证据，词义不成立即不满足条件A，故不收。"
+    }
+  ]
+}

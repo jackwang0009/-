@@ -1,0 +1,69 @@
+[
+  {
+    "key": "dejian",
+    "cn": "得间小说",
+    "origin": "https://www.idejian.com",
+    "robotsUrl": "https://www.idejian.com/robots.txt",
+    "httpStatus": 200,
+    "bytes": 209,
+    "challenged": true,
+    "agents": [],
+    "sitemapCount": 0,
+    "sitemapSample": [],
+    "aiBotBans": [],
+    "starRules": [],
+    "verdict": "BLOCKED (robots.txt 被反爬挑战页替换，不可读→从严视为不允许)"
+  },
+  {
+    "key": "shuqi",
+    "cn": "书旗小说",
+    "origin": "https://www.shuqi.com",
+    "robotsUrl": "https://www.shuqi.com/robots.txt",
+    "httpStatus": 200,
+    "bytes": 23325,
+    "challenged": false,
+    "agents": [
+      "*"
+    ],
+    "sitemapCount": 341,
+    "sitemapSample": [
+      "https://www.shuqi.com/sitemap/book_sitemap_all_pc_1.xml",
+      "https://www.shuqi.com/sitemap/book_sitemap_all_pc_2.xml"
+    ],
+    "aiBotBans": [],
+    "starRules": [
+      "disallow: /about/",
+      "disallow: /excellence",
+      "disallow: /inviteauthor",
+      "disallow: /label",
+      "disallow: /comment"
+    ],
+    "verdict": "OPEN (对 * 未整站禁止，逐路径核对后可抓)"
+  },
+  {
+    "key": "tadu",
+    "cn": "塔读文学",
+    "origin": "https://www.tadu.com",
+    "robotsUrl": "https://www.tadu.com/robots.txt",
+    "httpStatus": 200,
+    "bytes": 159,
+    "challenged": false,
+    "agents": [
+      "*"
+    ],
+    "sitemapCount": 1,
+    "sitemapSample": [
+      "https://www.tadu.com/sitemap.xml"
+    ],
+    "aiBotBans": [],
+    "starRules": [
+      "allow: /",
+      "disallow: /tadu/",
+      "disallow: /search",
+      "disallow: /search?query=*",
+      "disallow: /*.css",
+      "disallow: /*.js"
+    ],
+    "verdict": "OPEN (对 * 未整站禁止，逐路径核对后可抓)"
+  }
+]

@@ -1,0 +1,3900 @@
+{
+  "1_1_1141": {
+    "key": "1_1_1141",
+    "rankTypeText": "",
+    "totalNum": 100,
+    "fetchedAt": "2026-08-26T15:56:07.976Z",
+    "books": [
+      {
+        "bookId": "7658332715577527358",
+        "bookNameRaw": "退休勇买魔王仆",
+        "authorRaw": "晴空飞鸟",
+        "pos": 1,
+        "readCount": 209206,
+        "wordNumber": 198582,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o855aabd4c5105f905b0ae40c9c97e4e4~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364574&x-signature=LSJXrodP0AdA6urIfgUMa2Sdal4%3D"
+      },
+      {
+        "bookId": "7658503735013805081",
+        "bookNameRaw": "怪图鉴：哥布林血脉始",
+        "authorRaw": "馄饨流",
+        "pos": 2,
+        "readCount": 139229,
+        "wordNumber": 217415,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o671f49cbd226238bc7577aea05b33b11~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364574&x-signature=VRT%2F4i9X6GO1h3s%2BQTKMsOrcu3c%3D"
+      },
+      {
+        "bookId": "7653392559628094488",
+        "bookNameRaw": "领巫：限魔晶始求！",
+        "authorRaw": "轩",
+        "pos": 3,
+        "readCount": 124180,
+        "wordNumber": 295005,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2od0b7597a4ea34d1189573138296d4eaf~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364574&x-signature=TEwwKSQ7voFKsKYMe57JkHIVEYQ%3D"
+      },
+      {
+        "bookId": "7658561533282094105",
+        "bookNameRaw": "据帝幼态，精灵恋，刑",
+        "authorRaw": "清忙",
+        "pos": 4,
+        "readCount": 108329,
+        "wordNumber": 246397,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o571db5c39d27c5fc5f2743976c74c775~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364574&x-signature=WKbSdefCm0Xzmtn3QZ9XlkT%2Bq9k%3D"
+      },
+      {
+        "bookId": "7623384483550465049",
+        "bookNameRaw": "恶役领洗岸",
+        "authorRaw": "狐星",
+        "pos": 5,
+        "readCount": 74199,
+        "wordNumber": 273052,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o6bc461eb8f7d5b9b713c9df9f1cd13cf~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364574&x-signature=qvW4X3fOy3EYKpGUqrw1e1N9184%3D"
+      },
+      {
+        "bookId": "7600771307722001433",
+        "bookNameRaw": "混勇，诉魔王华夏",
+        "authorRaw": "滑稽银币",
+        "pos": 6,
+        "readCount": 77751,
+        "wordNumber": 154363,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/ea2a30884b66e304078a65f66df1b26a~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364574&x-signature=5%2FTxvMy%2FPUaFUealiK6UcSaYc78%3D"
+      },
+      {
+        "bookId": "7664919491125447705",
+        "bookNameRaw": "异：值限",
+        "authorRaw": "璃夕宸",
+        "pos": 7,
+        "readCount": 77294,
+        "wordNumber": 196073,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o2bcc672855fc554b9e7b582a04f149a7~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364574&x-signature=%2FOlEmpICbuKeH8RVftH7Np8gOaw%3D"
+      },
+      {
+        "bookId": "7662321215717002264",
+        "bookNameRaw": "魔词？反派薅敬！",
+        "authorRaw": "南",
+        "pos": 8,
+        "readCount": 70227,
+        "wordNumber": 227859,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o73f157ff49caabdfd1ee7faa9b8b626c~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364574&x-signature=dwWufNuTeLo0YqpCUAtYhJy4hB8%3D"
+      },
+      {
+        "bookId": "7664376091972209689",
+        "bookNameRaw": "穿越异，居绝？",
+        "authorRaw": "若渝渝渝",
+        "pos": 9,
+        "readCount": 59494,
+        "wordNumber": 237062,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o35909ab3a9e2281cd25b35a182b6104b~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364574&x-signature=SyT%2FqliBtYjbpqHGWXVFwCatRqM%3D"
+      },
+      {
+        "bookId": "7643249097788361790",
+        "bookNameRaw": "转史莱姆：亡强",
+        "authorRaw": "静香香静香",
+        "pos": 10,
+        "readCount": 65699,
+        "wordNumber": 182380,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2ofa07e00ec3de7edd3fe2128a83c3d79a~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364574&x-signature=w4OXabYNyitOUsGx1rfaxCxE7hY%3D"
+      }
+    ]
+  },
+  "1_2_1141": {
+    "key": "1_2_1141",
+    "rankTypeText": "",
+    "totalNum": 100,
+    "fetchedAt": "2026-08-26T15:56:09.358Z",
+    "books": [
+      {
+        "bookId": "7362544544950275134",
+        "bookNameRaw": "幻：鹰落帝",
+        "authorRaw": "枫潇呀",
+        "pos": 1,
+        "readCount": 490507,
+        "wordNumber": 3226422,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o2449088133468139974746cec5cf1bec~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364575&x-signature=iSqcX1kLptSU2rgTPDRCJeyLWbc%3D"
+      },
+      {
+        "bookId": "7320218217488600126",
+        "bookNameRaw": "领：苦痛，养",
+        "authorRaw": "嘎嘎乱",
+        "pos": 2,
+        "readCount": 379669,
+        "wordNumber": 3848209,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/999c8a1d05578d7aec77def618f7f4e6~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364575&x-signature=%2ByrTv6li9%2B1bmASwTrYe6PsUml0%3D"
+      },
+      {
+        "bookId": "7654593151348247614",
+        "bookNameRaw": "诡异，靠灾登顶",
+        "authorRaw": "糕",
+        "pos": 3,
+        "readCount": 363453,
+        "wordNumber": 388488,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o38e0ac3221c93d255029503b040bb825~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364575&x-signature=kLRjyvvM%2F%2F5qvonBO7ESMNCGY3s%3D"
+      },
+      {
+        "bookId": "7601032456199736382",
+        "bookNameRaw": "必反派院城存指南",
+        "authorRaw": "黑暗鲁鲁兽",
+        "pos": 4,
+        "readCount": 267592,
+        "wordNumber": 831629,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2obb41711418ec9e4e5d48a99468b1bd94~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364575&x-signature=52%2BFDO8O3PHSouBjCIQa5IVbmVg%3D"
+      },
+      {
+        "bookId": "7581768205408930841",
+        "bookNameRaw": "幻：冒险指南",
+        "authorRaw": "速适",
+        "pos": 5,
+        "readCount": 249033,
+        "wordNumber": 1147474,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o85a775aa92093d87bcea1308cdffce46~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364575&x-signature=SxuEpBPfbA692MRLYvkRf8N6dHE%3D"
+      },
+      {
+        "bookId": "7533154088880458814",
+        "bookNameRaw": "魔？钢铁洪流推！",
+        "authorRaw": "艺",
+        "pos": 6,
+        "readCount": 255376,
+        "wordNumber": 1718355,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2oe102fa70a9374a2eb7058792e7682f71~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364575&x-signature=p6104bnnCLnSuKvUCWk%2BLnNQOwg%3D"
+      },
+      {
+        "bookId": "7614012789639613502",
+        "bookNameRaw": "巫：识，杀穿？",
+        "authorRaw": "沁园春薛",
+        "pos": 7,
+        "readCount": 207780,
+        "wordNumber": 603142,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o0add144b8ea40837b8f782ffb7d106f2~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364575&x-signature=CMu5v%2F7mTuUQFP%2Fu8srFyTdDUO4%3D"
+      },
+      {
+        "bookId": "7080348306596957217",
+        "bookNameRaw": "异：挂！",
+        "authorRaw": "咸鱼",
+        "pos": 8,
+        "readCount": 172965,
+        "wordNumber": 5936152,
+        "creationStatus": "0",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/e340edb4574feb8218408b87334888c3~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364575&x-signature=d3eozKEs35i567TNrjMT7%2FUbPr8%3D"
+      },
+      {
+        "bookId": "7559112493956598809",
+        "bookNameRaw": "领：猎卡始",
+        "authorRaw": "青菜狼",
+        "pos": 9,
+        "readCount": 173550,
+        "wordNumber": 345470,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o51d67f06727f5b181d07f05ed315e7c7~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364575&x-signature=%2FWOXL6Rvr5B9rvpkPum%2BaG3A6qU%3D"
+      },
+      {
+        "bookId": "7230072764088978487",
+        "bookNameRaw": "！居邪裔？",
+        "authorRaw": "予桃",
+        "pos": 10,
+        "readCount": 162713,
+        "wordNumber": 4014092,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o210a168c0d6ebe5bb6eaeb05a66d53b3~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364575&x-signature=tlSdWY9t4vgCzNAMr2CllIPFljY%3D"
+      }
+    ]
+  },
+  "1_1_1140": {
+    "key": "1_1_1140",
+    "rankTypeText": "",
+    "totalNum": 100,
+    "fetchedAt": "2026-08-26T15:56:10.840Z",
+    "books": [
+      {
+        "bookId": "7656806334385376280",
+        "bookNameRaw": "封印源百，悟翻倍",
+        "authorRaw": "辣鱼",
+        "pos": 1,
+        "readCount": 98130,
+        "wordNumber": 290917,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2oc87784eff8ec50aaffa5de6119ab05f9~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364577&x-signature=i4Y%2BRaNKmIxoCZ1RcnibL4eqkvs%3D"
+      },
+      {
+        "bookId": "7668377752025713688",
+        "bookNameRaw": "养系炉鼎，魔沦陷",
+        "authorRaw": "奔跑玉兔",
+        "pos": 2,
+        "readCount": 82727,
+        "wordNumber": 177564,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2ocdaa29376b3340a66a0f8d1547e08cb7~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364577&x-signature=6JHTJ6wj6m1BOY%2F46wkAfN7a5H4%3D"
+      },
+      {
+        "bookId": "7611047330032143422",
+        "bookNameRaw": "修仙：醒极品灵根始",
+        "authorRaw": "绝智",
+        "pos": 3,
+        "readCount": 70237,
+        "wordNumber": 208781,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/4de0aa6063baa28622cedced863bb9ad~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364577&x-signature=swcZxh0GQ0ISbMIIu9zonb3jAQI%3D"
+      },
+      {
+        "bookId": "7668969149384641598",
+        "bookNameRaw": "封：升境，哪吒喊爹！",
+        "authorRaw": "逆湿",
+        "pos": 4,
+        "readCount": 69091,
+        "wordNumber": 114760,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2oc689c113af5cd7e231c880e82e701990~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364577&x-signature=WNfPjDRzcKcgjKDxaryYiOnlvO4%3D"
+      },
+      {
+        "bookId": "7633363793032006718",
+        "bookNameRaw": "刚江湖，清冷仙养",
+        "authorRaw": "深诗曲",
+        "pos": 5,
+        "readCount": 68259,
+        "wordNumber": 243473,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2ob18226e07ab573266c86450f7454e669~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364577&x-signature=TKX6%2BiZOo9F2zjcGVbBVtbGS638%3D"
+      },
+      {
+        "bookId": "7664843178314304537",
+        "bookNameRaw": "阳，横推古！",
+        "authorRaw": "敲码哇",
+        "pos": 6,
+        "readCount": 68169,
+        "wordNumber": 156257,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o2462befbef2d333d7bca72cd06cc1ed9~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364577&x-signature=kkJrrx79sGya8EKLF%2BUH4wurMIs%3D"
+      },
+      {
+        "bookId": "7634108430923336766",
+        "bookNameRaw": "敌江湖，隐退",
+        "authorRaw": "七封",
+        "pos": 7,
+        "readCount": 62581,
+        "wordNumber": 172173,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2oddf99b933c58e41c1c7a290f365843ee~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364577&x-signature=oXYui5fnQ6Kv%2Bbvt4Pz2JY6N3qo%3D"
+      },
+      {
+        "bookId": "7665565318009326616",
+        "bookNameRaw": "养，魔娘急哭",
+        "authorRaw": "甜茶居喝甜茶",
+        "pos": 8,
+        "readCount": 59343,
+        "wordNumber": 159343,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o32acd36b3c59863af06f3beb69236f6c~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364577&x-signature=0eLUaMAzp4GqyCTh9T%2F6ooVMa%2BE%3D"
+      },
+      {
+        "bookId": "7645625382313397310",
+        "bookNameRaw": "游：，截伟",
+        "authorRaw": "擎苍古帝",
+        "pos": 9,
+        "readCount": 51154,
+        "wordNumber": 277205,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2od5e4182cb3e1ed30e6a00bb85f45bb69~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364577&x-signature=8QI0AoUq7pEK73TNG0kP3Py9aNU%3D"
+      },
+      {
+        "bookId": "7664313419889118233",
+        "bookNameRaw": "尊：取",
+        "authorRaw": "",
+        "pos": 10,
+        "readCount": 50347,
+        "wordNumber": 211605,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o61a6d6b15434caa34a8f9016f7dc749a~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364577&x-signature=JN9wICoxuMJHXA%2BiA6dXPH02BCs%3D"
+      }
+    ]
+  },
+  "1_2_1140": {
+    "key": "1_2_1140",
+    "rankTypeText": "",
+    "totalNum": 100,
+    "fetchedAt": "2026-08-26T15:56:12.321Z",
+    "books": [
+      {
+        "bookId": "7077516958534470656",
+        "bookNameRaw": "凡骨",
+        "authorRaw": "壹",
+        "pos": 1,
+        "readCount": 830329,
+        "wordNumber": 8319832,
+        "creationStatus": "0",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2oab63dc9453b797dc4e499ad254f803fc~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364578&x-signature=qHLfY%2B3oYPT%2Fq8x17SCqeD8C7UQ%3D"
+      },
+      {
+        "bookId": "7637464494632881214",
+        "bookNameRaw": "砍各，各砍",
+        "authorRaw": "鸿轮",
+        "pos": 2,
+        "readCount": 641149,
+        "wordNumber": 371890,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2oea59b79c026f9c73720820e48f8aac31~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364578&x-signature=Udxy0y7o3kBh1PJS7cutnxpp270%3D"
+      },
+      {
+        "bookId": "7445188900496083992",
+        "bookNameRaw": "聚宝仙盆",
+        "authorRaw": "香味奶茶",
+        "pos": 3,
+        "readCount": 436662,
+        "wordNumber": 4348004,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2oa52cb4e26960b709f39d799713678b82~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364578&x-signature=3tgdDMRJS9bMsw5fpIbgrQVYEv0%3D"
+      },
+      {
+        "bookId": "7569244441353931800",
+        "bookNameRaw": "穿越庶兄：嫡弟竟仙帝转！",
+        "authorRaw": "今晚晒亮",
+        "pos": 4,
+        "readCount": 353326,
+        "wordNumber": 1181915,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/c8db88661b6ac6e267018dacb12a2a4c~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364578&x-signature=fuaJjFxq1Hwvc5WA77sEp7s3ynY%3D"
+      },
+      {
+        "bookId": "7641501763022883865",
+        "bookNameRaw": "选武侠仙侠，选洪荒",
+        "authorRaw": "皮蛋瘦肉周",
+        "pos": 5,
+        "readCount": 336233,
+        "wordNumber": 692487,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2ob449d3f0edd7fcdec3c04976845d1f69~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364578&x-signature=GwuU3GpC2I6iAsnuVVSErFEUj6Y%3D"
+      },
+      {
+        "bookId": "7597375926162164760",
+        "bookNameRaw": "敌，始养帝",
+        "authorRaw": "梦游哉",
+        "pos": 6,
+        "readCount": 301266,
+        "wordNumber": 824211,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2oec041ee193035d070dbd779c0d936f6b~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364578&x-signature=Ezl0jAdI6UzeIUHteTyxH9ugP7E%3D"
+      },
+      {
+        "bookId": "7425597358123011134",
+        "bookNameRaw": "星仙踪",
+        "authorRaw": "忘语",
+        "pos": 7,
+        "readCount": 283951,
+        "wordNumber": 1267678,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/380b7c65e1b8838a95d62187f323e999~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364578&x-signature=Hfd4I1I9TAgtWzzhyV9mmDJFroo%3D"
+      },
+      {
+        "bookId": "7450181849587911704",
+        "bookNameRaw": "仙凡",
+        "authorRaw": "流浪菲猫",
+        "pos": 8,
+        "readCount": 304813,
+        "wordNumber": 3580629,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2od1b18b2483f96ba8ebe6813abbb79d86~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364578&x-signature=DdcpiJbrnWuwIG4Qs1IYtwuUvCM%3D"
+      },
+      {
+        "bookId": "7568326868730924056",
+        "bookNameRaw": "嫂修仙",
+        "authorRaw": "运刀流",
+        "pos": 9,
+        "readCount": 283908,
+        "wordNumber": 1674501,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o94fd46d60757c47a4352e9c10adb491a~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364578&x-signature=aZODx9qJKlLeIbpg59XaQZ1E32s%3D"
+      },
+      {
+        "bookId": "7377931562463005720",
+        "bookNameRaw": "：仙庭系户摸鱼",
+        "authorRaw": "混沌核",
+        "pos": 10,
+        "readCount": 288436,
+        "wordNumber": 2906344,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2oe2a6cf90884f3aba9adc0798e7d22f89~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364578&x-signature=uVifgahXVPDR0BOHYLg6Hg1TcCA%3D"
+      }
+    ]
+  },
+  "1_1_8": {
+    "key": "1_1_8",
+    "rankTypeText": "",
+    "totalNum": 100,
+    "fetchedAt": "2026-08-26T15:56:13.733Z",
+    "books": [
+      {
+        "bookId": "7663700682670623768",
+        "bookNameRaw": "末选择：局亿洲蠊",
+        "authorRaw": "忆临",
+        "pos": 1,
+        "readCount": 357398,
+        "wordNumber": 180813,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2ob5329c98d17ef9dd7198fa71fe6c5719~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364580&x-signature=aJvG7x0SKH0p%2BxoE6plG8z0LPgM%3D"
+      },
+      {
+        "bookId": "7656306078614817817",
+        "bookNameRaw": "末灾序列",
+        "authorRaw": "星幽",
+        "pos": 2,
+        "readCount": 177365,
+        "wordNumber": 219246,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2off87d29d494fcd9ef988fc3084362e9d~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364580&x-signature=xrm6UWhSggQ%2B35a%2Fsl1CMS2PRBY%3D"
+      },
+      {
+        "bookId": "7668328845535087678",
+        "bookNameRaw": "穿丧尸萝莉，凤傲求",
+        "authorRaw": "梦",
+        "pos": 3,
+        "readCount": 157291,
+        "wordNumber": 151766,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o7a01b70a98fc976a11e393f590733aef~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364580&x-signature=1aZlF386TrcumON2Mj5GSsF4LJE%3D"
+      },
+      {
+        "bookId": "7664779730473716760",
+        "bookNameRaw": "旧族求，族谱禁忌",
+        "authorRaw": "春秋毛豆",
+        "pos": 4,
+        "readCount": 123587,
+        "wordNumber": 168314,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o87e595aff390626727a9fa0e47535731~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364580&x-signature=7VEPOSAB507EJAVmLqYBo%2FgyJhc%3D"
+      },
+      {
+        "bookId": "7664533857546275865",
+        "bookNameRaw": "木筏求：限资",
+        "authorRaw": "木",
+        "pos": 5,
+        "readCount": 107519,
+        "wordNumber": 196498,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o703f1e3abbbaeff7fb62818ed9de1101~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364580&x-signature=ciUHazH9yR73m0MtfwSo1vSRxRU%3D"
+      },
+      {
+        "bookId": "7659720471159507992",
+        "bookNameRaw": "末，版？",
+        "authorRaw": "枫桥雨",
+        "pos": 6,
+        "readCount": 94903,
+        "wordNumber": 262816,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o21d4c3ed3843c65f8bf5f72d9f8d8b26~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364580&x-signature=%2BiBOBd5cNl7wQrlMxH37s6hrwHQ%3D"
+      },
+      {
+        "bookId": "7665755247796554776",
+        "bookNameRaw": "末：限强化？局强化",
+        "authorRaw": "扑街酒",
+        "pos": 7,
+        "readCount": 101224,
+        "wordNumber": 167009,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o6e15be66d9f2e01505b919ff0a62a9e9~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364580&x-signature=N2%2F7R9I9ySSCrywJT1utJKwcNT8%3D"
+      },
+      {
+        "bookId": "7640863141710023742",
+        "bookNameRaw": "瘟疫模拟：局投",
+        "authorRaw": "杂鱼",
+        "pos": 8,
+        "readCount": 71838,
+        "wordNumber": 222624,
+        "creationStatus": "0",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o9635b43a76c7a9f4b558bffcb16f2a07~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364580&x-signature=%2BCZOmFS4G1pcxV%2BBHV660USFIzc%3D"
+      },
+      {
+        "bookId": "7660101486742867006",
+        "bookNameRaw": "求：萝莉，局强制契约",
+        "authorRaw": "柠萌",
+        "pos": 9,
+        "readCount": 80322,
+        "wordNumber": 274074,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2ofe248b4ff952392cba3c248055d21e16~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364580&x-signature=hPfXhd56QI6x3TXhkoeQNy6x4PA%3D"
+      },
+      {
+        "bookId": "7663004357029268542",
+        "bookNameRaw": "列求，获永久增益",
+        "authorRaw": "",
+        "pos": 10,
+        "readCount": 81049,
+        "wordNumber": 153915,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o8839cbf17048e1faa810fdbbe18d0d58~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364580&x-signature=kTXU9OeHffytGDptiJfXuJCazIk%3D"
+      }
+    ]
+  },
+  "1_2_8": {
+    "key": "1_2_8",
+    "rankTypeText": "",
+    "totalNum": 100,
+    "fetchedAt": "2026-08-26T15:56:15.211Z",
+    "books": [
+      {
+        "bookId": "7496026299845053465",
+        "bookNameRaw": "末存案供商",
+        "authorRaw": "板王仔",
+        "pos": 1,
+        "readCount": 683782,
+        "wordNumber": 2724717,
+        "creationStatus": "0",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2oefe821632dcc795622e206dd8464a062~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364581&x-signature=nDxSp5R4ZvfzcpKemORe32%2BF4P8%3D"
+      },
+      {
+        "bookId": "7180279419959774247",
+        "bookNameRaw": "冰河末，囤积百亿资",
+        "authorRaw": "忆",
+        "pos": 2,
+        "readCount": 520583,
+        "wordNumber": 6895027,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2oe465269c389e209681da59e607b5136d~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364581&x-signature=6%2BQJD3%2F6AE9B8HnCxyEDQ1y0Nu8%3D"
+      },
+      {
+        "bookId": "7632258300507065406",
+        "bookNameRaw": "区求：块包",
+        "authorRaw": "吴忠贤",
+        "pos": 3,
+        "readCount": 438524,
+        "wordNumber": 619889,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2oe68583e10d6d922189bbeb74f3692248~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364581&x-signature=HbrDzVniv6xchpl4hObxueuJX90%3D"
+      },
+      {
+        "bookId": "7558668991737105433",
+        "bookNameRaw": "激传送，局合！",
+        "authorRaw": "笔绘",
+        "pos": 4,
+        "readCount": 301958,
+        "wordNumber": 3149431,
+        "creationStatus": "0",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/20af2a9c59e600ad1a41e92717913b05~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364581&x-signature=c4K5lMKGs8AE6Te132tzh2XgdLQ%3D"
+      },
+      {
+        "bookId": "7607071375894776894",
+        "bookNameRaw": "求：建造城市始",
+        "authorRaw": "梦涯",
+        "pos": 5,
+        "readCount": 284424,
+        "wordNumber": 2279612,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/18d9028c0d8b911bfb9b5361f86673f5~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364581&x-signature=2rhx%2FKgf%2FtbTNO64YgJBcwV8luc%3D"
+      },
+      {
+        "bookId": "7276821229892275240",
+        "bookNameRaw": "末：土匪",
+        "authorRaw": "星梦辰缘",
+        "pos": 6,
+        "readCount": 288619,
+        "wordNumber": 2405392,
+        "creationStatus": "0",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2ob38486cc9d423b3710c9b2d5254e162a~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364581&x-signature=FfKSTqjQmh0Py7VF5NRYcov1gE8%3D"
+      },
+      {
+        "bookId": "7600685100820352062",
+        "bookNameRaw": "抽卡求，传卡",
+        "authorRaw": "亚呀",
+        "pos": 7,
+        "readCount": 277748,
+        "wordNumber": 1638751,
+        "creationStatus": "0",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o8b8010c84978cc09dc2016f5fb0c4703~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364581&x-signature=aazZkw6NtTXRzXgy5mKKby%2F2Wkg%3D"
+      },
+      {
+        "bookId": "7636687250301930558",
+        "bookNameRaw": "末，核站供限",
+        "authorRaw": "急败坏元宝炬",
+        "pos": 8,
+        "readCount": 262753,
+        "wordNumber": 609763,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o3817876de56916aad0966e8707034c44~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364581&x-signature=zmtFK7WcOYXxQd9WN%2FK3UjY1XrU%3D"
+      },
+      {
+        "bookId": "7636778431086070809",
+        "bookNameRaw": "求：局醒修罗序列",
+        "authorRaw": "盛夏凉",
+        "pos": 9,
+        "readCount": 262286,
+        "wordNumber": 513153,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o2adbb1ce8a1dd37a321d81a4e3babd44~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364581&x-signature=80vsrsniNJhBO57%2BmFe2TvHv6EQ%3D"
+      },
+      {
+        "bookId": "7481454748869069886",
+        "bookNameRaw": "庇护化论",
+        "authorRaw": "半顷阳",
+        "pos": 10,
+        "readCount": 241749,
+        "wordNumber": 2649136,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2ofc8c8e275cbf41e4a9832f755851a6df~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364581&x-signature=0apmswnyPAY8nxnlNBWIVFvk0WU%3D"
+      }
+    ]
+  },
+  "1_1_261": {
+    "key": "1_1_261",
+    "fetchedAt": "2026-08-26T15:56:17.030Z",
+    "books": []
+  },
+  "1_2_261": {
+    "key": "1_2_261",
+    "rankTypeText": "",
+    "totalNum": 100,
+    "fetchedAt": "2026-08-26T15:56:18.540Z",
+    "books": [
+      {
+        "bookId": "7326876174989134910",
+        "bookNameRaw": "",
+        "authorRaw": "",
+        "pos": 1,
+        "readCount": 836882,
+        "wordNumber": 1303032,
+        "creationStatus": "0",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o0a2b996f16f47236c6f3f0af6bd9ceb4~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364585&x-signature=Ga62Xt6S8w6ibhyaUUyofwe5mOg%3D"
+      },
+      {
+        "bookId": "7501902210347830334",
+        "bookNameRaw": "考逆袭：试始攀登",
+        "authorRaw": "元阳",
+        "pos": 2,
+        "readCount": 738998,
+        "wordNumber": 2844530,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/18712da583cf3f95b76697cac7980c90~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364585&x-signature=q5ZCYx1zhbl2dveRcyFPzF5rpSE%3D"
+      },
+      {
+        "bookId": "7259957689197792297",
+        "bookNameRaw": "局停职？转投纪委调查组",
+        "authorRaw": "江二爷",
+        "pos": 3,
+        "readCount": 717964,
+        "wordNumber": 6976517,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/31efd2153499a33cae8fe6039c290dd8~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364585&x-signature=3opAwlHAjWikvgoRSJDj%2FbyJEw0%3D"
+      },
+      {
+        "bookId": "7646327973087300670",
+        "bookNameRaw": "局扫黑暴",
+        "authorRaw": "南",
+        "pos": 4,
+        "readCount": 674731,
+        "wordNumber": 349155,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o9f64cfee28dfd70f0d988d6ac0edd999~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364585&x-signature=56bycFSRe%2FJ7gBWcF37v80rqbMU%3D"
+      },
+      {
+        "bookId": "7637508604198652990",
+        "bookNameRaw": "穿频，整顿城霸",
+        "authorRaw": "嘎嘣蹦",
+        "pos": 5,
+        "readCount": 630895,
+        "wordNumber": 800578,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2oe702e123737bffebb0ab9ad89c647335~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364585&x-signature=snrD%2BkANNPA8WowWpZ6IzAxIdU8%3D"
+      },
+      {
+        "bookId": "7645556324868049945",
+        "bookNameRaw": "穿反派，阴湿养病娇",
+        "authorRaw": "二元猫",
+        "pos": 6,
+        "readCount": 563841,
+        "wordNumber": 385786,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2od79091090d050756ee48f5a96cbc8dbd~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364585&x-signature=DCxs00h%2BALvdoIPy%2BXkyBTUiWlM%3D"
+      },
+      {
+        "bookId": "7207072067127086118",
+        "bookNameRaw": "姐怕，保护",
+        "authorRaw": "隔胳呜呜",
+        "pos": 7,
+        "readCount": 526454,
+        "wordNumber": 3004470,
+        "creationStatus": "0",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/37a5df2d49a9cd490a7e9788fc738166~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364585&x-signature=pvauMfboG9ADj5874xJwfSXQync%3D"
+      },
+      {
+        "bookId": "7212512693792541734",
+        "bookNameRaw": "宦官途",
+        "authorRaw": "流二",
+        "pos": 8,
+        "readCount": 525458,
+        "wordNumber": 6151420,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2oe412612c83b0a75fde5de3eb51de1812~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364585&x-signature=LS2YloiC7rClNSS8bFKoSoGQkuE%3D"
+      },
+      {
+        "bookId": "7341408148781026366",
+        "bookNameRaw": "官秘始",
+        "authorRaw": "冰棍",
+        "pos": 9,
+        "readCount": 452913,
+        "wordNumber": 5875231,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2oe9aae487a2cf63e5d5c11fcfee7a8399~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364585&x-signature=T1EnDcZP8iDfu7xxQyazrG9X47g%3D"
+      },
+      {
+        "bookId": "7490373272979115070",
+        "bookNameRaw": "青梅暗恋，",
+        "authorRaw": "夜雨",
+        "pos": 10,
+        "readCount": 440633,
+        "wordNumber": 1123880,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o2605bbe958a4568339e5afc61f95a1d2~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364585&x-signature=ccFa17SJbd4HIPNZy28MpmGTTME%3D"
+      }
+    ]
+  },
+  "1_1_124": {
+    "key": "1_1_124",
+    "rankTypeText": "",
+    "totalNum": 100,
+    "fetchedAt": "2026-08-26T15:56:20.000Z",
+    "books": [
+      {
+        "bookId": "7663040579378351129",
+        "bookNameRaw": "灵复苏：装，华夏仙！",
+        "authorRaw": "古夜",
+        "pos": 1,
+        "readCount": 167048,
+        "wordNumber": 209120,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2oe0265eb13770eba5001e7306a0da8404~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364586&x-signature=L8kF1VOFnS6rn5wXkjt7IPDIBlY%3D"
+      },
+      {
+        "bookId": "7666723872992939033",
+        "bookNameRaw": "灵复苏：局获呼吸",
+        "authorRaw": "洗脸猫",
+        "pos": 2,
+        "readCount": 125356,
+        "wordNumber": 196084,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o76cdc68f7bf0f19ae5914365ef592353~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364586&x-signature=qp9NjWEdnqOoWqgIi%2BqUsrltrOg%3D"
+      },
+      {
+        "bookId": "7662780112424668184",
+        "bookNameRaw": "守破观，咋修仙？",
+        "authorRaw": "喝桔柠檬",
+        "pos": 3,
+        "readCount": 95456,
+        "wordNumber": 230498,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o4ceb6cd800f2b0a716d9b4ede8d455f7~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364586&x-signature=dodpHxCXH5emvVZj1sTK5J9yJ64%3D"
+      },
+      {
+        "bookId": "7660826945604553790",
+        "bookNameRaw": "考状元：县暴富",
+        "authorRaw": "守村",
+        "pos": 4,
+        "readCount": 105255,
+        "wordNumber": 250939,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o0b6c45b7135136c2aa3168b729fd2284~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364586&x-signature=ZF%2BtCI41wKvUKocavixtOSt%2BNFY%3D"
+      },
+      {
+        "bookId": "7667338374876777497",
+        "bookNameRaw": "聊群约架，君",
+        "authorRaw": "鸡蛋羊",
+        "pos": 5,
+        "readCount": 90273,
+        "wordNumber": 157335,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o177c44cdb3bf5911e8306b793eb3aca8~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364586&x-signature=0pSlf1JoUfzfpO6tx0ni9l8iGIQ%3D"
+      },
+      {
+        "bookId": "7634571778957790232",
+        "bookNameRaw": "暑假踪，归元婴祖！",
+        "authorRaw": "梦",
+        "pos": 6,
+        "readCount": 72295,
+        "wordNumber": 284327,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2of4d032e387b2f2c83b3cd1fd280f26a7~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364586&x-signature=JJVEIg8Jd0aNZ%2BCqAWc9lwVbxm4%3D"
+      },
+      {
+        "bookId": "7665278512474885182",
+        "bookNameRaw": "暑假兼职龙虎，修仙帝？",
+        "authorRaw": "川雨衣",
+        "pos": 7,
+        "readCount": 68769,
+        "wordNumber": 260300,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o3411c8a6eab43770eb623f8f9db74522~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364586&x-signature=oyTE7Oxga3SUMrfNhJ2aeU2pOWI%3D"
+      },
+      {
+        "bookId": "7665972822581185561",
+        "bookNameRaw": "灵复苏，局化君",
+        "authorRaw": "软软",
+        "pos": 8,
+        "readCount": 54543,
+        "wordNumber": 192618,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o5ddfca1da5d7a7f4999e81cb1357e581~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364586&x-signature=hnc3YiSi%2BJwu3Jfc7Oqd7HQ2VQA%3D"
+      },
+      {
+        "bookId": "7665609321647983640",
+        "bookNameRaw": "修仙市，坏消息修",
+        "authorRaw": "绫波丽",
+        "pos": 9,
+        "readCount": 56144,
+        "wordNumber": 269688,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o30b6a2158f6e55b08007066c2f98c269~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364586&x-signature=NBsddmsRPWg2dQbMzMrFXdPp7Qk%3D"
+      },
+      {
+        "bookId": "7654865196510366744",
+        "bookNameRaw": "叶疯",
+        "authorRaw": "剪刀石布",
+        "pos": 10,
+        "readCount": 57236,
+        "wordNumber": 296247,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o4542db401c7ab85abd444864985174b0~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364586&x-signature=BPi6Wh4eq8Yg3sBB42IxBS5YKvo%3D"
+      }
+    ]
+  },
+  "1_2_124": {
+    "key": "1_2_124",
+    "rankTypeText": "",
+    "totalNum": 100,
+    "fetchedAt": "2026-08-26T15:56:21.549Z",
+    "books": [
+      {
+        "bookId": "7600765146167790617",
+        "bookNameRaw": "术：算，黄包始",
+        "authorRaw": "闻柳顾",
+        "pos": 1,
+        "readCount": 450128,
+        "wordNumber": 1270833,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o614539802b047c7a0c951f20137992e3~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364588&x-signature=kLgxc3eOMGg3Wj3rjGv72ER5Ru0%3D"
+      },
+      {
+        "bookId": "7112656623956397088",
+        "bookNameRaw": "，姐宠",
+        "authorRaw": "求求火吧",
+        "pos": 2,
+        "readCount": 384593,
+        "wordNumber": 5979996,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2oc95f7540eab2d374931b68c013194102~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364588&x-signature=AxQSMtPR38M6Zbi56j4xepRoP%2Fc%3D"
+      },
+      {
+        "bookId": "7563945197495667774",
+        "bookNameRaw": "球允牛逼存！",
+        "authorRaw": "朵菊",
+        "pos": 3,
+        "readCount": 296702,
+        "wordNumber": 1316211,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o1f2b52455aeb0b9935b390f875fc2036~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364588&x-signature=0TnRvbLyKGTjbcSdhdDkh4ulj%2Bs%3D"
+      },
+      {
+        "bookId": "7324876104668302398",
+        "bookNameRaw": "梦百，",
+        "authorRaw": "敌",
+        "pos": 4,
+        "readCount": 255073,
+        "wordNumber": 1575217,
+        "creationStatus": "0",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o6e8513544656bcc5cb5ba4d4dc7b574c~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364588&x-signature=NaOcZzqmukobit2uE8kPPrv91uQ%3D"
+      },
+      {
+        "bookId": "7028204375155674147",
+        "bookNameRaw": "医馆笔",
+        "authorRaw": "苓",
+        "pos": 5,
+        "readCount": 250121,
+        "wordNumber": 1115484,
+        "creationStatus": "0",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/8ac41343a5e7045d839bcb456d893774~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364588&x-signature=qeTxJ9rRXV36iu3cUP2gPINGNck%3D"
+      },
+      {
+        "bookId": "7347569064258047000",
+        "bookNameRaw": "获仙传承，村爽翻",
+        "authorRaw": "流",
+        "pos": 6,
+        "readCount": 246646,
+        "wordNumber": 3856229,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o546c10e1e6f6159e4304ad587ad770ff~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364588&x-signature=sEyh8xYFvIQJaz75DXbMu1I2c0w%3D"
+      },
+      {
+        "bookId": "7596278574026345534",
+        "bookNameRaw": "傻留守村！",
+        "authorRaw": "李七",
+        "pos": 7,
+        "readCount": 211950,
+        "wordNumber": 992882,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o2c3716f7d8d4619d2a11339611ac55c4~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364588&x-signature=8Z9f4vDLYeGKCE9i2GoOBaaQ4wM%3D"
+      },
+      {
+        "bookId": "7632705611515317310",
+        "bookNameRaw": "村傻",
+        "authorRaw": "姐姐",
+        "pos": 8,
+        "readCount": 191660,
+        "wordNumber": 578319,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o36fc6989bf533ead932584ef424d007b~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364588&x-signature=%2Fz4X44cahof77cwwYMFB5A%2BR25g%3D"
+      },
+      {
+        "bookId": "7615928604173536280",
+        "bookNameRaw": "局借运？啊！",
+        "authorRaw": "半碗清补凉",
+        "pos": 9,
+        "readCount": 193474,
+        "wordNumber": 738017,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o9cc3283936cbf91e99c0ef08155dad37~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364588&x-signature=Lrhw2u3hTZqCaUllamNtLLYzRJY%3D"
+      },
+      {
+        "bookId": "7546231091758107673",
+        "bookNameRaw": "娱圈秘闻",
+        "authorRaw": "苦瓜炒蟹",
+        "pos": 10,
+        "readCount": 190600,
+        "wordNumber": 1417505,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o1553807ac3933acff1bda2a90cae9b72~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364588&x-signature=Jr2NmmtX%2BXh1496snK1CiElogB0%3D"
+      }
+    ]
+  },
+  "1_1_1014": {
+    "key": "1_1_1014",
+    "rankTypeText": "",
+    "totalNum": 100,
+    "fetchedAt": "2026-08-26T15:56:22.951Z",
+    "books": [
+      {
+        "bookId": "7664914784973753406",
+        "bookNameRaw": "猎魔姐，血族",
+        "authorRaw": "收集邮票飞鸟",
+        "pos": 1,
+        "readCount": 438179,
+        "wordNumber": 165158,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2of7c0934680cd2f82db122388fb4faa88~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364589&x-signature=KZvzK70c5MmJvFcuXQKRdzCNpIA%3D"
+      },
+      {
+        "bookId": "7664998424982342681",
+        "bookNameRaw": "努强，曝",
+        "authorRaw": "叶墨",
+        "pos": 2,
+        "readCount": 332173,
+        "wordNumber": 247150,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2oeabf17750773dbb90b9b783f8ea7d574~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364589&x-signature=AK9PJ28xGDVV4ptcjwa5h8%2FMFAo%3D"
+      },
+      {
+        "bookId": "7659684099551939608",
+        "bookNameRaw": "属翻倍，黑化爆杀切",
+        "authorRaw": "祝某某啊",
+        "pos": 3,
+        "readCount": 317338,
+        "wordNumber": 293612,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o6bf0a2c0c6a4352813b36ad55ccd3ece~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364589&x-signature=sEQgzDYwt08QQmo5y2uFzl38VG0%3D"
+      },
+      {
+        "bookId": "7633324843114433598",
+        "bookNameRaw": "雄协：局招募拳",
+        "authorRaw": "林呱呱",
+        "pos": 4,
+        "readCount": 258795,
+        "wordNumber": 184830,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o3d3af30fef16c19a650f750d49eb928b~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364589&x-signature=tmYGTx8oknjM3CuMcWNYD5jhLJs%3D"
+      },
+      {
+        "bookId": "7659545384489847833",
+        "bookNameRaw": "仙：局紫葫芦辟福",
+        "authorRaw": "喜欢宅",
+        "pos": 5,
+        "readCount": 218623,
+        "wordNumber": 266476,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o26b31db16b79bc4e4f305a378e045c6e~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364589&x-signature=Sr6QQnSbci5lDpaEJ6hG9J89UMM%3D"
+      },
+      {
+        "bookId": "7669430143957355544",
+        "bookNameRaw": "班拜宗，拜菩提祖",
+        "authorRaw": "青青孖妗",
+        "pos": 6,
+        "readCount": 170050,
+        "wordNumber": 230759,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2ofb6d5ad020d3be3cad0ce13426a357df~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364589&x-signature=bSNwGpacQz2j5xu93r9iqhwTguY%3D"
+      },
+      {
+        "bookId": "7660761684419546174",
+        "bookNameRaw": "枪绑，邪修？",
+        "authorRaw": "李枸杞",
+        "pos": 7,
+        "readCount": 150343,
+        "wordNumber": 219610,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2oa94654f1e1b7abaaaa596e20bcb09b45~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364589&x-signature=1TTCLA4t%2FNtZTUkT7ZEjyE4mr1w%3D"
+      },
+      {
+        "bookId": "7668153046785854489",
+        "bookNameRaw": "娘胎醒转职，绑兽！",
+        "authorRaw": "慕霖夜羽",
+        "pos": 8,
+        "readCount": 142459,
+        "wordNumber": 171581,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o8416daaf060a913c94ac3fd967b4d603~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364589&x-signature=fD3taRks00GaJtQyRzjE88rpRgA%3D"
+      },
+      {
+        "bookId": "7552521675737156633",
+        "bookNameRaw": "领：局商店获丰饶圣",
+        "authorRaw": "咸鱼咕咕",
+        "pos": 9,
+        "readCount": 131815,
+        "wordNumber": 226916,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o8c0c6638b8a6a74ff9cbab0e928d28a2~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364589&x-signature=fc3sEawuTz5Cai%2Fzn6rIdkwgpUM%3D"
+      },
+      {
+        "bookId": "7657505071055244350",
+        "bookNameRaw": "祇：修仙，魔",
+        "authorRaw": "独淋夜雨",
+        "pos": 10,
+        "readCount": 115616,
+        "wordNumber": 188892,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o8d763680639753a07e76ec25226d58bf~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364589&x-signature=fOL5CM3il3agUo%2FZAVu1HsI7q1k%3D"
+      }
+    ]
+  },
+  "1_2_1014": {
+    "key": "1_2_1014",
+    "rankTypeText": "",
+    "totalNum": 100,
+    "fetchedAt": "2026-08-26T15:56:24.455Z",
+    "books": [
+      {
+        "bookId": "7504849932138859545",
+        "bookNameRaw": "停，邪跪！",
+        "authorRaw": "六葫芦",
+        "pos": 1,
+        "readCount": 2742648,
+        "wordNumber": 2319081,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2oadaa82ad57ef8091a7a5bd32af452d4a~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364590&x-signature=HgiJUW1D4Sve4ZrMlFwRiCB1JHE%3D"
+      },
+      {
+        "bookId": "7276384138653862966",
+        "bookNameRaw": "戏",
+        "authorRaw": "九域",
+        "pos": 2,
+        "readCount": 2270550,
+        "wordNumber": 4003607,
+        "creationStatus": "0",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o99ffbfd13492eb9953715959db26ed9b~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364590&x-signature=P1hqH4ryLm1zwhJFwun3NLOyZ%2Fw%3D"
+      },
+      {
+        "bookId": "6982529841564224526",
+        "bookNameRaw": "精病院斩",
+        "authorRaw": "九域",
+        "pos": 3,
+        "readCount": 2084312,
+        "wordNumber": 4263654,
+        "creationStatus": "0",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/c5397e4a514736bb1c6754663dbee3db~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364590&x-signature=oTzkZEZQ5KucN9W36gDDWd9Wwns%3D"
+      },
+      {
+        "bookId": "7592279900040465433",
+        "bookNameRaw": "操旧",
+        "authorRaw": "陷阵营营",
+        "pos": 4,
+        "readCount": 1271533,
+        "wordNumber": 719284,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o46c2283e139d920988ff6fc3a1db1e26~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364590&x-signature=mcptDgLrVkaVDWw9pPnGW12eAgQ%3D"
+      },
+      {
+        "bookId": "7338034838672247833",
+        "bookNameRaw": "诸愚戏",
+        "authorRaw": "九秋",
+        "pos": 5,
+        "readCount": 821763,
+        "wordNumber": 3687843,
+        "creationStatus": "0",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o456671fab473706eac056e1ae403e5c3~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364590&x-signature=sV9EbnxCdN0evv%2BuIezdxdMxqq4%3D"
+      },
+      {
+        "bookId": "7421167583522458648",
+        "bookNameRaw": "习，跑收容怪",
+        "authorRaw": "罗沙",
+        "pos": 6,
+        "readCount": 790588,
+        "wordNumber": 3662808,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o368422f6d81aefa1e4c42491681bf9d1~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364590&x-signature=FAYgGvcWNUZnkfB4kY27e1GrRIo%3D"
+      },
+      {
+        "bookId": "7541790468774841406",
+        "bookNameRaw": "始反晋升",
+        "authorRaw": "酷酷",
+        "pos": 7,
+        "readCount": 734651,
+        "wordNumber": 1678528,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2ob64758c8b2ca55f1b31844ef88072590~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364590&x-signature=pw1t9ftD9J%2FXPt6scpBvziG6%2BSo%3D"
+      },
+      {
+        "bookId": "7633410676018400281",
+        "bookNameRaw": "，亿赋，槛",
+        "authorRaw": "猫鱼",
+        "pos": 8,
+        "readCount": 713653,
+        "wordNumber": 511366,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o1f894ba87e8989e911ff040e3a889308~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364590&x-signature=IWgDjx5pMB7aijY77sTCNms5dCo%3D"
+      },
+      {
+        "bookId": "7462405945180572697",
+        "bookNameRaw": "刷怪啊，刷干嘛！",
+        "authorRaw": "喜欢橘",
+        "pos": 9,
+        "readCount": 674849,
+        "wordNumber": 2999275,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o76b6acc31de1b5f4675e0abf2939a0fe~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364590&x-signature=ZGIRYqGilaKVgCcIGxagM7JgpHE%3D"
+      },
+      {
+        "bookId": "7346057588347259929",
+        "bookNameRaw": "序列：",
+        "authorRaw": "脑脑",
+        "pos": 10,
+        "readCount": 623081,
+        "wordNumber": 3853709,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o43da4425bd3b338cef72fa545aaff9c1~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364590&x-signature=ug956uCxRmVejaNRnr225CFL9kI%3D"
+      }
+    ]
+  },
+  "1_1_273": {
+    "key": "1_1_273",
+    "rankTypeText": "",
+    "totalNum": 100,
+    "fetchedAt": "2026-08-26T15:56:25.938Z",
+    "books": [
+      {
+        "bookId": "7648533566090906649",
+        "bookNameRaw": "穿周宰，皇腰疼啥",
+        "authorRaw": "敏敏宝",
+        "pos": 1,
+        "readCount": 166570,
+        "wordNumber": 191921,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2oa47d41fac206f8c0bdc6a0dea3cc0d97~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364592&x-signature=bFccXgXXt0LKd8ZmXH0rGY6JFVE%3D"
+      },
+      {
+        "bookId": "7663863476095290393",
+        "bookNameRaw": "唐：玄武夜，绑投秦王",
+        "authorRaw": "零食晚膳",
+        "pos": 2,
+        "readCount": 101839,
+        "wordNumber": 194239,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o89f9532a722ec13cbafe89dbdd898017~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364592&x-signature=e5LBGETFbULvwvxlzc4HKDvQUR0%3D"
+      },
+      {
+        "bookId": "7661483808675335192",
+        "bookNameRaw": "红楼：庶贾琮，局收保护费",
+        "authorRaw": "画",
+        "pos": 3,
+        "readCount": 94350,
+        "wordNumber": 274854,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o5aa314297331b8cdf00ea7c3a7320674~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364592&x-signature=dwrTsQYEwAlhxIzbV80fCsXx4TQ%3D"
+      },
+      {
+        "bookId": "7667415571012520985",
+        "bookNameRaw": "朱标私，朱逼皇帝！",
+        "authorRaw": "红胜火",
+        "pos": 4,
+        "readCount": 79440,
+        "wordNumber": 230761,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2oaea33ae111b8202e71148618d655ecc2~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364592&x-signature=f%2FpsVy1AIEHXptjpAvpBfCfHzVg%3D"
+      },
+      {
+        "bookId": "7667974719122983960",
+        "bookNameRaw": "北魏枭雄",
+        "authorRaw": "随笔",
+        "pos": 5,
+        "readCount": 67599,
+        "wordNumber": 158557,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o745f9979c0ac57a8fba7c6ba3ebfdbf7~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364592&x-signature=U4pfBMWwrt2qso6ZCHyanNz1t5w%3D"
+      },
+      {
+        "bookId": "7663870216031439896",
+        "bookNameRaw": "：魏帝执剑，殿孤龙",
+        "authorRaw": "霜",
+        "pos": 6,
+        "readCount": 62792,
+        "wordNumber": 236704,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2oa83a99d79e49c5042ed4729b7fc6d793~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364592&x-signature=UcHX33XIYaMFqC4a%2FguSSPygj2E%3D"
+      },
+      {
+        "bookId": "7663022876680784958",
+        "bookNameRaw": "陛，娶吗？",
+        "authorRaw": "冻离",
+        "pos": 7,
+        "readCount": 61891,
+        "wordNumber": 290807,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2oa72317e3bcc92316ad45e0f579e2cac6~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364592&x-signature=MJ4fiYWQbgqJN1OvPoAsknuG7nc%3D"
+      },
+      {
+        "bookId": "7665931780137962521",
+        "bookNameRaw": "刚遁，疯批帝兵抢",
+        "authorRaw": "乃诸",
+        "pos": 8,
+        "readCount": 57158,
+        "wordNumber": 226276,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2ocecf35bc1eeef02ac1d7a2578891f57d~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364592&x-signature=pakmO04YvcmOD4zM16sSgEEmiTE%3D"
+      },
+      {
+        "bookId": "7639866369911049241",
+        "bookNameRaw": "唐：局囚，遇李承乾",
+        "authorRaw": "",
+        "pos": 9,
+        "readCount": 54514,
+        "wordNumber": 227601,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o58e9c3ed01e31ab5c4fd7dccdee1dddb~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364592&x-signature=e0DPISWy3yWuyETYTxIPuGMVE6U%3D"
+      },
+      {
+        "bookId": "7658200517666933784",
+        "bookNameRaw": "局褚转投吕布，曹操哭麻",
+        "authorRaw": "",
+        "pos": 10,
+        "readCount": 53123,
+        "wordNumber": 270562,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2ofdfd890601f77558bb04af8f9e93f2fa~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364592&x-signature=L1T9Y%2BleUm1bLB0drsh1vJk%2BVgs%3D"
+      }
+    ]
+  },
+  "1_2_273": {
+    "key": "1_2_273",
+    "rankTypeText": "",
+    "totalNum": 100,
+    "fetchedAt": "2026-08-26T15:56:27.384Z",
+    "books": [
+      {
+        "bookId": "7414011485757639704",
+        "bookNameRaw": "冒姓琅琊",
+        "authorRaw": "周南",
+        "pos": 1,
+        "readCount": 752801,
+        "wordNumber": 1450970,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/ai/p2o40b8a1c9ad4c18298349ef8fe897eaa6~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364593&x-signature=izkbUjWxMOmCsu65u7NLU0aoMvw%3D"
+      },
+      {
+        "bookId": "7640024268096408601",
+        "bookNameRaw": "唐，局玄武？",
+        "authorRaw": "抱星居",
+        "pos": 2,
+        "readCount": 774264,
+        "wordNumber": 585080,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o515aaa52bc042755fbc14d8d92d17e52~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364593&x-signature=zW7gXh9n%2Bk6vnK3u3uuaOjB3AAY%3D"
+      },
+      {
+        "bookId": "7363901972950305854",
+        "bookNameRaw": "，强毒，帝呼阎王",
+        "authorRaw": "星星",
+        "pos": 3,
+        "readCount": 621385,
+        "wordNumber": 3938845,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2off95b13ed1d339efe994ca9034c2646a~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364593&x-signature=4YppExFQv4VFotAPvqyGI81x8h4%3D"
+      },
+      {
+        "bookId": "7046842344074644484",
+        "bookNameRaw": "皇牌县令",
+        "authorRaw": "板王仔",
+        "pos": 4,
+        "readCount": 552261,
+        "wordNumber": 2722526,
+        "creationStatus": "0",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/aa6ffbc640ec700ace6ab3866a75de1d~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364593&x-signature=6Ghkb8EKG8W1g6ow6U9mAhov3%2F4%3D"
+      },
+      {
+        "bookId": "7612158980839722046",
+        "bookNameRaw": "魏孽首辅，族跪求祖",
+        "authorRaw": "咸鱼",
+        "pos": 5,
+        "readCount": 533932,
+        "wordNumber": 1154942,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/fd7628a8d8e062c2a19d233ce7564f16~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364593&x-signature=AymSH7YVr0P136u5b510BEXTCT0%3D"
+      },
+      {
+        "bookId": "7623459019432152089",
+        "bookNameRaw": "提刀，提笔！",
+        "authorRaw": "牧野横舟",
+        "pos": 6,
+        "readCount": 509700,
+        "wordNumber": 905636,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2oc9547a52cbccdf9b13ca98e0e180b57f~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364593&x-signature=obwDMOZzPNIuHyaNavRrE44BsS4%3D"
+      },
+      {
+        "bookId": "7553242944875007000",
+        "bookNameRaw": "：朱元璋冒牌侄",
+        "authorRaw": "借箭",
+        "pos": 7,
+        "readCount": 355042,
+        "wordNumber": 1207108,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/d16b89cc7381b3d0eea84c1644618bb4~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364593&x-signature=IwbAsEyS%2BFOVmcTF2xusD96T6P0%3D"
+      },
+      {
+        "bookId": "7477576232578599998",
+        "bookNameRaw": "哈哈哈，",
+        "authorRaw": "微微薇",
+        "pos": 8,
+        "readCount": 326125,
+        "wordNumber": 3150545,
+        "creationStatus": "0",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/e7c3b94a0b4c31ed65bd3d1b3a9cc850~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364593&x-signature=7dMPAhd7pGvEexxzEqHfr93Ucas%3D"
+      },
+      {
+        "bookId": "7638215590166940697",
+        "bookNameRaw": "辅佐曹操，骂送",
+        "authorRaw": "煞娘",
+        "pos": 9,
+        "readCount": 310292,
+        "wordNumber": 669181,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o526bce6c158ef476761709800ddb481f~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364593&x-signature=zCq6ntESN2PAgCIG6T7XS1RprKw%3D"
+      },
+      {
+        "bookId": "7532403250494966808",
+        "bookNameRaw": "寒屠户科举",
+        "authorRaw": "粑粑",
+        "pos": 10,
+        "readCount": 304439,
+        "wordNumber": 2865718,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o985f5f0661dcb12bbc9790bbb36a27dc~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364593&x-signature=zeofLfbwF9tUMhu8cPvLirmFuDE%3D"
+      }
+    ]
+  },
+  "1_1_27": {
+    "key": "1_1_27",
+    "rankTypeText": "",
+    "totalNum": "38",
+    "fetchedAt": "2026-08-26T15:56:28.897Z",
+    "books": [
+      {
+        "bookId": "7646257074912889881",
+        "bookNameRaw": "局选，选沪圈爷！",
+        "authorRaw": "奇姐奇",
+        "pos": 1,
+        "readCount": 54926,
+        "wordNumber": 228360,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o4a39c8a4731b6df643a57cdd84e04c0d~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364595&x-signature=yAgqBsqdC0%2FU2L2huXt5vmr31ic%3D"
+      },
+      {
+        "bookId": "7647071957128580158",
+        "bookNameRaw": "抢短剧！",
+        "authorRaw": "挽流",
+        "pos": 2,
+        "readCount": 32677,
+        "wordNumber": 173767,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o15b8288ec55ce15ee596b52f0aa5805c~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364595&x-signature=wYrPAx5nF9CsJb0vP6izE%2BpN9MQ%3D"
+      },
+      {
+        "bookId": "7639634712150936638",
+        "bookNameRaw": "婿流",
+        "authorRaw": "",
+        "pos": 3,
+        "readCount": 21797,
+        "wordNumber": 241847,
+        "creationStatus": "0",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o24201319b78f48e25ca759cdecf26655~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364595&x-signature=WzDXj%2Bi335oZUnif%2BwS19ix2c9E%3D"
+      },
+      {
+        "bookId": "7649802983059770393",
+        "bookNameRaw": "归乡，",
+        "authorRaw": "赖喜",
+        "pos": 4,
+        "readCount": 15936,
+        "wordNumber": 195270,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o590a8633740a3a74d0a6e6fc38e7a02d~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364595&x-signature=0EB%2Bl7JhZLnM%2BsKr8Q152lXVITA%3D"
+      },
+      {
+        "bookId": "7546167331378973758",
+        "bookNameRaw": "超级富豪婿",
+        "authorRaw": "蛋证",
+        "pos": 5,
+        "readCount": 8688,
+        "wordNumber": 204819,
+        "creationStatus": "0",
+        "thumbUri": "https://p9-reading-sign.fqnovelpic.com/novel-pic/p2o12a0f0e58848152aaf676d4e0cf2e0e6~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364595&x-signature=0H7EElb3YSF%2FMa8ZbZWwv2pmovE%3D"
+      },
+      {
+        "bookId": "7662407102245112894",
+        "bookNameRaw": "替婚，钱！",
+        "authorRaw": "败",
+        "pos": 6,
+        "readCount": 8654,
+        "wordNumber": 169913,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2oc76cdf6bb589fc8a25502bebcfd35dc6~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364595&x-signature=Jubp%2BOqOIDSVSnkeawHw1nhVpsQ%3D"
+      },
+      {
+        "bookId": "7661621670301404222",
+        "bookNameRaw": "市兵王：龙隐邕城",
+        "authorRaw": "挣银",
+        "pos": 7,
+        "readCount": 8703,
+        "wordNumber": 197949,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2oe51b91ffc6384e6c5e35e314541f96dd~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364595&x-signature=MXfpvKE5HDVAr%2Bw%2B3s4LSrddGLk%3D"
+      },
+      {
+        "bookId": "7652260141969968153",
+        "bookNameRaw": "苏，您找赘婿龙殿",
+        "authorRaw": "番茄剧",
+        "pos": 8,
+        "readCount": 7651,
+        "wordNumber": 180737,
+        "creationStatus": "0",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2ocb15e017c1edeff1f1be049713d44898~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364595&x-signature=oRIXuKvaSR0P4gJ3P23LcHzcI5c%3D"
+      },
+      {
+        "bookId": "7657491292754037785",
+        "bookNameRaw": "狱，喊乌",
+        "authorRaw": "忆言",
+        "pos": 9,
+        "readCount": 5991,
+        "wordNumber": 111860,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o44a97056dfcce90cc17a5ae5ef5fa3ff~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364595&x-signature=lpvL%2FuNdO18SBHpQAqIwNlRZcIc%3D"
+      },
+      {
+        "bookId": "7644091969009880126",
+        "bookNameRaw": "归：裁贴兵王",
+        "authorRaw": "摇灵",
+        "pos": 10,
+        "readCount": 5185,
+        "wordNumber": 256957,
+        "creationStatus": "0",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o7d624c552232186be507480982449cb4~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364595&x-signature=AEEcaMrt4ZHqjiKAeT4FqOzKDh0%3D"
+      }
+    ]
+  },
+  "1_2_27": {
+    "key": "1_2_27",
+    "rankTypeText": "",
+    "totalNum": 100,
+    "fetchedAt": "2026-08-26T15:56:30.377Z",
+    "books": [
+      {
+        "bookId": "6795361988357655565",
+        "bookNameRaw": "奶爸",
+        "authorRaw": "寸",
+        "pos": 1,
+        "readCount": 165722,
+        "wordNumber": 3053121,
+        "creationStatus": "0",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2ob17be204e19fcd03233209ad8e1a21b6~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364596&x-signature=CDM5kF9gSs%2BlXv1GKvqsPceuk7o%3D"
+      },
+      {
+        "bookId": "7520747795091819545",
+        "bookNameRaw": "兵王交警",
+        "authorRaw": "萧",
+        "pos": 2,
+        "readCount": 159568,
+        "wordNumber": 1501377,
+        "creationStatus": "0",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2oe5e970103b871241933107cf9af2eb54~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364596&x-signature=uu5W07O6ZnYKKkuXzvmu4907vS0%3D"
+      },
+      {
+        "bookId": "7434480377638439960",
+        "bookNameRaw": "零始，造华夏首支队",
+        "authorRaw": "魔王",
+        "pos": 3,
+        "readCount": 158541,
+        "wordNumber": 946072,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o9c9cc8f8405f76033b7fc56d9d7aaa1e~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364596&x-signature=xs6HGYwtefHvUqZabw5b7o64AR0%3D"
+      },
+      {
+        "bookId": "6984375961739332645",
+        "bookNameRaw": "诛殿⠀",
+        "authorRaw": "孤苍焰",
+        "pos": 4,
+        "readCount": 136569,
+        "wordNumber": 3042077,
+        "creationStatus": "0",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2oc1bfa257ecdc1beed1cc89092f76eb70~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364596&x-signature=wdMVXBdiITIXedkSU6FxuTRVynM%3D"
+      },
+      {
+        "bookId": "7189201032553958440",
+        "bookNameRaw": "纨绔，咋帝虎",
+        "authorRaw": "树揍猫",
+        "pos": 5,
+        "readCount": 122864,
+        "wordNumber": 7627631,
+        "creationStatus": "0",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o85a2904dd29440c3f766d8cb11772382~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364596&x-signature=K3EgRWvNggww6BhXQcNNLcG7ZfE%3D"
+      },
+      {
+        "bookId": "7591492894649748542",
+        "bookNameRaw": "领证，未婚妻杀",
+        "authorRaw": "衣冠南渡",
+        "pos": 6,
+        "readCount": 112944,
+        "wordNumber": 1161932,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o20de2fe384862da2fab97d5a3e21a48c~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364596&x-signature=rgEE3EInyb68rapwr%2BOGzaPXS1g%3D"
+      },
+      {
+        "bookId": "7380223334908185662",
+        "bookNameRaw": "底谁兵？",
+        "authorRaw": "椒盐榔",
+        "pos": 7,
+        "readCount": 99748,
+        "wordNumber": 4140380,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2oedb5cebb890c46885d0d7fe4ddf50b89~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364596&x-signature=iNuFQzQ%2FZ7uMemaubk4rTdULD4Q%3D"
+      },
+      {
+        "bookId": "7380258546882989118",
+        "bookNameRaw": "杀赘婿",
+        "authorRaw": "雨夜徒步",
+        "pos": 8,
+        "readCount": 98766,
+        "wordNumber": 3638112,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o2ac49e6baf20735f65cbfd37685d902c~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364596&x-signature=%2BEVpj0II5qI5D9AXoEKrJ2ZxuAM%3D"
+      },
+      {
+        "bookId": "7111555647203707917",
+        "bookNameRaw": "龙令",
+        "authorRaw": "九节茶",
+        "pos": 9,
+        "readCount": 80052,
+        "wordNumber": 2577657,
+        "creationStatus": "0",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/c9838b9bb92667c0d4598f003de8eb5e~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364596&x-signature=a3BbqJiJ8TxPIGjtegoKvqwTNqo%3D"
+      },
+      {
+        "bookId": "7225112202385034275",
+        "bookNameRaw": "，搞",
+        "authorRaw": "慌",
+        "pos": 10,
+        "readCount": 78731,
+        "wordNumber": 1537238,
+        "creationStatus": "0",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2ob20e18dc9c076fe1145eebed608c2a1e~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364596&x-signature=pYz9raMuHCrvIvsZTwxmA%2FU%2F%2FDw%3D"
+      }
+    ]
+  },
+  "1_1_263": {
+    "key": "1_1_263",
+    "rankTypeText": "",
+    "totalNum": 100,
+    "fetchedAt": "2026-08-26T15:56:31.814Z",
+    "books": [
+      {
+        "bookId": "7658153136497888280",
+        "bookNameRaw": "局青乡，选择偷渡香港",
+        "authorRaw": "拐角",
+        "pos": 1,
+        "readCount": 124082,
+        "wordNumber": 272563,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o58bda66a05effcdc93c3263e5d7930db~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364598&x-signature=Vh%2BGC8wlRxZiOnqPaBxb1H7N1pw%3D"
+      },
+      {
+        "bookId": "7648896345121508414",
+        "bookNameRaw": "：百兄弟搞业",
+        "authorRaw": "露噜潞啦",
+        "pos": 2,
+        "readCount": 124392,
+        "wordNumber": 275811,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o1f3b7c45f4d17750331be184f4506ee4~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364598&x-signature=yffSK7A3CL6PrHElPVV9QRmp73Y%3D"
+      },
+      {
+        "bookId": "7668953902712097817",
+        "bookNameRaw": "赶：娶丰腴，娇宠俏媳妇",
+        "authorRaw": "橙完",
+        "pos": 3,
+        "readCount": 135771,
+        "wordNumber": 191781,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o1167fa586e9e31ed6d753ba19e643a77~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364598&x-signature=%2BsFZyfS%2BHa4lIySdQ8TuaNT6Tx8%3D"
+      },
+      {
+        "bookId": "7661625390598720536",
+        "bookNameRaw": "，租司悠闲",
+        "authorRaw": "南北垞",
+        "pos": 4,
+        "readCount": 98646,
+        "wordNumber": 179588,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2ob4f5ef3e4ad9983ff884d738260eb6f2~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364598&x-signature=tG84o0xjcHnpzirspGJvzTMpwAU%3D"
+      },
+      {
+        "bookId": "7636784226146192409",
+        "bookNameRaw": "村，收吧，套！",
+        "authorRaw": "柳溪步霓裳",
+        "pos": 5,
+        "readCount": 90823,
+        "wordNumber": 273098,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o52a920fa763403acaaf0714e0cefd7a4~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364598&x-signature=%2FBGwoRFBpX0JQXaH%2FCLCBpVR2eY%3D"
+      },
+      {
+        "bookId": "7631078123865377816",
+        "bookNameRaw": "乡？乡？！",
+        "authorRaw": "浮",
+        "pos": 6,
+        "readCount": 78077,
+        "wordNumber": 271102,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o6ced9d4a44701c196345f337311b5af7~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364598&x-signature=hYlhGMPKjlg8BHN%2F3bxDqVo4txg%3D"
+      },
+      {
+        "bookId": "7665161075213487166",
+        "bookNameRaw": "卖压锅",
+        "authorRaw": "桔梗",
+        "pos": 7,
+        "readCount": 74553,
+        "wordNumber": 235425,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2of1ba1a4dd8a1c7dce1b071eb05d9afae~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364598&x-signature=KYKMwxZ3mHZHtkv1RQ58oU0Zjd0%3D"
+      },
+      {
+        "bookId": "7667551047551831102",
+        "bookNameRaw": "：局七千，拿央视标王",
+        "authorRaw": "翠赠礼",
+        "pos": 8,
+        "readCount": 70021,
+        "wordNumber": 181578,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o363e043faa738abf80ea82b7e8a3c76e~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364598&x-signature=la2qioAx5QvyeYSsUF6wvij5kFA%3D"
+      },
+      {
+        "bookId": "7672196371373378584",
+        "bookNameRaw": "北，局奖励绝管",
+        "authorRaw": "睡醒强",
+        "pos": 9,
+        "readCount": 67724,
+        "wordNumber": 147864,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2oeb1c59310983189481f25f9014e0e633~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364598&x-signature=YMnIgPYxiBuTLoH4eV%2FT24cDbKs%3D"
+      },
+      {
+        "bookId": "7661082107141180441",
+        "bookNameRaw": "考落榜，买彩票狂六亿",
+        "authorRaw": "王二娃勇闯涯",
+        "pos": 10,
+        "readCount": 61215,
+        "wordNumber": 241849,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2of36c9629681517bd30aa8cad4005d2a4~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364598&x-signature=lqZXL4oHwafyPvois8%2Fs0AEiGiA%3D"
+      }
+    ]
+  },
+  "1_2_263": {
+    "key": "1_2_263",
+    "rankTypeText": "",
+    "totalNum": 100,
+    "fetchedAt": "2026-08-26T15:56:33.258Z",
+    "books": [
+      {
+        "bookId": "7297156890234981412",
+        "bookNameRaw": "：穿越南锣鼓巷，",
+        "authorRaw": "闲",
+        "pos": 1,
+        "readCount": 415999,
+        "wordNumber": 4057356,
+        "creationStatus": "0",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2ofd108ff9ca05c54d8d62bb4e2603447f~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364599&x-signature=nJl%2FQB0dJEQ3PpCBWgBODFV0KmY%3D"
+      },
+      {
+        "bookId": "7571864974377634841",
+        "bookNameRaw": "倒爷：",
+        "authorRaw": "幼园火",
+        "pos": 2,
+        "readCount": 405053,
+        "wordNumber": 1569043,
+        "creationStatus": "0",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/f1cdc4d4e5ecde04c23e68b9cefff1bc~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364599&x-signature=OhAmg7Mp9roB%2B9Ckx2e7xla9SC0%3D"
+      },
+      {
+        "bookId": "7654057366010219582",
+        "bookNameRaw": "，姐姐非嫁",
+        "authorRaw": "城区哲",
+        "pos": 3,
+        "readCount": 378016,
+        "wordNumber": 405662,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o107369875e970b9b5aa4f4c9fd8d9e85~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364599&x-signature=t%2F%2F6tFqYVlhOdRpP3j%2BHBefPFhs%3D"
+      },
+      {
+        "bookId": "7637788984638196798",
+        "bookNameRaw": "：狱局，资爷",
+        "authorRaw": "舟",
+        "pos": 4,
+        "readCount": 312362,
+        "wordNumber": 689233,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o5b29bde03c29f7694991c3c4a34d8403~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364599&x-signature=qZ4Q8WV6CnqPuXFt%2BU0SNU%2BKU%2BU%3D"
+      },
+      {
+        "bookId": "7659224117916224537",
+        "bookNameRaw": "悍匪：管司？",
+        "authorRaw": "欢蛇瓜柳",
+        "pos": 5,
+        "readCount": 267954,
+        "wordNumber": 334478,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o6b9996f6626b619469d287ebae8a2cf8~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364599&x-signature=IGmfy2Z7BpHUCS95nNohY4TCB7I%3D"
+      },
+      {
+        "bookId": "7615608355507145753",
+        "bookNameRaw": "爆仓五千？反空华街",
+        "authorRaw": "琵琶折刀",
+        "pos": 6,
+        "readCount": 231524,
+        "wordNumber": 1028630,
+        "creationStatus": "1",
+        "thumbUri": "https://p9-reading-sign.fqnovelpic.com/novel-pic/71e1796f2968a8d66cd222820cbad737~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364599&x-signature=WOLoDzSgmBMZrTDz8%2BGTH3zg%2BKI%3D"
+      },
+      {
+        "bookId": "7099413677245205543",
+        "bookNameRaw": "：局撕毁城调令",
+        "authorRaw": "沧",
+        "pos": 7,
+        "readCount": 244265,
+        "wordNumber": 4021578,
+        "creationStatus": "0",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/651af191c587a1237d62c1c55d0dc971~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364599&x-signature=dJKfgGFGU6DuTpwD0y%2BrszR4L%2BY%3D"
+      },
+      {
+        "bookId": "7392160311094037529",
+        "bookNameRaw": "谁混社",
+        "authorRaw": "聊啊",
+        "pos": 8,
+        "readCount": 236183,
+        "wordNumber": 3068201,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o40246c3b5ff1eab3ba844b12f9a38077~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364599&x-signature=Sz8KXS7e19wSKXBuSlRnhrpekmY%3D"
+      },
+      {
+        "bookId": "7652561655762521113",
+        "bookNameRaw": "北振兴，千",
+        "authorRaw": "秋",
+        "pos": 9,
+        "readCount": 230314,
+        "wordNumber": 380003,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o6a08738bb5269aaca1f5abeb94d3bb67~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364599&x-signature=%2FWiHayK1MrlzulAPyE1DVRSTolY%3D"
+      },
+      {
+        "bookId": "7570418676646562841",
+        "bookNameRaw": "二科，选校选亿",
+        "authorRaw": "黑狗汤圆",
+        "pos": 10,
+        "readCount": 229858,
+        "wordNumber": 3383824,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2ob8bed64f70efb09414b8eca3ff47844c~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364599&x-signature=ICqGWIBGcYQYtCSIOxoG0r%2B8UHI%3D"
+      }
+    ]
+  },
+  "1_1_258": {
+    "key": "1_1_258",
+    "rankTypeText": "",
+    "totalNum": 100,
+    "fetchedAt": "2026-08-26T15:56:34.721Z",
+    "books": [
+      {
+        "bookId": "7665193065501445145",
+        "bookNameRaw": "",
+        "authorRaw": "蚕土豆",
+        "pos": 1,
+        "readCount": 6232374,
+        "wordNumber": 142261,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o6f70f2cb2f4ff3adff8ccc52e8a38d46~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364601&x-signature=doiA3bN88tF6EpI1Z1Ak51IMlgM%3D"
+      },
+      {
+        "bookId": "7669740908748737560",
+        "bookNameRaw": "九：刚混副官，尊找？",
+        "authorRaw": "星",
+        "pos": 2,
+        "readCount": 94602,
+        "wordNumber": 188002,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2ob472664cbe0ec163d260ed1efa2f1096~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364601&x-signature=0nnsF1wXm445HBi%2FqbbGnbOQJ8E%3D"
+      },
+      {
+        "bookId": "7668182037718633534",
+        "bookNameRaw": "？夺舍完诉",
+        "authorRaw": "贫讲",
+        "pos": 3,
+        "readCount": 72918,
+        "wordNumber": 187997,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o3f6811753e712414f975ee88530a9142~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364601&x-signature=g6Ec6xy1D8ah%2B%2FM3lU5hUZDJgF0%3D"
+      },
+      {
+        "bookId": "7651833038514474046",
+        "bookNameRaw": "妖魔乱：造畜始左仙",
+        "authorRaw": "司徒清尘",
+        "pos": 4,
+        "readCount": 47292,
+        "wordNumber": 291778,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2oa8d3d2bf5c3b5064218235cbd78b10bd~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364601&x-signature=KRbTpEPQx5H%2BokmBbs1%2FW0VTuKg%3D"
+      },
+      {
+        "bookId": "7658263507942525977",
+        "bookNameRaw": "局限，携帝兵禁区",
+        "authorRaw": "梦幻般泡影",
+        "pos": 5,
+        "readCount": 47516,
+        "wordNumber": 233331,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o24f1ce422787adf00dba90391fc29a65~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364601&x-signature=ruTNtKiINvBHBqFDQgpfg5wqyJ0%3D"
+      },
+      {
+        "bookId": "7666005073926818878",
+        "bookNameRaw": "邸：棵树",
+        "authorRaw": "夜羽",
+        "pos": 6,
+        "readCount": 37841,
+        "wordNumber": 157685,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o89aced14312b684fc305998f88d0b661~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364601&x-signature=6Oe%2BwAylctcyMg74CxwMmWQADYA%3D"
+      },
+      {
+        "bookId": "7656302576790408217",
+        "bookNameRaw": "清清，咋黑化修罗",
+        "authorRaw": "思考",
+        "pos": 7,
+        "readCount": 36140,
+        "wordNumber": 164288,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o0c03d06b744f5d9b391f7fefe7492dcb~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364601&x-signature=nZ0yqz%2FWrlF8C0VZgj9XfvH8p1Y%3D"
+      },
+      {
+        "bookId": "7664270525404826648",
+        "bookNameRaw": "扑封妖：六斩魔令",
+        "authorRaw": "枫",
+        "pos": 8,
+        "readCount": 36340,
+        "wordNumber": 212882,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o8bac313a985bc4cd57986a5d81c9e51e~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364601&x-signature=DSUVsXzsIvu2dv94uos0YAxUMM4%3D"
+      },
+      {
+        "bookId": "7657785117120678974",
+        "bookNameRaw": "降玄碑：建朽仙族！",
+        "authorRaw": "沧",
+        "pos": 9,
+        "readCount": 35085,
+        "wordNumber": 214922,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o74770964ba7d4d069ab3f87b9b6264b9~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364601&x-signature=WUPhY4BA4sYOdE2y4CoF9Rei0lc%3D"
+      },
+      {
+        "bookId": "7661884589543017496",
+        "bookNameRaw": "反派：局砍掉双臂",
+        "authorRaw": "乌",
+        "pos": 10,
+        "readCount": 31844,
+        "wordNumber": 170604,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o2c5d8e7cf7750676e6420055c900d547~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364601&x-signature=1APhTdf41QNF7GQofnS%2Fy4Gt13E%3D"
+      }
+    ]
+  },
+  "1_2_258": {
+    "key": "1_2_258",
+    "rankTypeText": "",
+    "totalNum": 100,
+    "fetchedAt": "2026-08-26T15:56:36.165Z",
+    "books": [
+      {
+        "bookId": "6883748331202284558",
+        "bookNameRaw": "惊鸿",
+        "authorRaw": "夕烟雨",
+        "pos": 1,
+        "readCount": 1326099,
+        "wordNumber": 9148677,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2oe5408c5e3eb3887717a54f09e24ad33f~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364602&x-signature=1IME%2BXeAOZcP8cWoAyngpMAZ4Ao%3D"
+      },
+      {
+        "bookId": "7138249318909086727",
+        "bookNameRaw": "渊",
+        "authorRaw": "沐潇",
+        "pos": 2,
+        "readCount": 923575,
+        "wordNumber": 6063224,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/3dbc7be59148237e1cea0ff8afa65cc0~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364602&x-signature=fPTw7rV0IjuRJWgD%2BnAJerxBPUM%3D"
+      },
+      {
+        "bookId": "7641144149260897305",
+        "bookNameRaw": "破五境，！",
+        "authorRaw": "院枇杷树",
+        "pos": 3,
+        "readCount": 495305,
+        "wordNumber": 673531,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o504749994db2a5a6564283f3806725e9~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364602&x-signature=R%2Bg9hMrxaX3cQ7KGGrIiuGE%2BJSU%3D"
+      },
+      {
+        "bookId": "7158752613117201419",
+        "bookNameRaw": "灵墟，剑棺，瞎剑客",
+        "authorRaw": "煮熟福鸽",
+        "pos": 4,
+        "readCount": 476384,
+        "wordNumber": 8248287,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2oede0e830b26e828644c92c617cb9ab30~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364602&x-signature=IGQRN9j9Gk%2BKM3I0UkWZ6gk4VrE%3D"
+      },
+      {
+        "bookId": "7077546460056652803",
+        "bookNameRaw": "剑霸",
+        "authorRaw": "永夜星河",
+        "pos": 5,
+        "readCount": 431563,
+        "wordNumber": 9239536,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o4223d3acdd8e268bab8fe4b57c18d71b~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364602&x-signature=L%2FwDk%2Fw9NcYCFdwOhGVeJ3q8TNI%3D"
+      },
+      {
+        "bookId": "7309742129457138738",
+        "bookNameRaw": "武，终敌",
+        "authorRaw": "戒",
+        "pos": 6,
+        "readCount": 379831,
+        "wordNumber": 4118399,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o0cecec4e2ee69469dbb1ae0b2fcfebf2~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364602&x-signature=n9BjPwGTdkMmGfJ2QqUB6fy9Tv8%3D"
+      },
+      {
+        "bookId": "7633370286288538686",
+        "bookNameRaw": "量增百徒爆星",
+        "authorRaw": "涯笔墨",
+        "pos": 7,
+        "readCount": 406286,
+        "wordNumber": 1194825,
+        "creationStatus": "1",
+        "thumbUri": "https://p9-reading-sign.fqnovelpic.com/novel-pic/p2o82caad9b2a5b3c9642ba0e76b96a9d70~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364602&x-signature=OkgCWgXd3poMzfy4f2iU8KANf2c%3D"
+      },
+      {
+        "bookId": "7263344278955363385",
+        "bookNameRaw": "局，谁敌",
+        "authorRaw": "非",
+        "pos": 8,
+        "readCount": 320298,
+        "wordNumber": 6943530,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o8a42d08651955a605291bd3ffbdb63a7~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364602&x-signature=nTpDWA7ImvyVylkJyBbMb67sJSI%3D"
+      },
+      {
+        "bookId": "7143134984532921382",
+        "bookNameRaw": "古废材",
+        "authorRaw": "哭七",
+        "pos": 9,
+        "readCount": 279307,
+        "wordNumber": 9537923,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2od8bb663af12f6b0e4978a1ef2d95bc00~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364602&x-signature=H7J44rk5SLETLvNBu9vAL2Bxx5w%3D"
+      },
+      {
+        "bookId": "7379342233071258686",
+        "bookNameRaw": "奇叔",
+        "authorRaw": "百御",
+        "pos": 10,
+        "readCount": 244371,
+        "wordNumber": 1050938,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o748284a6e81cb9c56a7f041d3e5ee2ea~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364602&x-signature=A5Zrnlt5iKsPA2dkBi0%2FGb23qv0%3D"
+      }
+    ]
+  },
+  "1_1_272": {
+    "key": "1_1_272",
+    "rankTypeText": "",
+    "totalNum": 100,
+    "fetchedAt": "2026-08-26T15:56:37.689Z",
+    "books": [
+      {
+        "bookId": "7661490601841396761",
+        "bookNameRaw": "幕盘，红华夏震撼千古",
+        "authorRaw": "流沐言",
+        "pos": 1,
+        "readCount": 264043,
+        "wordNumber": 247718,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2oc6268ddf6b5ff5aa2feff71ecfc9d466~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364604&x-signature=rSZahDwgNzZar3UVZ8i9k8JdwMw%3D"
+      },
+      {
+        "bookId": "7642627933453962302",
+        "bookNameRaw": "肝肝肝肝肝！肝！",
+        "authorRaw": "空",
+        "pos": 2,
+        "readCount": 160142,
+        "wordNumber": 291185,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o1ed8226529bde98e15c2efb96953d21a~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364604&x-signature=wccDSkDYlzpaXn1m8zK%2BNNT3CR0%3D"
+      },
+      {
+        "bookId": "7660746891893689406",
+        "bookNameRaw": "唐：局魔丸闺炮轰城",
+        "authorRaw": "砚染星河",
+        "pos": 3,
+        "readCount": 138276,
+        "wordNumber": 294505,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o6c0b0c681c962a8b8b005490c5e350f2~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364604&x-signature=mTTw5nCSH9aZm12tKwZGvxogKXI%3D"
+      },
+      {
+        "bookId": "7661634260775734334",
+        "bookNameRaw": "唐：局获顶级箭术",
+        "authorRaw": "土财",
+        "pos": 4,
+        "readCount": 122658,
+        "wordNumber": 218774,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o60b8a1c13ee2bf368ef50a3ac2a5b247~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364604&x-signature=L3%2F1gwuM6KALgxMkkIGGz09Siyg%3D"
+      },
+      {
+        "bookId": "7651873055261608984",
+        "bookNameRaw": "幕播，辈躺",
+        "authorRaw": "斌爽",
+        "pos": 5,
+        "readCount": 105806,
+        "wordNumber": 284345,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2ob1d0a8ba08bb9d014d2fc5041192e065~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364604&x-signature=X0RmPMdPUkCZjBlsO489cfg3PKU%3D"
+      },
+      {
+        "bookId": "7666352170253421592",
+        "bookNameRaw": "局签务副皇帝，权倾朝野！",
+        "authorRaw": "猫狗",
+        "pos": 6,
+        "readCount": 92930,
+        "wordNumber": 114699,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2of2ff1244b9c12049ce58dd2c64ec6c26~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364604&x-signature=E28VXXWsSQZXGrOPadQN0b%2B0l9w%3D"
+      },
+      {
+        "bookId": "7664968333946522648",
+        "bookNameRaw": "：，幕曝",
+        "authorRaw": "杏木木",
+        "pos": 7,
+        "readCount": 103357,
+        "wordNumber": 147348,
+        "creationStatus": "1",
+        "thumbUri": "https://p9-reading-sign.fqnovelpic.com/novel-pic/p2o3a84e4ec8d7f412e5fd320b7015820ce~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364604&x-signature=Ynx0jJ16F97oO4%2FfZFAy%2FEWOlPg%3D"
+      },
+      {
+        "bookId": "7648149363465669657",
+        "bookNameRaw": "贪官绑勤政系统？",
+        "authorRaw": "楠楠",
+        "pos": 8,
+        "readCount": 91114,
+        "wordNumber": 285880,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o85d8181c2086d6a0a9be2e66b44f96ec~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364604&x-signature=Mih4pIWaItdSGo%2BeZbIJ%2FS9XlP8%3D"
+      },
+      {
+        "bookId": "7655916718476250136",
+        "bookNameRaw": "崇祯六千，建奴",
+        "authorRaw": "吾凡",
+        "pos": 9,
+        "readCount": 80123,
+        "wordNumber": 300345,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o73d91f41d913fe871b9eb22aee9f590b~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364604&x-signature=gh5HNxePJOy71ZxGQZIPjn9mU84%3D"
+      },
+      {
+        "bookId": "7663809664882052120",
+        "bookNameRaw": "唐丞？豆包：助！",
+        "authorRaw": "防疯圣",
+        "pos": 10,
+        "readCount": 62845,
+        "wordNumber": 198339,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o2453336210ced940f1f411f07845b238~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364604&x-signature=AUur%2FUQcZbAOed8RHES9VPc%2Bw%2F0%3D"
+      }
+    ]
+  },
+  "1_2_272": {
+    "key": "1_2_272",
+    "rankTypeText": "",
+    "totalNum": 100,
+    "fetchedAt": "2026-08-26T15:56:39.150Z",
+    "books": [
+      {
+        "bookId": "7660134591012817982",
+        "bookNameRaw": "穿越乱：份拼饭",
+        "authorRaw": "竞",
+        "pos": 1,
+        "readCount": 908449,
+        "wordNumber": 954597,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o9d67ea6f0e9cea454d95d64f7761a142~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364605&x-signature=l3Cbu%2FprSQcLvxE%2FI5JHSTDSh2c%3D"
+      },
+      {
+        "bookId": "7626402281239366680",
+        "bookNameRaw": "秦：，嬴政！局壁穿越",
+        "authorRaw": "鸟",
+        "pos": 2,
+        "readCount": 769487,
+        "wordNumber": 679477,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o6faaa86e6566a8455913a2d10e4ec664~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364605&x-signature=%2FoxaDV0Ez163KajVmS0FiLu9hFU%3D"
+      },
+      {
+        "bookId": "7636574642320198681",
+        "bookNameRaw": "夺嫡偷偷，皇帝圣旨",
+        "authorRaw": "荒漠缘",
+        "pos": 3,
+        "readCount": 528975,
+        "wordNumber": 496261,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o7988846d4f77af5cfe93793683741c95~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364605&x-signature=RKlXVPdnY%2FZIiQTkh4GweDmaAuQ%3D"
+      },
+      {
+        "bookId": "6955825218392689678",
+        "bookNameRaw": "镇驸爷",
+        "authorRaw": "轩轾",
+        "pos": 4,
+        "readCount": 441127,
+        "wordNumber": 3053805,
+        "creationStatus": "0",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-images/fef38967912a0567b74036d4952a6fd0~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364605&x-signature=Ys%2FbbqTDMPTYbEItmrig%2FeuafT8%3D"
+      },
+      {
+        "bookId": "7645220011115547710",
+        "bookNameRaw": "秦秦始皇",
+        "authorRaw": "守村",
+        "pos": 5,
+        "readCount": 375679,
+        "wordNumber": 523499,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2oc9e7743f93c811b3892c3ffcb2ccffb3~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364605&x-signature=tE7%2BUwzG2EhnQ9rbqYgJjExea7s%3D"
+      },
+      {
+        "bookId": "7530301461050166296",
+        "bookNameRaw": "乱荒：卦粮肉仓！",
+        "authorRaw": "渊",
+        "pos": 6,
+        "readCount": 358742,
+        "wordNumber": 1703074,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o32600515fa540e75400db91bef619bd0~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364605&x-signature=bXRpN1RV%2FfWdu38euK38lAbFbig%3D"
+      },
+      {
+        "bookId": "7624093065682095166",
+        "bookNameRaw": "洪武苟：永拿亿",
+        "authorRaw": "火勾",
+        "pos": 7,
+        "readCount": 341040,
+        "wordNumber": 1299675,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o72320a6c868a1b231f596a4f03f061d6~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364605&x-signature=IGIg4mzvd82ja%2FARzY4AMqJ2Nyk%3D"
+      },
+      {
+        "bookId": "7643478287057947710",
+        "bookNameRaw": "皇帝容易，词挑拣",
+        "authorRaw": "绝枪",
+        "pos": 8,
+        "readCount": 284107,
+        "wordNumber": 547457,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o6fe0e889d8995b6c810b78e18d1c0ad2~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364605&x-signature=EH7zRfIojpjBAVBLyrhFJw7Je2Y%3D"
+      },
+      {
+        "bookId": "7630272936082951230",
+        "bookNameRaw": "荒淫，千古帝鬼？",
+        "authorRaw": "翰墨松桢",
+        "pos": 9,
+        "readCount": 331100,
+        "wordNumber": 544703,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o2b26e27a1f080c107cee6160c16300d5~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364605&x-signature=cxSN3eCdZTzIv8fvLZfm3BQEPSs%3D"
+      },
+      {
+        "bookId": "7609931463961627710",
+        "bookNameRaw": "求，反倒千古帝？",
+        "authorRaw": "猪",
+        "pos": 10,
+        "readCount": 240199,
+        "wordNumber": 1017716,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o6a169005a8032a83bb1a8f3a210a8b1c~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364605&x-signature=TGtP7pLZk9CIpv%2BznsUGJAtKrEM%3D"
+      }
+    ]
+  },
+  "1_1_539": {
+    "key": "1_1_539",
+    "rankTypeText": "",
+    "totalNum": 100,
+    "fetchedAt": "2026-08-26T15:56:40.588Z",
+    "books": [
+      {
+        "bookId": "7663755378353507352",
+        "bookNameRaw": "鬼催眠",
+        "authorRaw": "苟青",
+        "pos": 1,
+        "readCount": 270594,
+        "wordNumber": 191685,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2od06e54c03cc3af9474f9e3ac8ccda85c~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364607&x-signature=4G2TCClJSbd%2B83MlaoIP2r%2BxsXI%3D"
+      },
+      {
+        "bookId": "7665252396259347480",
+        "bookNameRaw": "局盗墓，系统首",
+        "authorRaw": "葫芦噜",
+        "pos": 2,
+        "readCount": 135662,
+        "wordNumber": 276958,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o619202920f091eb4952a1078a98f21d9~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364607&x-signature=xHqhfGpGz2Zmz%2B7huctfuMHAQjc%3D"
+      },
+      {
+        "bookId": "7664499842890075160",
+        "bookNameRaw": "盗墓熟练，惊呆校姐！",
+        "authorRaw": "泊舟",
+        "pos": 3,
+        "readCount": 99374,
+        "wordNumber": 181473,
+        "creationStatus": "1",
+        "thumbUri": "https://p9-reading-sign.fqnovelpic.com/novel-pic/p2o0cbdf1afd1b271c8a8f07374a9e9c81a~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364607&x-signature=%2F%2FXj3r7MBcgG4zXwWKMKLxlDBPo%3D"
+      },
+      {
+        "bookId": "7628919682925333566",
+        "bookNameRaw": "盗墓：背棺送葬，奖励龙般若功",
+        "authorRaw": "君清",
+        "pos": 4,
+        "readCount": 103330,
+        "wordNumber": 241277,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o915494293afb28d74f4b73a783fc2a6e~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364607&x-signature=ziBRk5%2BXEXnnSsykL8xdpQ4BGIg%3D"
+      },
+      {
+        "bookId": "7661647570988436504",
+        "bookNameRaw": "室：顶级探索",
+        "authorRaw": "云语",
+        "pos": 5,
+        "readCount": 83466,
+        "wordNumber": 256983,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o6b8f89110d781fac7eed3ad0beb2a955~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364607&x-signature=1lsNdEd17ohPtnF9tDAVEepvY8M%3D"
+      },
+      {
+        "bookId": "7654569948647263294",
+        "bookNameRaw": "祖八鬼帝，恐怖求？",
+        "authorRaw": "二六郎",
+        "pos": 6,
+        "readCount": 59717,
+        "wordNumber": 279614,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2of6bd09543e8025621460abf971a7139c~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364607&x-signature=1SIsGOViNT5EwrjzzCNuAxfMlJA%3D"
+      },
+      {
+        "bookId": "7495568375632890904",
+        "bookNameRaw": "游戏侵：诡异副玩转搜撤",
+        "authorRaw": "柔",
+        "pos": 7,
+        "readCount": 80849,
+        "wordNumber": 253290,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2ob5f0b934d6c0447f8665fa77b4629383~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364607&x-signature=I3gMjf2i3QZRvGHhayF5kwYA%2FyA%3D"
+      },
+      {
+        "bookId": "7665253601412910104",
+        "bookNameRaw": "醒麒麟血脉，隔空指考古队",
+        "authorRaw": "范阳卢氏",
+        "pos": 8,
+        "readCount": 71112,
+        "wordNumber": 287173,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2oc963225283653c23cac34be952a7d973~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364607&x-signature=ePZejZgXKyh%2F8X0cN7ZTFQkPr%2Bo%3D"
+      },
+      {
+        "bookId": "7665728053430995992",
+        "bookNameRaw": "诸渡厄：九叔闯诸",
+        "authorRaw": "喜欢千椿瀚",
+        "pos": 9,
+        "readCount": 70255,
+        "wordNumber": 250833,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o039403d3144ee6ad9211200115d3497a~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364607&x-signature=9MuhxzdN%2B4oPmuPm337lnVATx4Q%3D"
+      },
+      {
+        "bookId": "7660061473556663358",
+        "bookNameRaw": "诡异：逼",
+        "authorRaw": "滴石穿穿",
+        "pos": 10,
+        "readCount": 73299,
+        "wordNumber": 137628,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2oafb405359fbf7d14b14acf516c1c2a0f~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364607&x-signature=4ZVo6pQE6MrKPbOUmE%2BjxayZ0G4%3D"
+      }
+    ]
+  },
+  "1_2_539": {
+    "key": "1_2_539",
+    "rankTypeText": "",
+    "totalNum": 100,
+    "fetchedAt": "2026-08-26T15:56:42.077Z",
+    "books": [
+      {
+        "bookId": "7143038691944959011",
+        "bookNameRaw": "终焉",
+        "authorRaw": "杀虫队队",
+        "pos": 1,
+        "readCount": 2362483,
+        "wordNumber": 3201288,
+        "creationStatus": "0",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/4900f950c7af7f82fdc14cf528e0e288~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364608&x-signature=UELyRHsQtM0qkvTy8nCylNcAyFA%3D"
+      },
+      {
+        "bookId": "7623686597409508376",
+        "bookNameRaw": "球考：刚刑考试",
+        "authorRaw": "猫片哇",
+        "pos": 2,
+        "readCount": 1087518,
+        "wordNumber": 694077,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2oc1cad58a1611faa3ce1bff953296036f~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364608&x-signature=jJmm%2FWzYYIt5uyNmKHRalHulhxA%3D"
+      },
+      {
+        "bookId": "7256784068786785336",
+        "bookNameRaw": "诡舍",
+        "authorRaw": "夜雨丶",
+        "pos": 3,
+        "readCount": 1050638,
+        "wordNumber": 2120892,
+        "creationStatus": "0",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2ob67b9e86ddf3a2d6293a37e7895331a6~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364608&x-signature=5KhydG2%2FgQ%2FuMW8y%2BjUhX6nztfQ%3D"
+      },
+      {
+        "bookId": "7552067105378536473",
+        "bookNameRaw": "规则怪谈：谓，系统",
+        "authorRaw": "巡",
+        "pos": 4,
+        "readCount": 816863,
+        "wordNumber": 1105656,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2oa1f371e1c298df2bfd6303b02eb719f4~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364608&x-signature=8kPRz4mBaas08O7%2FuNR71C1DJwk%3D"
+      },
+      {
+        "bookId": "7636315116136320024",
+        "bookNameRaw": "警！邪眷属杀诡异副",
+        "authorRaw": "菌",
+        "pos": 5,
+        "readCount": 576028,
+        "wordNumber": 522220,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o1ec9b2c094f2b3dea74c691a85392ec3~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364608&x-signature=5SAQ38zWadvNGzDU%2BVSblRRK2g8%3D"
+      },
+      {
+        "bookId": "7488955435421010968",
+        "bookNameRaw": "序列求：末升级资",
+        "authorRaw": "呼啸",
+        "pos": 6,
+        "readCount": 514037,
+        "wordNumber": 3287112,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/ai/p2o5c18f15e4d52cde4a3766c8554856607~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364608&x-signature=F0RkzruB3i7zyYXkafMokk1XRbM%3D"
+      },
+      {
+        "bookId": "7423976172309974040",
+        "bookNameRaw": "沟未，杀穿末！",
+        "authorRaw": "",
+        "pos": 7,
+        "readCount": 450868,
+        "wordNumber": 1599733,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o3119da6573068af2990c0d336a6dfc24~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364608&x-signature=lvsvndt3LhMg8FN3y6ZOQ5ZKchs%3D"
+      },
+      {
+        "bookId": "7253908182769077252",
+        "bookNameRaw": "诡异降临，亡即终",
+        "authorRaw": "庆元职",
+        "pos": 8,
+        "readCount": 420021,
+        "wordNumber": 2334646,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2ob80dfb366cfe4a16a42b6c7376402379~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364608&x-signature=yQtY5NaVf%2BcAXcP%2BY2vqThaRsvE%3D"
+      },
+      {
+        "bookId": "7634359094794521662",
+        "bookNameRaw": "恐怖求：醒序列！",
+        "authorRaw": "围观",
+        "pos": 9,
+        "readCount": 413401,
+        "wordNumber": 520043,
+        "creationStatus": "1",
+        "thumbUri": "https://p9-reading-sign.fqnovelpic.com/novel-pic/p2oc1a9bdaf8f6722c019c9e89069707497~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364608&x-signature=aBzuWHSybj43egLh373XmoFVNdo%3D"
+      },
+      {
+        "bookId": "7357975803398720537",
+        "bookNameRaw": "亡游戏：局欺诈，假扮",
+        "authorRaw": "暴紫皮",
+        "pos": 10,
+        "readCount": 340368,
+        "wordNumber": 4853373,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o299ac7c1306997d7aa5d28120ebf473d~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364608&x-signature=CzoavFw69zxvqgfE4M1%2FuapJrxU%3D"
+      }
+    ]
+  },
+  "1_1_262": {
+    "key": "1_1_262",
+    "fetchedAt": "2026-08-26T15:56:43.550Z",
+    "books": []
+  },
+  "1_2_262": {
+    "key": "1_2_262",
+    "rankTypeText": "",
+    "totalNum": 100,
+    "fetchedAt": "2026-08-26T15:56:44.979Z",
+    "books": [
+      {
+        "bookId": "7650499837250522137",
+        "bookNameRaw": "系统害，选择交",
+        "authorRaw": "超级吹宝泡泡糖",
+        "pos": 1,
+        "readCount": 1004661,
+        "wordNumber": 481090,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o4d282abdaf4117792b83f7f4c851c914~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364611&x-signature=qGE%2BQVrIk8vA1lD%2FN7yOzulnJTo%3D"
+      },
+      {
+        "bookId": "7623581376586976281",
+        "bookNameRaw": "归留洋货？芯片！",
+        "authorRaw": "肉毒",
+        "pos": 2,
+        "readCount": 661548,
+        "wordNumber": 883938,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2ob13aaa1957ceaddad00657ba07a18a66~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364611&x-signature=L5YvhT0bpBtQjPpMCGHLzLAuWlc%3D"
+      },
+      {
+        "bookId": "7641906591557487640",
+        "bookNameRaw": "恋综，清冷设计爆火网",
+        "authorRaw": "滚滚",
+        "pos": 3,
+        "readCount": 597265,
+        "wordNumber": 428332,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2oe99c6f696aeabfda1d68b891d4049b4b~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364611&x-signature=XRVwHB6Y10q1Wb6xA%2BYexwHuiEk%3D"
+      },
+      {
+        "bookId": "7663023246102514712",
+        "bookNameRaw": "系统延迟坤，球股",
+        "authorRaw": "布雷",
+        "pos": 4,
+        "readCount": 535312,
+        "wordNumber": 666633,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2of18abb70f7e32a0694e9020096834940~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364611&x-signature=yUAGxwGFAAQf2bqqojuLjL4u4jg%3D"
+      },
+      {
+        "bookId": "7661942550818737214",
+        "bookNameRaw": "躺宿，咋顶流",
+        "authorRaw": "今曾照故",
+        "pos": 5,
+        "readCount": 521443,
+        "wordNumber": 333237,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2od30577fa400bc8f372385239e478b1ab~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364611&x-signature=PhPmF%2BMDIYx9ESe5Il%2FgpYrqTc8%3D"
+      },
+      {
+        "bookId": "7640807870426008638",
+        "bookNameRaw": "拍反腐片，拍义！",
+        "authorRaw": "火狐火狐",
+        "pos": 6,
+        "readCount": 501962,
+        "wordNumber": 566148,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2oa780ff9d3e2171182890eaed182ef19d~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364611&x-signature=OzazCYpwC9f45g3gCov2ruShYVo%3D"
+      },
+      {
+        "bookId": "7649016386907278361",
+        "bookNameRaw": "习牌班，换班",
+        "authorRaw": "碧红潮",
+        "pos": 7,
+        "readCount": 465319,
+        "wordNumber": 353521,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o559debb0cab90a7cc1b4c337ee14db67~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364611&x-signature=yCV2WtxzbwIOZc8h24%2BPGAXbIAQ%3D"
+      },
+      {
+        "bookId": "7647823184720301118",
+        "bookNameRaw": "校，建议怎？",
+        "authorRaw": "北",
+        "pos": 8,
+        "readCount": 453703,
+        "wordNumber": 587685,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2oc38fa8b5c30a8b8118e9dff04cecd07f~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364611&x-signature=hpuf7T6i784IftUFU0tcnLcPq7E%3D"
+      },
+      {
+        "bookId": "7311327491770027027",
+        "bookNameRaw": "食随刷，顾客馋哭",
+        "authorRaw": "冰咖半糖冰",
+        "pos": 9,
+        "readCount": 414504,
+        "wordNumber": 1703864,
+        "creationStatus": "0",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o770df82913e683aa67f26969ada911ca~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364611&x-signature=pQbDRYjA4l8npAbZLKeH%2FBiwIlk%3D"
+      },
+      {
+        "bookId": "7638459797838236696",
+        "bookNameRaw": "载，青梅爆",
+        "authorRaw": "八",
+        "pos": 10,
+        "readCount": 443267,
+        "wordNumber": 456836,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o983af13d668dbf89e8b57ba55d3112d0~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364611&x-signature=l1mpfWh2IlYc23nFOutzsgXZY7M%3D"
+      }
+    ]
+  },
+  "1_1_257": {
+    "key": "1_1_257",
+    "rankTypeText": "",
+    "totalNum": 100,
+    "fetchedAt": "2026-08-26T15:56:46.449Z",
+    "books": [
+      {
+        "bookId": "7660513089460128830",
+        "bookNameRaw": "站抽，霸志呀",
+        "authorRaw": "掰",
+        "pos": 1,
+        "readCount": 423438,
+        "wordNumber": 198141,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o9e9718929a1c8063a280f520daf67c70~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364612&x-signature=M1Z%2F5UIgZP2WzcZGuJwHJg3A5gE%3D"
+      },
+      {
+        "bookId": "7656783633486711870",
+        "bookNameRaw": "刚证混沌帝，化禁区？",
+        "authorRaw": "钰珏玉予",
+        "pos": 2,
+        "readCount": 388420,
+        "wordNumber": 241905,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o779ea1385c3b1e0f6226c0aaa4a479cf~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364612&x-signature=NBH3vNJhfoXsG0vpcFX0txG%2F1uM%3D"
+      },
+      {
+        "bookId": "7623051697895525401",
+        "bookNameRaw": "根骨庸，绝",
+        "authorRaw": "羊血苏苓",
+        "pos": 3,
+        "readCount": 263725,
+        "wordNumber": 270000,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o02d083bf56d34d07f8ca2ba387ba8e23~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364612&x-signature=u1HQmFzR9YJ2KNo0lTo1JLbpZFQ%3D"
+      },
+      {
+        "bookId": "7647404703248043070",
+        "bookNameRaw": "烛龙，类怎诞？",
+        "authorRaw": "火黑",
+        "pos": 4,
+        "readCount": 245235,
+        "wordNumber": 168100,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o990ea6153e884a1380b8ffd5a0e4a613~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364612&x-signature=F3XCZ5fa3g4QBopxPMCX896LQ7E%3D"
+      },
+      {
+        "bookId": "7665422529808321561",
+        "bookNameRaw": "选阐，选截杀疯",
+        "authorRaw": "深潜",
+        "pos": 5,
+        "readCount": 185209,
+        "wordNumber": 206434,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o58d83608ce90ba37856a6096a1270dbb~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364612&x-signature=fVLl45L69hh6jQpyVMTFut48ch0%3D"
+      },
+      {
+        "bookId": "7656607828005620760",
+        "bookNameRaw": "尊嫌肮脏？反退帖送",
+        "authorRaw": "王疯",
+        "pos": 6,
+        "readCount": 182472,
+        "wordNumber": 234770,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2oc498c6ca539f62ca73b316c33c19c631~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364612&x-signature=JQ%2Fj8vVNL40QJVDbbq%2BqvSWO8do%3D"
+      },
+      {
+        "bookId": "7667911750217370649",
+        "bookNameRaw": "局寿尽准帝，竟蝼蚁",
+        "authorRaw": "辰星",
+        "pos": 7,
+        "readCount": 171833,
+        "wordNumber": 172339,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2oa30781b7e46cf513a24f2271f5d4d0e3~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364612&x-signature=Azdzi0OVE8l%2FGCYtI6Eal8aSdWQ%3D"
+      },
+      {
+        "bookId": "7661096625497967641",
+        "bookNameRaw": "轮修仙：考科举始",
+        "authorRaw": "",
+        "pos": 8,
+        "readCount": 193190,
+        "wordNumber": 229821,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o3b7cbabeff74a15d2c24ba51fa21ab4f~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364612&x-signature=Z6k%2FFWm%2BUwvmFjJh%2FXCtOGgM7MA%3D"
+      },
+      {
+        "bookId": "7670157515434232856",
+        "bookNameRaw": "仙，聊群？",
+        "authorRaw": "杯盏斟竹叶青",
+        "pos": 9,
+        "readCount": 146090,
+        "wordNumber": 208188,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o24f98fa4e77b16c09d2f2883a5037d32~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364612&x-signature=Rf08tbraHBolllt5XETPtdliP7c%3D"
+      },
+      {
+        "bookId": "7641506817385712665",
+        "bookNameRaw": "局模拟爆，丹爆星鬼",
+        "authorRaw": "弹弓漂",
+        "pos": 10,
+        "readCount": 153641,
+        "wordNumber": 192022,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o659cb1514407951a4507b9c955c9884f~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364612&x-signature=%2FxaX2xrvkuY4Soyq7GbSYfOo64Q%3D"
+      }
+    ]
+  },
+  "1_2_257": {
+    "key": "1_2_257",
+    "rankTypeText": "",
+    "totalNum": 100,
+    "fetchedAt": "2026-08-26T15:56:47.957Z",
+    "books": [
+      {
+        "bookId": "7590221243043826712",
+        "bookNameRaw": "游戏劲，挖矿！",
+        "authorRaw": "易",
+        "pos": 1,
+        "readCount": 1782880,
+        "wordNumber": 1753736,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2oe517b47077b6004f7a08345823dac7ed~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364614&x-signature=LybOr11cHraR%2FmrovHfPJp7MaJA%3D"
+      },
+      {
+        "bookId": "7636702239288986649",
+        "bookNameRaw": "武侠：局破庙夜帮",
+        "authorRaw": "",
+        "pos": 2,
+        "readCount": 1151621,
+        "wordNumber": 754134,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o48044b67580cce64e26df7c28cad7234~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364614&x-signature=u6yGTyFzxevudY4xLHb84zXawkI%3D"
+      },
+      {
+        "bookId": "7147596144942517284",
+        "bookNameRaw": "局古，苟荒",
+        "authorRaw": "紫灵雪",
+        "pos": 3,
+        "readCount": 1153558,
+        "wordNumber": 6080689,
+        "creationStatus": "0",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/baa65a198607b52168aa1338740642f8~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364614&x-signature=Ia7f1b1BXPr5u%2BqRv6OCod%2BVqk0%3D"
+      },
+      {
+        "bookId": "7228940788351110182",
+        "bookNameRaw": "系统赋，熬",
+        "authorRaw": "榴莲号",
+        "pos": 4,
+        "readCount": 742983,
+        "wordNumber": 5290689,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o129beb2268aa16669806533810deddfb~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364614&x-signature=VouFLd4z%2BDyCQaPr9X3SV7EgZxg%3D"
+      },
+      {
+        "bookId": "7630378904976362520",
+        "bookNameRaw": "谁仙侠游戏退键扣？",
+        "authorRaw": "沐春",
+        "pos": 5,
+        "readCount": 735781,
+        "wordNumber": 821867,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o67d89564b10297cd59d4aceaaa5b8236~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364614&x-signature=b2I%2F5Y0MmpFOQAM6IXDxLhG%2FjuE%3D"
+      },
+      {
+        "bookId": "7544766518324644889",
+        "bookNameRaw": "始斩妖除魔",
+        "authorRaw": "八爪触怪",
+        "pos": 6,
+        "readCount": 710295,
+        "wordNumber": 2183166,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2od74c60ebf1b26ca188d7bff707d503bf~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364614&x-signature=fwnO2LjPk2XrvSy9hTtPobAcyVM%3D"
+      },
+      {
+        "bookId": "7583949514948496409",
+        "bookNameRaw": "抽取词，模拟？",
+        "authorRaw": "六六",
+        "pos": 7,
+        "readCount": 513152,
+        "wordNumber": 1224640,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o25721c86df780c788a2bd9ab196c60b4~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364614&x-signature=s05gdju7Hx%2BW6%2FF8tIBhk8L5gNM%3D"
+      },
+      {
+        "bookId": "7444482186822044734",
+        "bookNameRaw": "提登陆游戏，局联姻帝",
+        "authorRaw": "潇楚睡",
+        "pos": 8,
+        "readCount": 459795,
+        "wordNumber": 3404037,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o44c882aad2fd291b073aa4c5496b4b15~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364614&x-signature=kMMa0WATVDA9tPA%2FgMQLqsA%2BG5c%3D"
+      },
+      {
+        "bookId": "7609549092179430462",
+        "bookNameRaw": "凡修仙：百轮祖",
+        "authorRaw": "清淡瓜",
+        "pos": 9,
+        "readCount": 432445,
+        "wordNumber": 1209943,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/84f030f49f6a6a4dff2d1e0b2ff92c24~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364614&x-signature=15JlswvtpS%2Ffri65m0vRozXb2GQ%3D"
+      },
+      {
+        "bookId": "7549040798294101054",
+        "bookNameRaw": "局交修仙，仙",
+        "authorRaw": "丽洋葱",
+        "pos": 10,
+        "readCount": 427319,
+        "wordNumber": 1513407,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/7b4d88cea0224ff6136b84b6477008e5~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364614&x-signature=z2VyaK4ZjcHmfy%2FFv4N%2BIUbr9uw%3D"
+      }
+    ]
+  },
+  "1_1_751": {
+    "key": "1_1_751",
+    "rankTypeText": "",
+    "totalNum": 100,
+    "fetchedAt": "2026-08-26T15:56:49.390Z",
+    "books": [
+      {
+        "bookId": "7657210794022554649",
+        "bookNameRaw": "暑假兼职赶尸，局找！",
+        "authorRaw": "爆辣糖豆",
+        "pos": 1,
+        "readCount": 125114,
+        "wordNumber": 296927,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o559a1af9ec48e9f0a6532659a4896211~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364615&x-signature=ZI0pWIL9HaXiK8hra%2FoE9biJscU%3D"
+      },
+      {
+        "bookId": "7659390162392075289",
+        "bookNameRaw": "悬疑凶案：局案",
+        "authorRaw": "氰呓语",
+        "pos": 2,
+        "readCount": 62152,
+        "wordNumber": 254384,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o8341dad177aad65ab88e46ded9b1f21e~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364615&x-signature=vwj4PpixBqb1DtfcgnIJYvgTldM%3D"
+      },
+      {
+        "bookId": "7650073178680593433",
+        "bookNameRaw": "阴传",
+        "authorRaw": "沐瑶",
+        "pos": 3,
+        "readCount": 59790,
+        "wordNumber": 253545,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o9c23547faafa17dd3197aabaa2841487~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364615&x-signature=q2uzbO%2BJlD1schClwzgPeGDkU10%3D"
+      },
+      {
+        "bookId": "7669259118779042840",
+        "bookNameRaw": "盗墓：局征服琪佛爷赢麻",
+        "authorRaw": "空渔",
+        "pos": 4,
+        "readCount": 52578,
+        "wordNumber": 125163,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o00d7be98604c09c9d67e27abbd0ff0a5~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364615&x-signature=QoHIGSR7kc4hqU%2FetZpZVi8wfZU%3D"
+      },
+      {
+        "bookId": "7656892289117064254",
+        "bookNameRaw": "九叔：糟糕！邪徒弟闯祸",
+        "authorRaw": "兔兔",
+        "pos": 5,
+        "readCount": 47893,
+        "wordNumber": 165069,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2ofe3d5ce1f131cff98c52378f1360f400~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364615&x-signature=F3utWHczvkOTCsQrsDDGULgACco%3D"
+      },
+      {
+        "bookId": "7665627986716003352",
+        "bookNameRaw": "综艺，犯罪科？",
+        "authorRaw": "香菜江湖",
+        "pos": 6,
+        "readCount": 47548,
+        "wordNumber": 203596,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2ob2afe93d2ccd91d0bc828cc2d24131f2~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364615&x-signature=pfx1FjCNXsPm9Xg6%2F9sFiN94oFQ%3D"
+      },
+      {
+        "bookId": "7670373326274972734",
+        "bookNameRaw": "九：融合麒麟始破局",
+        "authorRaw": "吴印",
+        "pos": 7,
+        "readCount": 46544,
+        "wordNumber": 166407,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o17833ff051b6c12ecb86fe5faed504de~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364615&x-signature=e%2BDYDE3D%2B1DBLk8dFxZHczD%2BXns%3D"
+      },
+      {
+        "bookId": "7644373271537781822",
+        "bookNameRaw": "爷爷暴毙，局找",
+        "authorRaw": "青禾雨",
+        "pos": 8,
+        "readCount": 41738,
+        "wordNumber": 191835,
+        "creationStatus": "0",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o1add22ba87c12da41a4145541daf8495~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364615&x-signature=W7YtlJ4DHpcrN0YwiE45w1BRxJI%3D"
+      },
+      {
+        "bookId": "7668246570290138136",
+        "bookNameRaw": "画符！警婆观崩",
+        "authorRaw": "咕咚菠萝",
+        "pos": 9,
+        "readCount": 40867,
+        "wordNumber": 191055,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2of63fdc46775ebb5efebd15c0560c121a~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364615&x-signature=5lv%2FIOObaKHiJ18UrNlN1aiRSzE%3D"
+      },
+      {
+        "bookId": "7670926022203690008",
+        "bookNameRaw": "局：扫黑",
+        "authorRaw": "策叔",
+        "pos": 10,
+        "readCount": 38508,
+        "wordNumber": 149529,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2oaf521da4d5a893ef97cca1fefecf0e12~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364615&x-signature=Cr%2BBQ7UgGUDR2oJzvcXARD9MD1s%3D"
+      }
+    ]
+  },
+  "1_2_751": {
+    "key": "1_2_751",
+    "rankTypeText": "",
+    "totalNum": 100,
+    "fetchedAt": "2026-08-26T15:56:50.883Z",
+    "books": [
+      {
+        "bookId": "7087872099557051400",
+        "bookNameRaw": "狐仙镇百鬼",
+        "authorRaw": "紫梦游龙",
+        "pos": 1,
+        "readCount": 808374,
+        "wordNumber": 9783486,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/05cb5f60d9bea6c19a94f9a27a763ce7~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364617&x-signature=1uI%2BsJTZqdAY%2BmwdAvyCLiOD4uE%3D"
+      },
+      {
+        "bookId": "7287726057069743138",
+        "bookNameRaw": "镇龙棺，阎王",
+        "authorRaw": "匪夷",
+        "pos": 2,
+        "readCount": 474710,
+        "wordNumber": 4543466,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o46897b9759abdb93d98b54fd9c1230bd~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364617&x-signature=9YgiF6c2U9HjfUaLh7nkSsZGrCQ%3D"
+      },
+      {
+        "bookId": "7644187755781573656",
+        "bookNameRaw": "编医：案组抢疯！",
+        "authorRaw": "喵",
+        "pos": 3,
+        "readCount": 456109,
+        "wordNumber": 367845,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2ob27eaad982d0c0d97c5a28a7ae9b09a8~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364617&x-signature=VNwpXLxkm7oGL%2FFD1DmmvBZxVno%3D"
+      },
+      {
+        "bookId": "7166580408522378292",
+        "bookNameRaw": "，奇震",
+        "authorRaw": "茄",
+        "pos": 4,
+        "readCount": 396830,
+        "wordNumber": 6313348,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/769786ef7bf06064411cd2cb3fe921e7~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364617&x-signature=mGgn0QF%2FSFSH1Ytrwhl5VeqhTfI%3D"
+      },
+      {
+        "bookId": "7543933469701721112",
+        "bookNameRaw": "校尸咋办？怕！专业",
+        "authorRaw": "端程",
+        "pos": 5,
+        "readCount": 321708,
+        "wordNumber": 1548559,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o78b8e501fb081e2ca3fab3e8104be205~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364617&x-signature=37GiFI%2BeUvLSqf4ymI2fh7BlJRc%3D"
+      },
+      {
+        "bookId": "7637415246868515902",
+        "bookNameRaw": "完犯罪？破绽！",
+        "authorRaw": "抽半颗烟登",
+        "pos": 6,
+        "readCount": 281638,
+        "wordNumber": 560101,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2ob2ad4044481590f67c8837bfc642c33a~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364617&x-signature=LoL%2B59lHG0zdTzlIrwl5kPLq4zo%3D"
+      },
+      {
+        "bookId": "7379164201303952409",
+        "bookNameRaw": "邪典铺：收凶",
+        "authorRaw": "虫半",
+        "pos": 7,
+        "readCount": 273765,
+        "wordNumber": 3723190,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2oa2c14a9e3f17c79aa07a255784a11b65~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364617&x-signature=9t87l%2BqN4KGPZEL%2FpMFcdnLQFOE%3D"
+      },
+      {
+        "bookId": "7024903102301998111",
+        "bookNameRaw": "尸，鬼抬棺",
+        "authorRaw": "玉",
+        "pos": 8,
+        "readCount": 254546,
+        "wordNumber": 3297261,
+        "creationStatus": "0",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/a20fff6c8549be7167981d0c3595ba81~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364617&x-signature=b23Jo1%2BISdm6ntPBvvx1wGnb08Y%3D"
+      },
+      {
+        "bookId": "7287479909398613032",
+        "bookNameRaw": "邪墨！",
+        "authorRaw": "",
+        "pos": 9,
+        "readCount": 229195,
+        "wordNumber": 3052151,
+        "creationStatus": "0",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/fc34b99dacb5bb83a892650fc3e47b27~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364617&x-signature=qD4ZyT7UPVhfZ2cy6ivdRSBfHxA%3D"
+      },
+      {
+        "bookId": "7428990775863561241",
+        "bookNameRaw": "，炼僵尸！",
+        "authorRaw": "帅罚破产",
+        "pos": 10,
+        "readCount": 198060,
+        "wordNumber": 3745574,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o321a65b59a37140c4549e1a977acaca3~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364617&x-signature=Oa2goYIpGNjA3VLajMCh8KZU9FM%3D"
+      }
+    ]
+  },
+  "1_1_504": {
+    "key": "1_1_504",
+    "rankTypeText": "",
+    "totalNum": 100,
+    "fetchedAt": "2026-08-26T15:56:52.294Z",
+    "books": [
+      {
+        "bookId": "7665606419873287192",
+        "bookNameRaw": "穿合院，啥",
+        "authorRaw": "兵",
+        "pos": 1,
+        "readCount": 478362,
+        "wordNumber": 252803,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/ai/p2o0f9b9bdb2875d2dfbcd966875da06316~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364618&x-signature=hT3AOb9iILkOpU8QaQ9bDAxqSyQ%3D"
+      },
+      {
+        "bookId": "7666114972983757849",
+        "bookNameRaw": "管警察？炮架租",
+        "authorRaw": "吾叹逍遥",
+        "pos": 2,
+        "readCount": 236369,
+        "wordNumber": 230860,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o0bc5b33ea940a83352a66f30b81d08a0~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364618&x-signature=Kj%2FH5n4dT%2Fu8DNyOQugqFCsEWp4%3D"
+      },
+      {
+        "bookId": "7660171077552704536",
+        "bookNameRaw": "：毛皇治轮椅",
+        "authorRaw": "落幕柒柒",
+        "pos": 3,
+        "readCount": 181098,
+        "wordNumber": 274676,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2ofec027c1db55269b7449300b0b0df60e~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364618&x-signature=w86SlvgC7UEoMh1qrSU86MJSqUk%3D"
+      },
+      {
+        "bookId": "7663394963933105214",
+        "bookNameRaw": "抗：系统",
+        "authorRaw": "浪哥划船桨",
+        "pos": 4,
+        "readCount": 109941,
+        "wordNumber": 197698,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2ofe53780709b8885239633bc1743dc73f~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364618&x-signature=l%2BNFkkPCcY9HnmENK5Paaxbv1Og%3D"
+      },
+      {
+        "bookId": "7664596398326680638",
+        "bookNameRaw": "：逆，北王",
+        "authorRaw": "喜欢丽鱼青莲妖火",
+        "pos": 5,
+        "readCount": 107231,
+        "wordNumber": 199435,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o0103095dcbb023e6314f365d191b2d58~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364618&x-signature=ZNnzF%2BDpdz0msi8aUntjE3pxdFA%3D"
+      },
+      {
+        "bookId": "7670125518770949182",
+        "bookNameRaw": "统，跟系统？",
+        "authorRaw": "网咖",
+        "pos": 6,
+        "readCount": 99173,
+        "wordNumber": 146905,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2of9bd1595887a92c99742f902c4cb7387~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364618&x-signature=7F06%2B%2Fjwhlk8KVjqNo7%2BFqqv7Gc%3D"
+      },
+      {
+        "bookId": "7667113325930499096",
+        "bookNameRaw": "穿越，咋封建余孽？",
+        "authorRaw": "思函麟玉",
+        "pos": 7,
+        "readCount": 95929,
+        "wordNumber": 148836,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o6c1aff5c14ae237df2f37a6a6319c2cf~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364618&x-signature=V1evFwrgmSAhxqLnozCQLDKdLB8%3D"
+      },
+      {
+        "bookId": "7550728648693664792",
+        "bookNameRaw": "魂穿导队校参谋",
+        "authorRaw": "燕杰",
+        "pos": 8,
+        "readCount": 72954,
+        "wordNumber": 264076,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2oa1dd4675389fd12b958f7efd4540ec9a~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364618&x-signature=yAIC1aCUtqcDHiAwoS%2FpTgsJzzk%3D"
+      },
+      {
+        "bookId": "7650470867511544856",
+        "bookNameRaw": "亮剑：李云龙黄埔",
+        "authorRaw": "楚云飞",
+        "pos": 9,
+        "readCount": 71740,
+        "wordNumber": 241654,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o43bcaade82853dc50f827cc3579324a4~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364618&x-signature=nI42jRbLIh67IltlnA54TRIa4X4%3D"
+      },
+      {
+        "bookId": "7669043019315678232",
+        "bookNameRaw": "合院：李云龙司，傻柱叔叔",
+        "authorRaw": "",
+        "pos": 10,
+        "readCount": 68433,
+        "wordNumber": 260237,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2ofbfaa628cff6125c5aab1e076721c6b5~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364618&x-signature=huVbIhP7z0g2LqcGaja9rM8Hzzk%3D"
+      }
+    ]
+  },
+  "1_2_504": {
+    "key": "1_2_504",
+    "rankTypeText": "",
+    "totalNum": 100,
+    "fetchedAt": "2026-08-26T15:56:53.719Z",
+    "books": [
+      {
+        "bookId": "7641796083370183705",
+        "bookNameRaw": "亮剑：校毕业，李参谋",
+        "authorRaw": "闻丝竹",
+        "pos": 1,
+        "readCount": 362733,
+        "wordNumber": 561601,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o9385ee952b8cb5b9fad5690d8f9be8f3~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364620&x-signature=26biyrVmDRhVc2l1KuMe8AHq0w4%3D"
+      },
+      {
+        "bookId": "7392467716029811736",
+        "bookNameRaw": "谍：恶霸爆奖励！",
+        "authorRaw": "喝蜂蜜龙井茶",
+        "pos": 2,
+        "readCount": 339415,
+        "wordNumber": 2546153,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o4f545fc5dff3e2c2519115315fe08fb7~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364620&x-signature=B91bQWrICMDuSTr7%2BvpKNFswEtI%3D"
+      },
+      {
+        "bookId": "7571861395919096894",
+        "bookNameRaw": "强闯区捕？抗！",
+        "authorRaw": "榴",
+        "pos": 3,
+        "readCount": 278427,
+        "wordNumber": 1334314,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o09f45697b94df0a35230e26be801096c~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364620&x-signature=nZqyXZp%2FzoVy02n6w63ztN3shKg%3D"
+      },
+      {
+        "bookId": "7597014132235193406",
+        "bookNameRaw": "局桂系，南洋",
+        "authorRaw": "晋南",
+        "pos": 4,
+        "readCount": 235565,
+        "wordNumber": 1569226,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2oe69aae16ae6672f341e40e8f3de97c99~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364620&x-signature=CZcOLVOcOYfsXe9x8XdFFJ102h8%3D"
+      },
+      {
+        "bookId": "7293080739413756962",
+        "bookNameRaw": "谍务逆袭",
+        "authorRaw": "冬热",
+        "pos": 5,
+        "readCount": 225342,
+        "wordNumber": 2780343,
+        "creationStatus": "0",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2oa7a96328b28a3a577655f15df0e3e161~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364620&x-signature=9%2BjVyFTKWRBHkduggpxk9e%2F1w3g%3D"
+      },
+      {
+        "bookId": "7505334702857784344",
+        "bookNameRaw": "北•娘土匪",
+        "authorRaw": "锦添繁",
+        "pos": 6,
+        "readCount": 218530,
+        "wordNumber": 308446,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o3b1fc68188c29c61662c8c212f2b39d7~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364620&x-signature=2TtDEAaFVd2%2BEEuIVse0HTC%2Bahg%3D"
+      },
+      {
+        "bookId": "7531962054194777112",
+        "bookNameRaw": "阀：爹劝，旅杀帅",
+        "authorRaw": "豆皮",
+        "pos": 7,
+        "readCount": 217309,
+        "wordNumber": 2726878,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/62e8da33220416ddc8b136d61a91fe19~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364620&x-signature=pdm2unYKRKgThk09q17X5It4TLA%3D"
+      },
+      {
+        "bookId": "7620415294208478233",
+        "bookNameRaw": "忽悠帅拜，南黄埔卧底？",
+        "authorRaw": "语",
+        "pos": 8,
+        "readCount": 203758,
+        "wordNumber": 687096,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2obb633600272d4f65c179ce46bac4fa2f~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364620&x-signature=kopIMZ7huc0k6UXtQvYOqxKRO7Q%3D"
+      },
+      {
+        "bookId": "7613355241370553406",
+        "bookNameRaw": "皇怕谁？",
+        "authorRaw": "鸢尾鸟",
+        "pos": 9,
+        "readCount": 200108,
+        "wordNumber": 818687,
+        "creationStatus": "1",
+        "thumbUri": "https://p9-reading-sign.fqnovelpic.com/novel-pic/p2o462c1293eba9a09dfc609761d407082b~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364620&x-signature=ogMahstyJB3C%2B%2BIlK9tKIAFYMjA%3D"
+      },
+      {
+        "bookId": "7543682615161670718",
+        "bookNameRaw": "抗浴血魂",
+        "authorRaw": "尘",
+        "pos": 10,
+        "readCount": 197510,
+        "wordNumber": 1485489,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2odaf985524fcc66790d6e358d0f150924~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364620&x-signature=alzlopxwQfiUPyMjoqNdr%2FqmWLQ%3D"
+      }
+    ]
+  },
+  "1_1_746": {
+    "key": "1_1_746",
+    "rankTypeText": "",
+    "totalNum": 100,
+    "fetchedAt": "2026-08-26T15:56:55.206Z",
+    "books": [
+      {
+        "bookId": "7662282074774064190",
+        "bookNameRaw": "王：赋",
+        "authorRaw": "赵傻猫",
+        "pos": 1,
+        "readCount": 112973,
+        "wordNumber": 237272,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2oa3529bdd9b15c3172f30feafc0248b2d~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364621&x-signature=WOk38X1a0fyXXwPNM9xKjbWY3pE%3D"
+      },
+      {
+        "bookId": "7647836670414294041",
+        "bookNameRaw": "洲：质检，五钟诛仙清图",
+        "authorRaw": "喜欢辣",
+        "pos": 2,
+        "readCount": 85164,
+        "wordNumber": 240997,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o9ac298ca5af3f5952882124be9cd151e~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364621&x-signature=mja7bkPMi4rO5DZ%2FqI7tCsp%2BZB0%3D"
+      },
+      {
+        "bookId": "7669972746423503934",
+        "bookNameRaw": "棋魂：召唤柯洁，叟戏顽童",
+        "authorRaw": "章完饭",
+        "pos": 3,
+        "readCount": 74323,
+        "wordNumber": 191040,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o241df9993a5cdc28c72d1b9936ae8c6f~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364621&x-signature=BzAUb7RHZ5ta4Qb678pyzfNNui4%3D"
+      },
+      {
+        "bookId": "7664506520704404505",
+        "bookNameRaw": "：交易系统助游牧",
+        "authorRaw": "李二",
+        "pos": 4,
+        "readCount": 71808,
+        "wordNumber": 270546,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2oe9c2e5fbf02d56471565811d9ddc9254~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364621&x-signature=JQC1XstZxGmjJsguZvuZsdiRbiw%3D"
+      },
+      {
+        "bookId": "7663388980976569406",
+        "bookNameRaw": "尽求：醒双龙王武魂",
+        "authorRaw": "鲤鱼绿",
+        "pos": 5,
+        "readCount": 63838,
+        "wordNumber": 216412,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2off17772d71f3b411b9485d98b15e1f87~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364621&x-signature=vPPQIpaVZgNh5c4WstjPxz5O%2FAs%3D"
+      },
+      {
+        "bookId": "7654763224323083289",
+        "bookNameRaw": "游戏豪：咸鱼王始",
+        "authorRaw": "聊摸摸鱼",
+        "pos": 6,
+        "readCount": 64325,
+        "wordNumber": 161004,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2oae4f8ed96684caaaaa8a6a9a2d64135d~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364621&x-signature=dczpXRQWE8OyKV9hgcjI0vhWyDU%3D"
+      },
+      {
+        "bookId": "7668529897618295870",
+        "bookNameRaw": "湖助科，局抢圣保罗",
+        "authorRaw": "片雷",
+        "pos": 7,
+        "readCount": 59193,
+        "wordNumber": 191936,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2ob62b3ef2e474c083d1dedfc2bd247fec~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364621&x-signature=hMSO9Lsq5dQPZfDN%2BaIMZ4mhbNg%3D"
+      },
+      {
+        "bookId": "7664576051028167705",
+        "bookNameRaw": "亡游戏：武",
+        "authorRaw": "冰红茶厂",
+        "pos": 8,
+        "readCount": 64792,
+        "wordNumber": 184963,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2ob2d654c699d35dffc1ddb8aada1d054a~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364621&x-signature=HftR%2FH7VnuECwDtEsx%2Fzl70%2Bzj0%3D"
+      },
+      {
+        "bookId": "7665991415695952958",
+        "bookNameRaw": "求，局辆基",
+        "authorRaw": "零号",
+        "pos": 9,
+        "readCount": 54506,
+        "wordNumber": 149138,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2oe4d9298105f2521a400893d63ff22302~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364621&x-signature=8cIjriuj2NJvsOxSCohl2v%2B9z5Y%3D"
+      },
+      {
+        "bookId": "7662588763016547353",
+        "bookNameRaw": "航求船值怪局熊熊二",
+        "authorRaw": "倚需剑",
+        "pos": 10,
+        "readCount": 47951,
+        "wordNumber": 154914,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2ocd53f181998b93c1452e449740395022~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364621&x-signature=AwtQju5abXK25wMb6ieXwGmtcsA%3D"
+      }
+    ]
+  },
+  "1_2_746": {
+    "key": "1_2_746",
+    "rankTypeText": "",
+    "totalNum": 100,
+    "fetchedAt": "2026-08-26T15:56:56.639Z",
+    "books": [
+      {
+        "bookId": "7486697608677690392",
+        "bookNameRaw": "列求，升华切！",
+        "authorRaw": "孔雀",
+        "pos": 1,
+        "readCount": 682192,
+        "wordNumber": 3107401,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2occ1ac3ec0a072a855c47b5b3f777ca96~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364623&x-signature=vbyc60E1d%2B815pGlJ4S67Y%2BvJPo%3D"
+      },
+      {
+        "bookId": "7577210392514939929",
+        "bookNameRaw": "求：房限化",
+        "authorRaw": "橙汁盐",
+        "pos": 2,
+        "readCount": 498826,
+        "wordNumber": 1663586,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2ocf7394ea0f0eb5d8d70f38b0855f4529~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364623&x-signature=Y1UUV89wGPA035JXh7KzUGVbTTI%3D"
+      },
+      {
+        "bookId": "7357660681379793982",
+        "bookNameRaw": "航，局幽灵船",
+        "authorRaw": "买桃",
+        "pos": 3,
+        "readCount": 481062,
+        "wordNumber": 2595175,
+        "creationStatus": "0",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o719bf69874fbc862ae64b8593f03217e~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364623&x-signature=eDomLrxzb6YdIkPy5znbkks1r14%3D"
+      },
+      {
+        "bookId": "7306416697148197950",
+        "bookNameRaw": "网游：级刺客，即暗影！",
+        "authorRaw": "元",
+        "pos": 4,
+        "readCount": 268820,
+        "wordNumber": 4934978,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o7ad17dedf7c603b114a080b118695bf0~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364623&x-signature=%2Bn6ggubC7ML2f%2FR%2FB%2FzO%2FznYJUQ%3D"
+      },
+      {
+        "bookId": "7635684922174213145",
+        "bookNameRaw": "角洲：暴君降临",
+        "authorRaw": "扑街",
+        "pos": 5,
+        "readCount": 266923,
+        "wordNumber": 546805,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o1a5a412f2872e9ac61d7cfe437a3a882~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364623&x-signature=riWi5LDmaWIFInJWRMCz1ydL2%2BY%3D"
+      },
+      {
+        "bookId": "7604686284233116734",
+        "bookNameRaw": "武侠游戏，局九阳功震惊球",
+        "authorRaw": "吐墨汁乌贼",
+        "pos": 6,
+        "readCount": 201342,
+        "wordNumber": 1237132,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/d66506fdc266f1cf1555eb8118ec4ea1~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364623&x-signature=94gbG7DM0hnCoBFGkjwGX2b%2F16M%3D"
+      },
+      {
+        "bookId": "7539842661939694654",
+        "bookNameRaw": "游戏侵：杀诸颤抖",
+        "authorRaw": "星梦辰缘",
+        "pos": 7,
+        "readCount": 230831,
+        "wordNumber": 1289719,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2ofdf5db054430155f53fb2b1b5e5d2d08~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364623&x-signature=qgqnnwsewxUySbBtIcmCFst7KUU%3D"
+      },
+      {
+        "bookId": "7229602235896826932",
+        "bookNameRaw": "迷雾求",
+        "authorRaw": "寻",
+        "pos": 8,
+        "readCount": 208090,
+        "wordNumber": 3486008,
+        "creationStatus": "0",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o93da56c60ff4678c44776c7ae4811263~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364623&x-signature=Wjvf0T%2B1222Yw4rlXM62xPN9KuM%3D"
+      },
+      {
+        "bookId": "7094870813114895394",
+        "bookNameRaw": "网游绝毒尊",
+        "authorRaw": "星梦辰缘",
+        "pos": 9,
+        "readCount": 232532,
+        "wordNumber": 1511707,
+        "creationStatus": "0",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/d5e2000335db914aa15b7b9fa7db230b~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364623&x-signature=VQrn8gFunERV15rIdVP0SEi3Umc%3D"
+      },
+      {
+        "bookId": "7539818151354059838",
+        "bookNameRaw": "网游亡武侠",
+        "authorRaw": "夜眸藏锋",
+        "pos": 10,
+        "readCount": 199026,
+        "wordNumber": 4494233,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o5e48d1263ae7e7717ca3a196ea4b23c4~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364623&x-signature=Pax3NrPc0rmVTchs8lHOiwifLeA%3D"
+      }
+    ]
+  },
+  "1_1_718": {
+    "key": "1_1_718",
+    "rankTypeText": "",
+    "totalNum": 100,
+    "fetchedAt": "2026-08-26T15:56:58.076Z",
+    "books": [
+      {
+        "bookId": "7657731764898515993",
+        "bookNameRaw": "：破产愚众",
+        "authorRaw": "暮雨",
+        "pos": 1,
+        "readCount": 186913,
+        "wordNumber": 214899,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o405e8d6fde08a37cc60374bfe9338d2b~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364624&x-signature=sPOapsIpMS%2FD2t0BGa9Dstt4Qn4%3D"
+      },
+      {
+        "bookId": "7643518559921916953",
+        "bookNameRaw": "猪猪侠：攻空？",
+        "authorRaw": "丑旅",
+        "pos": 2,
+        "readCount": 182491,
+        "wordNumber": 184897,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o6f028c8fbe1443ebc01de082a7c20c82~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364624&x-signature=JpatB7vTikfAx1Dtz%2FmuxAkYamg%3D"
+      },
+      {
+        "bookId": "7656825431345089561",
+        "bookNameRaw": "综漫：捡碎片局拼虚式茈",
+        "authorRaw": "五悟",
+        "pos": 3,
+        "readCount": 172690,
+        "wordNumber": 153478,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2oe1401bca830a35f2b950ad59de773629~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364624&x-signature=3Aq3unfJj6zSJIejQXmdjr9V9cQ%3D"
+      },
+      {
+        "bookId": "7668325214391897112",
+        "bookNameRaw": "送卖，众飞影铠甲",
+        "authorRaw": "丹修",
+        "pos": 4,
+        "readCount": 173736,
+        "wordNumber": 145767,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o48636e52fcbe1018813c5a40049ef043~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364624&x-signature=qHRMidryQny7bt0hPmpNBFUEkPA%3D"
+      },
+      {
+        "bookId": "7665251098143247422",
+        "bookNameRaw": "：，敌，随！！",
+        "authorRaw": "葡萄抽烟",
+        "pos": 5,
+        "readCount": 149594,
+        "wordNumber": 180010,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o1135733b0f00350d8fc93cb08a686e2e~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364624&x-signature=llRnd%2BvXHbiXJeI4anrMTwKF39s%3D"
+      },
+      {
+        "bookId": "7661277530032196632",
+        "bookNameRaw": "城：局捡",
+        "authorRaw": "蝈蝈王",
+        "pos": 6,
+        "readCount": 137730,
+        "wordNumber": 179744,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o6007d49b1626cc2c43d37ad8fdff185e~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364624&x-signature=ukmE0Fl6yVA5%2FonPRU97YbO4aeE%3D"
+      },
+      {
+        "bookId": "7666179413817429017",
+        "bookNameRaw": "顶级智斗：局寄石墩",
+        "authorRaw": "蚕土荳",
+        "pos": 7,
+        "readCount": 163359,
+        "wordNumber": 163289,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o2d8163ecd850171d522ba6675e70267f~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364624&x-signature=oMY0m8I3cBtiyGFniJbfJYiJRUw%3D"
+      },
+      {
+        "bookId": "7667403867901938713",
+        "bookNameRaw": "欢迎显怀，释怀",
+        "authorRaw": "九牛",
+        "pos": 8,
+        "readCount": 163920,
+        "wordNumber": 225171,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o427fcee52e3c10aa9eac558045f85ff1~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364624&x-signature=aHbjweGjnQcEQ6nOeRrzLpL9H1E%3D"
+      },
+      {
+        "bookId": "7635399493684300825",
+        "bookNameRaw": "综漫：异族评鉴指南",
+        "authorRaw": "细节胃",
+        "pos": 9,
+        "readCount": 160105,
+        "wordNumber": 183866,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2oeff54f3ff50a76aad08a14b391ec937d~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364624&x-signature=SqmhIuunEfmUxvExBGCHNnOtLXY%3D"
+      },
+      {
+        "bookId": "7667868635968310296",
+        "bookNameRaw": "：继承良帅，拥兵百！",
+        "authorRaw": "魅射",
+        "pos": 10,
+        "readCount": 134336,
+        "wordNumber": 188867,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o02b16c6a939732a4b2988690b1839a41~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364624&x-signature=QyOF8urbHj0aJXDGb6AfBpvdjuY%3D"
+      }
+    ]
+  },
+  "1_2_718": {
+    "key": "1_2_718",
+    "rankTypeText": "",
+    "totalNum": 100,
+    "fetchedAt": "2026-08-26T15:56:59.514Z",
+    "books": [
+      {
+        "bookId": "7651657474658798617",
+        "bookNameRaw": "奥：强债！借债倍返！",
+        "authorRaw": "",
+        "pos": 1,
+        "readCount": 430707,
+        "wordNumber": 402039,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2oe4056d690de9f9dfc3f66e846be57073~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364626&x-signature=Z2IrPE9G0Nr%2BRaokweylqsADUJA%3D"
+      },
+      {
+        "bookId": "7629992768516918297",
+        "bookNameRaw": "转火影，卡普模版",
+        "authorRaw": "辣椒",
+        "pos": 2,
+        "readCount": 347661,
+        "wordNumber": 505928,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o2a3482c92643c12e7b7f9780d9234380~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364626&x-signature=mXpZDuRkGApSG71mHyKVEgh0AOM%3D"
+      },
+      {
+        "bookId": "7664536471730146328",
+        "bookNameRaw": "奥：蝎座",
+        "authorRaw": "承",
+        "pos": 3,
+        "readCount": 331855,
+        "wordNumber": 361287,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2oa37290fe93ca1505ff7b845da7b35f7a~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364626&x-signature=Fi%2B0JonOlu9M%2BA%2Fe0phczSVkBws%3D"
+      },
+      {
+        "bookId": "7631418979428355097",
+        "bookNameRaw": "锤抽词，帝皇站？",
+        "authorRaw": "忠言呐",
+        "pos": 4,
+        "readCount": 269847,
+        "wordNumber": 716838,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2oeeda5d880223918659fc57942c929ce1~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364626&x-signature=hE7VhKS9eudT6mbQJXBET%2F182cI%3D"
+      },
+      {
+        "bookId": "7569224382342499352",
+        "bookNameRaw": "，恶霸蜘蛛侠，爆漫威！",
+        "authorRaw": "今退休吗",
+        "pos": 5,
+        "readCount": 220747,
+        "wordNumber": 1206677,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/25ebf15412fcda2413d090d91955ce76~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364626&x-signature=dHTYVJv0suQ0cdXHNNFQXqgc60c%3D"
+      },
+      {
+        "bookId": "7639828824770759704",
+        "bookNameRaw": "拍摄，奥曼？",
+        "authorRaw": "秋莉",
+        "pos": 6,
+        "readCount": 216155,
+        "wordNumber": 508829,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2of9e93dbab935e10927158e217b0139a8~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364626&x-signature=JdPQjCgXfEGq9gi0CuVYWMj8vUg%3D"
+      },
+      {
+        "bookId": "7628071472921054233",
+        "bookNameRaw": "咒：级灭宿傩！",
+        "authorRaw": "皮卡堂布",
+        "pos": 7,
+        "readCount": 210360,
+        "wordNumber": 719197,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o5e1d3a20b94cedaf22c5df3beb4138a5~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364626&x-signature=fVTFlCQEySg1RvHWzXJ5x%2FjG0Hg%3D"
+      },
+      {
+        "bookId": "7635975332540976190",
+        "bookNameRaw": "综漫：留千叶兼职巨",
+        "authorRaw": "筱宇",
+        "pos": 8,
+        "readCount": 209199,
+        "wordNumber": 974656,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o039a3893d17d63f782fc36efc3ae52ad~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364626&x-signature=%2B6V3l%2BVd3tUjmgDpF%2B5pfRxg%2BAw%3D"
+      },
+      {
+        "bookId": "7579769326991854654",
+        "bookNameRaw": "崩铁：，疯魔",
+        "authorRaw": "幻",
+        "pos": 9,
+        "readCount": 194157,
+        "wordNumber": 1144800,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2ob25289d6e13c4bb58936e5a597d51f7a~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364626&x-signature=wdPogFMtYVzGlzKIBx0fu2qL2TA%3D"
+      },
+      {
+        "bookId": "7634922681590107160",
+        "bookNameRaw": "火影：征服忍始强",
+        "authorRaw": "翻肚咸鱼",
+        "pos": 10,
+        "readCount": 184288,
+        "wordNumber": 632880,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o87d2c99f75d74c9d36b03fe68968316c~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364626&x-signature=rFw9EE253dfsdOPNVuZexu9G9xA%3D"
+      }
+    ]
+  },
+  "1_1_1016": {
+    "key": "1_1_1016",
+    "rankTypeText": "",
+    "totalNum": 100,
+    "fetchedAt": "2026-08-26T15:57:01.031Z",
+    "books": [
+      {
+        "bookId": "7650130776280796185",
+        "bookNameRaw": "义：局举",
+        "authorRaw": "诸殿",
+        "pos": 1,
+        "readCount": 668975,
+        "wordNumber": 260796,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/ai/p2o30cc3bb97a4c73ece451d79b6e185ce5~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364627&x-signature=W71qOuezTvMqpykXOG9nBjo7fhE%3D"
+      },
+      {
+        "bookId": "7650181850488392728",
+        "bookNameRaw": "青梅转祖？超",
+        "authorRaw": "偷懒鱼",
+        "pos": 2,
+        "readCount": 297413,
+        "wordNumber": 190526,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o28fe2779fd2f1df57732e674e06918b9~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364627&x-signature=UOg8OsdDcOvzanvOaqLjgcAjwhU%3D"
+      },
+      {
+        "bookId": "7669158413007342654",
+        "bookNameRaw": "义：避祁伟",
+        "authorRaw": "丿",
+        "pos": 3,
+        "readCount": 325333,
+        "wordNumber": 158058,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2od11ad82d921713899f2e4badf0e24fde~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364627&x-signature=BFdFhK9K3S5XsVEM1P4g9sC8eGQ%3D"
+      },
+      {
+        "bookId": "7664239392654887998",
+        "bookNameRaw": "合院：哥棍",
+        "authorRaw": "合杠",
+        "pos": 4,
+        "readCount": 252126,
+        "wordNumber": 278072,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2occ2099321fc9c1a2e0c512a62e30302b~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364627&x-signature=0iG%2B3jZSrBeYfXS9oPnEMaRmU80%3D"
+      },
+      {
+        "bookId": "7671163833880169496",
+        "bookNameRaw": "合院：红二五始步",
+        "authorRaw": "系魔导",
+        "pos": 5,
+        "readCount": 214119,
+        "wordNumber": 146782,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o7c69b5ab6cc5c6a3994b5ccec74b4c06~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364627&x-signature=kezMVIC5n0yV0bsGB%2BywO6CkaOw%3D"
+      },
+      {
+        "bookId": "7666426115187018776",
+        "bookNameRaw": "合院：亮剑义",
+        "authorRaw": "清梦压星核",
+        "pos": 6,
+        "readCount": 200947,
+        "wordNumber": 251808,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o16cd499d7729d6552ee8948f0a517ea4~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364627&x-signature=u6DGtDaboavwd9NFmtcPUJsd8A4%3D"
+      },
+      {
+        "bookId": "7661225144039263256",
+        "bookNameRaw": "义，汉拳王，汉王",
+        "authorRaw": "呆呆",
+        "pos": 7,
+        "readCount": 201114,
+        "wordNumber": 266985,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2of3f6497443f639bd0cd52cc1faf3b87d~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364627&x-signature=bJXAgHs8zlMfwRolR%2FKmPKsEK9k%3D"
+      },
+      {
+        "bookId": "7650305257494301721",
+        "bookNameRaw": "合院，局选赘",
+        "authorRaw": "周",
+        "pos": 8,
+        "readCount": 194915,
+        "wordNumber": 298687,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o35aac755509c57d783c3eaee90ecebf8~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364627&x-signature=TmlqdD7FIiUyH9zsHLTNzOWyg%2Bs%3D"
+      },
+      {
+        "bookId": "7667951999849073726",
+        "bookNameRaw": "港综：骆虹哥，局刚坏",
+        "authorRaw": "曲",
+        "pos": 9,
+        "readCount": 165799,
+        "wordNumber": 203644,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o84fb6bd03428fc902a094077eff4a1b6~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364627&x-signature=SGhLxYvqRjVamKtk4ZUeZxDB60Y%3D"
+      },
+      {
+        "bookId": "7664219532667407384",
+        "bookNameRaw": "：域！",
+        "authorRaw": "艾莉",
+        "pos": 10,
+        "readCount": 171322,
+        "wordNumber": 120284,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o439cbb7b8ace04277b64e24320a29291~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364627&x-signature=Qr9J%2FCUr5Wl2DBMhbnqyO%2BnMo14%3D"
+      }
+    ]
+  },
+  "1_2_1016": {
+    "key": "1_2_1016",
+    "rankTypeText": "",
+    "totalNum": 100,
+    "fetchedAt": "2026-08-26T15:57:02.417Z",
+    "books": [
+      {
+        "bookId": "7616343124184419353",
+        "bookNameRaw": "义：散装汉，造星城市！",
+        "authorRaw": "汗血宝码",
+        "pos": 1,
+        "readCount": 399023,
+        "wordNumber": 716427,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o9225367ea7362f45be8b8dbac655f47a~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364628&x-signature=Ep8hWtahYPcBQYVOE8DHJgMpDI0%3D"
+      },
+      {
+        "bookId": "7628873452421663806",
+        "bookNameRaw": "兵突击局配五班",
+        "authorRaw": "户",
+        "pos": 2,
+        "readCount": 276577,
+        "wordNumber": 910590,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o9ffbc5ba25fa4a821bf88525b22ec026~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364628&x-signature=LEweVVspXcO4w4Z1dwxZ3Ee0ls0%3D"
+      },
+      {
+        "bookId": "7593988664409984025",
+        "bookNameRaw": "义：汉棋局，破！",
+        "authorRaw": "拾",
+        "pos": 3,
+        "readCount": 283145,
+        "wordNumber": 1047815,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o0c8fa1dbcb61d189d58a6641089d056e~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364628&x-signature=unWU53%2B%2F7ijTi6eEfsKbWggLUYM%3D"
+      },
+      {
+        "bookId": "7651139353963400216",
+        "bookNameRaw": "义：替刘始",
+        "authorRaw": "千",
+        "pos": 4,
+        "readCount": 238831,
+        "wordNumber": 355393,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o1345022f146675f1bf2a26672b4e9233~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364628&x-signature=0e2jJwlqafUVsFWejNFvR02FnHo%3D"
+      },
+      {
+        "bookId": "7618159108587260952",
+        "bookNameRaw": "义：称职务",
+        "authorRaw": "林苏",
+        "pos": 5,
+        "readCount": 234216,
+        "wordNumber": 987920,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/e5ac0a23a8ac1e64e99b80a482a4eed6~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364628&x-signature=Z6Wc5orQ9UiONnNB%2BsaWxejBPXI%3D"
+      },
+      {
+        "bookId": "7278791977582201890",
+        "bookNameRaw": "合院：垂钓诸",
+        "authorRaw": "若青帝",
+        "pos": 6,
+        "readCount": 225440,
+        "wordNumber": 6842787,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2oecd60d1f5a3b5689fb231f8329b638b1~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364628&x-signature=V74am5DvTYbq43%2BPmimk3BqR2tQ%3D"
+      },
+      {
+        "bookId": "7572922323175492670",
+        "bookNameRaw": "义：局考北济博",
+        "authorRaw": "贼刀",
+        "pos": 7,
+        "readCount": 222574,
+        "wordNumber": 790088,
+        "creationStatus": "0",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o9c69d7e6649c6ef682a340c364d26cf7~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364628&x-signature=cCSzRFoyzhP7SUX0EFND3nhcGyM%3D"
+      },
+      {
+        "bookId": "7636445564585921598",
+        "bookNameRaw": "雕：仇！",
+        "authorRaw": "",
+        "pos": 8,
+        "readCount": 222025,
+        "wordNumber": 558813,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2o7de7209ad36b48951ce9952087f75e99~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364628&x-signature=PG%2FRCpBSmepYrsklMKmfApLWAUE%3D"
+      },
+      {
+        "bookId": "7641973707283368984",
+        "bookNameRaw": "合院：欺压，屠尽院",
+        "authorRaw": "酸菜炒番茄",
+        "pos": 9,
+        "readCount": 209431,
+        "wordNumber": 529913,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2ob2647c89ff5b70befd969986a4987022~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364628&x-signature=wPLRohFFBwq9TAoD66u2PfhNlMU%3D"
+      },
+      {
+        "bookId": "7644835351684451352",
+        "bookNameRaw": "黑袍：祖",
+        "authorRaw": "幼琳酱",
+        "pos": 10,
+        "readCount": 200777,
+        "wordNumber": 437805,
+        "creationStatus": "1",
+        "thumbUri": "https://p3-reading-sign.fqnovelpic.com/novel-pic/p2oaf358d14c3a3128c18ca54d13813b8bc~tplv-resize:225:0.image?lk3s=5b7047ff&x-expires=1788364628&x-signature=7JBenxkJLdAWXqGrc0sVgsPBJ6w%3D"
+      }
+    ]
+  }
+}

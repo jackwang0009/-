@@ -1,0 +1,4 @@
+已解析 2391 本（主池 1844 + 补池 596，去重后 2393）；命中 57，nearMiss 11
+  1/57 让你拍节目，你让项羽撕秦始皇？ ch=226 first=2026-06-01
+
+写出 .scrape/sim/raw_ch2_fanqie.json：books=57 nearMiss=11

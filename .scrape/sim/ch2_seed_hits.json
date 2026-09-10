@@ -1,0 +1,57 @@
+[
+  {
+    "bookId": "7640863141710023742",
+    "bookName": "瘟疫模拟：开局投放Necroa",
+    "seedMatchedIn": [
+      "title"
+    ],
+    "seedKeywords": [
+      "模拟"
+    ],
+    "seedCats": [
+      "科幻末世",
+      "穿越",
+      "开局",
+      "魂穿"
+    ],
+    "source": "local:.scrape/fq_books.json"
+  },
+  {
+    "bookId": "7641506817385712665",
+    "bookName": "开局模拟被打爆，金丹爆星什么鬼",
+    "seedMatchedIn": [
+      "title"
+    ],
+    "seedKeywords": [
+      "模拟"
+    ],
+    "seedCats": [
+      "玄幻脑洞",
+      "玄幻",
+      "系统",
+      "穿越",
+      "架空",
+      "开局"
+    ],
+    "source": "local:.scrape/fq_books.json"
+  },
+  {
+    "bookId": "7583949514948496409",
+    "bookName": "一年抽取一词条，模拟的也可以？",
+    "seedMatchedIn": [
+      "title"
+    ],
+    "seedKeywords": [
+      "模拟"
+    ],
+    "seedCats": [
+      "玄幻脑洞",
+      "玄幻",
+      "系统",
+      "穿越",
+      "架空",
+      "东方玄幻"
+    ],
+    "source": "local:.scrape/fq_books.json"
+  }
+]

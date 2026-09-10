@@ -1,0 +1,790 @@
+
+===== ch4 probe @ 2026-09-08T13:35:19.653Z =====
+
+--- 七猫：搜索 API（旧资产用的那个端点）---
+[200] len=20616    qimao search 模拟
+        https://api-www.qimao.com/api/search/result?keyword=%E6%A8%A1%E6%8B%9F&page=1
+        head: {"data":{"page_data":{"count":"160","page":"1","page_size":"15"},"search_list":[{"book_id":"1976175","image_link":"https://cdn.wtzw.com/bookimg/public/images/cover/a3c6/cbaeaee2c2d1303a7ae50b5cc82b2192_360x480.jpg","titl
+[200] len=20965    qimao search 模拟器
+        https://api-www.qimao.com/api/search/result?keyword=%E6%A8%A1%E6%8B%9F%E5%99%A8&page=1
+        head: {"data":{"page_data":{"count":"245","page":"1","page_size":"15"},"search_list":[{"book_id":"1788022","image_link":"https://cdn.wtzw.com/bookimg/public/images/cover/f0e5/449b79e4659a7e8d5aef0fc25e82d5a4_360x480.jpg","titl
+[200] len=21452    qimao search 推演
+        https://api-www.qimao.com/api/search/result?keyword=%E6%8E%A8%E6%BC%94&page=1
+        head: {"data":{"page_data":{"count":"26","page":"1","page_size":"15"},"search_list":[{"book_id":"1786692","image_link":"https://cdn.wtzw.com/bookimg/public/images/cover/f0e5/451bf1db3b6751ebbc81335d7bca9939_360x480.jpg","title
+
+--- 七猫：书页 / 书库分类页 ---
+[200] len=23670    qimao book 1880008
+        https://www.qimao.com/shuku/1880008/
+        head: <textarea id="renderData" style="display:none">{"l1":"var arg1='5d8dd2ca0d31095768f27308a18c152d1531318df4f9c57e92';"}</textarea><!doctype html><html><head><meta charset="utf-8"><meta name="aliyun_waf_aa" content="1adb65
+[200] len=23670    qimao shuku 玄幻 click
+        https://www.qimao.com/shuku/a-202-37-a-a-a-a-click-1/
+        head: <textarea id="renderData" style="display:none">{"l1":"var arg1='5d8dd2cb30ac7f3cf064fbe3efa85c46cc478d6fa35fcb0818';"}</textarea><!doctype html><html><head><meta charset="utf-8"><meta name="aliyun_waf_aa" content="1adb65
+[200] len=23670    qimao robots
+        https://www.qimao.com/robots.txt
+        head: <textarea id="renderData" style="display:none">{"l1":"var arg1='5d8dd2f4a0ce5ac479266846517ed0a0e924e4ce419deab823';"}</textarea><!doctype html><html><head><meta charset="utf-8"><meta name="aliyun_waf_aa" content="1adb65
+
+--- 知乎盐选：公开入口探活 ---
+[200] len=2099     zhihu robots
+        https://www.zhihu.com/robots.txt
+        head: User-agent: Googlebot Allow: /tardis/jm Disallow: /appview/ Disallow: /login Disallow: /logout Disallow: /resetpassword Disallow: /terms Disallow: /search Disallow: /notifications Disallow: /settings Disallow: /inbox Dis
+[403] len=584      zhihu search 盐选 模拟修仙
+        https://www.zhihu.com/search?type=content&q=%E7%9B%90%E9%80%89%20%E6%A8%A1%E6%8B%9F%20%E4%BF%AE%E4%BB%99
+        head:  <!DOCTYPE html><html lang="en"><head><meta id="zh-zse-ck" charset="UTF-8" content="XwwhkOywcJZkQUw9XcAW+E5yyjsJN6ASC5tre/aBJn09LEA+bTlO30srkiS2rXzAcVduipmB82nK17sWT+tZgLk+ZwLe+oZQB4E7feF3gZTsCjxHF4JUEAGZ6G1Ia8lT"></h
+[200] len=47032    zhihu xen market remix
+        https://www.zhihu.com/xen/market/vip-privileges
+        head: <!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover"><link rel="dns-prefetch" href="//s
+[400] len=19       zhihu pub api search
+        https://www.zhihu.com/api/v4/search_v3?t=general&q=%E6%A8%A1%E6%8B%9F%E4%BF%AE%E4%BB%99
+        head: {"HitLabels":null} 
+[404] len=9        zhihu remix hot
+        https://www.zhihu.com/market/paid_column
+        head: Not found
+
+===== probe done =====
+
+===== ch4 probe2 @ 2026-09-08T13:36:15.652Z =====
+
+--- 七猫 API：书籍详情 / 榜单 候选端点 ---
+[404]      len=18      qm:book/detail?id=1880008
+        404 page not found
+[404]      len=18      qm:book/book-detail?id=1880008
+        404 page not found
+[404]      len=18      qm:book/info?book_id=1880008
+        404 page not found
+[200]      len=119     qm:book/chapter-list?id=1880008
+        {"errors":{"id":"0","code":"40001002","level":"1","status":"200","title":"请求参数错误","popup_title":"","details":"请求参数错误"}}
+[404]      len=18      qm:shuku/detail?id=1880008
+        404 page not found
+[404]      len=18      qm:v1/book/detail?id=1880008
+        404 page not found
+[404]      len=18      qm:rank/list?type=1&page=1
+        404 page not found
+[404]      len=18      qm:shuku/list?category=202&page=1
+        404 page not found
+[404]      len=18      qm:search/hot-words
+        404 page not found
+
+--- 七猫：搜索 API 深翻页是否稳定（第 5、10 页）---
+[200]      len=19994   qm search 模拟器 page=5
+        {"data":{"page_data":{"count":"245","page":"5","page_size":"15"},"search_list":[{"book_id":"1833578","image_link":"https://cdn.wtzw.com/bookimg/public/images/cover/c399/278a7bb8b6a4cd36c57e2eea7997a611_360x480.jpg","title":"HP：马尔福家的大小姐好像有那个大病","intro":"本文走向轻松，无刀子，请放心食用。\n角色是罗姨的，ooc是我的！(*)_/:\n熟知《哈利波
+[200]      len=20993   qm search 模拟器 page=10
+        {"data":{"page_data":{"count":"245","page":"10","page_size":"15"},"search_list":[{"book_id":"1950725","image_link":"https://cdn.wtzw.com/bookimg/public/images/cover/a3c6/e047cfe95d74966792c7ccfa565f160d_360x480.jpg","title":"人生模拟：从养成女谪仙开始","intro":"【第一次模拟，你穿越到修仙世界】\n【你成为宗门新星，执行宗门任务过程中，你救下了一名无法修炼的混沌圣
+
+--- 知乎：盐选合规入口候选（避开 robots 禁止的 /search）---
+[404]      len=9       zh xen market remix nav
+        Not Found
+[404]      len=69      zh api market recommend
+        <html><title>404: Not Found</title><body>404: Not Found</body></html>
+[403]      len=211     zh api remix search
+        {"error":{"need_login":true,"redirect":"https:\/\/www.zhihu.com\/account\/unhuman?type=U4E3Z1&need_login=true&session=9893440d796350650522433f28cfc68f&next=%2Fsignin","code":40353,"message":"请您登录后查看更多专业优质内容。"}} 
+[404]      len=69      zh salt column list
+        <html><title>404: Not Found</title><body>404: Not Found</body></html>
+[200]      len=47021   zh xen market info
+        <!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover"><link rel="dns-prefetch" href="//static.zhihu.com"><link rel="dns-prefetch" href="//pic4.zhimg.com"><link rel="dns
+[403]      len=584     zhuanlan topic
+         <!DOCTYPE html><html lang="en"><head><meta id="zh-zse-ck" charset="UTF-8" content="LnchmdXHJ+Oz6/ZHeYJ6Mgwg4CsZ/ox8lCidxufxm/K+hEkBYYke+Zi9P5XXv13SM2kXiwb/3J0Y05Pu23l5smxcWTVjX03J8DkWecNsnpiKxzkxaGKpmnHumGAPLd4Z"></head><body><div style="color:#535861;opacity: 0.1;display: flex;justify-content: 
+[403]      len=55      zh api v4 topic novels
+        {"error":{"message":"请求参数异常，请升级客户端后重试。","code":10003}} 
+
+===== probe2 done =====
+
+===== ch4 qimao harvest @ 2026-09-08T13:37:09.656Z =====
+
+[模拟] count=160
+  page 1: 15 rows, +15 new, pool=15
+  page 2: 15 rows, +15 new, pool=30
+  page 3: 15 rows, +13 new, pool=43
+  page 4: 15 rows, +15 new, pool=58
+
+===== ch4 zhihu probe @ 2026-09-08T13:37:16.218Z =====
+
+--- robots.txt 存档（后面 meta.notes 要引用）---
+[200]        len=2099    zhihu robots
+        saved -> .scrape/sim/raw/ch4_zhihu_robots.txt
+        User-agent: Googlebot Allow: /tardis/jm Disallow: /appview/ Disallow: /login Disallow: /logout Disallow: /resetpassword Disallow: /terms Disallow: /search Disallow: /notifications Disallow: /settings Disallow: /inbox Disallow: /admin_inbox Disallow: /*?guide* 
+  page 5: 15 rows, +15 new, pool=73
+        Disallow 条目 85 条，含 /search = true
+
+--- 盐选内容页是否需要登录（拿真实已知页做判定）---
+  page 6: 15 rows, +15 new, pool=88
+[403]        len=584     zhuanlan article
+         <!DOCTYPE html><html lang="en"><head><meta id="zh-zse-ck" charset="UTF-8" content="llg2Y9XCvJxIIY9bDDXTGB8WyFWwtIhwKH+8Rbg1WraJEMbhhsSWe9OcRGt7n/bjxF5gDSEDZXu36JqH9OxbNOjwlMhSiAKRchBnjWmABAspopxyANNWRniiDoRA1Bsc"></head><body><div style="color:#535861;opac
+  page 7: 15 rows, +15 new, pool=103
+[403]        len=584     zhihu question page
+         <!DOCTYPE html><html lang="en"><head><meta id="zh-zse-ck" charset="UTF-8" content="e4mtPiLpYiaOuqEuUcyJjeRWQlBr5hV1RGtMChQMTV6LRxc96qgYggdh9OGzl4CsMhoN66m/wo+49ZNhwliJOPLmQsEnN6t1PX/VF9vZWZu2qKAJJyqT5Kf+s2gPzhDV"></head><body><div style="color:#535861;opac
+  page 8: 15 rows, +15 new, pool=118
+[404]        len=9       zhihu xen market home
+        Not Found
+  page 9: 15 rows, +13 new, pool=131
+[403]        len=55      zhihu pub api article
+        {"error":{"message":"请求参数异常，请升级客户端后重试。","code":10003}} 
+  page 10: 15 rows, +15 new, pool=146
+
+--- 换搜索引擎侧入口（robots 允许，走公开索引找盐选书目）---
+[200]        len=98664   bing site:zhihu 盐选 模拟 修仙
+        saved -> .scrape/sim/raw/ch4_bing_1.html
+        <!DOCTYPE html><html dir="ltr" lang="zh" xml:lang="zh" xmlns="http://www.w3.org/1999/xhtml" xmlns:Web="http://schemas.live.com/Web/"><script type="text/javascript" nonce="bh0jzf9NL/4oS4I6w/XIpPxu4stRsfqRoN34i7rxZ6w=" >//<![CDATA[ window.si_ST=new Date //]]><
+  page 11: 10 rows, +10 new, pool=156
+[200]        len=99005   bing 知乎盐选 模拟器 小说
+        <!DOCTYPE html><html dir="ltr" lang="zh" xml:lang="zh" xmlns="http://www.w3.org/1999/xhtml" xmlns:Web="http://schemas.live.com/Web/"><script type="text/javascript" nonce="i/LMoYbJJbNfL4UVhEj9Ww2l3GFRey1PzXQXScVgLgM=" >//<![CDATA[ window.si_ST=new Date //]]><
+
+[模拟器] count=245
+  page 1: 15 rows, +1 new, pool=157
+  page 2: 15 rows, +0 new, pool=157
+[200]        len=345074  so.com 知乎盐选 模拟修仙
+        <!DOCTYPE html> <!--[if lt IE 7 ]><html class="ie6"><![endif]--> <!--[if IE 7 ]><html class="ie7"><![endif]--> <!--[if IE 8 ]><html class="ie8"><![endif]--> <!--[if IE 9 ]><html class="ie9"><![endif]--> <!--[if (gt IE 9)|!(IE)]><!--><html ><!--<![endif]--> <he
+  page 3: 15 rows, +0 new, pool=157
+
+===== zhihu probe done =====
+  page 4: 15 rows, +9 new, pool=166
+  page 5: 15 rows, +15 new, pool=181
+  page 6: 15 rows, +10 new, pool=191
+  page 7: 15 rows, +15 new, pool=206
+  page 8: 15 rows, +1 new, pool=207
+  page 9: 15 rows, +6 new, pool=213
+  page 10: 15 rows, +1 new, pool=214
+  page 11: 15 rows, +7 new, pool=221
+  page 12: 15 rows, +6 new, pool=227
+  page 13: 15 rows, +0 new, pool=227
+  page 14: 15 rows, +5 new, pool=232
+  page 15: 15 rows, +8 new, pool=240
+  page 16: 15 rows, +2 new, pool=242
+  page 17: 5 rows, +2 new, pool=244
+
+[推演] count=26
+  page 1: 15 rows, +15 new, pool=259
+  page 2: 11 rows, +10 new, pool=269
+
+[演算] count=0
+  page 1: empty -> stop
+
+[沙盘] count=3
+  page 1: 3 rows, +2 new, pool=271
+
+[预演] count=1
+  page 1: 1 rows, +1 new, pool=272
+
+[重开] count=12
+  page 1: 12 rows, +12 new, pool=284
+
+[人生模拟] count=1076
+  page 1: 15 rows, +0 new, pool=284
+  page 2: 15 rows, +0 new, pool=284
+
+===== ch4 zhihu tardis @ 2026-09-08T13:37:56.968Z =====
+  page 3: 15 rows, +3 new, pool=287
+[200] site:zhihu.com 盐选 模拟器 修仙           -> zhihu links: 3 (pool 3)
+  page 4: 15 rows, +12 new, pool=299
+  page 5: 15 rows, +11 new, pool=310
+[200] site:zhihu.com 盐选 模拟器 修仙           -> zhihu links: 2 (pool 5)
+  page 6: 15 rows, +15 new, pool=325
+[200] 知乎盐选 人生模拟 修仙 小说                    -> zhihu links: 1 (pool 6)
+  page 7: 15 rows, +15 new, pool=340
+[200] 知乎盐选 人生模拟 修仙 小说                    -> zhihu links: 0 (pool 6)
+  page 8: 15 rows, +14 new, pool=354
+  page 9: 15 rows, +0 new, pool=354
+[200] 知乎盐选 推演 修真 短篇                      -> zhihu links: 1 (pool 6)
+  page 10: 15 rows, +14 new, pool=368
+[200] 知乎盐选 推演 修真 短篇                      -> zhihu links: 0 (pool 6)
+  page 11: 15 rows, +12 new, pool=380
+[200] site:zhihu.com 盐选专栏 模拟 修仙 小说       -> zhihu links: 3 (pool 6)
+  page 12: 15 rows, +8 new, pool=388
+  page 13: 15 rows, +12 new, pool=400
+[200] site:zhihu.com 盐选专栏 模拟 修仙 小说       -> zhihu links: 2 (pool 8)
+  page 14: 15 rows, +13 new, pool=413
+[200] 知乎盐选 重开 修仙                         -> zhihu links: 1 (pool 8)
+  page 15: 15 rows, +15 new, pool=428
+  page 16: 15 rows, +0 new, pool=428
+[200] 知乎盐选 重开 修仙                         -> zhihu links: 1 (pool 9)
+
+SERP 池共 9 条 -> .scrape/sim/ch4_zh_serp.json
+
+--- tardis / SEO 渲染路径探活（robots 唯一 Allow 的那条）---
+  page 17: 15 rows, +8 new, pool=436
+[200]        len=1165    tardis/zm/art (chrome)
+  page 18: 15 rows, +15 new, pool=451
+[200]        len=1165    tardis/zm/art (googlebot)
+
+[无限重生] count=7118
+  page 1: 15 rows, +15 new, pool=466
+[200]        len=1165    tardis/bd/art (chrome)
+  page 2: 15 rows, +15 new, pool=481
+  page 3: 15 rows, +15 new, pool=496
+[200]        len=1165    tardis/bd/art (googlebot)
+  page 4: 15 rows, +15 new, pool=511
+[200]        len=1165    tardis/sogou/art (chrome)
+  page 5: 15 rows, +15 new, pool=526
+[200]        len=1165    tardis/sogou/art (googlebot)
+  page 6: 15 rows, +14 new, pool=540
+[200]        len=1077    tardis/jm/art (chrome)
+  page 7: 15 rows, +14 new, pool=554
+[200]        len=1077    tardis/jm/art (googlebot)
+  page 8: 15 rows, +15 new, pool=569
+  page 9: 15 rows, +15 new, pool=584
+[200]        len=1165    tardis/zm/ans (chrome)
+  page 10: 15 rows, +13 new, pool=597
+[200]        len=1165    tardis/zm/ans (googlebot)
+  page 11: 15 rows, +15 new, pool=612
+[200]        len=1165    tardis/bd/ans (chrome)
+  page 12: 15 rows, +13 new, pool=625
+[200]        len=1165    tardis/bd/ans (googlebot)
+  page 13: 15 rows, +6 new, pool=631
+[200]        len=1077    tardis/landing/q (chrome)
+  page 14: 15 rows, +12 new, pool=643
+[200]        len=1077    tardis/landing/q (googlebot)
+
+===== zhihu tardis probe done =====
+  page 15: 15 rows, +14 new, pool=657
+  page 16: 15 rows, +14 new, pool=671
+  page 17: 15 rows, +14 new, pool=685
+  page 18: 15 rows, +11 new, pool=696
+
+七猫命中池：696 本（去重后），70 次请求 -> .scrape/sim/ch4_qm_hits.json
+===== qimao harvest done =====
+
+===== ch4 build @ 2026-09-08T13:39:56.707Z =====
+输入命中池：696 本
+
+条件 A 命中且条件 B 命中：81 本 -> 取头部 60 本
+条件 A 中但条件 B 不中（nearMiss）：126 本
+
+分类分布 top 15：
+     75  都市高武
+     74  东方玄幻
+     53  异世大陆
+     45  诸天万界
+     37  衍生同人
+     33  末世危机
+     31  励志鸡汤
+     24  成功有道
+     23  幻想修真
+     20  都市高手
+     16  穿越历史
+     16  灵气复苏
+     16  散文随笔
+     15  架空历史
+     14  商战职场
+
+字数中位数：1019250（101.9 万字）
+已写出 .scrape/sim/raw_ch4_qimao.json：books=60 nearMiss=126
+
+入选前 20（字数降序）：
+  1. 模拟模拟就无敌了                     高             811.5万 连载  东方玄幻   [title+abstract] 模拟
+  2. 玄幻模拟器                        咸鱼洁南          322.5万 完结  诸天万界   [title+abstract] 模拟器/模拟
+  3. 妖魔乱世，我能模拟修仙                  只会叭水的鱼        289.7万 完结  幻想修真   [title+abstract] 模拟
+  4. 玄幻之无限模拟人生                    飞花朵           283.0万 完结  东方玄幻   [title+abstract] 模拟/模拟器/人生模拟
+  5. 让你模拟人生，你次次逆天改命？              执火独行          238.0万 完结  诸天万界   [title+abstract] 模拟/推演
+  6. 氪命推演，无敌从斩妖开始                 谦豫            228.4万 完结  东方玄幻   [title+abstract] 推演
+  7. 模拟器：开局天牢死囚                   闪电月牙          204.1万 完结  东方玄幻   [title+abstract] 模拟器/模拟
+  8. 轮回模拟：我能逆天改命                  江河载月          186.0万 完结  幻想修真   [title+abstract] 模拟/模拟器
+  9. 模拟万次，成就人族横炼大帝                圣光照耀着你        180.4万 完结  东方玄幻   [title+abstract] 模拟/模拟器
+ 10. 玄幻：我能推演绝世功法                  海贼英雄          177.3万 完结  幻想修真   [title+abstract] 推演
+ 11. 从锁龙井开始无限模拟                   阿牛要吃菜         162.5万 完结  东方玄幻   [title] 模拟
+ 12. 西游：开局重开金鳌岛                   鱼生太长          160.5万 完结  上古洪荒   [title] 重开
+ 13. 玄幻：我，无限模拟，成就大帝               小江河子          154.3万 完结  东方玄幻   [title+abstract] 模拟/模拟器
+ 14. 人生模拟：氪金就变强！                  欧阳大大          150.2万 完结  幻想修真   [title+abstract] 人生模拟/模拟/模拟器
+ 15. 玄幻：我有人生模拟器                   我是小嘟嘟         143.3万 完结  东方玄幻   [title+abstract] 模拟器/人生模拟/模拟
+ 16. 我的修仙模拟器                      小三胖子          135.2万 完结  幻想修真   [title] 模拟器/模拟
+ 17. 斗破：我云山，拥有人生模拟器               洛风侧           132.8万 完结  衍生同人   [title+abstract] 模拟器/人生模拟/模拟
+ 18. 我的人生可以无限模拟                   阳冬十月          128.5万 完结  东方玄幻   [title+abstract] 模拟
+ 19. 我有一个魔神模拟器                    第一魔           126.6万 完结  异世大陆   [title+abstract] 模拟器/模拟
+ 20. 孙悟空的人生模拟器                    岳不懂           123.2万 完结  上古洪荒   [title+abstract] 模拟器/人生模拟/模拟
+===== build done =====
+
+===== ch4 validate @ 2026-09-08T13:40:19.193Z =====
+meta.channel=4 platforms=["qimao"]
+books=60 nearMiss=126
+
+--- 字段填充率（60 本）---
+   platform          60/60
+   platformBookId    60/60
+   title             60/60
+   author            60/60
+   url               60/60
+   wordCount         60/60
+   chapterTotal       0/60
+   status            60/60
+   categories        60/60
+   tags               0/60
+   abstract          60/60
+   popularity         0/60
+   score              0/60
+   firstPublishDate   0/60
+   lastUpdateDate    60/60
+   simEvidence       60/60
+   openingHook        0/60
+   collectedAt       60/60
+   source            60/60
+
+--- 数值 ---
+   字数中位数 1019250（101.9 万字）  最小 35.3万  最大 811.5万
+   状态分布 {"连载":5,"完结":55}
+   matchedIn 分布 {"title+abstract":52,"title":8}
+   分类分布 {"东方玄幻":24,"诸天万界":3,"幻想修真":16,"上古洪荒":3,"衍生同人":2,"异世大陆":6,"架空历史":1,"都市高武":2,"未来幻想":1,"末世危机":1,"古典仙侠":1}
+
+--- 结论 ---
+✅ 全部 60 条 books + 126 条 nearMiss 均符合 SCHEMA 第二节字段契约
+===== validate done =====
+
+===== ch4 build @ 2026-09-08T13:40:49.470Z =====
+输入命中池：696 本
+
+条件 A 命中且条件 B 命中：81 本 -> 取头部 60 本（截掉 21 本）
+条件 A 中但条件 B 不中（nearMiss）：126 本
+
+分类分布 top 15：
+     75  都市高武
+     74  东方玄幻
+     53  异世大陆
+     45  诸天万界
+     37  衍生同人
+     33  末世危机
+     31  励志鸡汤
+     24  成功有道
+     23  幻想修真
+     20  都市高手
+     16  穿越历史
+     16  灵气复苏
+     16  散文随笔
+     15  架空历史
+     14  商战职场
+
+字数中位数：合格总体 81 本 = 691700（69.2 万字）
+             交付集 60 本 = 1019250（101.9 万字，受头部截断抬高）
+仅简介命中型：合格总体中 1 本，其中被截断丢掉 1 本
+已写出 .scrape/sim/raw_ch4_qimao.json：books=60 nearMiss=126
+
+入选前 20（字数降序）：
+  1. 模拟模拟就无敌了                     高             811.5万 连载  东方玄幻   [title+abstract] 模拟
+  2. 玄幻模拟器                        咸鱼洁南          322.5万 完结  诸天万界   [title+abstract] 模拟器/模拟
+  3. 妖魔乱世，我能模拟修仙                  只会叭水的鱼        289.7万 完结  幻想修真   [title+abstract] 模拟
+  4. 玄幻之无限模拟人生                    飞花朵           283.0万 完结  东方玄幻   [title+abstract] 模拟/模拟器/人生模拟
+  5. 让你模拟人生，你次次逆天改命？              执火独行          238.0万 完结  诸天万界   [title+abstract] 模拟/推演
+  6. 氪命推演，无敌从斩妖开始                 谦豫            228.4万 完结  东方玄幻   [title+abstract] 推演
+  7. 模拟器：开局天牢死囚                   闪电月牙          204.1万 完结  东方玄幻   [title+abstract] 模拟器/模拟
+  8. 轮回模拟：我能逆天改命                  江河载月          186.0万 完结  幻想修真   [title+abstract] 模拟/模拟器
+  9. 模拟万次，成就人族横炼大帝                圣光照耀着你        180.4万 完结  东方玄幻   [title+abstract] 模拟/模拟器
+ 10. 玄幻：我能推演绝世功法                  海贼英雄          177.3万 完结  幻想修真   [title+abstract] 推演
+ 11. 从锁龙井开始无限模拟                   阿牛要吃菜         162.5万 完结  东方玄幻   [title] 模拟
+ 12. 西游：开局重开金鳌岛                   鱼生太长          160.5万 完结  上古洪荒   [title] 重开
+ 13. 玄幻：我，无限模拟，成就大帝               小江河子          154.3万 完结  东方玄幻   [title+abstract] 模拟/模拟器
+ 14. 人生模拟：氪金就变强！                  欧阳大大          150.2万 完结  幻想修真   [title+abstract] 人生模拟/模拟/模拟器
+ 15. 玄幻：我有人生模拟器                   我是小嘟嘟         143.3万 完结  东方玄幻   [title+abstract] 模拟器/人生模拟/模拟
+ 16. 我的修仙模拟器                      小三胖子          135.2万 完结  幻想修真   [title] 模拟器/模拟
+ 17. 斗破：我云山，拥有人生模拟器               洛风侧           132.8万 完结  衍生同人   [title+abstract] 模拟器/人生模拟/模拟
+ 18. 我的人生可以无限模拟                   阳冬十月          128.5万 完结  东方玄幻   [title+abstract] 模拟
+ 19. 我有一个魔神模拟器                    第一魔           126.6万 完结  异世大陆   [title+abstract] 模拟器/模拟
+ 20. 孙悟空的人生模拟器                    岳不懂           123.2万 完结  上古洪荒   [title+abstract] 模拟器/人生模拟/模拟
+===== build done =====
+
+===== ch4 validate @ 2026-09-08T13:40:49.522Z =====
+meta.channel=4 platforms=["qimao"]
+books=60 nearMiss=126
+
+--- 字段填充率（60 本）---
+   platform          60/60
+   platformBookId    60/60
+   title             60/60
+   author            60/60
+   url               60/60
+   wordCount         60/60
+   chapterTotal       0/60
+   status            60/60
+   categories        60/60
+   tags               0/60
+   abstract          60/60
+   popularity         0/60
+   score              0/60
+   firstPublishDate   0/60
+   lastUpdateDate    60/60
+   simEvidence       60/60
+   openingHook        0/60
+   collectedAt       60/60
+   source            60/60
+
+--- 数值 ---
+   字数中位数 1019250（101.9 万字）  最小 35.3万  最大 811.5万
+   状态分布 {"连载":5,"完结":55}
+   matchedIn 分布 {"title+abstract":52,"title":8}
+   分类分布 {"东方玄幻":24,"诸天万界":3,"幻想修真":16,"上古洪荒":3,"衍生同人":2,"异世大陆":6,"架空历史":1,"都市高武":2,"未来幻想":1,"末世危机":1,"古典仙侠":1}
+
+--- 结论 ---
+✅ 全部 60 条 books + 126 条 nearMiss 均符合 SCHEMA 第二节字段契约
+===== validate done =====
+
+===== ch4 qimao supplement @ 2026-09-08T13:42:15.607Z =====
+既有命中池：696 本
+[模拟修仙        ] count=1425  +48 new  pool=744
+[修仙模拟        ] count=1425  +7 new  pool=751
+[模拟长生        ] count= 841  +110 new  pool=861
+[推演长生        ] count= 711  +1 new  pool=862
+[推演功法        ] count= 103  +68 new  pool=930
+[模拟人生修仙      ] count=2334  +5 new  pool=935
+[重生模拟        ] count=6724  +0 new  pool=935
+[轮回模拟        ] count= 289  +66 new  pool=1001
+[无限模拟        ] count= 721  +1 new  pool=1002
+[模拟器修真       ] count=2593  +67 new  pool=1069
+[演算天机        ] count=  53  +53 new  pool=1122
+[推演大道        ] count= 133  +93 new  pool=1215
+
+补召回：696 -> 1215 本（+519），91 次请求
+===== supplement done =====
+
+===== ch4 build @ 2026-09-08T13:44:38.085Z =====
+输入命中池：1215 本
+
+条件 A 命中且条件 B 命中：86 本 -> 全收 86 本（SCHEMA 修订 3 已拆上限）
+条件 A 中但条件 B 不中（nearMiss）：126 本
+
+分类分布 top 15：
+    179  都市高武
+    178  东方玄幻
+     80  异世大陆
+     74  幻想修真
+     64  诸天万界
+     51  衍生同人
+     48  古典仙侠
+     38  励志鸡汤
+     35  末世危机
+     34  成功有道
+     32  都市高手
+     25  架空历史
+     22  散文随笔
+     19  灵气复苏
+     18  穿越历史
+
+字数中位数：合格总体 86 本 = 658550（65.9 万字）
+             交付集 86 本 = 658550（65.9 万字，受头部截断抬高）
+仅简介命中型：合格总体中 5 本，其中被截断丢掉 0 本
+已写出 .scrape/sim/raw_ch4_qimao.json：books=86 nearMiss=126
+
+入选前 20（字数降序）：
+  1. 模拟模拟就无敌了                     高             811.5万 连载  东方玄幻   [title+abstract] 模拟
+  2. 玄幻模拟器                        咸鱼洁南          322.5万 完结  诸天万界   [title+abstract] 模拟器/模拟
+  3. 妖魔乱世，我能模拟修仙                  只会叭水的鱼        289.7万 完结  幻想修真   [title+abstract] 模拟
+  4. 玄幻之无限模拟人生                    飞花朵           283.0万 完结  东方玄幻   [title+abstract] 模拟/模拟器/人生模拟
+  5. 让你模拟人生，你次次逆天改命？              执火独行          238.0万 完结  诸天万界   [title+abstract] 模拟/推演
+  6. 氪命推演，无敌从斩妖开始                 谦豫            228.4万 完结  东方玄幻   [title+abstract] 推演
+  7. 模拟器：开局天牢死囚                   闪电月牙          204.1万 完结  东方玄幻   [title+abstract] 模拟器/模拟
+  8. 轮回模拟：我能逆天改命                  江河载月          186.0万 完结  幻想修真   [title+abstract] 模拟/模拟器
+  9. 模拟万次，成就人族横炼大帝                圣光照耀着你        180.4万 完结  东方玄幻   [title+abstract] 模拟/模拟器
+ 10. 玄幻：我能推演绝世功法                  海贼英雄          177.3万 完结  幻想修真   [title+abstract] 推演
+ 11. 从锁龙井开始无限模拟                   阿牛要吃菜         162.5万 完结  东方玄幻   [title] 模拟
+ 12. 西游：开局重开金鳌岛                   鱼生太长          160.5万 完结  上古洪荒   [title] 重开
+ 13. 玄幻：我，无限模拟，成就大帝               小江河子          154.3万 完结  东方玄幻   [title+abstract] 模拟/模拟器
+ 14. 人生模拟：氪金就变强！                  欧阳大大          150.2万 完结  幻想修真   [title+abstract] 人生模拟/模拟/模拟器
+ 15. 玄幻：我有人生模拟器                   我是小嘟嘟         143.3万 完结  东方玄幻   [title+abstract] 模拟器/人生模拟/模拟
+ 16. 我的修仙模拟器                      小三胖子          135.2万 完结  幻想修真   [title] 模拟器/模拟
+ 17. 斗破：我云山，拥有人生模拟器               洛风侧           132.8万 完结  衍生同人   [title+abstract] 模拟器/人生模拟/模拟
+ 18. 我的人生可以无限模拟                   阳冬十月          128.5万 完结  东方玄幻   [title+abstract] 模拟
+ 19. 我有一个魔神模拟器                    第一魔           126.6万 完结  异世大陆   [title+abstract] 模拟器/模拟
+ 20. 孙悟空的人生模拟器                    岳不懂           123.2万 完结  上古洪荒   [title+abstract] 模拟器/人生模拟/模拟
+===== build done =====
+
+===== ch4 build @ 2026-09-08T13:45:11.261Z =====
+输入命中池：1215 本
+
+条件 A 命中且条件 B 命中：86 本 -> 全收 86 本（SCHEMA 修订 3 已拆上限）
+条件 A 中但条件 B 不中（nearMiss）：126 本
+
+分类分布 top 15：
+    179  都市高武
+    178  东方玄幻
+     80  异世大陆
+     74  幻想修真
+     64  诸天万界
+     51  衍生同人
+     48  古典仙侠
+     38  励志鸡汤
+     35  末世危机
+     34  成功有道
+     32  都市高手
+     25  架空历史
+     22  散文随笔
+     19  灵气复苏
+     18  穿越历史
+
+字数中位数：658550（65.9 万字）—— 合格总体即交付集，无截断
+仅简介命中型（模拟只是情节装置、未进书名）：5 本
+已写出 .scrape/sim/raw_ch4_qimao.json：books=86 nearMiss=126
+
+入选前 20（字数降序）：
+  1. 模拟模拟就无敌了                     高             811.5万 连载  东方玄幻   [title+abstract] 模拟
+  2. 玄幻模拟器                        咸鱼洁南          322.5万 完结  诸天万界   [title+abstract] 模拟器/模拟
+  3. 妖魔乱世，我能模拟修仙                  只会叭水的鱼        289.7万 完结  幻想修真   [title+abstract] 模拟
+  4. 玄幻之无限模拟人生                    飞花朵           283.0万 完结  东方玄幻   [title+abstract] 模拟/模拟器/人生模拟
+  5. 让你模拟人生，你次次逆天改命？              执火独行          238.0万 完结  诸天万界   [title+abstract] 模拟/推演
+  6. 氪命推演，无敌从斩妖开始                 谦豫            228.4万 完结  东方玄幻   [title+abstract] 推演
+  7. 模拟器：开局天牢死囚                   闪电月牙          204.1万 完结  东方玄幻   [title+abstract] 模拟器/模拟
+  8. 轮回模拟：我能逆天改命                  江河载月          186.0万 完结  幻想修真   [title+abstract] 模拟/模拟器
+  9. 模拟万次，成就人族横炼大帝                圣光照耀着你        180.4万 完结  东方玄幻   [title+abstract] 模拟/模拟器
+ 10. 玄幻：我能推演绝世功法                  海贼英雄          177.3万 完结  幻想修真   [title+abstract] 推演
+ 11. 从锁龙井开始无限模拟                   阿牛要吃菜         162.5万 完结  东方玄幻   [title] 模拟
+ 12. 西游：开局重开金鳌岛                   鱼生太长          160.5万 完结  上古洪荒   [title] 重开
+ 13. 玄幻：我，无限模拟，成就大帝               小江河子          154.3万 完结  东方玄幻   [title+abstract] 模拟/模拟器
+ 14. 人生模拟：氪金就变强！                  欧阳大大          150.2万 完结  幻想修真   [title+abstract] 人生模拟/模拟/模拟器
+ 15. 玄幻：我有人生模拟器                   我是小嘟嘟         143.3万 完结  东方玄幻   [title+abstract] 模拟器/人生模拟/模拟
+ 16. 我的修仙模拟器                      小三胖子          135.2万 完结  幻想修真   [title] 模拟器/模拟
+ 17. 斗破：我云山，拥有人生模拟器               洛风侧           132.8万 完结  衍生同人   [title+abstract] 模拟器/人生模拟/模拟
+ 18. 我的人生可以无限模拟                   阳冬十月          128.5万 完结  东方玄幻   [title+abstract] 模拟
+ 19. 我有一个魔神模拟器                    第一魔           126.6万 完结  异世大陆   [title+abstract] 模拟器/模拟
+ 20. 孙悟空的人生模拟器                    岳不懂           123.2万 完结  上古洪荒   [title+abstract] 模拟器/人生模拟/模拟
+===== build done =====
+
+===== ch4 validate @ 2026-09-08T13:45:11.317Z =====
+meta.channel=4 platforms=["qimao"]
+books=86 nearMiss=126
+
+--- 字段填充率（86 本）---
+   platform          86/86
+   platformBookId    86/86
+   title             86/86
+   author            86/86
+   url               86/86
+   wordCount         86/86
+   chapterTotal       0/86
+   status            86/86
+   categories        86/86
+   tags               0/86
+   abstract          86/86
+   popularity         0/86
+   score              0/86
+   firstPublishDate   0/86
+   lastUpdateDate    86/86
+   simEvidence       86/86
+   openingHook        0/86
+   collectedAt       86/86
+   source            86/86
+
+--- 数值 ---
+   字数中位数 658550（65.9 万字）  最小 4.5万  最大 811.5万
+   状态分布 {"连载":12,"完结":74}
+   matchedIn 分布 {"title+abstract":72,"title":9,"abstract":5}
+   分类分布 {"东方玄幻":39,"诸天万界":3,"幻想修真":20,"上古洪荒":4,"衍生同人":2,"异世大陆":8,"架空历史":1,"都市高武":2,"未来幻想":1,"古典仙侠":2,"末世危机":1,"灵气复苏":2,"穿越历史":1}
+
+--- 结论 ---
+✅ 全部 86 条 books + 126 条 nearMiss 均符合 SCHEMA 第二节字段契约
+===== validate done =====
+
+===== ch4 qimao reverse-recall @ 2026-09-08T13:46:58.707Z =====
+既有命中池：1215 本
+[杂役        ] count=   96  看过  96 条  +1 本过条件A的新书  pool=1216
+[筑基        ] count=  140  看过 120 条  +0 本过条件A的新书  pool=1216
+[金丹        ] count=   30  看过  30 条  +2 本过条件A的新书  pool=1218
+[元婴        ] count= 1647  看过 120 条  +0 本过条件A的新书  pool=1218
+[灵根        ] count= 1415  看过 120 条  +0 本过条件A的新书  pool=1218
+[长生        ] count=  686  看过 120 条  +0 本过条件A的新书  pool=1218
+[宗门        ] count= 1463  看过 120 条  +0 本过条件A的新书  pool=1218
+[炼气        ] count=   24  看过  24 条  +0 本过条件A的新书  pool=1218
+[化神        ] count= 3778  看过 120 条  +0 本过条件A的新书  pool=1218
+[仙门        ] count= 3655  看过 120 条  +1 本过条件A的新书  pool=1219
+[凡人修仙      ] count= 1359  看过 120 条  +1 本过条件A的新书  pool=1220
+[苟道        ] count= 1528  看过 120 条  +1 本过条件A的新书  pool=1221
+
+反向召回：池 1215 -> 1221（+6），83 次请求，扫过 1230 条结果
+===== reverse-recall done =====
+
+===== ch4 build @ 2026-09-08T13:49:02.176Z =====
+输入命中池：1221 本
+
+条件 A 命中且条件 B 命中：92 本 -> 全收 92 本（SCHEMA 修订 3 已拆上限）
+条件 A 中但条件 B 不中（nearMiss）：126 本
+
+分类分布 top 15：
+    182  东方玄幻
+    179  都市高武
+     80  异世大陆
+     75  幻想修真
+     64  诸天万界
+     51  衍生同人
+     48  古典仙侠
+     38  励志鸡汤
+     35  末世危机
+     34  成功有道
+     32  都市高手
+     25  架空历史
+     22  散文随笔
+     20  灵气复苏
+     18  穿越历史
+
+字数中位数：656900（65.7 万字）—— 合格总体即交付集，无截断
+仅简介命中型（模拟只是情节装置、未进书名）：11 本
+已写出 .scrape/sim/raw_ch4_qimao.json：books=92 nearMiss=126
+
+入选前 20（字数降序）：
+  1. 模拟模拟就无敌了                     高             811.5万 连载  东方玄幻   [title+abstract] 模拟
+  2. 玄幻模拟器                        咸鱼洁南          322.5万 完结  诸天万界   [title+abstract] 模拟器/模拟
+  3. 妖魔乱世，我能模拟修仙                  只会叭水的鱼        289.7万 完结  幻想修真   [title+abstract] 模拟
+  4. 玄幻之无限模拟人生                    飞花朵           283.0万 完结  东方玄幻   [title+abstract] 模拟/模拟器/人生模拟
+  5. 金丹是恒星，你管这叫修仙？                走地鹤           270.3万 完结  幻想修真   [abstract] 模拟
+  6. 让你模拟人生，你次次逆天改命？              执火独行          238.0万 完结  诸天万界   [title+abstract] 模拟/推演
+  7. 氪命推演，无敌从斩妖开始                 谦豫            228.4万 完结  东方玄幻   [title+abstract] 推演
+  8. 模拟器：开局天牢死囚                   闪电月牙          204.1万 完结  东方玄幻   [title+abstract] 模拟器/模拟
+  9. 轮回模拟：我能逆天改命                  江河载月          186.0万 完结  幻想修真   [title+abstract] 模拟/模拟器
+ 10. 模拟万次，成就人族横炼大帝                圣光照耀着你        180.4万 完结  东方玄幻   [title+abstract] 模拟/模拟器
+ 11. 玄幻：我能推演绝世功法                  海贼英雄          177.3万 完结  幻想修真   [title+abstract] 推演
+ 12. 从锁龙井开始无限模拟                   阿牛要吃菜         162.5万 完结  东方玄幻   [title] 模拟
+ 13. 西游：开局重开金鳌岛                   鱼生太长          160.5万 完结  上古洪荒   [title] 重开
+ 14. 玄幻：我，无限模拟，成就大帝               小江河子          154.3万 完结  东方玄幻   [title+abstract] 模拟/模拟器
+ 15. 人生模拟：氪金就变强！                  欧阳大大          150.2万 完结  幻想修真   [title+abstract] 人生模拟/模拟/模拟器
+ 16. 玄幻：我有人生模拟器                   我是小嘟嘟         143.3万 完结  东方玄幻   [title+abstract] 模拟器/人生模拟/模拟
+ 17. 我的修仙模拟器                      小三胖子          135.2万 完结  幻想修真   [title] 模拟器/模拟
+ 18. 斗破：我云山，拥有人生模拟器               洛风侧           132.8万 完结  衍生同人   [title+abstract] 模拟器/人生模拟/模拟
+ 19. 我的人生可以无限模拟                   阳冬十月          128.5万 完结  东方玄幻   [title+abstract] 模拟
+ 20. 我有一个魔神模拟器                    第一魔           126.6万 完结  异世大陆   [title+abstract] 模拟器/模拟
+===== build done =====
+
+===== ch4 validate @ 2026-09-08T13:49:02.225Z =====
+meta.channel=4 platforms=["qimao"]
+books=92 nearMiss=126
+
+--- 字段填充率（92 本）---
+   platform          92/92
+   platformBookId    92/92
+   title             92/92
+   author            92/92
+   url               92/92
+   wordCount         92/92
+   chapterTotal       0/92
+   status            92/92
+   categories        92/92
+   tags               0/92
+   abstract          92/92
+   popularity         0/92
+   score              0/92
+   firstPublishDate   0/92
+   lastUpdateDate    92/92
+   simEvidence       92/92
+   openingHook        0/92
+   collectedAt       92/92
+   source            92/92
+
+--- 数值 ---
+   字数中位数 656900（65.7 万字）  最小 4.5万  最大 811.5万
+   状态分布 {"连载":13,"完结":79}
+   matchedIn 分布 {"title+abstract":72,"abstract":11,"title":9}
+   分类分布 {"东方玄幻":43,"诸天万界":3,"幻想修真":21,"上古洪荒":4,"衍生同人":2,"异世大陆":8,"架空历史":1,"都市高武":2,"未来幻想":1,"古典仙侠":2,"末世危机":1,"灵气复苏":3,"穿越历史":1}
+
+--- 结论 ---
+✅ 全部 92 条 books + 126 条 nearMiss 均符合 SCHEMA 第二节字段契约
+===== validate done =====
+
+===== ch4 build @ 2026-09-08T13:49:18.701Z =====
+输入命中池：1221 本
+
+条件 A 命中且条件 B 命中：92 本 -> 全收 92 本（SCHEMA 修订 3 已拆上限）
+条件 A 中但条件 B 不中（nearMiss）：126 本
+
+分类分布 top 15：
+    182  东方玄幻
+    179  都市高武
+     80  异世大陆
+     75  幻想修真
+     64  诸天万界
+     51  衍生同人
+     48  古典仙侠
+     38  励志鸡汤
+     35  末世危机
+     34  成功有道
+     32  都市高手
+     25  架空历史
+     22  散文随笔
+     20  灵气复苏
+     18  穿越历史
+
+字数中位数：656900（65.7 万字）—— 合格总体即交付集，无截断
+仅简介命中型（模拟只是情节装置、未进书名）：11 本
+已写出 .scrape/sim/raw_ch4_qimao.json：books=92 nearMiss=126
+
+入选前 20（字数降序）：
+  1. 模拟模拟就无敌了                     高             811.5万 连载  东方玄幻   [title+abstract] 模拟
+  2. 玄幻模拟器                        咸鱼洁南          322.5万 完结  诸天万界   [title+abstract] 模拟器/模拟
+  3. 妖魔乱世，我能模拟修仙                  只会叭水的鱼        289.7万 完结  幻想修真   [title+abstract] 模拟
+  4. 玄幻之无限模拟人生                    飞花朵           283.0万 完结  东方玄幻   [title+abstract] 模拟/模拟器/人生模拟
+  5. 金丹是恒星，你管这叫修仙？                走地鹤           270.3万 完结  幻想修真   [abstract] 模拟
+  6. 让你模拟人生，你次次逆天改命？              执火独行          238.0万 完结  诸天万界   [title+abstract] 模拟/推演
+  7. 氪命推演，无敌从斩妖开始                 谦豫            228.4万 完结  东方玄幻   [title+abstract] 推演
+  8. 模拟器：开局天牢死囚                   闪电月牙          204.1万 完结  东方玄幻   [title+abstract] 模拟器/模拟
+  9. 轮回模拟：我能逆天改命                  江河载月          186.0万 完结  幻想修真   [title+abstract] 模拟/模拟器
+ 10. 模拟万次，成就人族横炼大帝                圣光照耀着你        180.4万 完结  东方玄幻   [title+abstract] 模拟/模拟器
+ 11. 玄幻：我能推演绝世功法                  海贼英雄          177.3万 完结  幻想修真   [title+abstract] 推演
+ 12. 从锁龙井开始无限模拟                   阿牛要吃菜         162.5万 完结  东方玄幻   [title] 模拟
+ 13. 西游：开局重开金鳌岛                   鱼生太长          160.5万 完结  上古洪荒   [title] 重开
+ 14. 玄幻：我，无限模拟，成就大帝               小江河子          154.3万 完结  东方玄幻   [title+abstract] 模拟/模拟器
+ 15. 人生模拟：氪金就变强！                  欧阳大大          150.2万 完结  幻想修真   [title+abstract] 人生模拟/模拟/模拟器
+ 16. 玄幻：我有人生模拟器                   我是小嘟嘟         143.3万 完结  东方玄幻   [title+abstract] 模拟器/人生模拟/模拟
+ 17. 我的修仙模拟器                      小三胖子          135.2万 完结  幻想修真   [title] 模拟器/模拟
+ 18. 斗破：我云山，拥有人生模拟器               洛风侧           132.8万 完结  衍生同人   [title+abstract] 模拟器/人生模拟/模拟
+ 19. 我的人生可以无限模拟                   阳冬十月          128.5万 完结  东方玄幻   [title+abstract] 模拟
+ 20. 我有一个魔神模拟器                    第一魔           126.6万 完结  异世大陆   [title+abstract] 模拟器/模拟
+===== build done =====
+
+===== ch4 validate @ 2026-09-08T13:49:18.748Z =====
+meta.channel=4 platforms=["qimao"]
+books=92 nearMiss=126
+
+--- 字段填充率（92 本）---
+   platform          92/92
+   platformBookId    92/92
+   title             92/92
+   author            92/92
+   url               92/92
+   wordCount         92/92
+   chapterTotal       0/92
+   status            92/92
+   categories        92/92
+   tags               0/92
+   abstract          92/92
+   popularity         0/92
+   score              0/92
+   firstPublishDate   0/92
+   lastUpdateDate    92/92
+   simEvidence       92/92
+   openingHook        0/92
+   collectedAt       92/92
+   source            92/92
+
+--- 数值 ---
+   字数中位数 656900（65.7 万字）  最小 4.5万  最大 811.5万
+   状态分布 {"连载":13,"完结":79}
+   matchedIn 分布 {"title+abstract":72,"abstract":11,"title":9}
+   分类分布 {"东方玄幻":43,"诸天万界":3,"幻想修真":21,"上古洪荒":4,"衍生同人":2,"异世大陆":8,"架空历史":1,"都市高武":2,"未来幻想":1,"古典仙侠":2,"末世危机":1,"灵气复苏":3,"穿越历史":1}
+
+--- 结论 ---
+✅ 全部 92 条 books + 126 条 nearMiss 均符合 SCHEMA 第二节字段契约
+===== validate done =====
+
+===== ch4 validate @ 2026-09-09T14:37:12.037Z =====
+meta.channel=4 platforms=["qimao"]
+books=89 nearMiss=129
+
+--- 字段填充率（89 本）---
+   platform          89/89
+   platformBookId    89/89
+   title             89/89
+   author            89/89
+   url               89/89
+   wordCount         89/89
+   chapterTotal       0/89
+   status            89/89
+   categories        89/89
+   tags               0/89
+   abstract          89/89
+   popularity         0/89
+   score              0/89
+   firstPublishDate   0/89
+   lastUpdateDate    89/89
+   simEvidence       89/89
+   openingHook        0/89
+   collectedAt       89/89
+   source            89/89
+
+--- 数值 ---
+   字数中位数 656600（65.7 万字）  最小 4.5万  最大 811.5万
+   状态分布 {"连载":13,"完结":76}
+   matchedIn 分布 {"title+abstract":72,"abstract":9,"title":8}
+   分类分布 {"东方玄幻":43,"诸天万界":3,"幻想修真":20,"衍生同人":2,"异世大陆":8,"上古洪荒":3,"架空历史":1,"都市高武":2,"未来幻想":1,"末世危机":1,"古典仙侠":1,"灵气复苏":3,"穿越历史":1}
+
+--- 结论 ---
+✅ 全部 89 条 books + 129 条 nearMiss 均符合 SCHEMA 第二节字段契约
+===== validate done =====

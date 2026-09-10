@@ -1,0 +1,37 @@
+[
+  {
+    "name": "robots",
+    "url": "https://www.shuqi.com/robots.txt",
+    "status": 200,
+    "bytes": 23325,
+    "finalUrl": "https://www.shuqi.com/robots.txt",
+    "server": "Tengine/2.1.3_400",
+    "title": null,
+    "head": "User-agent: * Disallow：/about/ Disallow：/excellence Disallow：/inviteauthor Disallow：/label Disallow：/comment Sitemap: https://www.shuqi.com/sitemap/book_sitemap_all_pc_1.xml Sitemap: https://www.shu"
+  },
+  {
+    "name": "home",
+    "url": "https://www.shuqi.com/",
+    "status": 403,
+    "bytes": 1120,
+    "finalUrl": "https://www.shuqi.com/",
+    "server": "Tengine/2.1.3_400",
+    "title": "403 - 访问被拒绝",
+    "head": "<!DOCTYPE html> <html lang=\"zh-CN\"> <head> <meta charset=\"utf-8\"> <title>403 - 访问被拒绝</title> <style> body { font-family: -apple-system, \"Microsoft YaHei\", sans-serif; background: #f5f5f5; ma"
+  },
+  {
+    "name": "m-home",
+    "url": "https://m.shuqi.com/",
+    "error": "fetch failed"
+  },
+  {
+    "name": "book-shape",
+    "url": "https://www.shuqi.com/book/8158305.html",
+    "status": 403,
+    "bytes": 1120,
+    "finalUrl": "https://www.shuqi.com/book/8158305.html",
+    "server": "Tengine/2.1.3_400",
+    "title": "403 - 访问被拒绝",
+    "head": "<!DOCTYPE html> <html lang=\"zh-CN\"> <head> <meta charset=\"utf-8\"> <title>403 - 访问被拒绝</title> <style> body { font-family: -apple-system, \"Microsoft YaHei\", sans-serif; background: #f5f5f5; ma"
+  }
+]

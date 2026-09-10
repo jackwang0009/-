@@ -1,0 +1,23 @@
+
+########## home (142376b) ##########
+  榜 texts: 男频排行榜 | 女频排行榜
+  state keys: common, home, search, rank, page, reader, preview, welfare, theme, seo, comment, imc, author, libra, readProgress
+    home.noticeList: Array(10) sample={"abstract":"番茄小说内容生态治理升级措施公告","is_hot":1,"location":255,"notice_id":7678198112011158000,"notice_time":1787719802,"notice_type":0,"title":"番茄小说内容生态治理升级措施公告","url":"https://fanqienovel.com/writer/zone/
+    home.bannerList: Array(6) sample={"name":"长风问道·墨载乾坤—玄幻历史向长篇征文重磅上线！","uri":"https://p3-novel.byteimg.com/origin/novel-static/b721541079ab12ddd0f16c4056e9d78b","video_uri":null,"background":"#C6E7FF","theme":1,"link":"https://fanqienov
+    home.writerList: Array(54) sample={"uid":"4393263683600765","cover_uri":"https://p6-novel.byteimg.com/origin/novel-static/92ad058c53cf8683aaa52939a94f90c8","name":"空留","introduction":"代表作《惜花芷》《惹金枝》"}
+    home.editorList: Array(9) sample={"bookName":"特工易冷","author":"骁骑校","bookId":"7080092010052324352","thumbUri":"https://p3-novel-sign.byteimg.com/novel-pic/2e9dbaef02e682e88dd606aee1ff6e5d~tplv-resize:225:300.image?lk3s=191c1ecc&x-expi
+    home.weekList: Array(8) sample={"abstract":"（顶级豪门+女主现代江南风美人+男主疯批+前期女主攻略+后期男主强势宠+双洁+好结局HE）\n为了肚子里的孩子，鹿之绫被迫嫁给疯批大佬，所有人都猜她活不到生崽之日。\n为保命她开始攻略，一不小心成了他的心尖宠。\n后来，她准备跑路。\n他的车停在悬崖之上，摇摇欲坠，他虚踩油门，笑得漫不经心，“我好像没听清，你是说……离婚？嗯？”\n后来，他轻抚她的脸，声线性感而残忍，“乖
+    home.boyList: Array(6) sample={"abstract":"盛产美女的“姜氏部族”与“申屠部族”已开战三年，这让姜氏部族的成年男人近乎死绝，而一但输掉“部族生死战”，姜氏部族的所有女人，会被折磨致死，会被凌辱贩卖，绝望的气氛笼罩着整个部族，有人选择了逃亡，有人选择了背叛。\n　　十五岁的姜玄本还是一个半大孩子，为了母亲妹妹以及族里的女人们，他别无选择！\n　　我不装了！我摊牌了！\n　　我一直在隐藏实力！\n　　我！姜玄！姜氏部族
+    home.girlList: Array(6) sample={"author":"童童","bookName":"萤火之城","abstract":"一段不曾走过的旅途，重新定义了生命的概念。一场从未有过的挑战和进化，开启对生命和情感的思考。“萤火之城”，自由与秩序的对立，自然与科技的统一，这里，窥见未来文明的一角。","thumbUri":"https://p6-novel-sign.byteimg.com/novel-pic/p2o293de9f159
+    home.updateList: Array(20) sample={"bookName":"车站截胡，我成了蓝军旅长","bookId":"7132126567769050115","itemId":"7678359564755943960","title":"第317章 新的指挥员上任","category":"都市脑洞","updateTime":"1787757454","author":"戴帽子的女孩","uid":"4142602121392429",
+    rank.book_list len=n/a total=0
+
+########## library (9171b) ##########
+  榜 texts: 
+  state keys: home, welfare, search, rank, page, common, reader, preview, theme, seo, comment, imc, author, libra, readProgress
+    rank.book_list len=n/a total=0
+
+########## newbook258 (63347b) ##########
+  榜 texts: 男频阅读榜 | 男频新书榜 | 女频阅读榜 | 女频新书榜
+  state keys: common, home, search, rank, page, reader, preview, welfare, theme, seo, comment, imc, author, libra, readProgress
+    rank.book_list len=10 total=100

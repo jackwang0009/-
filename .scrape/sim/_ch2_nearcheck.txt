@@ -1,0 +1,24 @@
+ch2_info.json 共 1844 条：可用 1842，错误 2
+带 _near 字段 1842/1842；带 _judge 字段 1842/1842
+_hit=true 56，_near=true 0
+
+condA(模拟属性) 命中 56；condB(修仙属性) 命中 1842；condB 不命中 0
+→ A∧¬B = 0
+   其中 靠分类成立 1842；分类不成立、仅靠简介词成立 0
+
+步骤A 枚举的分类（ch2_ids.mjs CULT_CATEGORIES）：
+   1140 东方仙侠   CULT_CAT 正则命中=true
+    258 传统玄幻   CULT_CAT 正则命中=true
+    257 玄幻脑洞   CULT_CAT 正则命中=true
+    124 都市修真   CULT_CAT 正则命中=true
+    511 东方玄幻   CULT_CAT 正则命中=true
+    259 奇幻仙侠   CULT_CAT 正则命中=true
+     66 洪荒     CULT_CAT 正则命中=true
+      7 玄幻     CULT_CAT 正则命中=true
+   → 八个入口里，分类名本身不满足条件B 的有 0 个
+
+categoryV2 里完全不含修仙类分类的书：0 本
+
+--- 判据 ---
+✅ _near 分支正常落盘，且全池 condB 恒为真 → A∧¬B 在数学上不可能出现
+   原因不在判定代码，在候选池：步骤A 只枚举仙侠/玄幻系分类，B 在打 A 之前就已经过滤过一遍。

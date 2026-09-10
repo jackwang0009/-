@@ -1,0 +1,53 @@
+hasFetch: true
+author: 院有枇杷树
+authorId: 30439930871495
+bookId: 7641144149260897305
+mediaId: 1724757877934091
+bookName: 一日破五境，人间太岁神！
+status: 1
+category: 
+categoryV2: [{"ObjectId":258,"Dim":10,"Name":"传统玄幻","ExternalDesc":"入坑玄幻的经典小说","Gender":1,"Status":1,"AppId":1967,"Extra":"{\"for_publication\":0,\"icon\":\"http://p3-novel.byteimg.com/novel-static/53b5eda487cdc97437554496c56f481f~tplv-noop.image\"}","InExperiment":false,"MainCategory":true,"CreateTime":1610001046},{"ObjectId":7,"Dim":1,"Name":"玄幻","ExternalDesc":"一起进入奇幻世界","Gender":1,"Status":1,"AppId":1967,
+abstract: 【评分刚出，会涨】
+穿越武道世界，顾临即将沦为炉鼎，本就手无缚鸡之力，眼看要变成干尸，所幸合欢宗恶妇早已走火入魔，途中暴毙。
+正庆幸捡回一条小命，谁料恰好觉醒金手指【功德书】！
+“间接铲除合欢宗毒妇，斩获500功德点，奖励满级玄冥神掌！”
+霎时，从普通人突破到通脉五重！
+这一刻，顾临激动之余，眼神里也充斥着勃勃野望！
+......
+功德书，杀妖能奖励。
+除魔，又奖励。
+斩贪官，再奖励。
+灭奸佞，还奖励。
+顾临越杀越起劲！
+在等级森严、权力暴力至上的羽化王朝，在人中龙凤尚且举步维艰的残酷世道，在妖魔乱舞的黑暗时代，在门阀氏族垄断资源通道的背景下，顾临却凭借功德书一步步走到最高！
+直到某一天，妖帝魔神携手降临羽化神州，天下沦为待宰羔羊，世人绝望恸哭，相继奔赴死亡。
+这时，有人轻拂袍袖，背影不可一世！！
+【快节奏升级】【不压主】【极致爽文】
+thumbUri: https://p9-novel-sign.byteimg.com/novel-pic/p2o504749994db2a5a6564283f3806725e9~tplv-resize:225:300.image?lk3s=191c1ecc&x-expires=1787843522&x-signature=rm%2F%2FwktaMffkT4JqYTMdL0Lmzp0%3D
+creationStatus: 1
+wordNumber: 673531
+readCount: 495305
+description: 顺风顺水顺财神
+avatarUri: https://p3-reading-sign.fqnovelpic.com/tos-cn-i-1yzifmftcy/9df4489ab5cc452b94b8ad5deae9b653~tplv-s85hriknmn-jpeg-v1:300:0.jpeg?lk3s=6668da9f&x-expires=1790269381&x-signature=0HivdkYIsm%2Fpunxf7%2F7v9I%2B4wVg%3D
+creatorId: 30439930871495
+lastPublishTime: 1787738435
+lastChapterItemId: 7673845806398456345
+lastChapterTitle: 第两百九十七章 四域交流，耀眼战役！【七】
+volumeNameList: Array(1) first="第一卷：默认"
+chapterListWithVolume: Array(1) first=[{"itemId":"7641144184522424857","needPay":0,"title":"第一章 深渊之下，尽是光明","isChapterLock":false,"isPaidPublication":false,"isPaidStory":false,"volume_name":"第一卷：默认","realChapterOrder":"1","firstPassTime":"1779700919"},{"itemId":"7641144403603489305","needPay":0,"title":"第二章 痛杀三人，继续突破！","isChapterLock":false,"isPaidPublication":false,"isPaidStory":false,"volume_name":"第一卷：默认","realChapterOrder":"2","firstPassTime":"1779700935"},{"itemId":"7641144450290287129","needPay":0,"title":"第三章 石阳书院，当下目标！","isChapterLock":false,"isPaidPublication":false,"isPaidStory":false,"volume_name":"第一卷：默认","realChapterOr
+chapterTotal: 297
+followStatus: 0
+itemIds: Array(297) first="7673845806398456345"
+hasFetchDirectory: true
+chapterList: Array(0) first=undefined
+serverRendered: true
+genre: 0
+platform: 2
+type: 0
+originalAuthors: [{"AuthorName":"院有枇杷树","AuthorId":7064615295440131367}]
+authorName: 院有枇杷树
+completeCategory: 
+sourceUri: novel-pic/p2o504749994db2a5a6564283f3806725e9
+thumbUrl: https://p9-novel-sign.byteimg.com/novel-pic/p2o504749994db2a5a6564283f3806725e9~tplv-resize:225:300.image?lk3s=191c1ecc&x-expires=1787843522&x-signature=rm%2F%2FwktaMffkT4JqYTMdL0Lmzp0%3D
+=== rank obj (newRankList / rankCategoryTypeList) ===
+rankCategoryTypeList: null

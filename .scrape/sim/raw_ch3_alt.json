@@ -1,0 +1,116 @@
+{
+  "meta": {
+    "channel": 3,
+    "platforms": [
+      "tadu"
+    ],
+    "status": "partial",
+    "collectedAt": "2026-09-09T13:18:03.257Z",
+    "entryPoints": [
+      "https://www.tadu.com/store/99-a-0-15-a-20-p-{页}-909",
+      "https://www.tadu.com/store/109-a-0-15-a-20-p-{页}-909",
+      "https://www.tadu.com/store/135-a-0-15-a-20-p-{页}-909",
+      "https://www.tadu.com/store/103-a-0-15-a-20-p-{页}-909（仅供 nearMiss）"
+    ],
+    "notes": "【入口】塔读站内搜索被 robots 明禁（/search、/search?query=*），改走 /store 分类页。扫三个与条件 B 相关的分类（99 东方玄幻 / 109 武侠仙侠 / 135 脑洞创意）共 1061 本，逐本取书页拿简介全文与标签；103 现代都市 404 本只扫列表页，仅用于 nearMiss（其条件 A 命中 0 本）。\n【那 396 本空字段的结论：不是站方不给，也不是选择器漂了，是取回的响应本身不是书页】ch3_fetch.log 记的「简介为空 396 本，字数为空 396 本」经查是同一批书（交集 396，无一只空一项），且简介/标签/字数/周人气/总银票/章数/更新日七项同时为空——整条解析链一起断，而不是某一个选择器失配。取证三步：① 这 396 本在列表页全部拿得到字数，数据在站上确实存在；② 重抓其中 9 本落盘对比（raw/ch3_alt_probe_*.html），老正则原样跑过去七项全部正常解出，选择器没问题；③ 这 396 本在原抓取顺序里只构成 2 个连续段（位置 0–561），是时间窗而非按书散布。即 22:20 那轮在一段时间内被站方返了非书页响应，HTTP 200、不空 body、不抛异常，解析器安静地返回一堆 null——SCHEMA 第 4 节点名的「不报错的那一类失败」。ch3_alt_fetch.mjs 缺的正是那条「异常短就当失败」的断言。处置：ch3_alt_refetch.mjs 补上断言（<20000 字节或无 datum 块即判失败退避重试）后全量重取，396/396 修复，全库剩余空简介 0。\n【「重开」是假阳性重灾区】条件 A 词表里的「重开」在修仙文里压倒性地是「天地重开／乱世重开／重开山门」这类开天辟地义。本池 4 本「重开」命中逐条看原文后全部排除（已列入 nearMiss 并附原句），无一是「同一段时间反复重来」。词形命中率 4/5 而词义命中率 0/4——这个词单独用不可靠，建议通道 1 考虑要么给它加「模拟／重来／循环」的共现约束，要么在合并时对它单独复核。\n【分页上限造成的已知缺口，已量化】塔读每个分类的列表页最多 30 页（实测 p31 起 0 条），即每类至多露出约 600 个位次；换排序（最新发布 / 周人气）抽查 p1 与 p30 各一页，池外新书分别为 2/3 与 1/2 本，约一成。要吃掉这个缺口需 4 种排序 × 三类 60 页 ≈ 240 次列表请求外加新候选的书页请求，而本池 1061 本的实收率是 1/1061，预期增量 0–1 本，故本轮不扫，缺口留在这里由通道 1 定夺。\n【书旗 shuqi 交 0 本：新墙，不在 SCHEMA 第 6 节里】robots.txt 今天仍可 200 读到（23325 字节，内容与 ch3_robots_verdict.json 一致，对 * 未整站禁止），但除 robots.txt 外每一个路径都返回 1120 字节的「403 - 访问被拒绝」页（Tengine）：首页、书页 /book/{id}.html、搜索、以及它自己 robots 里公示的 sitemap 全部 403；m.shuqi.com 域名不解析。即站方 robots 层面允许、边缘层面拦截本代理。绕它需要换身份或喂 Cookie，属规避反爬，不做。取证：raw/ch3_shuqi_*.html、raw/ch3_shuqi_recheck_*.txt、ch3_shuqi_recheck.json。\n【字段缺失口径】openingHook 一律 null：塔读试读正文属章节内容，SCHEMA 第 4 节禁抓，未取。firstPublishDate 一律 null：塔读书页与列表页都不公开首发日期，只给最新章节时间，无处可取。popularity.metric=\"周人气\" 取自书页 datum 块原始标签，未跨站折算；该值大面积为 0 是站方原样显示，不是没取到。\n【存量年份分布，供解读产量用】塔读三类 1061 本的最新章节年份：{\"2021\":379,\"2022\":389,\"2023\":224,\"2024\":42,\"2025\":14,\"2026\":13}。",
+    "byPlatform": {
+      "tadu": 1
+    },
+    "wordCountMedian": 557700,
+    "poolScanned": 1465,
+    "bookPagesFetched": 1061,
+    "perSite": {
+      "tadu": {
+        "status": "ok",
+        "books": 1,
+        "blocked": null
+      },
+      "shuqi": {
+        "status": "blocked-by-anti-bot",
+        "books": 0,
+        "blocked": "robots.txt 可读且对 * 未整站禁止，但除 robots.txt 外全部路径返回 1120 字节「403 - 访问被拒绝」（Tengine），含首页 / 书页 / 搜索 / 它自己公示的 sitemap；m.shuqi.com 不解析。绕过需换身份或喂 Cookie，属规避反爬，未做。",
+        "evidence": [
+          "https://www.shuqi.com/robots.txt → 200 (23325B)",
+          "https://www.shuqi.com/ → 403 (1120B)",
+          "https://m.shuqi.com/ → ERR fetch failed",
+          "https://www.shuqi.com/book/8158305.html → 403 (1120B)"
+        ],
+        "note": "这是 SCHEMA 第 6 节尚未收录的新墙（该节现记书旗为「可抓」），按第 6 节规矩回报通道 1 增补，本通道不改 SCHEMA.md。"
+      }
+    }
+  },
+  "books": [
+    {
+      "platform": "tadu",
+      "platformBookId": "1002281",
+      "title": "修仙模拟器：失败者",
+      "author": "别扥我秋裤",
+      "url": "https://www.tadu.com/book/1002281/",
+      "wordCount": 557700,
+      "chapterTotal": 202,
+      "status": "完结",
+      "categories": [
+        "脑洞创意"
+      ],
+      "tags": [
+        "高武世界",
+        "架空历史",
+        "系统流",
+        "其他",
+        "幻想世界"
+      ],
+      "abstract": "穿越重生的张药，意外获得修仙模拟器，只需完成他人的遗愿便可提升自身资质！",
+      "popularity": {
+        "metric": "周人气",
+        "raw": 0
+      },
+      "score": null,
+      "firstPublishDate": null,
+      "lastUpdateDate": "2023-10-10",
+      "simEvidence": {
+        "matchedIn": [
+          "title",
+          "abstract"
+        ],
+        "keywords": [
+          "模拟器"
+        ]
+      },
+      "openingHook": null,
+      "collectedAt": "2026-09-09T13:18:03.257Z",
+      "source": "https://www.tadu.com/store/{99|109|135}-a-0-15-a-20-p-{页}-909"
+    }
+  ],
+  "nearMiss": [
+    {
+      "title": "仙凡道记",
+      "url": "https://www.tadu.com/book/851568/",
+      "reason": "词形命中「重开」但词义不符：「天地重开，万族尽殁」——开天辟地义，非同一段时间反复重来。按 SCHEMA 条件 A 的限定义排除"
+    },
+    {
+      "title": "乱世仙途",
+      "url": "https://www.tadu.com/book/860570/",
+      "reason": "词形命中「重开」但词义不符：「天劫又至，乱世重开」——世道重启义，非反复重来。按 SCHEMA 条件 A 的限定义排除"
+    },
+    {
+      "title": "吾有一卷君敢观否",
+      "url": "https://www.tadu.com/book/849671/",
+      "reason": "词形命中「重开」但词义不符：「通天欲重开世界，唯其独尊」——重造世界义，非反复重来。按 SCHEMA 条件 A 的限定义排除"
+    },
+    {
+      "title": "修仙从学习火焰呼吸开始",
+      "url": "https://www.tadu.com/book/1002264/",
+      "reason": "词形命中「重开」但词义不符：「重开登仙之门，续世间已断五千年之仙路」——重启仙路义，非反复重来。按 SCHEMA 条件 A 的限定义排除"
+    },
+    {
+      "title": "我创造了小世界",
+      "url": "https://www.tadu.com/book/994838/",
+      "reason": "模拟但非修仙：分类「脑洞创意」，简介无修仙词（命中模拟词 沙盘）"
+    },
+    {
+      "title": "我的王者模拟器",
+      "url": "https://www.tadu.com/book/998347/",
+      "reason": "模拟但非修仙：分类「脑洞创意」，简介无修仙词（命中模拟词 模拟器）"
+    }
+  ]
+}

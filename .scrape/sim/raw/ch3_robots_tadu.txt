@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /tadu/
+Disallow: /search
+Disallow: /search?query=*
+Disallow: /*.css
+Disallow: /*.js
+
+Sitemap: https://www.tadu.com/sitemap.xml

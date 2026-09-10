@@ -1,0 +1,1346 @@
+{
+  "1_1_258": {
+    "key": "1_1_258",
+    "categoryId": 258,
+    "categoryName": "传统玄幻",
+    "rankType": 1,
+    "rankName": "传统玄幻新书榜",
+    "rankVersion": "1787757000",
+    "totalNum": 100,
+    "fetchedAt": "2026-08-26T15:18:08.346Z",
+    "books": [
+      {
+        "bookId": "7665193065501445145",
+        "pos": 1,
+        "posDiff": 0,
+        "readCount": 6232374,
+        "wordNumber": 142261,
+        "creationStatus": "1",
+        "lastChapterTitle": "第48章 家谈",
+        "lastChapterUpdateTime": "1787723595"
+      },
+      {
+        "bookId": "7669740908748737560",
+        "pos": 2,
+        "posDiff": 0,
+        "readCount": 94602,
+        "wordNumber": 188002,
+        "creationStatus": "1",
+        "lastChapterTitle": "第七十七章 师尊年轻的时候",
+        "lastChapterUpdateTime": "1787752166"
+      },
+      {
+        "bookId": "7668182037718633534",
+        "pos": 3,
+        "posDiff": 0,
+        "readCount": 72918,
+        "wordNumber": 187997,
+        "creationStatus": "1",
+        "lastChapterTitle": "第74章 名次之外",
+        "lastChapterUpdateTime": "1787727126"
+      },
+      {
+        "bookId": "7651833038514474046",
+        "pos": 4,
+        "posDiff": 0,
+        "readCount": 47292,
+        "wordNumber": 289608,
+        "creationStatus": "1",
+        "lastChapterTitle": "第0128 章 肾庙成！",
+        "lastChapterUpdateTime": "1787672917"
+      },
+      {
+        "bookId": "7658263507942525977",
+        "pos": 5,
+        "posDiff": 0,
+        "readCount": 47516,
+        "wordNumber": 233336,
+        "creationStatus": "1",
+        "lastChapterTitle": "第113章无敌肉身，无惧神速",
+        "lastChapterUpdateTime": "1787753864"
+      },
+      {
+        "bookId": "7666005073926818878",
+        "pos": 6,
+        "posDiff": 3,
+        "readCount": 37841,
+        "wordNumber": 157685,
+        "creationStatus": "1",
+        "lastChapterTitle": "第72章 神霄九式首秀",
+        "lastChapterUpdateTime": "1787709383"
+      },
+      {
+        "bookId": "7656302576790408217",
+        "pos": 7,
+        "posDiff": 1,
+        "readCount": 36140,
+        "wordNumber": 164288,
+        "creationStatus": "1",
+        "lastChapterTitle": "第64章 插翅难飞",
+        "lastChapterUpdateTime": "1787753765"
+      },
+      {
+        "bookId": "7664270525404826648",
+        "pos": 8,
+        "posDiff": -2,
+        "readCount": 36340,
+        "wordNumber": 212829,
+        "creationStatus": "1",
+        "lastChapterTitle": "第100章 在做俯卧撑",
+        "lastChapterUpdateTime": "1787746708"
+      },
+      {
+        "bookId": "7657785117120678974",
+        "pos": 9,
+        "posDiff": 1,
+        "readCount": 35085,
+        "wordNumber": 214922,
+        "creationStatus": "1",
+        "lastChapterTitle": "第103章 人景历740年，五年光阴；三子秦修凡！",
+        "lastChapterUpdateTime": "1787675895"
+      },
+      {
+        "bookId": "7661884589543017496",
+        "pos": 10,
+        "posDiff": 2,
+        "readCount": 31844,
+        "wordNumber": 170604,
+        "creationStatus": "1",
+        "lastChapterTitle": "第71章 斩成人彘",
+        "lastChapterUpdateTime": "1787550120"
+      }
+    ]
+  },
+  "1_1_257": {
+    "key": "1_1_257",
+    "categoryId": 257,
+    "categoryName": "玄幻脑洞",
+    "rankType": 1,
+    "rankName": "玄幻脑洞新书榜",
+    "rankVersion": "1787757000",
+    "totalNum": 100,
+    "fetchedAt": "2026-08-26T15:18:09.877Z",
+    "books": [
+      {
+        "bookId": "7660513089460128830",
+        "pos": 1,
+        "posDiff": 1,
+        "readCount": 423438,
+        "wordNumber": 198141,
+        "creationStatus": "1",
+        "lastChapterTitle": "第88章 给我电！！！",
+        "lastChapterUpdateTime": "1787735701"
+      },
+      {
+        "bookId": "7656783633486711870",
+        "pos": 2,
+        "posDiff": -1,
+        "readCount": 388420,
+        "wordNumber": 241905,
+        "creationStatus": "1",
+        "lastChapterTitle": "第112章声音真正的主人！一群头铁娃，若是....再加上我呢？",
+        "lastChapterUpdateTime": "1787586006"
+      },
+      {
+        "bookId": "7623051697895525401",
+        "pos": 3,
+        "posDiff": 0,
+        "readCount": 263725,
+        "wordNumber": 270000,
+        "creationStatus": "1",
+        "lastChapterTitle": "第128章 惑心羊之眼",
+        "lastChapterUpdateTime": "1787749257"
+      },
+      {
+        "bookId": "7647404703248043070",
+        "pos": 4,
+        "posDiff": 0,
+        "readCount": 245235,
+        "wordNumber": 163772,
+        "creationStatus": "1",
+        "lastChapterTitle": "第76章 鹿蜀当康",
+        "lastChapterUpdateTime": "1787673602"
+      },
+      {
+        "bookId": "7665422529808321561",
+        "pos": 5,
+        "posDiff": 0,
+        "readCount": 185209,
+        "wordNumber": 202247,
+        "creationStatus": "1",
+        "lastChapterTitle": "第98章 瞬杀两尊顶尖准圣",
+        "lastChapterUpdateTime": "1787672572"
+      },
+      {
+        "bookId": "7656607828005620760",
+        "pos": 6,
+        "posDiff": 0,
+        "readCount": 182472,
+        "wordNumber": 234770,
+        "creationStatus": "1",
+        "lastChapterTitle": "第103章 心病，没有主药...又如何医治......",
+        "lastChapterUpdateTime": "1787677277"
+      },
+      {
+        "bookId": "7667911750217370649",
+        "pos": 7,
+        "posDiff": 0,
+        "readCount": 171833,
+        "wordNumber": 172339,
+        "creationStatus": "1",
+        "lastChapterTitle": "第76章 翻不起什么风浪？威震六大宇宙！",
+        "lastChapterUpdateTime": "1787716783"
+      },
+      {
+        "bookId": "7661096625497967641",
+        "pos": 8,
+        "posDiff": 0,
+        "readCount": 193190,
+        "wordNumber": 229821,
+        "creationStatus": "1",
+        "lastChapterTitle": "第108章 培根的烦恼",
+        "lastChapterUpdateTime": "1787479647"
+      },
+      {
+        "bookId": "7641506817385712665",
+        "pos": 9,
+        "posDiff": 0,
+        "readCount": 153641,
+        "wordNumber": 192022,
+        "creationStatus": "1",
+        "lastChapterTitle": "第92章 第五次模拟的任务",
+        "lastChapterUpdateTime": "1787723979"
+      },
+      {
+        "bookId": "7670157515434232856",
+        "pos": 10,
+        "posDiff": 3,
+        "readCount": 146090,
+        "wordNumber": 208188,
+        "creationStatus": "1",
+        "lastChapterTitle": "第69章 这就是练气期",
+        "lastChapterUpdateTime": "1787712332"
+      }
+    ]
+  },
+  "1_1_1140": {
+    "key": "1_1_1140",
+    "categoryId": 1140,
+    "categoryName": "东方仙侠",
+    "rankType": 1,
+    "rankName": "东方仙侠新书榜",
+    "rankVersion": "1787757000",
+    "totalNum": 100,
+    "fetchedAt": "2026-08-26T15:18:11.333Z",
+    "books": [
+      {
+        "bookId": "7656806334385376280",
+        "pos": 1,
+        "posDiff": 0,
+        "readCount": 98130,
+        "wordNumber": 290917,
+        "creationStatus": "1",
+        "lastChapterTitle": "第124章 全都拒绝百世轮回书？",
+        "lastChapterUpdateTime": "1787653418"
+      },
+      {
+        "bookId": "7668377752025713688",
+        "pos": 2,
+        "posDiff": 0,
+        "readCount": 82727,
+        "wordNumber": 177564,
+        "creationStatus": "1",
+        "lastChapterTitle": "第28章 没有人等我",
+        "lastChapterUpdateTime": "1787591094"
+      },
+      {
+        "bookId": "7611047330032143422",
+        "pos": 3,
+        "posDiff": 0,
+        "readCount": 70237,
+        "wordNumber": 208781,
+        "creationStatus": "1",
+        "lastChapterTitle": "第96章 九幽殿",
+        "lastChapterUpdateTime": "1787673759"
+      },
+      {
+        "bookId": "7633363793032006718",
+        "pos": 4,
+        "posDiff": 0,
+        "readCount": 68259,
+        "wordNumber": 243473,
+        "creationStatus": "1",
+        "lastChapterTitle": "第51章 评价冰箱需要制冷吗",
+        "lastChapterUpdateTime": "1787661742"
+      },
+      {
+        "bookId": "7664843178314304537",
+        "pos": 5,
+        "posDiff": 0,
+        "readCount": 68169,
+        "wordNumber": 153968,
+        "creationStatus": "1",
+        "lastChapterTitle": "第66章 非真君不入通天殿？我成真君便是！",
+        "lastChapterUpdateTime": "1787757009"
+      },
+      {
+        "bookId": "7634108430923336766",
+        "pos": 6,
+        "posDiff": 0,
+        "readCount": 62581,
+        "wordNumber": 172173,
+        "creationStatus": "1",
+        "lastChapterTitle": "第76章 为你挡，只是我想",
+        "lastChapterUpdateTime": "1787745571"
+      },
+      {
+        "bookId": "7668969149384641598",
+        "pos": 7,
+        "posDiff": 29,
+        "readCount": 69091,
+        "wordNumber": 112644,
+        "creationStatus": "1",
+        "lastChapterTitle": "第51章 应龙老祖，先天五行灵珠。",
+        "lastChapterUpdateTime": "1787715248"
+      },
+      {
+        "bookId": "7665565318009326616",
+        "pos": 8,
+        "posDiff": 2,
+        "readCount": 59343,
+        "wordNumber": 159407,
+        "creationStatus": "1",
+        "lastChapterTitle": "第76章 相信……惑儿定力十足。",
+        "lastChapterUpdateTime": "1787638163"
+      },
+      {
+        "bookId": "7664313419889118233",
+        "pos": 9,
+        "posDiff": 0,
+        "readCount": 50347,
+        "wordNumber": 211605,
+        "creationStatus": "1",
+        "lastChapterTitle": "尾声 七圣聚义，三藏还魂",
+        "lastChapterUpdateTime": "1787740396"
+      },
+      {
+        "bookId": "7645625382313397310",
+        "pos": 10,
+        "posDiff": 1,
+        "readCount": 51154,
+        "wordNumber": 277205,
+        "creationStatus": "1",
+        "lastChapterTitle": "第138章 哪吒：我只有一个塔爹，李靖，不过是一个塔奴罢了",
+        "lastChapterUpdateTime": "1787664038"
+      }
+    ]
+  },
+  "1_1_1141": {
+    "key": "1_1_1141",
+    "categoryId": 1141,
+    "categoryName": "西方奇幻",
+    "rankType": 1,
+    "rankName": "西方奇幻新书榜",
+    "rankVersion": "1787757000",
+    "totalNum": 100,
+    "fetchedAt": "2026-08-26T15:18:12.802Z",
+    "books": [
+      {
+        "bookId": "7658332715577527358",
+        "pos": 1,
+        "posDiff": 0,
+        "readCount": 209206,
+        "wordNumber": 198582,
+        "creationStatus": "1",
+        "lastChapterTitle": "第82章 沁人心脾",
+        "lastChapterUpdateTime": "1787679237"
+      },
+      {
+        "bookId": "7658503735013805081",
+        "pos": 2,
+        "posDiff": 0,
+        "readCount": 139229,
+        "wordNumber": 217415,
+        "creationStatus": "1",
+        "lastChapterTitle": "第100章 狗头人部族、当心眼睛",
+        "lastChapterUpdateTime": "1787738425"
+      },
+      {
+        "bookId": "7653392559628094488",
+        "pos": 3,
+        "posDiff": 0,
+        "readCount": 124180,
+        "wordNumber": 295005,
+        "creationStatus": "1",
+        "lastChapterTitle": "第136章 奥罗拉·肉身顶级天赋",
+        "lastChapterUpdateTime": "1787744767"
+      },
+      {
+        "bookId": "7658561533282094105",
+        "pos": 4,
+        "posDiff": 0,
+        "readCount": 108329,
+        "wordNumber": 246397,
+        "creationStatus": "1",
+        "lastChapterTitle": "第37章 后继有人？",
+        "lastChapterUpdateTime": "1787658106"
+      },
+      {
+        "bookId": "7623384483550465049",
+        "pos": 5,
+        "posDiff": 0,
+        "readCount": 74199,
+        "wordNumber": 273052,
+        "creationStatus": "1",
+        "lastChapterTitle": "第130章 罗兰巴尔做出艰难选择",
+        "lastChapterUpdateTime": "1786898780"
+      },
+      {
+        "bookId": "7600771307722001433",
+        "pos": 6,
+        "posDiff": 2,
+        "readCount": 77751,
+        "wordNumber": 154363,
+        "creationStatus": "1",
+        "lastChapterTitle": "第61章 德古拉大人，您看黑丝和白丝哪个好看？",
+        "lastChapterUpdateTime": "1787753186"
+      },
+      {
+        "bookId": "7664919491125447705",
+        "pos": 7,
+        "posDiff": -1,
+        "readCount": 77294,
+        "wordNumber": 196073,
+        "creationStatus": "1",
+        "lastChapterTitle": "第80章 我培养了一个神",
+        "lastChapterUpdateTime": "1787679087"
+      },
+      {
+        "bookId": "7662321215717002264",
+        "pos": 8,
+        "posDiff": -1,
+        "readCount": 70227,
+        "wordNumber": 227859,
+        "creationStatus": "1",
+        "lastChapterTitle": "第100章 毒蛇与鲨鱼",
+        "lastChapterUpdateTime": "1787711084"
+      },
+      {
+        "bookId": "7664376091972209689",
+        "pos": 9,
+        "posDiff": 0,
+        "readCount": 59494,
+        "wordNumber": 237062,
+        "creationStatus": "1",
+        "lastChapterTitle": "第59章 基础启蒙也要交学费",
+        "lastChapterUpdateTime": "1787686621"
+      },
+      {
+        "bookId": "7643249097788361790",
+        "pos": 10,
+        "posDiff": 0,
+        "readCount": 65699,
+        "wordNumber": 182380,
+        "creationStatus": "1",
+        "lastChapterTitle": "第86章 去野外......",
+        "lastChapterUpdateTime": "1787671371"
+      }
+    ]
+  },
+  "1_1_124": {
+    "key": "1_1_124",
+    "categoryId": 124,
+    "categoryName": "都市修真",
+    "rankType": 1,
+    "rankName": "都市修真新书榜",
+    "rankVersion": "1787757000",
+    "totalNum": 100,
+    "fetchedAt": "2026-08-26T15:18:14.306Z",
+    "books": [
+      {
+        "bookId": "7663040579378351129",
+        "pos": 1,
+        "posDiff": 0,
+        "readCount": 167048,
+        "wordNumber": 209120,
+        "creationStatus": "1",
+        "lastChapterTitle": "第103章 哈哈，道爷我成了！三花聚顶，五气朝元！",
+        "lastChapterUpdateTime": "1787724394"
+      },
+      {
+        "bookId": "7666723872992939033",
+        "pos": 2,
+        "posDiff": 0,
+        "readCount": 125356,
+        "wordNumber": 194103,
+        "creationStatus": "1",
+        "lastChapterTitle": "第87章 净世白莲",
+        "lastChapterUpdateTime": "1787718350"
+      },
+      {
+        "bookId": "7660826945604553790",
+        "pos": 3,
+        "posDiff": 0,
+        "readCount": 105255,
+        "wordNumber": 250939,
+        "creationStatus": "1",
+        "lastChapterTitle": "第113章 半年",
+        "lastChapterUpdateTime": "1787659920"
+      },
+      {
+        "bookId": "7662780112424668184",
+        "pos": 4,
+        "posDiff": 0,
+        "readCount": 95456,
+        "wordNumber": 230498,
+        "creationStatus": "1",
+        "lastChapterTitle": "第104章 你还说你不是神仙？",
+        "lastChapterUpdateTime": "1787658787"
+      },
+      {
+        "bookId": "7634571778957790232",
+        "pos": 5,
+        "posDiff": 0,
+        "readCount": 72295,
+        "wordNumber": 284327,
+        "creationStatus": "1",
+        "lastChapterTitle": "第137章 血族！",
+        "lastChapterUpdateTime": "1787673346"
+      },
+      {
+        "bookId": "7667338374876777497",
+        "pos": 6,
+        "posDiff": 1,
+        "readCount": 90273,
+        "wordNumber": 157335,
+        "creationStatus": "1",
+        "lastChapterTitle": "第68章 花果山狩猎大赛",
+        "lastChapterUpdateTime": "1787643108"
+      },
+      {
+        "bookId": "7665278512474885182",
+        "pos": 7,
+        "posDiff": -1,
+        "readCount": 68769,
+        "wordNumber": 260300,
+        "creationStatus": "1",
+        "lastChapterTitle": "第123章 筑基大妖！",
+        "lastChapterUpdateTime": "1787716983"
+      },
+      {
+        "bookId": "7665972822581185561",
+        "pos": 8,
+        "posDiff": 0,
+        "readCount": 54543,
+        "wordNumber": 192618,
+        "creationStatus": "1",
+        "lastChapterTitle": "第86章 活在电影里吗",
+        "lastChapterUpdateTime": "1787534121"
+      },
+      {
+        "bookId": "7665609321647983640",
+        "pos": 9,
+        "posDiff": 0,
+        "readCount": 56144,
+        "wordNumber": 269688,
+        "creationStatus": "1",
+        "lastChapterTitle": "第121章 吸引人的工作！",
+        "lastChapterUpdateTime": "1787700766"
+      },
+      {
+        "bookId": "7654865196510366744",
+        "pos": 10,
+        "posDiff": 0,
+        "readCount": 57236,
+        "wordNumber": 296247,
+        "creationStatus": "1",
+        "lastChapterTitle": "第133章 白冲炼丹",
+        "lastChapterUpdateTime": "1787711073"
+      }
+    ]
+  },
+  "1_1_1014": {
+    "key": "1_1_1014",
+    "categoryId": 1014,
+    "categoryName": "都市高武",
+    "rankType": 1,
+    "rankName": "都市高武新书榜",
+    "rankVersion": "1787757000",
+    "totalNum": 100,
+    "fetchedAt": "2026-08-26T15:18:15.799Z",
+    "books": [
+      {
+        "bookId": "7664914784973753406",
+        "pos": 1,
+        "posDiff": 0,
+        "readCount": 438179,
+        "wordNumber": 165158,
+        "creationStatus": "1",
+        "lastChapterTitle": "第76章 陆舟：对，都是我做的",
+        "lastChapterUpdateTime": "1787740214"
+      },
+      {
+        "bookId": "7664998424982342681",
+        "pos": 2,
+        "posDiff": 0,
+        "readCount": 332173,
+        "wordNumber": 247150,
+        "creationStatus": "1",
+        "lastChapterTitle": "第97章 藏富于民，才是王道！",
+        "lastChapterUpdateTime": "1787751022"
+      },
+      {
+        "bookId": "7659684099551939608",
+        "pos": 3,
+        "posDiff": 0,
+        "readCount": 317338,
+        "wordNumber": 293612,
+        "creationStatus": "1",
+        "lastChapterTitle": "第142章 不！！！",
+        "lastChapterUpdateTime": "1787644137"
+      },
+      {
+        "bookId": "7633324843114433598",
+        "pos": 4,
+        "posDiff": 0,
+        "readCount": 258795,
+        "wordNumber": 184830,
+        "creationStatus": "1",
+        "lastChapterTitle": "第56章 协会战，「兔符咒」，神速之力，「箭」",
+        "lastChapterUpdateTime": "1787706427"
+      },
+      {
+        "bookId": "7659545384489847833",
+        "pos": 5,
+        "posDiff": 0,
+        "readCount": 218623,
+        "wordNumber": 266476,
+        "creationStatus": "1",
+        "lastChapterTitle": "第128章 合成成功！",
+        "lastChapterUpdateTime": "1787699122"
+      },
+      {
+        "bookId": "7669430143957355544",
+        "pos": 6,
+        "posDiff": 0,
+        "readCount": 170050,
+        "wordNumber": 230759,
+        "creationStatus": "1",
+        "lastChapterTitle": "第 98 章 基长在我们墨儿面前算什么？",
+        "lastChapterUpdateTime": "1787752341"
+      },
+      {
+        "bookId": "7660761684419546174",
+        "pos": 7,
+        "posDiff": 0,
+        "readCount": 150343,
+        "wordNumber": 219610,
+        "creationStatus": "1",
+        "lastChapterTitle": "第99章 野生狗奶形象代言人",
+        "lastChapterUpdateTime": "1787742696"
+      },
+      {
+        "bookId": "7668153046785854489",
+        "pos": 8,
+        "posDiff": 0,
+        "readCount": 142459,
+        "wordNumber": 171581,
+        "creationStatus": "1",
+        "lastChapterTitle": "第74章 ：我不答应！",
+        "lastChapterUpdateTime": "1787718765"
+      },
+      {
+        "bookId": "7552521675737156633",
+        "pos": 9,
+        "posDiff": 0,
+        "readCount": 131815,
+        "wordNumber": 226916,
+        "creationStatus": "1",
+        "lastChapterTitle": "第107章 这小东西是谁发明的，真可爱",
+        "lastChapterUpdateTime": "1787756514"
+      },
+      {
+        "bookId": "7657505071055244350",
+        "pos": 10,
+        "posDiff": 1,
+        "readCount": 115616,
+        "wordNumber": 188892,
+        "creationStatus": "1",
+        "lastChapterTitle": "第86章 搜刮资源，收割本源",
+        "lastChapterUpdateTime": "1787751974"
+      }
+    ]
+  },
+  "1_2_258": {
+    "key": "1_2_258",
+    "categoryId": 258,
+    "categoryName": "传统玄幻",
+    "rankType": 2,
+    "rankName": "传统玄幻阅读榜",
+    "rankVersion": "1787757000",
+    "totalNum": 100,
+    "fetchedAt": "2026-08-26T15:18:17.275Z",
+    "books": [
+      {
+        "bookId": "6883748331202284558",
+        "pos": 1,
+        "posDiff": 0,
+        "readCount": 1326099,
+        "wordNumber": 9148677,
+        "creationStatus": "1",
+        "lastChapterTitle": "第4258章 想走？",
+        "lastChapterUpdateTime": "1787753945"
+      },
+      {
+        "bookId": "7138249318909086727",
+        "pos": 2,
+        "posDiff": 0,
+        "readCount": 923575,
+        "wordNumber": 6063224,
+        "creationStatus": "1",
+        "lastChapterTitle": "第2928章 围杀，灭口",
+        "lastChapterUpdateTime": "1787748076"
+      },
+      {
+        "bookId": "7641144149260897305",
+        "pos": 3,
+        "posDiff": 0,
+        "readCount": 495305,
+        "wordNumber": 673531,
+        "creationStatus": "1",
+        "lastChapterTitle": "第两百九十七章 四域交流，耀眼战役！【七】",
+        "lastChapterUpdateTime": "1787710075"
+      },
+      {
+        "bookId": "7158752613117201419",
+        "pos": 4,
+        "posDiff": 0,
+        "readCount": 476384,
+        "wordNumber": 8248287,
+        "creationStatus": "1",
+        "lastChapterTitle": "第3885章 神魔战域开，一剑破黄泉",
+        "lastChapterUpdateTime": "1787645287"
+      },
+      {
+        "bookId": "7077546460056652803",
+        "pos": 5,
+        "posDiff": 0,
+        "readCount": 431563,
+        "wordNumber": 9239536,
+        "creationStatus": "1",
+        "lastChapterTitle": "第3942章 杀戮之地",
+        "lastChapterUpdateTime": "1787749898"
+      },
+      {
+        "bookId": "7309742129457138738",
+        "pos": 6,
+        "posDiff": 0,
+        "readCount": 379831,
+        "wordNumber": 4118399,
+        "creationStatus": "1",
+        "lastChapterTitle": "第1986章 半推半就",
+        "lastChapterUpdateTime": "1787568747"
+      },
+      {
+        "bookId": "7633370286288538686",
+        "pos": 7,
+        "posDiff": 0,
+        "readCount": 406286,
+        "wordNumber": 1194825,
+        "creationStatus": "1",
+        "lastChapterTitle": "第615章 遭到拒绝",
+        "lastChapterUpdateTime": "1787042567"
+      },
+      {
+        "bookId": "7263344278955363385",
+        "pos": 8,
+        "posDiff": 0,
+        "readCount": 320298,
+        "wordNumber": 6943530,
+        "creationStatus": "1",
+        "lastChapterTitle": "第3332章 都灭了，我灭的",
+        "lastChapterUpdateTime": "1787665324"
+      },
+      {
+        "bookId": "7143134984532921382",
+        "pos": 9,
+        "posDiff": 0,
+        "readCount": 279307,
+        "wordNumber": 9537923,
+        "creationStatus": "1",
+        "lastChapterTitle": "第4512章 蚀渊骨钉",
+        "lastChapterUpdateTime": "1787755609"
+      },
+      {
+        "bookId": "7379342233071258686",
+        "pos": 10,
+        "posDiff": 0,
+        "readCount": 244371,
+        "wordNumber": 1050938,
+        "creationStatus": "1",
+        "lastChapterTitle": "第452章 林神将",
+        "lastChapterUpdateTime": "1787581648"
+      }
+    ]
+  },
+  "1_2_257": {
+    "key": "1_2_257",
+    "categoryId": 257,
+    "categoryName": "玄幻脑洞",
+    "rankType": 2,
+    "rankName": "玄幻脑洞阅读榜",
+    "rankVersion": "1787757000",
+    "totalNum": 100,
+    "fetchedAt": "2026-08-26T15:18:18.769Z",
+    "books": [
+      {
+        "bookId": "7590221243043826712",
+        "pos": 1,
+        "posDiff": 0,
+        "readCount": 1782880,
+        "wordNumber": 1753736,
+        "creationStatus": "1",
+        "lastChapterTitle": "第811章 算了吧，都烂了",
+        "lastChapterUpdateTime": "1787675328"
+      },
+      {
+        "bookId": "7636702239288986649",
+        "pos": 2,
+        "posDiff": 1,
+        "readCount": 1151621,
+        "wordNumber": 754134,
+        "creationStatus": "1",
+        "lastChapterTitle": "第329章 白莲净世！在世活佛！",
+        "lastChapterUpdateTime": "1787693513"
+      },
+      {
+        "bookId": "7147596144942517284",
+        "pos": 3,
+        "posDiff": -1,
+        "readCount": 1153558,
+        "wordNumber": 6080689,
+        "creationStatus": "0",
+        "lastChapterTitle": "第2710章 长生烬（大结局）",
+        "lastChapterUpdateTime": "1776199264"
+      },
+      {
+        "bookId": "7228940788351110182",
+        "pos": 4,
+        "posDiff": 0,
+        "readCount": 742983,
+        "wordNumber": 5290689,
+        "creationStatus": "1",
+        "lastChapterTitle": "第2567章 木秀于林风必摧之，把人当狗耍！",
+        "lastChapterUpdateTime": "1787752518"
+      },
+      {
+        "bookId": "7630378904976362520",
+        "pos": 5,
+        "posDiff": 0,
+        "readCount": 735781,
+        "wordNumber": 821867,
+        "creationStatus": "1",
+        "lastChapterTitle": "第393章 又是奇遇？",
+        "lastChapterUpdateTime": "1787728448"
+      },
+      {
+        "bookId": "7544766518324644889",
+        "pos": 6,
+        "posDiff": 0,
+        "readCount": 710295,
+        "wordNumber": 2183166,
+        "creationStatus": "1",
+        "lastChapterTitle": "第972章 蚍蜉观井，误以见青天",
+        "lastChapterUpdateTime": "1787714810"
+      },
+      {
+        "bookId": "7583949514948496409",
+        "pos": 7,
+        "posDiff": 0,
+        "readCount": 513152,
+        "wordNumber": 1224640,
+        "creationStatus": "1",
+        "lastChapterTitle": "第575章 天斗星的末路王者！",
+        "lastChapterUpdateTime": "1787626135"
+      },
+      {
+        "bookId": "7444482186822044734",
+        "pos": 8,
+        "posDiff": 0,
+        "readCount": 459795,
+        "wordNumber": 3404037,
+        "creationStatus": "1",
+        "lastChapterTitle": "第1603章 太白山之主！",
+        "lastChapterUpdateTime": "1787582796"
+      },
+      {
+        "bookId": "7609549092179430462",
+        "pos": 9,
+        "posDiff": 0,
+        "readCount": 432445,
+        "wordNumber": 1208018,
+        "creationStatus": "1",
+        "lastChapterTitle": "第520章：大仇得报，我想你了！",
+        "lastChapterUpdateTime": "1787755739"
+      },
+      {
+        "bookId": "7549040798294101054",
+        "pos": 10,
+        "posDiff": 0,
+        "readCount": 427319,
+        "wordNumber": 1513407,
+        "creationStatus": "1",
+        "lastChapterTitle": "第736章 因果对因果！",
+        "lastChapterUpdateTime": "1787713819"
+      }
+    ]
+  },
+  "1_2_1140": {
+    "key": "1_2_1140",
+    "categoryId": 1140,
+    "categoryName": "东方仙侠",
+    "rankType": 2,
+    "rankName": "东方仙侠阅读榜",
+    "rankVersion": "1787757000",
+    "totalNum": 100,
+    "fetchedAt": "2026-08-26T15:18:20.191Z",
+    "books": [
+      {
+        "bookId": "7077516958534470656",
+        "pos": 1,
+        "posDiff": 0,
+        "readCount": 830329,
+        "wordNumber": 8319832,
+        "creationStatus": "0",
+        "lastChapterTitle": "番外 剑开天门（六）",
+        "lastChapterUpdateTime": "1787418750"
+      },
+      {
+        "bookId": "7637464494632881214",
+        "pos": 2,
+        "posDiff": 0,
+        "readCount": 641149,
+        "wordNumber": 371890,
+        "creationStatus": "1",
+        "lastChapterTitle": "第147章 去剑盟举报我？我接的",
+        "lastChapterUpdateTime": "1787715556"
+      },
+      {
+        "bookId": "7445188900496083992",
+        "pos": 3,
+        "posDiff": 0,
+        "readCount": 436662,
+        "wordNumber": 4348004,
+        "creationStatus": "1",
+        "lastChapterTitle": "第2068章 秒神君，阴神尊",
+        "lastChapterUpdateTime": "1787667383"
+      },
+      {
+        "bookId": "7569244441353931800",
+        "pos": 4,
+        "posDiff": 0,
+        "readCount": 353326,
+        "wordNumber": 1177838,
+        "creationStatus": "1",
+        "lastChapterTitle": "第526章 哦元煌、姬郎~你那宽厚的胸膛~",
+        "lastChapterUpdateTime": "1787672840"
+      },
+      {
+        "bookId": "7641501763022883865",
+        "pos": 5,
+        "posDiff": 0,
+        "readCount": 336233,
+        "wordNumber": 692483,
+        "creationStatus": "1",
+        "lastChapterTitle": "第319章 上位圣人殒落",
+        "lastChapterUpdateTime": "1787673555"
+      },
+      {
+        "bookId": "7597375926162164760",
+        "pos": 6,
+        "posDiff": 0,
+        "readCount": 301266,
+        "wordNumber": 824211,
+        "creationStatus": "1",
+        "lastChapterTitle": "第381章 石猴",
+        "lastChapterUpdateTime": "1787734699"
+      },
+      {
+        "bookId": "7425597358123011134",
+        "pos": 7,
+        "posDiff": 0,
+        "readCount": 283951,
+        "wordNumber": 1267678,
+        "creationStatus": "1",
+        "lastChapterTitle": "第573章 白蛟血脉",
+        "lastChapterUpdateTime": "1787737796"
+      },
+      {
+        "bookId": "7450181849587911704",
+        "pos": 8,
+        "posDiff": 3,
+        "readCount": 304813,
+        "wordNumber": 3580629,
+        "creationStatus": "1",
+        "lastChapterTitle": "第1707章 神秘帅大叔",
+        "lastChapterUpdateTime": "1787754743"
+      },
+      {
+        "bookId": "7377931562463005720",
+        "pos": 9,
+        "posDiff": 0,
+        "readCount": 288436,
+        "wordNumber": 2906344,
+        "creationStatus": "1",
+        "lastChapterTitle": "第1391章 裂土之会",
+        "lastChapterUpdateTime": "1787691390"
+      },
+      {
+        "bookId": "7568326868730924056",
+        "pos": 10,
+        "posDiff": -2,
+        "readCount": 283908,
+        "wordNumber": 1674501,
+        "creationStatus": "1",
+        "lastChapterTitle": "第754章 屡屡上当",
+        "lastChapterUpdateTime": "1787703926"
+      }
+    ]
+  },
+  "1_2_1141": {
+    "key": "1_2_1141",
+    "categoryId": 1141,
+    "categoryName": "西方奇幻",
+    "rankType": 2,
+    "rankName": "西方奇幻阅读榜",
+    "rankVersion": "1787757000",
+    "totalNum": 100,
+    "fetchedAt": "2026-08-26T15:18:21.568Z",
+    "books": [
+      {
+        "bookId": "7362544544950275134",
+        "pos": 1,
+        "posDiff": 0,
+        "readCount": 490507,
+        "wordNumber": 3226422,
+        "creationStatus": "1",
+        "lastChapterTitle": "第1708 章 持六皇之力于一剑",
+        "lastChapterUpdateTime": "1787750643"
+      },
+      {
+        "bookId": "7320218217488600126",
+        "pos": 2,
+        "posDiff": 0,
+        "readCount": 379669,
+        "wordNumber": 3848209,
+        "creationStatus": "1",
+        "lastChapterTitle": "第 1887章 魔力飞艇",
+        "lastChapterUpdateTime": "1787755264"
+      },
+      {
+        "bookId": "7654593151348247614",
+        "pos": 3,
+        "posDiff": 0,
+        "readCount": 363453,
+        "wordNumber": 388488,
+        "creationStatus": "1",
+        "lastChapterTitle": "第178章 老姐，你怎么看？",
+        "lastChapterUpdateTime": "1787746846"
+      },
+      {
+        "bookId": "7601032456199736382",
+        "pos": 4,
+        "posDiff": 0,
+        "readCount": 267592,
+        "wordNumber": 831629,
+        "creationStatus": "1",
+        "lastChapterTitle": "第三百五十六章：怀表的作用",
+        "lastChapterUpdateTime": "1787735764"
+      },
+      {
+        "bookId": "7581768205408930841",
+        "pos": 5,
+        "posDiff": 0,
+        "readCount": 249033,
+        "wordNumber": 1147474,
+        "creationStatus": "1",
+        "lastChapterTitle": "第42章 ‘铁钩帮’",
+        "lastChapterUpdateTime": "1787744866"
+      },
+      {
+        "bookId": "7533154088880458814",
+        "pos": 6,
+        "posDiff": 0,
+        "readCount": 255376,
+        "wordNumber": 1718355,
+        "creationStatus": "1",
+        "lastChapterTitle": "第829章 第三行星登陆战",
+        "lastChapterUpdateTime": "1787717501"
+      },
+      {
+        "bookId": "7614012789639613502",
+        "pos": 7,
+        "posDiff": 0,
+        "readCount": 207780,
+        "wordNumber": 603142,
+        "creationStatus": "1",
+        "lastChapterTitle": "第285章 巫器的需求",
+        "lastChapterUpdateTime": "1787473474"
+      },
+      {
+        "bookId": "7080348306596957217",
+        "pos": 8,
+        "posDiff": 0,
+        "readCount": 172965,
+        "wordNumber": 5936152,
+        "creationStatus": "0",
+        "lastChapterTitle": "第2710章 完本感言",
+        "lastChapterUpdateTime": "1765418254"
+      },
+      {
+        "bookId": "7559112493956598809",
+        "pos": 9,
+        "posDiff": 0,
+        "readCount": 173550,
+        "wordNumber": 345470,
+        "creationStatus": "1",
+        "lastChapterTitle": "第152章 安排与赏赐",
+        "lastChapterUpdateTime": "1787729094"
+      },
+      {
+        "bookId": "7230072764088978487",
+        "pos": 10,
+        "posDiff": 0,
+        "readCount": 162713,
+        "wordNumber": 4014092,
+        "creationStatus": "1",
+        "lastChapterTitle": "第1874章 漂亮的艾丝黛儿",
+        "lastChapterUpdateTime": "1787674760"
+      }
+    ]
+  },
+  "1_2_124": {
+    "key": "1_2_124",
+    "categoryId": 124,
+    "categoryName": "都市修真",
+    "rankType": 2,
+    "rankName": "都市修真阅读榜",
+    "rankVersion": "1787757000",
+    "totalNum": 100,
+    "fetchedAt": "2026-08-26T15:18:23.049Z",
+    "books": [
+      {
+        "bookId": "7600765146167790617",
+        "pos": 1,
+        "posDiff": 0,
+        "readCount": 450128,
+        "wordNumber": 1270833,
+        "creationStatus": "1",
+        "lastChapterTitle": "第473章 分玉",
+        "lastChapterUpdateTime": "1787628858"
+      },
+      {
+        "bookId": "7112656623956397088",
+        "pos": 2,
+        "posDiff": 0,
+        "readCount": 384593,
+        "wordNumber": 5979996,
+        "creationStatus": "1",
+        "lastChapterTitle": "第2715章 纪元重启的原因！",
+        "lastChapterUpdateTime": "1787755575"
+      },
+      {
+        "bookId": "7563945197495667774",
+        "pos": 3,
+        "posDiff": 1,
+        "readCount": 296702,
+        "wordNumber": 1316211,
+        "creationStatus": "1",
+        "lastChapterTitle": "第632章 登天而上",
+        "lastChapterUpdateTime": "1787707298"
+      },
+      {
+        "bookId": "7324876104668302398",
+        "pos": 4,
+        "posDiff": -1,
+        "readCount": 255073,
+        "wordNumber": 1575217,
+        "creationStatus": "0",
+        "lastChapterTitle": "第752章 终章",
+        "lastChapterUpdateTime": "1737171618"
+      },
+      {
+        "bookId": "7028204375155674147",
+        "pos": 5,
+        "posDiff": 0,
+        "readCount": 250121,
+        "wordNumber": 1115484,
+        "creationStatus": "0",
+        "lastChapterTitle": "写在完结一年后的话",
+        "lastChapterUpdateTime": "1699696770"
+      },
+      {
+        "bookId": "7347569064258047000",
+        "pos": 6,
+        "posDiff": 0,
+        "readCount": 246646,
+        "wordNumber": 3856229,
+        "creationStatus": "1",
+        "lastChapterTitle": "第1820章 老奸巨猾的王长峰",
+        "lastChapterUpdateTime": "1787756154"
+      },
+      {
+        "bookId": "7596278574026345534",
+        "pos": 7,
+        "posDiff": 1,
+        "readCount": 211950,
+        "wordNumber": 992882,
+        "creationStatus": "1",
+        "lastChapterTitle": "第461章 说服翁心凌",
+        "lastChapterUpdateTime": "1787705955"
+      },
+      {
+        "bookId": "7632705611515317310",
+        "pos": 8,
+        "posDiff": -1,
+        "readCount": 191660,
+        "wordNumber": 578319,
+        "creationStatus": "1",
+        "lastChapterTitle": "第252章 再见熊仙",
+        "lastChapterUpdateTime": "1787717443"
+      },
+      {
+        "bookId": "7615928604173536280",
+        "pos": 9,
+        "posDiff": 0,
+        "readCount": 193474,
+        "wordNumber": 738017,
+        "creationStatus": "1",
+        "lastChapterTitle": "第345章 邪神与山尸",
+        "lastChapterUpdateTime": "1787649748"
+      },
+      {
+        "bookId": "7546231091758107673",
+        "pos": 10,
+        "posDiff": 0,
+        "readCount": 190600,
+        "wordNumber": 1417505,
+        "creationStatus": "1",
+        "lastChapterTitle": "第703章 和事佬2",
+        "lastChapterUpdateTime": "1787705665"
+      }
+    ]
+  },
+  "1_2_1014": {
+    "key": "1_2_1014",
+    "categoryId": 1014,
+    "categoryName": "都市高武",
+    "rankType": 2,
+    "rankName": "都市高武阅读榜",
+    "rankVersion": "1787757000",
+    "totalNum": 100,
+    "fetchedAt": "2026-08-26T15:18:24.552Z",
+    "books": [
+      {
+        "bookId": "7504849932138859545",
+        "pos": 1,
+        "posDiff": 0,
+        "readCount": 2742648,
+        "wordNumber": 2319081,
+        "creationStatus": "1",
+        "lastChapterTitle": "第1080章 再见熟人",
+        "lastChapterUpdateTime": "1787724089"
+      },
+      {
+        "bookId": "7276384138653862966",
+        "pos": 2,
+        "posDiff": 0,
+        "readCount": 2270550,
+        "wordNumber": 4003607,
+        "creationStatus": "0",
+        "lastChapterTitle": "完本感言。",
+        "lastChapterUpdateTime": "1777462058"
+      },
+      {
+        "bookId": "6982529841564224526",
+        "pos": 3,
+        "posDiff": 0,
+        "readCount": 2084312,
+        "wordNumber": 4263654,
+        "creationStatus": "0",
+        "lastChapterTitle": "番外 红缨的礼物",
+        "lastChapterUpdateTime": "1722335310"
+      },
+      {
+        "bookId": "7592279900040465433",
+        "pos": 4,
+        "posDiff": 0,
+        "readCount": 1271533,
+        "wordNumber": 719284,
+        "creationStatus": "1",
+        "lastChapterTitle": "第340章 等上了法庭，她就狂不起来了（加更）",
+        "lastChapterUpdateTime": "1787708469"
+      },
+      {
+        "bookId": "7338034838672247833",
+        "pos": 5,
+        "posDiff": 0,
+        "readCount": 821763,
+        "wordNumber": 3687843,
+        "creationStatus": "0",
+        "lastChapterTitle": "番外 生日番外 if（新生日）",
+        "lastChapterUpdateTime": "1782781730"
+      },
+      {
+        "bookId": "7421167583522458648",
+        "pos": 6,
+        "posDiff": 0,
+        "readCount": 790588,
+        "wordNumber": 3662808,
+        "creationStatus": "1",
+        "lastChapterTitle": "第1654章 陆鼎强势进场，喜欢龇牙？发来！",
+        "lastChapterUpdateTime": "1787740354"
+      },
+      {
+        "bookId": "7541790468774841406",
+        "pos": 7,
+        "posDiff": 0,
+        "readCount": 734651,
+        "wordNumber": 1678528,
+        "creationStatus": "1",
+        "lastChapterTitle": "第728章 皎月归心",
+        "lastChapterUpdateTime": "1787674319"
+      },
+      {
+        "bookId": "7633410676018400281",
+        "pos": 8,
+        "posDiff": 0,
+        "readCount": 713653,
+        "wordNumber": 511366,
+        "creationStatus": "1",
+        "lastChapterTitle": "第251章 要事",
+        "lastChapterUpdateTime": "1787672877"
+      },
+      {
+        "bookId": "7462405945180572697",
+        "pos": 9,
+        "posDiff": 0,
+        "readCount": 674849,
+        "wordNumber": 2999275,
+        "creationStatus": "1",
+        "lastChapterTitle": "第1296章 火气大涨的血喉",
+        "lastChapterUpdateTime": "1787748467"
+      },
+      {
+        "bookId": "7346057588347259929",
+        "pos": 10,
+        "posDiff": 0,
+        "readCount": 623081,
+        "wordNumber": 3853709,
+        "creationStatus": "1",
+        "lastChapterTitle": "第1828章 神明的欺骗",
+        "lastChapterUpdateTime": "1787597964"
+      }
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+scripts:
+https://lf-security.bytegoofy.com/obj/security-secsdk/runtime-v1.0.0.js
+https://privacy.zijieapi.com/api/web-cmp/sdk/?project_key=006bd93d65c02c4f
+https://lf-c-flwb.bytetos.com/obj/rc-client-security/web/glue/1.0.0.29/sdk-glue.js
+https://hm.baidu.com/hm.js?2667d29c8e792e6fa9182c20a3013175
+https://lf-c-flwb.bytetos.com/obj/rc-client-security/sec_sdk_build/3.8.0/captcha/index.js
+https://lf1-cdn-tos.bytegoofy.com/obj/goofy/secsdk/secsdk-lastest.umd.js
+//lf-fe.fqnovelstatic.com/obj/novel-fanqie-fe/toutiao/muye/Home.8cfc78c6.js
+//lf-fe.fqnovelstatic.com/obj/novel-fanqie-fe/toutiao/muye/js/muye_a2c8e2a7.js
+--- https://lf-fe.fqnovelstatic.com/obj/novel-fanqie-fe/toutiao/muye/js/muye_a2c8e2a7.js (3862958b) ---
+  /api/user/info
+  /api/reader/user/info
+  /api/user/apply/serial/permission
+  /api/user/media/account
+  /api/author/homepage/check/v0/
+  /api/user/get_kickout_info
+  /api/user/clear_kickout_info
+  /api/author/book/category_list/v0/
+  /api/library/book_list
+  /api/author/library/book_list/v0/
+  /api/book/simple/info
+  /api/bookshelf/multidetail
+  /api/reader/book/progress
+  /api/reader/book/read_item_list
+  /api/reader/book/update_progress
+  /api/reader/book/batch_update_progress
+  /api/node/data/antidirt/v0/
+  /api/node/copyright/list
+  /api/node/publication/list
+  /api/notice/list
+  /api/rank/recommend/list
+  /api/rank/recent/update/list
+  /api/banner/list
+  /api/author/misc/top_book_list/v1/
+  /api/author/misc/top_author_list/v1/
+  /api/reader/full
+  /api/reader/directory/detail
+  /api/book/info
+  /api/reader/directory/iid
+  /api/reader/directory/list
+  /api/author/search/search_book/v1
+  /api/rank/category/list
+  /api/config/list
+  /api/editor/list
+  /api/comment/get_book_comment
+  /api/writer/info
+  /api/writer/book_list
+  /api/book/follow
+  /api/user/info/v2
+  /api/v2/resource/asset-sdk

@@ -1,0 +1,23 @@
+=== faloo SearchBook / 搜索表单上下文
+--- 搜索框 DOM
+h"><div class="SearchLeft"><span>
+<a href="//b.faloo.com/" target="_blank" title="飞卢小说网"><img src="//s.faloo.com/novel2/logo.png" style="width:1.78rem; height:0.6rem;" alt="飞卢小说网" title="飞卢小说网" /></a>
+</span></div><div class="SearchCenter"><div class="SearchCenterDiv1"><div class="SearchCenterDiv1-One"><i id="o" onclick="sousuo()"><span id="bookname">书名</span><span>&nbsp;<img src="//s.faloo.com/novel2/index/sanjiao.png"></span><span></span><div id="fuchuang" class="fuchuang">
+<a onclick="xuan(1)">书名</a>
+<a onclick="xuan(2)">作者</a>
+<a onclick="xuan(3)">二次元</a>
+</div></i></div><div class="SearchCenterDiv1-Two"><input type="text" id="BookName" name="BookName" maxlength="32" style="color: #666666;"  placeholder="霍格沃茨：我汤姆，真不是黑魔王" value=""></div><div class="SearchCenterDiv1-Three"><input type="button" value="搜索" onclick="SearchBook()"></div><em class="question"></em></div><div class="SearchCenterDiv2">
+<a href="https://b.faloo.com/1484744.html" target="_blank" title="盘点万界战力等级，论外吓尿诸天">盘点万界战力等级，论外吓尿诸天</a>
+<a href="https://b.faloo.com/1479061.html" target="_blank" title="综漫：开局概念树，吃香的睡辣的">综漫：开局概念树，吃香的睡辣的</a>
+<a href="https://b.faloo.com/1478500.html" target="_blank" title="我都成黄金圣斗士了，金手指才来">我都成黄金圣斗士了，金手指才来</a>
+<a href="https://b.faloo.com/1481863.html" target="_blank" title="崩铁：我为创世神，调制世界">崩铁：我为创世神，调制世界</a>
+</div></div><div class="SearchRight"><div style="padding-top: 10px;"></div>
+<p>作家：
+<a href="//b.faloo.com/Author/1.html" target="_blank" style="color: #FF6600;">进入作家专区</
+
+=== zongheng 书库分类导航
+  c0  完本
+  c0  完本
+  c0  免费小说
+--- 排序/筛选参数说明位
+

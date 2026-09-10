@@ -1,0 +1,86 @@
+=== zongheng robots
+User-Agent: *
+Allow: /
+Disallow: /*.css
+Disallow: /*.js
+Sitemap:https://www.zongheng.com/sitemap_1.xml
+Sitemap:https://www.zongheng.com/sitemap_other.xml
+
+=== 17k robots
+User-agent: *
+Disallow: /azapp*/
+Disallow: /azapp*
+Disallow: /ckv3
+Disallow: /ck
+Allow: /
+Sitemap: https://www.17k.com/sitemap.xml
+=== faloo 分类导航链接
+  y_44.html  同人
+  y_0_1.html  书库
+  y_0_0_0_0_3_1_1.html  VIP小说
+  y_0_0_0_0_2_0_1.html  完本小说
+  y_0_0_0_0_6_1_1.html  免费小说
+  y_0_1.html  原创书库
+  y_1.html  玄幻奇幻
+  y_6.html  武侠仙侠
+  y_44.html  同人小说
+  y_4.html  都市言情
+  y_3.html  军事历史
+  y_2.html  科幻网游
+  y_5.html  恐怖灵异
+  y_7.html  青春校园
+  y_97.html  轻小说
+  y_54.html  女生小说
+  y_9.html  短篇其他
+  y_1_1.html  [原创书库]
+  y_1_28_1.html  异世大陆
+  y_1_50_1.html  神话传说
+  y_1_29_1.html  东方玄幻
+  y_1_30_1.html  转世重生
+  y_1_31_1.html  王朝争霸
+  y_1_56_1.html  上古神话
+  y_1_32_1.html  变身情缘
+  y_1_81_1.html  穿越附身
+  y_1_0_0_0_0_0_1.html  全部
+  y_1_0_0_11_0_0_1.html  30万以下
+  y_1_0_0_12_0_0_1.html  30万-50万
+  y_1_0_0_3_0_0_1.html  50万-100万
+  y_1_0_0_14_0_0_1.html  100万-200万
+  y_1_0_0_9_0_0_1.html  50万以上
+  y_1_0_0_4_0_0_1.html  100万以上
+  y_1_0_0_17_0_0_1.html  200万以上
+  y_1_0_0_0_0_0_1.html  全部
+  y_1_0_0_0_9_0_1.html  新书入库
+  y_1_0_0_0_1_0_1.html  还在写作中..
+  y_1_0_0_0_2_0_1.html  已经完本
+  y_1_0_0_0_3_0_1.html  VIP小说
+  y_1_0_0_0_6_0_1.html  免费小说
+=== faloo 书目条 (前 3 条原样)
+<div class="TwoBox02" id="BookContent">
+<div class="TwoBox02_01"><div class="TwoBox02_02"><div class="TwoBox02_03"><a href="//b.faloo.com/933118.html" target="_blank" title="全民基建：开局打造万里长城！"><img class="TYImg" data-original="http://img.faloo.com/Novel/332x470/0/645/000645314.jpg" src="http://img.faloo.com/Novel/332x470/0/645/000645314.jpg" / title="全民基建：开局打造万里长城！"></a></div>
+---
+<div class="TwoBox02_04"><div class="TwoBox02_05"><div class="TwoBox02_08"><h1 class="fontSize17andHei" title="全民基建：开局打造万里长城！"><a href="//b.faloo.com/933118.html" target="_blank" title="全民基建：开局打造万里长城！">全民基建：开局打造万里长城！</a></h1></div>
+=== faloo 书页链接样例
+  id=1484744  盘点万界战力等级，论外吓尿诸天
+  id=1479061  综漫：开局概念树，吃香的睡辣的
+  id=1478500  我都成黄金圣斗士了，金手指才来
+  id=1481863  崩铁：我为创世神，调制世界
+  id=933118  全民基建：开局打造万里长城！
+  id=1446868  洪荒：巫族小兵，我能掠夺词条！
+  id=1405657  洪荒：让你出气，你去暴打鸿钧？
+  id=1118376  洪荒：我能查看人生剧本
+  id=967706  洪荒：开局请通天教主退位！
+  id=1085066  人在胎里，隔壁女帝想把我挤出去
+  id=1541273  洪荒开局成为下品先天灵宝时空珠
+  id=1399334  洪荒：开局亿万神通尽加吾身
+=== zongheng search 结构
+--- zh search 片段
+search-result-list{display:flex;justify-content:space-between;width:738px;height:128px;margin-bottom:30px}.search-result-list .imgbox{margin-right:17px}.search-result-list .imgbox img{width:96px;height:128px;box-shadow:inset 0 0 1px 0 rgba(0,0,0,.1);border-radius:4px}.search-result-list .se-result-infos{width:490px}.search-result-list .btn{flex-shrink:0;width:140px;margin-left:30px}.search-result-list .se-result-infos h2.tit{height:24px;font-size:16px;font-family:PingFangSC-Medium,PingFang SC;font-weight:500;line-height:24px;margin-bottom:4px}.search-result-list .se-result-infos h2.tit a{color:#333}.search-result-list .se-result-infos .bookinfo{height:20px;font-size:12px;font-family:PingFangSC-Regular,PingFang SC;font-weight:400;color:#999;line-height:20px;margin-bottom:8px}.search-result-list .se-result-infos .bookinfo a{color:#999}.search-result-list .se-result-infos .bookinfo em{text-indent:-9999px;position:relative;margin:0 5px}.search-result-list .se-result-infos>p{font-size:12px;font-family:PingFangSC-Regular,PingFang SC;font-weight:400;color:#666;line-height:20px;max-height:40px;margin-bottom:8px;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;text-overflow:ellipsis}.search-result-list .se-result-infos .bookinfo em{text-indent:-9999px;position:relative;margin:0 5px}.search-result-list .se-result-infos>.key-word{font-size:12px;font-family:PingFangSC-Regular,PingFang SC;font-weight:400;color:#999;line-height:20px;margin-bottom:8px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:451px}.search-result-list .btn a.bkinfo{display:block;width:108px;height:40px;background:linear-gradient(330deg,#e60000 0,#ff6114 100%);border-radius:20px;display:flex;align-items:center;justify-content:center;font-size:14px;font-family:PingFangSC-Medium,PingFang SC;font-weight:500;color:#fff;line-height:20px}.search-result-list .btn a.addshelf{display:block;width:108px;height:40px;border-radius:20px;display:flex;align-items:center;justify-content:center;font-size:12px;font-family:PingFangSC-Regular,PingFang SC;font-weight:400;color:#696969;line-height:14px}.search-side{width:294px;border-radius:12px;border:1px solid #e6e8eb;margin-right:48px;margin-top:135px}.search-side-con{margin:2px 24px}.se-side-tit{height:24px;font-size:16px;font-family:PingFangSC-Medium,PingFang SC;font-weight:500;color:#333;line-height:24px;margin:20px 0}.search-side-con .se-side-cell{height:96px;display:flex;justify-content:space-between;margin-botto
+=== 17k search 结构
+<html>
+<script>
+    var arg1='2B5ED5CC98DA74584785E7E05062A8FF1EA3809D';
+    function setCookie(name,value){var expiredate=new Date();expiredate.setTime(expiredate.getTime()+(3600*1000));document.cookie=name+"="+value+";expires="+expiredate.toGMTString()+";max-age=3600;path=/";}
+    function reload(x) {setCookie("acw_sc__v2", x);document.location.reload();}
+</script>
+<script name="aliyunwaf_6a6f5ea8">var _0x4818=['\x63\x73\x4b\x48\x77\x71\x4d\x49','\x5a\x73\x4b\x4a\x77\x72\x38\x56\x65\x41\x73\x79','\x55\x63\x4b\x69\x4e\x38\x4f\x2f\x77\x70\x6c\x77\x4d\x41\x3d\x3d','\x4a\x52\x38\x43\x54\x67\x3d\x3d','\x59\x73\x4f\x6e\x62\x53\x45\x51\x77\x37\x6f\x7a\x77\x71\x5a\x4b\x65\x73\x4b\x55\x77\x37\x6b\x77\x58\x38\x4f\x52\x49\x51\x3d\x3d','\x77\x37\x6f\x56\x53\x38\x4f\x53\x77\x6f\x50\x43\x6c\x33\x6a\x43\x68\x4d\x4b\x68\x77\x36\x48\x44\x6c\x73\x4b\x58\x77\x34\x73\x2f\x59\x73\x4f\x47','\x66\x77\x56\x6d\x49\x31\x41\x74\x77\x70\x6c\x61\x59\x38\x4f\x74\x77\x35\x63\x4e\x66\x53\x67\x70\x77\x36\x4d\x3d','\x4f\x63\x4f\x4e\x77\x72\x6a\x43\x71\x73\x4b\x78\x54\x47\x54\x43\x68\x73\x4f\x6a\x45\x57\x45\x38\x50\x63\x4f\x63\x4a\x38\x4b\x36','\x55\x38\x4b\x35\x4c\x63\x4f\x74\x77\x70\x56\x30\x45\x4d\x4f\x6b\x77\x34\x37\x44\x72\x4d\x4f\x58','\x48\x4d\x4f\x32\x77\x6f\x48\x43\x69\x4d\x4b\x39\x53\x6c\x58\x43\x6c\x63\x4f\x6f\x43\x31\x6b\x3d','\x61\x73\x4b\x49\x77\x71\x4d\x44\x64\x67\x4d\x75\x50\x73\x4f\x4b\x42\x4d\x4b\x63\x77\x72\x72\x43\x74\x6b\x4c\x44\x72\x4d\x4b\x42\x77\x36\x34\x64','\x77\x71\x49\x6d\x4d\x54\x30\x74\x77\x36\x52\x4e\x77\x35\x6b\x3d','\x44\x4d\x4b\x63\x55\x30\x4a\x6d\x55\x77\x55\x76','\x56\x6a\x48\x44\x6c\x4d\x4f\x48\x56\x63\x4f\x4e\x58\x33\x66\x44\x69\x63\x4b\x4a\x48\x51\x3d\x3d','\x77\x71\x68\x42\x48\x38\x4b\x6e\x77\x34\x54\x44\x68\x53\x44\x44\x67\x4d\x4f\x64\x77\x72\x6a\x43\x6e\x63\x4f\x57\x77\x70\x68\x68\x4e\x38\x4b\x43\x47\x63\x4b\x71\x77\x36\x64\x48\x41\x55\x35\x2b\x77\x72\x67\x32\x4a\x63\x4b\x61\x77\x34\x49\x45\x4a\x63\x4f\x63\x77\x72\x52\x4a\x77\x6f\x5a\x30\x77\x71\x46\x39\x59\x67\x41\x56','\x64\x7a\x64\x32\x77\x35\x62\x44\x6d\x33\x6a\x44\x70\x73\x4b\x33\x77\x70\x59\x3d','\x77\x34\x50\x44\x67\x63\x4b\x58\x77\x6f\x33\x43\x6b\x63\x4b\x4c\x77\x72\x35\x71\x77\x72\x59\x3d','\x77\x72\x4a\x4f\x54\x63\x4f\x51\x57\x4d\x4f\x67','\x77\x71\x54\x44\x76\x63\x4f\x6a\x77\x34\x34\x37\x77\x72\x34\x3d','\x77\x35\x58\x44\x71\x73\x4b\x68\x4d\x46\x31\x2f','\x77\x72\x41\x79\x48\x73\x4f\x66\x77\x70\x70\x63','\x4a\x33\x64\x56\x50\x63\x4f\x78\x4c\x67\x3d\x3d','\x77\x72\x64\x48\x77\x37\x70\x39\x5a\x77\x3d\x3d','\x77\x34\x72\x44\x6f\x38\x4b\x6d\x4e\x45\x77\x3d','\x49\x4d\x4b\x41\x55\x6b\x42\x74','\x77\x36\x62\x44\x72\x63\x4b\x51\x77\x70\x56\x48\x77\x70\x4e\x51\x77\x71\x55\x3d','\x64\x38\x4f\x73\x57\x68\x41\x55\x77\x37\x59\x7a\x77\x72\x55\x3d','\x77\x71\x6e\x43\x6b\x73\x4f\x65\x65\x7a\x72\x44\x68\x77\x3d\x3d','\x55\x73\x4b\x6e\x49\x4d\x4b\x57\x56\x38\x4b\x2f','\x77\x34\x7a\x44\x6f\x63\x4b\x38\x4e\x55\x5a\x76','\x63\x38\x4f\x78\x5a\x68\x41\x4a\x77\x36\x73\x6b\x77\x71\x4a\x6a','\x50\x63\

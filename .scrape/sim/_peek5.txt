@@ -1,0 +1,31 @@
+=== og / meta
+  og:title = 全员智商为负一百的修仙界
+  og:description = content=&quot;纵横小说网提供作者(什么笔名)的经典小说《全员智商为负一百的修仙界》，《全员智商为负一百的修仙界》最新章节全文阅读服务，本站更新及时，无弹窗广告，欢迎光临(m.zongheng.com)观看小说：&amp;nbs
+  og:image = https://static.zongheng.com/upload/cover/76/68/7668c2176cdbf17fcd4e453c30d8ff0f.jpeg
+  og:novel:book_name = 全员智商为负一百的修仙界
+  og:novel:category = 玄幻奇幻
+  og:novel:author = 什么笔名
+  og:novel:read_url = //www.zongheng.com/detail/1593259
+  og:novel:update_time = 2026-09-08 21:30:02
+  og:novel:latest_chapter_name = 第17章 苏晚醒了
+  og:novel:latest_chapter_url = //read.zongheng.com/chapter/1593259/95226919.html
+  og:novel:status = 连载中
+=== 简介块
+--- book-info @5441
+百的修仙界 全员智商为负一百的修仙界 
+ 连载中
+ 
+ 玄幻奇幻
+ 
+ 轻松
+ 
+ 诸天万界
+ 
+ 脑洞
+ 
+ 修仙
+ 
+ 女强
+ 0 总点击 0 总推荐 0 周推荐 <div data
+=== 标签块
+

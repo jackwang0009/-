@@ -1,0 +1,768 @@
+cat=东方仙侠(1140) sort=0 page=0 n=20 fresh=20 has_more=true pool=20
+cat=东方仙侠(1140) sort=0 page=1 n=20 fresh=20 has_more=true pool=40
+cat=东方仙侠(1140) sort=0 page=2 n=20 fresh=20 has_more=true pool=60
+cat=东方仙侠(1140) sort=0 page=3 n=20 fresh=20 has_more=true pool=80
+cat=东方仙侠(1140) sort=0 page=4 n=20 fresh=20 has_more=true pool=100
+cat=东方仙侠(1140) sort=0 page=5 n=10 fresh=10 has_more=true pool=110
+cat=东方仙侠(1140) sort=0 page=6 n=10 fresh=10 has_more=true pool=120
+cat=东方仙侠(1140) sort=0 page=7 n=10 fresh=10 has_more=true pool=130
+cat=东方仙侠(1140) sort=0 page=8 n=10 fresh=10 has_more=true pool=140
+cat=东方仙侠(1140) sort=0 page=9 n=10 fresh=10 has_more=true pool=150
+cat=东方仙侠(1140) sort=0 page=10 n=10 fresh=10 has_more=true pool=160
+cat=东方仙侠(1140) sort=0 page=11 n=10 fresh=10 has_more=true pool=170
+cat=东方仙侠(1140) sort=1 page=0 n=20 fresh=20 has_more=true pool=190
+cat=东方仙侠(1140) sort=1 page=1 n=20 fresh=19 has_more=true pool=209
+cat=东方仙侠(1140) sort=1 page=2 n=20 fresh=20 has_more=true pool=229
+cat=东方仙侠(1140) sort=1 page=3 n=20 fresh=19 has_more=true pool=248
+cat=东方仙侠(1140) sort=1 page=4 n=20 fresh=20 has_more=true pool=268
+cat=东方仙侠(1140) sort=1 page=5 n=10 fresh=10 has_more=true pool=278
+cat=东方仙侠(1140) sort=1 page=6 n=10 fresh=10 has_more=true pool=288
+cat=东方仙侠(1140) sort=1 page=7 n=10 fresh=9 has_more=true pool=297
+cat=东方仙侠(1140) sort=1 page=8 n=10 fresh=9 has_more=true pool=306
+cat=东方仙侠(1140) sort=1 page=9 n=10 fresh=10 has_more=true pool=316
+cat=东方仙侠(1140) sort=1 page=10 n=10 fresh=10 has_more=true pool=326
+cat=东方仙侠(1140) sort=1 page=11 n=10 fresh=10 has_more=true pool=336
+cat=传统玄幻(258) sort=0 page=0 n=20 fresh=20 has_more=true pool=356
+cat=传统玄幻(258) sort=0 page=1 n=20 fresh=20 has_more=true pool=376
+cat=传统玄幻(258) sort=0 page=2 n=20 fresh=20 has_more=true pool=396
+cat=传统玄幻(258) sort=0 page=3 n=20 fresh=20 has_more=true pool=416
+cat=传统玄幻(258) sort=0 page=4 n=20 fresh=20 has_more=true pool=436
+cat=传统玄幻(258) sort=0 page=5 n=10 fresh=10 has_more=true pool=446
+cat=传统玄幻(258) sort=0 page=6 n=10 fresh=10 has_more=true pool=456
+cat=传统玄幻(258) sort=0 page=7 n=10 fresh=10 has_more=true pool=466
+cat=传统玄幻(258) sort=0 page=8 n=10 fresh=10 has_more=true pool=476
+cat=传统玄幻(258) sort=0 page=9 n=10 fresh=10 has_more=true pool=486
+cat=传统玄幻(258) sort=0 page=10 n=10 fresh=10 has_more=true pool=496
+cat=传统玄幻(258) sort=0 page=11 n=10 fresh=10 has_more=true pool=506
+cat=传统玄幻(258) sort=1 page=0 n=20 fresh=20 has_more=true pool=526
+cat=传统玄幻(258) sort=1 page=1 n=20 fresh=20 has_more=true pool=546
+cat=传统玄幻(258) sort=1 page=2 n=20 fresh=18 has_more=true pool=564
+cat=传统玄幻(258) sort=1 page=3 n=20 fresh=19 has_more=true pool=583
+cat=传统玄幻(258) sort=1 page=4 n=20 fresh=20 has_more=true pool=603
+cat=传统玄幻(258) sort=1 page=5 n=10 fresh=10 has_more=true pool=613
+cat=传统玄幻(258) sort=1 page=6 n=10 fresh=10 has_more=true pool=623
+cat=传统玄幻(258) sort=1 page=7 n=10 fresh=10 has_more=true pool=633
+cat=传统玄幻(258) sort=1 page=8 n=10 fresh=10 has_more=true pool=643
+cat=传统玄幻(258) sort=1 page=9 n=10 fresh=10 has_more=true pool=653
+cat=传统玄幻(258) sort=1 page=10 n=10 fresh=10 has_more=true pool=663
+cat=传统玄幻(258) sort=1 page=11 n=10 fresh=9 has_more=true pool=672
+cat=玄幻脑洞(257) sort=0 page=0 n=20 fresh=20 has_more=true pool=692
+cat=玄幻脑洞(257) sort=0 page=1 n=20 fresh=20 has_more=true pool=712
+cat=玄幻脑洞(257) sort=0 page=2 n=20 fresh=20 has_more=true pool=732
+cat=玄幻脑洞(257) sort=0 page=3 n=20 fresh=20 has_more=true pool=752
+cat=玄幻脑洞(257) sort=0 page=4 n=20 fresh=20 has_more=true pool=772
+cat=玄幻脑洞(257) sort=0 page=5 n=10 fresh=10 has_more=true pool=782
+cat=玄幻脑洞(257) sort=0 page=6 n=10 fresh=10 has_more=true pool=792
+cat=玄幻脑洞(257) sort=0 page=7 n=10 fresh=10 has_more=true pool=802
+cat=玄幻脑洞(257) sort=0 page=8 n=10 fresh=10 has_more=true pool=812
+cat=玄幻脑洞(257) sort=0 page=9 n=10 fresh=10 has_more=true pool=822
+cat=玄幻脑洞(257) sort=0 page=10 n=10 fresh=10 has_more=true pool=832
+cat=玄幻脑洞(257) sort=0 page=11 n=10 fresh=10 has_more=true pool=842
+cat=玄幻脑洞(257) sort=1 page=0 n=20 fresh=19 has_more=true pool=861
+cat=玄幻脑洞(257) sort=1 page=1 n=20 fresh=20 has_more=true pool=881
+cat=玄幻脑洞(257) sort=1 page=2 n=20 fresh=19 has_more=true pool=900
+cat=玄幻脑洞(257) sort=1 page=3 n=20 fresh=20 has_more=true pool=920
+cat=玄幻脑洞(257) sort=1 page=4 n=20 fresh=20 has_more=true pool=940
+cat=玄幻脑洞(257) sort=1 page=5 n=10 fresh=10 has_more=true pool=950
+cat=玄幻脑洞(257) sort=1 page=6 n=10 fresh=10 has_more=true pool=960
+cat=玄幻脑洞(257) sort=1 page=7 n=10 fresh=10 has_more=true pool=970
+cat=玄幻脑洞(257) sort=1 page=8 n=10 fresh=10 has_more=true pool=980
+cat=玄幻脑洞(257) sort=1 page=9 n=10 fresh=10 has_more=true pool=990
+cat=玄幻脑洞(257) sort=1 page=10 n=10 fresh=10 has_more=true pool=1000
+cat=玄幻脑洞(257) sort=1 page=11 n=10 fresh=10 has_more=true pool=1010
+cat=都市修真(124) sort=0 page=0 n=20 fresh=20 has_more=true pool=1030
+cat=都市修真(124) sort=0 page=1 n=20 fresh=20 has_more=true pool=1050
+cat=都市修真(124) sort=0 page=2 n=20 fresh=20 has_more=true pool=1070
+cat=都市修真(124) sort=0 page=3 n=20 fresh=20 has_more=true pool=1090
+cat=都市修真(124) sort=0 page=4 n=20 fresh=20 has_more=true pool=1110
+cat=都市修真(124) sort=0 page=5 n=10 fresh=10 has_more=true pool=1120
+cat=都市修真(124) sort=0 page=6 n=10 fresh=10 has_more=true pool=1130
+cat=都市修真(124) sort=0 page=7 n=10 fresh=10 has_more=true pool=1140
+cat=都市修真(124) sort=0 page=8 n=10 fresh=10 has_more=true pool=1150
+cat=都市修真(124) sort=0 page=9 n=10 fresh=10 has_more=true pool=1160
+cat=都市修真(124) sort=0 page=10 n=10 fresh=10 has_more=true pool=1170
+cat=都市修真(124) sort=0 page=11 n=10 fresh=10 has_more=true pool=1180
+cat=都市修真(124) sort=1 page=0 n=20 fresh=19 has_more=true pool=1199
+cat=都市修真(124) sort=1 page=1 n=20 fresh=19 has_more=true pool=1218
+cat=都市修真(124) sort=1 page=2 n=20 fresh=20 has_more=true pool=1238
+cat=都市修真(124) sort=1 page=3 n=20 fresh=20 has_more=true pool=1258
+cat=都市修真(124) sort=1 page=4 n=20 fresh=19 has_more=true pool=1277
+cat=都市修真(124) sort=1 page=5 n=10 fresh=10 has_more=true pool=1287
+cat=都市修真(124) sort=1 page=6 n=10 fresh=10 has_more=true pool=1297
+cat=都市修真(124) sort=1 page=7 n=10 fresh=10 has_more=true pool=1307
+cat=都市修真(124) sort=1 page=8 n=10 fresh=9 has_more=true pool=1316
+cat=都市修真(124) sort=1 page=9 n=10 fresh=10 has_more=true pool=1326
+cat=都市修真(124) sort=1 page=10 n=10 fresh=10 has_more=true pool=1336
+cat=都市修真(124) sort=1 page=11 n=10 fresh=10 has_more=true pool=1346
+cat=东方玄幻(511) sort=0 page=0 n=20 fresh=0 has_more=true pool=1346
+cat=东方玄幻(511) sort=0 page=1 n=20 fresh=0 has_more=true pool=1346
+cat=东方玄幻(511) sort=0 page=2 n=20 fresh=0 has_more=true pool=1346
+cat=东方玄幻(511) sort=0 page=3 n=20 fresh=0 has_more=true pool=1346
+cat=东方玄幻(511) sort=0 page=4 n=20 fresh=4 has_more=true pool=1350
+cat=东方玄幻(511) sort=0 page=5 n=10 fresh=1 has_more=true pool=1351
+cat=东方玄幻(511) sort=0 page=6 n=10 fresh=1 has_more=true pool=1352
+cat=东方玄幻(511) sort=0 page=7 n=10 fresh=5 has_more=true pool=1357
+cat=东方玄幻(511) sort=0 page=8 n=10 fresh=6 has_more=true pool=1363
+cat=东方玄幻(511) sort=0 page=9 n=10 fresh=3 has_more=true pool=1366
+cat=东方玄幻(511) sort=0 page=10 n=10 fresh=3 has_more=true pool=1369
+cat=东方玄幻(511) sort=0 page=11 n=10 fresh=7 has_more=true pool=1376
+cat=东方玄幻(511) sort=1 page=0 n=20 fresh=11 has_more=true pool=1387
+cat=东方玄幻(511) sort=1 page=1 n=20 fresh=5 has_more=true pool=1392
+cat=东方玄幻(511) sort=1 page=2 n=20 fresh=1 has_more=true pool=1393
+cat=东方玄幻(511) sort=1 page=3 n=20 fresh=0 has_more=true pool=1393
+cat=东方玄幻(511) sort=1 page=4 n=20 fresh=0 has_more=true pool=1393
+cat=东方玄幻(511) sort=1 page=5 n=10 fresh=0 has_more=true pool=1393
+cat=东方玄幻(511) sort=1 page=6 n=10 fresh=0 has_more=true pool=1393
+cat=东方玄幻(511) sort=1 page=7 n=10 fresh=0 has_more=true pool=1393
+cat=东方玄幻(511) sort=1 page=8 n=10 fresh=0 has_more=true pool=1393
+cat=东方玄幻(511) sort=1 page=9 n=10 fresh=6 has_more=true pool=1399
+cat=东方玄幻(511) sort=1 page=10 n=10 fresh=6 has_more=true pool=1405
+cat=东方玄幻(511) sort=1 page=11 n=10 fresh=6 has_more=true pool=1411
+cat=奇幻仙侠(259) sort=0 page=0 n=20 fresh=8 has_more=true pool=1419
+cat=奇幻仙侠(259) sort=0 page=1 n=20 fresh=5 has_more=true pool=1424
+cat=奇幻仙侠(259) sort=0 page=2 n=20 fresh=7 has_more=true pool=1431
+cat=奇幻仙侠(259) sort=0 page=3 n=20 fresh=4 has_more=true pool=1435
+cat=奇幻仙侠(259) sort=0 page=4 n=20 fresh=5 has_more=true pool=1440
+cat=奇幻仙侠(259) sort=0 page=5 n=10 fresh=7 has_more=true pool=1447
+cat=奇幻仙侠(259) sort=0 page=6 n=10 fresh=2 has_more=true pool=1449
+cat=奇幻仙侠(259) sort=0 page=7 n=10 fresh=6 has_more=true pool=1455
+cat=奇幻仙侠(259) sort=0 page=8 n=10 fresh=7 has_more=true pool=1462
+cat=奇幻仙侠(259) sort=0 page=9 n=10 fresh=7 has_more=true pool=1469
+cat=奇幻仙侠(259) sort=0 page=10 n=10 fresh=2 has_more=true pool=1471
+cat=奇幻仙侠(259) sort=0 page=11 n=10 fresh=10 has_more=true pool=1481
+cat=奇幻仙侠(259) sort=1 page=0 n=20 fresh=10 has_more=true pool=1491
+cat=奇幻仙侠(259) sort=1 page=1 n=20 fresh=3 has_more=true pool=1494
+cat=奇幻仙侠(259) sort=1 page=2 n=20 fresh=9 has_more=true pool=1503
+cat=奇幻仙侠(259) sort=1 page=3 n=20 fresh=6 has_more=true pool=1509
+cat=奇幻仙侠(259) sort=1 page=4 n=20 fresh=3 has_more=true pool=1512
+cat=奇幻仙侠(259) sort=1 page=5 n=10 fresh=1 has_more=true pool=1513
+cat=奇幻仙侠(259) sort=1 page=6 n=10 fresh=6 has_more=true pool=1519
+cat=奇幻仙侠(259) sort=1 page=7 n=10 fresh=6 has_more=true pool=1525
+cat=奇幻仙侠(259) sort=1 page=8 n=10 fresh=5 has_more=true pool=1530
+cat=奇幻仙侠(259) sort=1 page=9 n=10 fresh=4 has_more=true pool=1534
+cat=奇幻仙侠(259) sort=1 page=10 n=10 fresh=3 has_more=true pool=1537
+cat=奇幻仙侠(259) sort=1 page=11 n=10 fresh=6 has_more=true pool=1543
+cat=洪荒(66) sort=0 page=0 n=20 fresh=1 has_more=true pool=1544
+cat=洪荒(66) sort=0 page=1 n=20 fresh=9 has_more=true pool=1553
+cat=洪荒(66) sort=0 page=2 n=20 fresh=16 has_more=true pool=1569
+cat=洪荒(66) sort=0 page=3 n=20 fresh=18 has_more=true pool=1587
+cat=洪荒(66) sort=0 page=4 n=20 fresh=17 has_more=true pool=1604
+cat=洪荒(66) sort=0 page=5 n=10 fresh=10 has_more=true pool=1614
+cat=洪荒(66) sort=0 page=6 n=10 fresh=10 has_more=true pool=1624
+cat=洪荒(66) sort=0 page=7 n=10 fresh=9 has_more=true pool=1633
+cat=洪荒(66) sort=0 page=8 n=10 fresh=10 has_more=true pool=1643
+cat=洪荒(66) sort=0 page=9 n=10 fresh=10 has_more=true pool=1653
+cat=洪荒(66) sort=0 page=10 n=10 fresh=10 has_more=true pool=1663
+cat=洪荒(66) sort=0 page=11 n=10 fresh=10 has_more=true pool=1673
+cat=洪荒(66) sort=1 page=0 n=20 fresh=2 has_more=true pool=1675
+cat=洪荒(66) sort=1 page=1 n=20 fresh=15 has_more=true pool=1690
+cat=洪荒(66) sort=1 page=2 n=20 fresh=19 has_more=true pool=1709
+cat=洪荒(66) sort=1 page=3 n=20 fresh=20 has_more=true pool=1729
+cat=洪荒(66) sort=1 page=4 n=20 fresh=20 has_more=true pool=1749
+cat=洪荒(66) sort=1 page=5 n=10 fresh=7 has_more=true pool=1756
+cat=洪荒(66) sort=1 page=6 n=10 fresh=10 has_more=true pool=1766
+cat=洪荒(66) sort=1 page=7 n=10 fresh=10 has_more=true pool=1776
+cat=洪荒(66) sort=1 page=8 n=10 fresh=9 has_more=true pool=1785
+cat=洪荒(66) sort=1 page=9 n=10 fresh=10 has_more=true pool=1795
+cat=洪荒(66) sort=1 page=10 n=10 fresh=10 has_more=true pool=1805
+cat=洪荒(66) sort=1 page=11 n=10 fresh=10 has_more=true pool=1815
+cat=玄幻(7) sort=0 page=0 n=20 fresh=0 has_more=true pool=1815
+cat=玄幻(7) sort=0 page=1 n=20 fresh=0 has_more=true pool=1815
+cat=玄幻(7) sort=0 page=2 n=20 fresh=0 has_more=true pool=1815
+cat=玄幻(7) sort=0 page=3 n=20 fresh=0 has_more=true pool=1815
+cat=玄幻(7) sort=0 page=4 n=20 fresh=0 has_more=true pool=1815
+cat=玄幻(7) sort=0 page=5 n=10 fresh=0 has_more=true pool=1815
+cat=玄幻(7) sort=0 page=6 n=10 fresh=0 has_more=true pool=1815
+cat=玄幻(7) sort=0 page=7 n=10 fresh=0 has_more=true pool=1815
+cat=玄幻(7) sort=0 page=8 n=10 fresh=0 has_more=true pool=1815
+cat=玄幻(7) sort=0 page=9 n=10 fresh=2 has_more=true pool=1817
+cat=玄幻(7) sort=0 page=10 n=10 fresh=2 has_more=true pool=1819
+cat=玄幻(7) sort=0 page=11 n=10 fresh=6 has_more=true pool=1825
+cat=玄幻(7) sort=1 page=0 n=20 fresh=10 has_more=true pool=1835
+cat=玄幻(7) sort=1 page=1 n=20 fresh=5 has_more=true pool=1840
+cat=玄幻(7) sort=1 page=2 n=20 fresh=3 has_more=true pool=1843
+cat=玄幻(7) sort=1 page=3 n=20 fresh=0 has_more=true pool=1843
+cat=玄幻(7) sort=1 page=4 n=20 fresh=0 has_more=true pool=1843
+cat=玄幻(7) sort=1 page=5 n=10 fresh=0 has_more=true pool=1843
+cat=玄幻(7) sort=1 page=6 n=10 fresh=0 has_more=true pool=1843
+cat=玄幻(7) sort=1 page=7 n=10 fresh=1 has_more=true pool=1844
+cat=玄幻(7) sort=1 page=8 n=10 fresh=0 has_more=true pool=1844
+cat=玄幻(7) sort=1 page=9 n=10 fresh=0 has_more=true pool=1844
+cat=玄幻(7) sort=1 page=10 n=10 fresh=0 has_more=true pool=1844
+cat=玄幻(7) sort=1 page=11 n=10 fresh=0 has_more=true pool=1844
+步骤A完成：请求 192 次，新增 1844，ID 池共 1844
+20/1844 resolved=20 hits=0 near=0 err=0 27s eta=40.5min
+40/1844 resolved=40 hits=1 near=0 err=0 54s eta=40.6min
+60/1844 resolved=60 hits=1 near=0 err=0 81s eta=40.3min
+80/1844 resolved=80 hits=1 near=0 err=0 108s eta=39.8min
+100/1844 resolved=100 hits=2 near=0 err=0 137s eta=39.8min
+120/1844 resolved=120 hits=2 near=0 err=0 164s eta=39.3min
+140/1844 resolved=140 hits=2 near=0 err=0 191s eta=38.8min
+160/1844 resolved=160 hits=4 near=0 err=0 219s eta=38.4min
+180/1844 resolved=180 hits=4 near=0 err=0 247s eta=38.0min
+200/1844 resolved=200 hits=7 near=0 err=0 274s eta=37.5min
+220/1844 resolved=220 hits=7 near=0 err=0 301s eta=37.0min
+240/1844 resolved=240 hits=9 near=0 err=0 329s eta=36.6min
+260/1844 resolved=260 hits=10 near=0 err=0 357s eta=36.3min
+280/1844 resolved=280 hits=11 near=0 err=0 384s eta=35.8min
+300/1844 resolved=300 hits=11 near=0 err=0 412s eta=35.3min
+320/1844 resolved=320 hits=12 near=0 err=0 440s eta=34.9min
+340/1844 resolved=340 hits=12 near=0 err=0 467s eta=34.5min
+360/1844 resolved=360 hits=12 near=0 err=0 494s eta=34.0min
+380/1844 resolved=380 hits=12 near=0 err=0 522s eta=33.5min
+400/1844 resolved=400 hits=13 near=0 err=0 549s eta=33.1min
+420/1844 resolved=420 hits=13 near=0 err=0 576s eta=32.5min
+440/1844 resolved=440 hits=13 near=0 err=0 603s eta=32.1min
+460/1844 resolved=460 hits=13 near=0 err=0 630s eta=31.6min
+480/1844 resolved=480 hits=13 near=0 err=0 659s eta=31.2min
+500/1844 resolved=500 hits=14 near=0 err=0 685s eta=30.7min
+520/1844 resolved=520 hits=14 near=0 err=0 714s eta=30.3min
+540/1844 resolved=540 hits=14 near=0 err=0 741s eta=29.8min
+560/1844 resolved=560 hits=15 near=0 err=0 768s eta=29.4min
+580/1844 resolved=580 hits=15 near=0 err=0 796s eta=28.9min
+600/1844 resolved=600 hits=15 near=0 err=0 824s eta=28.5min
+620/1844 resolved=620 hits=15 near=0 err=0 852s eta=28.0min
+640/1844 resolved=640 hits=15 near=0 err=0 880s eta=27.6min
+660/1844 resolved=660 hits=16 near=0 err=0 908s eta=27.1min
+680/1844 resolved=680 hits=17 near=0 err=0 935s eta=26.7min
+700/1844 resolved=700 hits=17 near=0 err=0 962s eta=26.2min
+720/1844 resolved=720 hits=17 near=0 err=0 989s eta=25.7min
+740/1844 resolved=740 hits=19 near=0 err=1 1017s eta=25.3min
+760/1844 resolved=760 hits=22 near=0 err=1 1044s eta=24.8min
+780/1844 resolved=780 hits=23 near=0 err=1 1071s eta=24.3min
+800/1844 resolved=800 hits=26 near=0 err=1 1099s eta=23.9min
+820/1844 resolved=820 hits=28 near=0 err=1 1126s eta=23.4min
+840/1844 resolved=840 hits=30 near=0 err=1 1154s eta=23.0min
+860/1844 resolved=860 hits=31 near=0 err=1 1182s eta=22.5min
+880/1844 resolved=880 hits=32 near=0 err=1 1210s eta=22.1min
+900/1844 resolved=900 hits=32 near=0 err=1 1238s eta=21.6min
+920/1844 resolved=920 hits=34 near=0 err=1 1265s eta=21.2min
+940/1844 resolved=940 hits=34 near=0 err=1 1293s eta=20.7min
+960/1844 resolved=960 hits=34 near=0 err=1 1321s eta=20.3min
+980/1844 resolved=980 hits=35 near=0 err=1 1348s eta=19.8min
+1000/1844 resolved=1000 hits=35 near=0 err=1 1376s eta=19.4min
+1020/1844 resolved=1020 hits=36 near=0 err=1 1403s eta=18.9min
+1040/1844 resolved=1040 hits=36 near=0 err=1 1430s eta=18.4min
+1060/1844 resolved=1060 hits=37 near=0 err=1 1458s eta=18.0min
+1080/1844 resolved=1080 hits=37 near=0 err=1 1485s eta=17.5min
+1100/1844 resolved=1100 hits=37 near=0 err=1 1513s eta=17.1min
+1120/1844 resolved=1120 hits=37 near=0 err=1 1541s eta=16.6min
+1140/1844 resolved=1140 hits=37 near=0 err=1 1569s eta=16.1min
+1160/1844 resolved=1160 hits=37 near=0 err=1 1597s eta=15.7min
+1180/1844 resolved=1180 hits=37 near=0 err=1 1625s eta=15.2min
+1200/1844 resolved=1200 hits=38 near=0 err=1 1653s eta=14.8min
+1220/1844 resolved=1220 hits=38 near=0 err=1 1681s eta=14.3min
+1240/1844 resolved=1240 hits=39 near=0 err=1 1710s eta=13.9min
+1260/1844 resolved=1260 hits=39 near=0 err=1 1737s eta=13.4min
+1280/1844 resolved=1280 hits=39 near=0 err=1 1765s eta=13.0min
+1300/1844 resolved=1300 hits=40 near=0 err=1 1792s eta=12.5min
+1320/1844 resolved=1320 hits=40 near=0 err=1 1820s eta=12.0min
+1340/1844 resolved=1340 hits=40 near=0 err=1 1848s eta=11.6min
+1360/1844 resolved=1360 hits=42 near=0 err=1 1875s eta=11.1min
+1380/1844 resolved=1380 hits=43 near=0 err=1 1903s eta=10.7min
+1400/1844 resolved=1400 hits=43 near=0 err=1 1931s eta=10.2min
+1420/1844 resolved=1420 hits=43 near=0 err=1 1960s eta=9.8min
+1440/1844 resolved=1440 hits=43 near=0 err=1 1987s eta=9.3min
+1460/1844 resolved=1460 hits=44 near=0 err=1 2015s eta=8.8min
+1480/1844 resolved=1480 hits=46 near=0 err=1 2042s eta=8.4min
+1500/1844 resolved=1500 hits=46 near=0 err=1 2070s eta=7.9min
+1520/1844 resolved=1520 hits=47 near=0 err=1 2097s eta=7.5min
+1540/1844 resolved=1540 hits=47 near=0 err=1 2126s eta=7.0min
+1560/1844 resolved=1560 hits=48 near=0 err=1 2154s eta=6.5min
+1580/1844 resolved=1580 hits=49 near=0 err=1 2181s eta=6.1min
+1600/1844 resolved=1600 hits=51 near=0 err=1 2210s eta=5.6min
+1620/1844 resolved=1620 hits=52 near=0 err=1 2239s eta=5.2min
+1640/1844 resolved=1640 hits=53 near=0 err=1 2269s eta=4.7min
+1660/1844 resolved=1660 hits=54 near=0 err=1 2297s eta=4.2min
+1680/1844 resolved=1680 hits=54 near=0 err=2 2327s eta=3.8min
+1700/1844 resolved=1700 hits=55 near=0 err=2 2356s eta=3.3min
+1720/1844 resolved=1720 hits=55 near=0 err=2 2385s eta=2.9min
+1740/1844 resolved=1740 hits=55 near=0 err=2 2415s eta=2.4min
+1760/1844 resolved=1760 hits=55 near=0 err=2 2444s eta=1.9min
+1780/1844 resolved=1780 hits=55 near=0 err=2 2473s eta=1.5min
+1800/1844 resolved=1800 hits=55 near=0 err=2 2502s eta=1.0min
+1820/1844 resolved=1820 hits=56 near=0 err=2 2531s eta=0.6min
+1840/1844 resolved=1840 hits=56 near=0 err=2 2559s eta=0.1min
+
+步骤B完成：解析 1844 本，命中(A∧B) 56，nearMiss(A∧¬B) 0，错误 2
+cat=都市脑洞(262) sort=0 page=0 n=20 fresh=20 has_more=true pool=20
+cat=都市脑洞(262) sort=0 page=1 n=20 fresh=20 has_more=true pool=40
+cat=都市脑洞(262) sort=0 page=2 n=20 fresh=20 has_more=true pool=60
+cat=都市脑洞(262) sort=1 page=0 n=20 fresh=20 has_more=true pool=80
+cat=都市脑洞(262) sort=1 page=1 n=20 fresh=20 has_more=true pool=100
+cat=都市脑洞(262) sort=1 page=2 n=20 fresh=20 has_more=true pool=120
+cat=游戏体育(746) sort=0 page=0 n=20 fresh=20 has_more=true pool=140
+cat=游戏体育(746) sort=0 page=1 n=20 fresh=20 has_more=true pool=160
+cat=游戏体育(746) sort=0 page=2 n=20 fresh=20 has_more=true pool=180
+cat=游戏体育(746) sort=1 page=0 n=20 fresh=20 has_more=true pool=200
+cat=游戏体育(746) sort=1 page=1 n=20 fresh=19 has_more=true pool=219
+cat=游戏体育(746) sort=1 page=2 n=20 fresh=20 has_more=true pool=239
+cat=都市种田(263) sort=0 page=0 n=20 fresh=20 has_more=true pool=259
+cat=都市种田(263) sort=0 page=1 n=20 fresh=20 has_more=true pool=279
+cat=都市种田(263) sort=0 page=2 n=20 fresh=20 has_more=true pool=299
+cat=都市种田(263) sort=1 page=0 n=20 fresh=20 has_more=true pool=319
+cat=都市种田(263) sort=1 page=1 n=20 fresh=19 has_more=true pool=338
+cat=都市种田(263) sort=1 page=2 n=20 fresh=20 has_more=true pool=358
+cat=科幻末世(8) sort=0 page=0 n=20 fresh=20 has_more=true pool=378
+cat=科幻末世(8) sort=0 page=1 n=20 fresh=20 has_more=true pool=398
+cat=科幻末世(8) sort=0 page=2 n=20 fresh=20 has_more=true pool=418
+cat=科幻末世(8) sort=1 page=0 n=20 fresh=20 has_more=true pool=438
+cat=科幻末世(8) sort=1 page=1 n=20 fresh=20 has_more=true pool=458
+cat=科幻末世(8) sort=1 page=2 n=20 fresh=20 has_more=true pool=478
+cat=西方奇幻(1141) sort=0 page=0 n=20 fresh=20 has_more=true pool=498
+cat=西方奇幻(1141) sort=0 page=1 n=20 fresh=20 has_more=true pool=518
+cat=西方奇幻(1141) sort=0 page=2 n=20 fresh=20 has_more=true pool=538
+cat=西方奇幻(1141) sort=1 page=0 n=20 fresh=19 has_more=true pool=557
+cat=西方奇幻(1141) sort=1 page=1 n=20 fresh=19 has_more=true pool=576
+cat=西方奇幻(1141) sort=1 page=2 n=20 fresh=20 has_more=true pool=596
+步骤A完成：请求 30 次，新增 596，ID 池共 596
+20/596 resolved=20 hits=0 near=1 err=0 26s eta=12.7min
+40/596 resolved=40 hits=1 near=2 err=0 54s eta=12.4min
+
+===== ch2 validate @ 2026-09-09T13:07:28.487Z =====
+meta.channel=2 platforms=["fanqie"] status=undefined
+books=56 nearMiss=0
+
+--- 字段填充率（56 本）---
+   platform          56/56
+   platformBookId    56/56
+   title             56/56
+   author            56/56
+   url               56/56
+   wordCount         56/56
+   chapterTotal      54/56
+   status            56/56
+   categories        56/56
+   tags              56/56
+   abstract          56/56
+   popularity        56/56
+   score              0/56
+   firstPublishDate  54/56
+   lastUpdateDate    56/56
+   simEvidence       56/56
+   openingHook        0/56
+   collectedAt       56/56
+   source            56/56
+
+--- 数值 ---
+   字数中位数 527614（52.8 万字）  最小 0.1万  最大 1261.5万
+   状态分布 {"连载":50,"完结":6}
+   matchedIn 分布 {"title+abstract":15,"abstract":41}
+   命中词分布 {"模拟":23,"模拟器":15,"人生模拟":2,"重开":11,"推演":24,"预演":1}
+   分类分布 {"玄幻脑洞":27,"东方仙侠":16,"都市修真":5,"传统玄幻":4,"西方奇幻":4}
+
+--- 结论 ---
+❌ 2 处不合规：
+  meta 缺 status
+  meta.status 非法：undefined
+===== validate done =====
+60/596 resolved=60 hits=1 near=3 err=0 81s eta=12.1min
+80/596 resolved=80 hits=1 near=4 err=0 108s eta=11.7min
+100/596 resolved=100 hits=1 near=4 err=0 136s eta=11.2min
+120/596 resolved=120 hits=1 near=4 err=0 163s eta=10.8min
+140/596 resolved=140 hits=1 near=5 err=0 191s eta=10.3min
+160/596 resolved=160 hits=1 near=5 err=0 218s eta=9.9min
+180/596 resolved=180 hits=1 near=6 err=0 245s eta=9.5min
+200/596 resolved=200 hits=1 near=7 err=0 273s eta=9.0min
+220/596 resolved=220 hits=1 near=8 err=0 300s eta=8.5min
+240/596 resolved=240 hits=1 near=8 err=0 327s eta=8.1min
+260/596 resolved=260 hits=1 near=8 err=0 354s eta=7.6min
+280/596 resolved=280 hits=1 near=8 err=0 382s eta=7.2min
+300/596 resolved=300 hits=1 near=8 err=0 410s eta=6.7min
+320/596 resolved=320 hits=1 near=8 err=0 437s eta=6.3min
+340/596 resolved=340 hits=1 near=8 err=0 465s eta=5.8min
+360/596 resolved=360 hits=1 near=9 err=0 492s eta=5.4min
+380/596 resolved=380 hits=1 near=10 err=0 519s eta=4.9min
+400/596 resolved=400 hits=1 near=10 err=0 547s eta=4.5min
+420/596 resolved=420 hits=1 near=10 err=0 574s eta=4.0min
+440/596 resolved=440 hits=1 near=11 err=0 602s eta=3.6min
+460/596 resolved=460 hits=1 near=11 err=0 631s eta=3.1min
+480/596 resolved=480 hits=1 near=11 err=0 659s eta=2.7min
+500/596 resolved=500 hits=1 near=11 err=0 686s eta=2.2min
+520/596 resolved=520 hits=2 near=11 err=0 714s eta=1.7min
+540/596 resolved=540 hits=4 near=11 err=0 741s eta=1.3min
+560/596 resolved=560 hits=4 near=11 err=0 769s eta=0.8min
+580/596 resolved=580 hits=4 near=11 err=0 797s eta=0.4min
+
+步骤B完成（.scrape/sim/ch2_ids_noncult.json）：解析 596 本，命中(A∧B) 4，nearMiss(A∧¬B) 11，错误 0
+
+===== ch2 validate @ 2026-09-09T13:20:24.812Z =====
+meta.channel=2 platforms=["fanqie"] status=partial
+books=57 nearMiss=11
+
+--- 字段填充率（57 本）---
+   platform          57/57
+   platformBookId    57/57
+   title             57/57
+   author            57/57
+   url               57/57
+   wordCount         57/57
+   chapterTotal      55/57
+   status            57/57
+   categories        57/57
+   tags              57/57
+   abstract          57/57
+   popularity        57/57
+   score              0/57
+   firstPublishDate  55/57
+   lastUpdateDate    57/57
+   simEvidence       57/57
+   openingHook        0/57
+   collectedAt       57/57
+   source            57/57
+
+--- 数值 ---
+   字数中位数 525019（52.5 万字）  最小 0.1万  最大 1261.5万
+   状态分布 {"连载":51,"完结":6}
+   matchedIn 分布 {"title+abstract":15,"abstract":42}
+   命中词分布 {"模拟":24,"模拟器":15,"人生模拟":2,"重开":11,"推演":24,"预演":1}
+   分类分布 {"玄幻脑洞":27,"都市脑洞":1,"东方仙侠":16,"都市修真":5,"传统玄幻":4,"西方奇幻":4}
+
+--- nearMiss 抽样（共 11 条，列前 10）---
+   1. 系统延迟一坤年，我成了全球股东 — 命中模拟词 重开（abstract），但不满足修仙条件：分类为 都市脑洞/系统/神豪/穿越/无女主/搞笑轻松，简介无修仙…
+   2. 让你当众写检讨，你作洛神赋？ — 命中模拟词 推演（abstract），但不满足修仙条件：分类为 都市脑洞/系统/穿越/多女主/打脸/魂穿，简介无修仙/炼…
+   3. 游戏女主成真？高冷校花泪流满面 — 命中模拟词 模拟（abstract），但不满足修仙条件：分类为 都市脑洞/都市/多女主/校花，简介无修仙/炼气/筑基一类…
+   4. 全民求生，获得D级人员模拟器 — 命中模拟词 模拟器/模拟（title+abstract），但不满足修仙条件：分类为 科幻末世/穿越/末世/求生/开局/卡…
+   5. 黑暗求生：丢失庇护所后自学成神 — 命中模拟词 模拟器/模拟（abstract），但不满足修仙条件：分类为 游戏体育/穿越/求生/无女主/升级流/副本，简介…
+   6. 第四天灾：我的穿越模拟器 — 命中模拟词 模拟器/模拟（title+abstract），但不满足修仙条件：分类为 游戏体育/系统/穿越/无限流/同人/…
+   7. 开局成为留守儿童 — 命中模拟词 重开（abstract），但不满足修仙条件：分类为 都市种田/都市/乡村/空间/开局/发家致富，简介无修仙/…
+   8. 星际流：深空星舰指挥官 — 命中模拟词 模拟器/模拟（abstract），但不满足修仙条件：分类为 科幻末世/星际/末世/打脸/系统/求生，简介无修…
+   9. 全地球都在替宇宙打排位 — 命中模拟词 推演（abstract），但不满足修仙条件：分类为 游戏体育/系统/无限流，简介无修仙/炼气/筑基一类词…
+   10. 我在股市做空全球 — 命中模拟词 模拟器/模拟（abstract），但不满足修仙条件：分类为 都市脑洞/都市/打脸/神豪/系统，简介无修仙/炼…
+
+--- 结论 ---
+✅ 全部 57 条 books + 11 条 nearMiss 均符合 SCHEMA 第二节字段契约
+===== validate done =====
+
+===== ch2 validate @ 2026-09-09T13:20:51.210Z =====
+meta.channel=2 platforms=["fanqie"] status=partial
+books=57 nearMiss=11
+
+--- 字段填充率（57 本）---
+   platform          57/57
+   platformBookId    57/57
+   title             57/57
+   author            57/57
+   url               57/57
+   wordCount         57/57
+   chapterTotal      55/57
+   status            57/57
+   categories        57/57
+   tags              57/57
+   abstract          57/57
+   popularity        57/57
+   score              0/57
+   firstPublishDate  55/57
+   lastUpdateDate    57/57
+   simEvidence       57/57
+   openingHook        0/57
+   collectedAt       57/57
+   source            57/57
+
+--- 数值 ---
+   字数中位数 525019（52.5 万字）  最小 0.1万  最大 1261.5万
+   状态分布 {"连载":51,"完结":6}
+   matchedIn 分布 {"title+abstract":15,"abstract":42}
+   命中词分布 {"模拟":24,"模拟器":15,"人生模拟":2,"重开":11,"推演":24,"预演":1}
+   分类分布 {"玄幻脑洞":27,"都市脑洞":1,"东方仙侠":16,"都市修真":5,"传统玄幻":4,"西方奇幻":4}
+
+--- nearMiss 抽样（共 11 条，列前 10）---
+   1. 系统延迟一坤年，我成了全球股东 — 命中模拟词 重开（abstract），但不满足修仙条件：分类为 都市脑洞/系统/神豪/穿越/无女主/搞笑轻松，简介无修仙…
+   2. 让你当众写检讨，你作洛神赋？ — 命中模拟词 推演（abstract），但不满足修仙条件：分类为 都市脑洞/系统/穿越/多女主/打脸/魂穿，简介无修仙/炼…
+   3. 游戏女主成真？高冷校花泪流满面 — 命中模拟词 模拟（abstract），但不满足修仙条件：分类为 都市脑洞/都市/多女主/校花，简介无修仙/炼气/筑基一类…
+   4. 全民求生，获得D级人员模拟器 — 命中模拟词 模拟器/模拟（title+abstract），但不满足修仙条件：分类为 科幻末世/穿越/末世/求生/开局/卡…
+   5. 黑暗求生：丢失庇护所后自学成神 — 命中模拟词 模拟器/模拟（abstract），但不满足修仙条件：分类为 游戏体育/穿越/求生/无女主/升级流/副本，简介…
+   6. 第四天灾：我的穿越模拟器 — 命中模拟词 模拟器/模拟（title+abstract），但不满足修仙条件：分类为 游戏体育/系统/穿越/无限流/同人/…
+   7. 开局成为留守儿童 — 命中模拟词 重开（abstract），但不满足修仙条件：分类为 都市种田/都市/乡村/空间/开局/发家致富，简介无修仙/…
+   8. 星际流：深空星舰指挥官 — 命中模拟词 模拟器/模拟（abstract），但不满足修仙条件：分类为 科幻末世/星际/末世/打脸/系统/求生，简介无修…
+   9. 全地球都在替宇宙打排位 — 命中模拟词 推演（abstract），但不满足修仙条件：分类为 游戏体育/系统/无限流，简介无修仙/炼气/筑基一类词…
+   10. 我在股市做空全球 — 命中模拟词 模拟器/模拟（abstract），但不满足修仙条件：分类为 都市脑洞/都市/打脸/神豪/系统，简介无修仙/炼…
+
+--- 结论 ---
+✅ 全部 57 条 books + 11 条 nearMiss 均符合 SCHEMA 第二节字段契约
+===== validate done =====
+
+===== ch2 validate @ 2026-09-09T13:23:44.076Z =====
+meta.channel=2 platforms=["fanqie"] status=partial
+books=57 nearMiss=11
+
+--- 存档先验 ---
+   可用于取证的存档 57/57；PUA 污染 0；书页存档 57 条
+
+--- 逐字比对交付值与存档 ---
+   ✅ 57 本 × 10 个字段与存档逐字一致，simEvidence 关键词全部回源可查
+
+--- 字段填充率（57 本）---
+   platform          57/57
+   platformBookId    57/57
+   title             57/57
+   author            57/57
+   url               57/57
+   wordCount         57/57
+   chapterTotal      55/57
+   status            57/57
+   categories        57/57
+   tags              57/57
+   abstract          57/57
+   popularity        57/57
+   score              0/57
+   firstPublishDate  55/57
+   lastUpdateDate    57/57
+   simEvidence       57/57
+   openingHook        0/57
+   collectedAt       57/57
+   source            57/57
+
+--- 数值 ---
+   字数中位数 525019（52.5 万字）  最小 0.1万  最大 1261.5万
+   状态分布 {"连载":51,"完结":6}
+   matchedIn 分布 {"title+abstract":15,"abstract":42}
+   命中方式分池：全部 57 本（仅title 0 / 仅abstract 42 / 两者都 15）
+              主池 56 本（仅title 0 / 仅abstract 41 / 两者都 15）
+              补池 1 本（仅title 0 / 仅abstract 1 / 两者都 0）
+   命中词分布 {"模拟":24,"模拟器":15,"人生模拟":2,"重开":11,"推演":24,"预演":1}
+   分类分布 {"玄幻脑洞":27,"都市脑洞":1,"东方仙侠":16,"都市修真":5,"传统玄幻":4,"西方奇幻":4}
+
+--- nearMiss 抽样（共 11 条，列前 10）---
+   1. 系统延迟一坤年，我成了全球股东 — [补池] 命中模拟词 重开（abstract），但不满足修仙条件：分类为 都市脑洞/系统/神豪/穿越/无女主/搞笑轻松，…
+   2. 让你当众写检讨，你作洛神赋？ — [补池] 命中模拟词 推演（abstract），但不满足修仙条件：分类为 都市脑洞/系统/穿越/多女主/打脸/魂穿，简介…
+   3. 游戏女主成真？高冷校花泪流满面 — [补池] 命中模拟词 模拟（abstract），但不满足修仙条件：分类为 都市脑洞/都市/多女主/校花，简介无修仙/炼气…
+   4. 全民求生，获得D级人员模拟器 — [补池] 命中模拟词 模拟器/模拟（title+abstract），但不满足修仙条件：分类为 科幻末世/穿越/末世/求生…
+   5. 黑暗求生：丢失庇护所后自学成神 — [补池] 命中模拟词 模拟器/模拟（abstract），但不满足修仙条件：分类为 游戏体育/穿越/求生/无女主/升级流/…
+   6. 第四天灾：我的穿越模拟器 — [补池] 命中模拟词 模拟器/模拟（title+abstract），但不满足修仙条件：分类为 游戏体育/系统/穿越/无限…
+   7. 开局成为留守儿童 — [补池] 命中模拟词 重开（abstract），但不满足修仙条件：分类为 都市种田/都市/乡村/空间/开局/发家致富，简…
+   8. 星际流：深空星舰指挥官 — [补池] 命中模拟词 模拟器/模拟（abstract），但不满足修仙条件：分类为 科幻末世/星际/末世/打脸/系统/求生…
+   9. 全地球都在替宇宙打排位 — [补池] 命中模拟词 推演（abstract），但不满足修仙条件：分类为 游戏体育/系统/无限流，简介无修仙/炼气/筑基…
+   10. 我在股市做空全球 — [补池] 命中模拟词 模拟器/模拟（abstract），但不满足修仙条件：分类为 都市脑洞/都市/打脸/神豪/系统，简介…
+
+--- 结论 ---
+✅ 全部 57 条 books + 11 条 nearMiss 均符合 SCHEMA 第二节字段契约
+===== validate done =====
+
+===== ch2 validate @ 2026-09-09T13:23:53.835Z =====
+meta.channel=2 platforms=["fanqie"] status=partial
+books=57 nearMiss=11
+
+--- 存档先验 ---
+   可用于取证的存档 57/57；PUA 污染 0；书页存档 57 条
+
+--- 逐字比对交付值与存档 ---
+   ✅ 57 本 × 10 个字段与存档逐字一致，simEvidence 关键词全部回源可查
+
+--- 字段填充率（57 本）---
+   platform          57/57
+   platformBookId    57/57
+   title             57/57
+   author            57/57
+   url               57/57
+   wordCount         57/57
+   chapterTotal      55/57
+   status            57/57
+   categories        57/57
+   tags              57/57
+   abstract          57/57
+   popularity        57/57
+   score              0/57
+   firstPublishDate  55/57
+   lastUpdateDate    57/57
+   simEvidence       57/57
+   openingHook        0/57
+   collectedAt       57/57
+   source            57/57
+
+--- 数值 ---
+   字数中位数 525019（52.5 万字）  最小 0.1万  最大 1261.5万
+   状态分布 {"连载":51,"完结":6}
+   matchedIn 分布 {"title+abstract":15,"abstract":42}
+   命中方式分池：全部 57 本（仅title 0 / 仅abstract 42 / 两者都 15）
+              主池 56 本（仅title 0 / 仅abstract 41 / 两者都 15）
+              补池 1 本（仅title 0 / 仅abstract 1 / 两者都 0）
+   命中词分布 {"模拟":24,"模拟器":15,"人生模拟":2,"重开":11,"推演":24,"预演":1}
+   分类分布 {"玄幻脑洞":27,"都市脑洞":1,"东方仙侠":16,"都市修真":5,"传统玄幻":4,"西方奇幻":4}
+
+--- nearMiss 抽样（共 11 条，列前 10）---
+   1. 系统延迟一坤年，我成了全球股东 — [补池] 命中模拟词 重开（abstract），但不满足修仙条件：分类为 都市脑洞/系统/神豪/穿越/无女主/搞笑轻松，…
+   2. 让你当众写检讨，你作洛神赋？ — [补池] 命中模拟词 推演（abstract），但不满足修仙条件：分类为 都市脑洞/系统/穿越/多女主/打脸/魂穿，简介…
+   3. 游戏女主成真？高冷校花泪流满面 — [补池] 命中模拟词 模拟（abstract），但不满足修仙条件：分类为 都市脑洞/都市/多女主/校花，简介无修仙/炼气…
+   4. 全民求生，获得D级人员模拟器 — [补池] 命中模拟词 模拟器/模拟（title+abstract），但不满足修仙条件：分类为 科幻末世/穿越/末世/求生…
+   5. 黑暗求生：丢失庇护所后自学成神 — [补池] 命中模拟词 模拟器/模拟（abstract），但不满足修仙条件：分类为 游戏体育/穿越/求生/无女主/升级流/…
+   6. 第四天灾：我的穿越模拟器 — [补池] 命中模拟词 模拟器/模拟（title+abstract），但不满足修仙条件：分类为 游戏体育/系统/穿越/无限…
+   7. 开局成为留守儿童 — [补池] 命中模拟词 重开（abstract），但不满足修仙条件：分类为 都市种田/都市/乡村/空间/开局/发家致富，简…
+   8. 星际流：深空星舰指挥官 — [补池] 命中模拟词 模拟器/模拟（abstract），但不满足修仙条件：分类为 科幻末世/星际/末世/打脸/系统/求生…
+   9. 全地球都在替宇宙打排位 — [补池] 命中模拟词 推演（abstract），但不满足修仙条件：分类为 游戏体育/系统/无限流，简介无修仙/炼气/筑基…
+   10. 我在股市做空全球 — [补池] 命中模拟词 模拟器/模拟（abstract），但不满足修仙条件：分类为 都市脑洞/都市/打脸/神豪/系统，简介…
+
+--- 结论 ---
+✅ 全部 57 条 books + 11 条 nearMiss 均符合 SCHEMA 第二节字段契约
+===== validate done =====
+
+===== ch2 validate @ 2026-09-09T13:27:16.653Z =====
+meta.channel=2 platforms=["fanqie"] status=partial
+books=56 nearMiss=12
+
+--- 存档先验 ---
+   可用于取证的存档 56/56；PUA 污染 0；书页存档 57 条
+
+--- 逐字比对交付值与存档 ---
+   ✅ 56 本 × 10 个字段与存档逐字一致，simEvidence 关键词全部回源可查
+
+--- 字段填充率（56 本）---
+   platform          56/56
+   platformBookId    56/56
+   title             56/56
+   author            56/56
+   url               56/56
+   wordCount         56/56
+   chapterTotal      54/56
+   status            56/56
+   categories        56/56
+   tags              56/56
+   abstract          56/56
+   popularity        56/56
+   score              0/56
+   firstPublishDate  54/56
+   lastUpdateDate    56/56
+   simEvidence       56/56
+   openingHook        0/56
+   collectedAt       56/56
+   source            56/56
+
+--- 数值 ---
+   字数中位数 527614（52.8 万字）  最小 0.1万  最大 1261.5万
+   状态分布 {"连载":50,"完结":6}
+   matchedIn 分布 {"title+abstract":15,"abstract":41}
+   命中方式分池：全部 56 本（仅title 0 / 仅abstract 41 / 两者都 15）
+              主池 56 本（仅title 0 / 仅abstract 41 / 两者都 15）
+              补池 0 本（仅title 0 / 仅abstract 0 / 两者都 0）
+   命中词分布 {"模拟":23,"模拟器":15,"人生模拟":2,"重开":11,"推演":24,"预演":1}
+   分类分布 {"玄幻脑洞":27,"东方仙侠":16,"都市修真":5,"传统玄幻":4,"西方奇幻":4}
+
+--- nearMiss 抽样（共 12 条，列前 10）---
+   1. 系统延迟一坤年，我成了全球股东 — [补池] 命中模拟词 重开（abstract），但不满足修仙条件：分类为 都市脑洞/系统/神豪/穿越/无女主/搞笑轻松，…
+   2. 让你当众写检讨，你作洛神赋？ — [补池] 命中模拟词 推演（abstract），但不满足修仙条件：分类为 都市脑洞/系统/穿越/多女主/打脸/魂穿，简介…
+   3. 让你拍节目，你让项羽撕秦始皇？ — [补池][裁定降级] 通道1 裁定（SCHEMA 修订 6 判例）：条件A 成立（简介含「模拟」），条件B 不成立。分类…
+   4. 游戏女主成真？高冷校花泪流满面 — [补池] 命中模拟词 模拟（abstract），但不满足修仙条件：分类为 都市脑洞/都市/多女主/校花，简介无修仙/炼气…
+   5. 全民求生，获得D级人员模拟器 — [补池] 命中模拟词 模拟器/模拟（title+abstract），但不满足修仙条件：分类为 科幻末世/穿越/末世/求生…
+   6. 黑暗求生：丢失庇护所后自学成神 — [补池] 命中模拟词 模拟器/模拟（abstract），但不满足修仙条件：分类为 游戏体育/穿越/求生/无女主/升级流/…
+   7. 第四天灾：我的穿越模拟器 — [补池] 命中模拟词 模拟器/模拟（title+abstract），但不满足修仙条件：分类为 游戏体育/系统/穿越/无限…
+   8. 开局成为留守儿童 — [补池] 命中模拟词 重开（abstract），但不满足修仙条件：分类为 都市种田/都市/乡村/空间/开局/发家致富，简…
+   9. 星际流：深空星舰指挥官 — [补池] 命中模拟词 模拟器/模拟（abstract），但不满足修仙条件：分类为 科幻末世/星际/末世/打脸/系统/求生…
+   10. 全地球都在替宇宙打排位 — [补池] 命中模拟词 推演（abstract），但不满足修仙条件：分类为 游戏体育/系统/无限流，简介无修仙/炼气/筑基…
+
+--- 结论 ---
+✅ 全部 56 条 books + 12 条 nearMiss 均符合 SCHEMA 第二节字段契约
+===== validate done =====
+
+===== ch2 validate @ 2026-09-09T14:18:23.047Z =====
+meta.channel=2 platforms=["fanqie"] status=partial
+books=46 nearMiss=22
+
+--- 存档先验 ---
+   可用于取证的存档 46/46；PUA 污染 0；书页存档 57 条
+
+--- 逐字比对交付值与存档 ---
+   ✅ 46 本 × 10 个字段与存档逐字一致，simEvidence 关键词全部回源可查
+
+--- 字段填充率（46 本）---
+   platform          46/46
+   platformBookId    46/46
+   title             46/46
+   author            46/46
+   url               46/46
+   wordCount         46/46
+   chapterTotal      45/46
+   status            46/46
+   categories        46/46
+   tags              46/46
+   abstract          46/46
+   popularity        46/46
+   score              0/46
+   firstPublishDate  45/46
+   lastUpdateDate    46/46
+   simEvidence       46/46
+   openingHook        0/46
+   collectedAt       46/46
+   source            46/46
+
+--- 数值 ---
+   字数中位数 533624（53.4 万字）  最小 0.1万  最大 285.9万
+   状态分布 {"连载":41,"完结":5}
+   matchedIn 分布 {"title+abstract":15,"abstract":31}
+   命中方式分池：全部 46 本（仅title 0 / 仅abstract 31 / 两者都 15）
+              主池 46 本（仅title 0 / 仅abstract 31 / 两者都 15）
+              补池 0 本（仅title 0 / 仅abstract 0 / 两者都 0）
+   命中词分布 {"模拟":23,"模拟器":15,"人生模拟":2,"推演":24,"预演":1,"重开":1}
+   分类分布 {"玄幻脑洞":25,"东方仙侠":11,"都市修真":4,"传统玄幻":2,"西方奇幻":4}
+
+--- nearMiss 抽样（共 22 条，列前 10）---
+   1. 系统延迟一坤年，我成了全球股东 — [补池] 命中模拟词 重开（abstract），但不满足修仙条件：分类为 都市脑洞/系统/神豪/穿越/无女主/搞笑轻松，…
+   2. 让你当众写检讨，你作洛神赋？ — [补池] 命中模拟词 推演（abstract），但不满足修仙条件：分类为 都市脑洞/系统/穿越/多女主/打脸/魂穿，简介…
+   3. 让你拍节目，你让项羽撕秦始皇？ — [补池][裁定降级] 通道1 裁定（SCHEMA 修订 6 判例）：条件A 成立（简介含「模拟」），条件B 不成立。分类…
+   4. 游戏女主成真？高冷校花泪流满面 — [补池] 命中模拟词 模拟（abstract），但不满足修仙条件：分类为 都市脑洞/都市/多女主/校花，简介无修仙/炼气…
+   5. 全民求生，获得D级人员模拟器 — [补池] 命中模拟词 模拟器/模拟（title+abstract），但不满足修仙条件：分类为 科幻末世/穿越/末世/求生…
+   6. 诡异乱世：大乾第一巡夜人 — [主池][裁定降级] SCHEMA 修订6「重开」词义复核：条件A 不成立。原句「斩邪神、诛仇敌，重开轮回」——带宾语「…
+   7. 黑暗求生：丢失庇护所后自学成神 — [补池] 命中模拟词 模拟器/模拟（abstract），但不满足修仙条件：分类为 游戏体育/穿越/求生/无女主/升级流/…
+   8. 让你救世，你把三千仙帝全吃了？ — [主池][裁定降级] SCHEMA 修订6「重开」词义复核：条件A 不成立。原句「他撕裂混沌，重开天地」——带宾语「天地…
+   9. 封印神源百万年，悟性每天翻倍 — [主池][裁定降级] SCHEMA 修订6「重开」词义复核：条件A 不成立。原句「只为等待仙路重开」——「仙路」重新开启…
+   10. 第四天灾：我的穿越模拟器 — [补池] 命中模拟词 模拟器/模拟（title+abstract），但不满足修仙条件：分类为 游戏体育/系统/穿越/无限…
+
+--- 结论 ---
+✅ 全部 46 条 books + 22 条 nearMiss 均符合 SCHEMA 第二节字段契约
+===== validate done =====
+
+===== ch2 validate @ 2026-09-09T14:19:42.128Z =====
+meta.channel=2 platforms=["fanqie"] status=partial
+books=46 nearMiss=22
+
+--- 存档先验 ---
+   可用于取证的存档 46/46；PUA 污染 0；书页存档 57 条
+
+--- 逐字比对交付值与存档 ---
+   ✅ 46 本 × 10 个字段与存档逐字一致，simEvidence 关键词全部回源可查
+
+--- 字段填充率（46 本）---
+   platform          46/46
+   platformBookId    46/46
+   title             46/46
+   author            46/46
+   url               46/46
+   wordCount         46/46
+   chapterTotal      45/46
+   status            46/46
+   categories        46/46
+   tags              46/46
+   abstract          46/46
+   popularity        46/46
+   score              0/46
+   firstPublishDate  45/46
+   lastUpdateDate    46/46
+   simEvidence       46/46
+   openingHook        0/46
+   collectedAt       46/46
+   source            46/46
+
+--- 数值 ---
+   字数中位数 533624（53.4 万字）  最小 0.1万  最大 285.9万
+   状态分布 {"连载":41,"完结":5}
+   matchedIn 分布 {"title+abstract":15,"abstract":31}
+   命中方式分池：全部 46 本（仅title 0 / 仅abstract 31 / 两者都 15）
+              主池 46 本（仅title 0 / 仅abstract 31 / 两者都 15）
+              补池 0 本（仅title 0 / 仅abstract 0 / 两者都 0）
+   命中词分布 {"模拟":23,"模拟器":15,"人生模拟":2,"推演":24,"预演":1,"重开":1}
+   分类分布 {"玄幻脑洞":25,"东方仙侠":11,"都市修真":4,"传统玄幻":2,"西方奇幻":4}
+
+--- nearMiss 抽样（共 22 条，列前 10）---
+   1. 系统延迟一坤年，我成了全球股东 — [补池] 命中模拟词 重开（abstract），但不满足修仙条件：分类为 都市脑洞/系统/神豪/穿越/无女主/搞笑轻松，…
+   2. 让你当众写检讨，你作洛神赋？ — [补池] 命中模拟词 推演（abstract），但不满足修仙条件：分类为 都市脑洞/系统/穿越/多女主/打脸/魂穿，简介…
+   3. 让你拍节目，你让项羽撕秦始皇？ — [补池][裁定降级] 通道1 裁定（SCHEMA 修订 6 判例）：条件A 成立（简介含「模拟」），条件B 不成立。分类…
+   4. 游戏女主成真？高冷校花泪流满面 — [补池] 命中模拟词 模拟（abstract），但不满足修仙条件：分类为 都市脑洞/都市/多女主/校花，简介无修仙/炼气…
+   5. 全民求生，获得D级人员模拟器 — [补池] 命中模拟词 模拟器/模拟（title+abstract），但不满足修仙条件：分类为 科幻末世/穿越/末世/求生…
+   6. 诡异乱世：大乾第一巡夜人 — [主池][裁定降级] SCHEMA 修订6「重开」词义复核：条件A 不成立。原句「斩邪神、诛仇敌，重开轮回」——带宾语「…
+   7. 黑暗求生：丢失庇护所后自学成神 — [补池] 命中模拟词 模拟器/模拟（abstract），但不满足修仙条件：分类为 游戏体育/穿越/求生/无女主/升级流/…
+   8. 让你救世，你把三千仙帝全吃了？ — [主池][裁定降级] SCHEMA 修订6「重开」词义复核：条件A 不成立。原句「他撕裂混沌，重开天地」——带宾语「天地…
+   9. 封印神源百万年，悟性每天翻倍 — [主池][裁定降级] SCHEMA 修订6「重开」词义复核：条件A 不成立。原句「只为等待仙路重开」——「仙路」重新开启…
+   10. 第四天灾：我的穿越模拟器 — [补池] 命中模拟词 模拟器/模拟（title+abstract），但不满足修仙条件：分类为 游戏体育/系统/穿越/无限…
+
+--- 结论 ---
+✅ 全部 46 条 books + 22 条 nearMiss 均符合 SCHEMA 第二节字段契约
+===== validate done =====

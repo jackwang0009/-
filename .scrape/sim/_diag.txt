@@ -1,0 +1,12 @@
+详情页存档数 46
+=== ch5_faloo_1072240.html len=357
+title: (无)
+有 og:novel:click_cnt? false
+有 入站时间? false
+有 T-L-T-C-Box1? false
+flat 长度 0
+flat 片段: 
+
+=== 各详情页大小分布
+  最小 ch5_faloo_676642.html 356  最大 ch5_faloo_1547608.html 357
+  小于 50KB 的: 46

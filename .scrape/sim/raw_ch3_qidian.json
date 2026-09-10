@@ -1,0 +1,25 @@
+{
+  "meta": {
+    "channel": 3,
+    "platforms": ["qidian", "qqbook"],
+    "collectedAt": "2026-09-08T13:32:00Z",
+    "entryPoints": [
+      "https://www.qidian.com/robots.txt",
+      "https://www.qidian.com/",
+      "https://www.qidian.com/so/%E6%A8%A1%E6%8B%9F.html",
+      "https://www.qidian.com/xuanhuan/",
+      "https://www.qidian.com/all/chanId21/",
+      "https://www.qidian.com/book/1035621989/",
+      "https://www.qidian.com/ajax/rank/getMoreRankList?rankId=yuepiao&pageNum=1",
+      "https://m.qidian.com/",
+      "https://m.qidian.com/robots.txt",
+      "https://book.qq.com/",
+      "https://book.qq.com/robots.txt",
+      "https://book.qq.com/category/-1-1-1-1-1-1-1/"
+    ],
+    "status": "blocked-by-policy",
+    "notes": "本通道 0 本入库，不是抓漏或抓不动，是两条独立的硬性拦截同时命中，任何一条都足以单独否决抓取。\n\n【拦截一 · robots.txt 整站禁止 AI 代理】阅文系两个可连通主机的 robots.txt 都在 User-agent 段里点名 ClaudeBot 并 Disallow: /（全站，非部分路径）。m.qidian.com/robots.txt 原文：`User-agent: ClaudeBot` / `Disallow: /`，同段还禁 ChatGPT-User、GPTbot、SemrushBot、SemrushBot-SA。book.qq.com/robots.txt 原文同样以 `User-agent: ClaudeBot` / `Disallow: /` 开头，同禁 ChatGPT-User、GPTbot。被点名的 ChatGPT-User 恰恰是「用户主动发起的单页抓取」用的 UA，不是训练爬虫 UA——即站方已把『受用户指使的 AI 代理』一并排除在外，本次作业正属此类，且是 40–80 本量级的批量抓取而非单页取用。执行本任务的是 Claude，改换 Chrome UA 字符串可以在技术上绕开 robots 的 UA 匹配，但那是明知故犯地规避站方明示的、专门针对本代理身份的限制，故不做。\n\n【拦截二 · www.qidian.com 全站 JS 反爬挑战】桌面站每一个 URL 都只返回同一张 209 字节的挑战页（内含 `var buid` 与 `/C2WF946J0/probe.js`），首页、分类页、/so/ 搜索页、书籍详情页、/ajax/ 接口无一例外——连 https://www.qidian.com/robots.txt 本身都被这张挑战页替换，因此桌面站的爬虫许可根本无从读取。按 robots 惯例，robots.txt 不可读时应从严视为不允许；何况 WAF 挑战页本身就是站方主动施加的访问控制。派单方已注明『不要跟它硬碰』，故未尝试执行挑战脚本、注入 cookie 或上无头浏览器。\n\n【补充 · 即便忽略前两条，指定入口也大多被 robots 对 * 禁止】m.qidian.com 对 User-agent: * 禁 /so/*（站内搜索）与 /majax/*（移动端数据接口）；book.qq.com 对 * 禁 /so/、/search.html、/intro.html、/read.html。派单指定的『站内搜索 模拟/模拟器/推演/人生模拟』入口正落在这些禁止路径上。book.qq.com/category/-1-1-1-1-1-1-1/ 返回 404，分类页 URL 结构已变。\n\n【系统性拿不到的字段】不是个别字段缺失，而是传输层即被拒，全部字段（platformBookId / title / author / wordCount / chapterTotal / status / categories / tags / abstract / popularity / score / firstPublishDate / lastUpdateDate / openingHook）在合规前提下一个都取不到。popularity.metric 原计划按派单填『推荐票』或『收藏』，未取到值，不折算、不留占位。\n\n【已确认可连通但未采集的入口】m.qidian.com 首页（76733 字节，标题『起点中文网_阅文集团旗下网站_首页』）与 book.qq.com 首页（150207 字节，标题『小说,小说网,最新热门小说-QQ阅读_阅文集团旗下网站』）技术上可读，仅因拦截一而未进入采集。若后续获得站方授权或改由人工导出，这两个入口可直接复用。\n\n【留档】探活原始 HTML 全部留在 .scrape/sim/raw/ch3_probe_*.html 与 ch3_probe2_*.html，日志见 .scrape/sim/ch3.log，探活脚本 ch3_probe.mjs / ch3_probe2.mjs 可复跑复验。全过程请求间隔 ≥1.2 秒，共 13 次请求，未触发任何 403/429。"
+  },
+  "books": [],
+  "nearMiss": []
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>403 - 访问被拒绝</title>
+  <style>
+    body { font-family: -apple-system, "Microsoft YaHei", sans-serif; background: #f5f5f5; margin: 0; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+    .card { background: #fff; border-radius: 8px; padding: 40px; max-width: 480px; width: 90%; box-shadow: 0 2px 12px rgba(0,0,0,0.08); text-align: center; }
+    .status { font-size: 64px; font-weight: 700; color: #e74c3c; margin: 0; }
+    h2 { color: #333; margin: 16px 0 8px; }
+    p { color: #666; line-height: 1.6; }
+    .btn { display: inline-block; margin-top: 20px; padding: 10px 28px; background: #23B383; color: #ffffff; border: none; border-radius: 4px; cursor: pointer; text-decoration: none; font-size: 14px; }
+    .btn:hover { background: #1d9a6e; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <p class="status">403</p>
+    <h2>访问被拒绝</h2>
+    <p>检测到当前访问环境存在异常，已被系统拒绝。</p>
+    <p>检测到浏览器版本异常（Chrome 128），已被安全策略拦截。</p>
+    <p>如果您是正常用户，请使用标准浏览器访问。</p>
+    <a class="btn" href="/">返回首页</a>
+  </div>
+</body>
+</html>

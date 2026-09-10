@@ -1,0 +1,32 @@
+cat=都市脑洞(262) sort=0 page=0 n=20 fresh=20 has_more=true pool=20
+cat=都市脑洞(262) sort=0 page=1 n=20 fresh=20 has_more=true pool=40
+cat=都市脑洞(262) sort=0 page=2 n=20 fresh=20 has_more=true pool=60
+cat=都市脑洞(262) sort=1 page=0 n=20 fresh=20 has_more=true pool=80
+cat=都市脑洞(262) sort=1 page=1 n=20 fresh=20 has_more=true pool=100
+cat=都市脑洞(262) sort=1 page=2 n=20 fresh=20 has_more=true pool=120
+cat=游戏体育(746) sort=0 page=0 n=20 fresh=20 has_more=true pool=140
+cat=游戏体育(746) sort=0 page=1 n=20 fresh=20 has_more=true pool=160
+cat=游戏体育(746) sort=0 page=2 n=20 fresh=20 has_more=true pool=180
+cat=游戏体育(746) sort=1 page=0 n=20 fresh=20 has_more=true pool=200
+cat=游戏体育(746) sort=1 page=1 n=20 fresh=19 has_more=true pool=219
+cat=游戏体育(746) sort=1 page=2 n=20 fresh=20 has_more=true pool=239
+cat=都市种田(263) sort=0 page=0 n=20 fresh=20 has_more=true pool=259
+cat=都市种田(263) sort=0 page=1 n=20 fresh=20 has_more=true pool=279
+cat=都市种田(263) sort=0 page=2 n=20 fresh=20 has_more=true pool=299
+cat=都市种田(263) sort=1 page=0 n=20 fresh=20 has_more=true pool=319
+cat=都市种田(263) sort=1 page=1 n=20 fresh=19 has_more=true pool=338
+cat=都市种田(263) sort=1 page=2 n=20 fresh=20 has_more=true pool=358
+cat=科幻末世(8) sort=0 page=0 n=20 fresh=20 has_more=true pool=378
+cat=科幻末世(8) sort=0 page=1 n=20 fresh=20 has_more=true pool=398
+cat=科幻末世(8) sort=0 page=2 n=20 fresh=20 has_more=true pool=418
+cat=科幻末世(8) sort=1 page=0 n=20 fresh=20 has_more=true pool=438
+cat=科幻末世(8) sort=1 page=1 n=20 fresh=20 has_more=true pool=458
+cat=科幻末世(8) sort=1 page=2 n=20 fresh=20 has_more=true pool=478
+cat=西方奇幻(1141) sort=0 page=0 n=20 fresh=20 has_more=true pool=498
+cat=西方奇幻(1141) sort=0 page=1 n=20 fresh=20 has_more=true pool=518
+cat=西方奇幻(1141) sort=0 page=2 n=20 fresh=20 has_more=true pool=538
+cat=西方奇幻(1141) sort=1 page=0 n=20 fresh=19 has_more=true pool=557
+cat=西方奇幻(1141) sort=1 page=1 n=20 fresh=19 has_more=true pool=576
+cat=西方奇幻(1141) sort=1 page=2 n=20 fresh=20 has_more=true pool=596
+
+步骤A完成：请求 30 次，新增 596，ID 池共 596

@@ -1,0 +1,30 @@
+CAT 1141 = 西方奇幻
+CAT 1140 = 东方仙侠
+CAT 8 = 科幻末世
+CAT 261 = 都市日常
+CAT 124 = 都市修真
+CAT 1014 = 都市高武
+CAT 273 = 历史古代
+CAT 27 = 战神赘婿
+CAT 263 = 都市种田
+CAT 258 = 传统玄幻
+CAT 272 = 历史脑洞
+CAT 539 = 悬疑脑洞
+CAT 262 = 都市脑洞
+CAT 257 = 玄幻脑洞
+CAT 751 = 悬疑灵异
+CAT 504 = 抗战谍战
+CAT 746 = 游戏体育
+CAT 718 = 动漫衍生
+CAT 1016 = 男频衍生
+--- rank keys: serverRendered, book_list, readRankList, newRankList, rankCategoryTypeList, defaultPage, total_num, rankVersion, rankTypeText, loading
+book_list len: 10
+total_num: 100
+defaultPage: 1
+rankVersion: "1787757000"
+rankTypeText: ""
+rankCategoryTypeList: {"male":[{"id":"1141","name":"西方奇幻"},{"id":"1140","name":"东方仙侠"},{"id":"8","name":"科幻末世"},{"id":"261","name":"都市日常"},{"id":"124","name":"都市修真"},{"id":"1014","name":"都市高武"},{"id":"273","name":"历史古代"},{"id":"27","name":"战神赘婿"},{"id":"263","name":"都市种田"},{"id":"258","name":"传统玄幻"},{"id":"272","name":"历史脑洞"},{"id":"539","name":"悬疑脑洞"},{"id":"262","name":"都市脑洞"},{"id":"257","name":"玄幻脑洞"},{"id":"751","name":"悬疑灵异"},{"id":"504","name":"抗战谍战"},{"id":"746","name":"游戏体育"},{"id":"718","name":"动漫衍生"},{"id":"1016","name":"男频衍生"}],"female":[{"id":"1139","name":"古风世情"},{"id":"8","name":"科幻末世"},{"id":"746","name":"游戏体育"},{"id":"1015","name":"女频衍生"},{"id":"248","name":"玄幻言情"},{"id":"23","name":"种田"},{"id":"79","name":"年代"},{"id":"267","name":"现言脑洞"},{"id":"246","name":"宫斗宅斗"},{"id":"539","name":"悬疑脑洞"},{"id":"253","name":"古言脑洞"},{"id":"24","name":"快穿"},{"id":"749","name":"青春甜宠"},{"id":"745","name":"星光璀璨"},{"id":"747","name":"女频悬疑"},{"id":"750","name":"职场婚恋"},{"id":"748","name":"豪门总裁"},{"id":"1017","name":"民国言情"}]}
+readRankList: null
+newRankList: null
+page=2 first bookId: 6883748331202284558 len 10
+page=1 first bookId: 6883748331202284558

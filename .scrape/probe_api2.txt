@@ -1,0 +1,17 @@
+app=1967 rlt=1 code=0 total=0 len=0 first=undefined
+app=1967 rlt=2 code=0 total=0 len=0 first=undefined
+app=1967 rlt=3 code=0 total=0 len=0 first=undefined
+app=2503 rlt=1 code=0 total=0 len=0 first=undefined
+app=2503 rlt=2 code=0 total=0 len=0 first=undefined
+app=2503 rlt=3 code=0 total=0 len=0 first=undefined
+app=0 rlt=1 code=0 total=0 len=0 first=undefined
+app=0 rlt=2 code=0 total=0 len=0 first=undefined
+app=0 rlt=3 code=0 total=0 len=0 first=undefined
+--- with rankMold ---
+mold=0 code=0 total=0 len=0 first=undefined
+mold=1 code=0 total=0 len=0 first=undefined
+mold=2 code=0 total=0 len=0 first=undefined
+mold=3 code=0 total=0 len=0 first=undefined
+--- no rank_version ---
+norv code=0 total=0 len=0 first=undefined
+norv2503 code=0 total=0 len=0 first=undefined

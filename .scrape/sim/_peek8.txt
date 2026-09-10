@@ -1,0 +1,38 @@
+=== faloo 书页 yyyy-mm-dd 出现处
+  2026-09-08 ← aloo.com/1118376.html"/>
+ 
+ 
+ 
+ 
+ <meta name="og:
+  2026-09-08 ← %db%bb%a2%c9%f1" title="云巅虎神" target="_blank" class="fs14 colorQianHui pdLeft10">云巅虎神
+ 更新时间：2026-09-08 21时<span class="colorQianHui
+  2022-02-26 ← -R-T-B2-Box1">小说子类：
+ 神话传说
+ 入站时间：2022-02-26标签：</s
+
+=== faloo 目录页（首章日期的可能来源）
+  ok enc=gb2312 len=722963
+  日期数=0 最早=undefined 最晚=undefined
+  首章附近: >会员：
+ 注册
+ 充值
+ 帮助
+ 特色：
+ 同人
+ 畅读卡
+ 下载
+  
+ 首页
+ 
+ <a href="//b.faloo.com/y
+
+=== api.17k.com 试探
+  200 len=65 https://api.17k.com/book/3038645
+    {"status":{"code":10000,"msg":"appKey不能为空"},"time":1788874879000}
+  404 len=13 https://api.17k.com/v1/book/3038645
+    404 Not Found
+  200 len=65 https://api.17k.com/book/3038645.json
+    {"status":{"code":10000,"msg":"appKey不能为空"},"time":1788874881000}
+  404 len=13 https://api.17k.com/search/book?q=%E6%A8%A1%E6%8B%9F
+    404 Not Found

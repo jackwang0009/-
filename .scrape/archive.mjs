@@ -253,7 +253,9 @@ async function downloadCover(rec, coversDir, opts) {
     try {
       await throttle(opts.delayMs);
       const res = await fetchImage(url, opts.timeoutMs);
-      const expiry = signedExpiry(url);
+      // 保留原始签名链用于 403 过期诊断。permanentUrl 会去掉 x-expires query，
+      // 归一化后的 URL 无法再判断这次失败是不是签名到期。
+      const expiry = signedExpiry(raw);
       if (res.status === 403 && expiry) {
         return {
           status: 'failed', expired: true,

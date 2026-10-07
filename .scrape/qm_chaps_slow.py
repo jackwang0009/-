@@ -5,6 +5,8 @@ import random
 import time
 import urllib.request
 
+from qm_chaps_utils import parse_chapters, read_cached, write_cached, write_output
+
 D = os.path.dirname(__file__)
 RAW = os.path.join(D, 'raw')
 UA = ('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
@@ -31,7 +33,7 @@ for rnd in range(6):
     nxt = []
     for bid in pending:
         p = os.path.join(RAW, f'qmc_{bid}.json')
-        if os.path.exists(p) and open(p, encoding='utf-8').read().startswith('{"data"'):
+        if read_cached(p) is not None:
             continue
         url = f'https://www.qimao.com/api/book/chapter-list?book_id={bid}'
         req = urllib.request.Request(url, headers={
@@ -47,8 +49,8 @@ for rnd in range(6):
             nxt.append(bid)
             time.sleep(5)
             continue
-        if body.startswith('{"data"'):
-            open(p, 'w', encoding='utf-8').write(body)
+        if parse_chapters(body) is not None:
+            write_cached(p, body)
             print('  ok', bid, flush=True)
             time.sleep(random.uniform(2.5, 4.5))
         else:
@@ -65,14 +67,12 @@ for bid in ids:
     p = os.path.join(RAW, f'qmc_{bid}.json')
     if not os.path.exists(p):
         continue
-    body = open(p, encoding='utf-8').read()
-    if not body.startswith('{"data"'):
+    ch = read_cached(p)
+    if ch is None:
         continue
-    ch = json.loads(body)['data']['chapters']
     f = lambda t: datetime.datetime.fromtimestamp(int(t)).strftime('%Y-%m-%d')
     times = sorted(int(c['update_time']) for c in ch)
     out[bid] = dict(first=f(times[0]), last=f(times[-1]), n=len(ch),
                     words=sum(int(c.get('words') or 0) for c in ch))
-json.dump(out, open(os.path.join(D, 'qm_chaps.json'), 'w', encoding='utf-8'),
-          ensure_ascii=False, indent=1)
+write_output(os.path.join(D, 'qm_chaps.json'), out)
 print('RESULT', len(out), '/', len(ids), flush=True)

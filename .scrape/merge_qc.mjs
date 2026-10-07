@@ -334,6 +334,8 @@ async function main() {
     await fs.mkdir(LIB_DIR, { recursive: true });
     await fs.writeFile(REPORT, lines.join('\n') + '\n', 'utf8');
     console.log(`\n报告已写入 ${path.relative(ROOT, REPORT)}`);
+    // 缺少任何分表都无法完成 1-100 合并，必须让脚本调用方看到失败。
+    process.exitCode = 1;
     return;
   }
 

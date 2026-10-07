@@ -5,6 +5,8 @@ import re
 import time
 import urllib.request
 
+from qm_chaps_utils import parse_chapters, read_cached, write_cached, write_output
+
 D = os.path.dirname(__file__)
 RAW = os.path.join(D, 'raw')
 UA = ('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
@@ -21,11 +23,13 @@ for x in qm:
         ids.append(x['bookid'])
 
 out = {}
+failed = []
 for i, bid in enumerate(ids, 1):
     p = os.path.join(RAW, f'qmc_{bid}.json')
-    if os.path.exists(p) and os.path.getsize(p) > 200:
-        body = open(p, encoding='utf-8').read()
-    else:
+    ch = read_cached(p) if os.path.exists(p) else None
+    if ch is None:
+        if os.path.exists(p):
+            print('  invalid cache, refetching', bid)
         url = f'https://www.qimao.com/api/book/chapter-list?book_id={bid}'
         req = urllib.request.Request(url, headers={
             'User-Agent': UA, 'Referer': f'https://www.qimao.com/shuku/{bid}/'})
@@ -34,17 +38,17 @@ for i, bid in enumerate(ids, 1):
             try:
                 with urllib.request.urlopen(req, timeout=20) as r:
                     body = r.read().decode('utf-8', 'ignore')
-                open(p, 'w', encoding='utf-8').write(body)
-                time.sleep(0.4)
-                break
+                ch = parse_chapters(body)
+                if ch is not None:
+                    write_cached(p, body)
+                    time.sleep(0.4)
+                    break
+                print('  invalid response', bid)
             except Exception as e:
                 print('  retry', bid, e)
                 time.sleep(2)
-    try:
-        js = json.loads(body)
-        ch = js['data']['chapters']
-    except Exception:
-        out[bid] = {}
+    if ch is None:
+        failed.append(bid)
         continue
     def fmt(ts):
         return datetime.datetime.fromtimestamp(int(ts)).strftime('%Y-%m-%d %H:%M')
@@ -54,7 +58,6 @@ for i, bid in enumerate(ids, 1):
     if i % 15 == 0:
         print('  ', i, '/', len(ids))
 
-json.dump(out, open(os.path.join(D, 'qm_chaps.json'), 'w', encoding='utf-8'),
-          ensure_ascii=False, indent=1)
+write_output(os.path.join(D, 'qm_chaps.json'), out)
 ok = sum(1 for v in out.values() if v)
-print('done', ok, '/', len(ids))
+print('done', ok, '/', len(ids), 'valid; failed', len(failed))

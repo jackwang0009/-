@@ -131,6 +131,8 @@ Get-ChildItem -Recurse -Filter *.md '03-正文' | Where-Object Name -ne 'README.
   # 里头＝【第 N 世 · 始】（含借命的「世 · 借 · 始」）之后到终／寿终／【此生中断】之前；续章（元信息「世」带「续」，或本章第一个终点行是终／寿终）从第一段起就在里头
   $mark  = [regex]::Match($body, '【[^】]*第[^】]*世(?: · 借)? · (始|终|寿终)')
   $inSim = ($shi -match '续') -or ($mark.Success -and $mark.Groups[1].Value -in @('终', '寿终'))
+  # 穿插（作者 2026-10-07 裁，首例 0039）：元信息「世」带「穿插」的无世章，整段【……】是穿插进来的里头场面
+  $weave = $shi -match '穿插'
   $chap = [int]$f.BaseName.Substring(0,4)
   $n = 0; $p = 0; $panelLen = 0; $bare = 0; $bareFirst = ''
   foreach ($line in ($body -split "`r?`n")) {
@@ -145,6 +147,9 @@ Get-ChildItem -Recurse -Filter *.md '03-正文' | Where-Object Name -ne 'README.
       if ($s -notmatch '^【.*】$') { $bare++; if (-not $bareFirst) { $bareFirst = "第 {0} 段  {1}" -f $p, $s } }
       $narr = $s -replace '[【】]',''
       $scanText = $narr
+    } elseif ($weave -and -not $isStart -and -not $isEnd -and $s -match '^【.*】$') {
+      # 穿插的里头场面：不进面板字数、不查选项超长、不查旁白「你」；括号里的字照扫禁用词
+      $scanText = $s -replace '[【】]',''
     } else {
       # 面板句：它开口的那几句，一章合计不超两百字（括号算字）；选项每行不超十二字，固定句放行
       foreach ($pm in [regex]::Matches($s,'【[^】]*】')) {
@@ -178,6 +183,8 @@ Get-ChildItem -Recurse -Filter *.md '03-正文' | Where-Object Name -ne 'README.
 **新加的两项，一判一列。** `选项超长`：`【】` 内每一条剥掉空白后超十二字就报（机制 0.2「选项那三行每一行不超十二个字」、术语表第六节「死因一句话不超十二字」），**标点也算字**——`【死于：后山灵田，夜耙子】` 十一字合式；固定句 `【是否以此刻为始，模拟此生？】`、借命固定句 `【以此人此刻为始，模拟其生？】`、`【第 N 世 · 始／终 · 享年 X】`、`【此生中断】`、`【可带回一样】`、`【已带回：……】`、卷二末的抬头 `【三千世 · ……】` 不按选项算，用 `$fixed` 那条正则放行。`旁白你`：剥掉 `【】` 之后再剔掉 `“…”` 引号内的字，剩下的旁白里有「你」就列一条，**只列不判**——对话里的「你」合法，而一句对话跨行、引号在上一行开在下一行关的，这一步剔不干净，会多列。**2026-09-25 起这两项只管括号外**：`选项超长` 与面板字数只数里头以外的面板句，`旁白你` 只查现实段——里头句本来就写「你」（机制 0.3 第一条，作者 09-25 裁）。
 
 **「里头无括号」（2026-09-25 通道 1 加，判）。** 作者 09-25 裁「进入模拟后的内容都需要使用【】」。扫描按始终行切出里头：`【第 N 世 · 始】`（含借命的 `【第 N 世 · 借 · 始】`）之后到 `【终】`／`【寿终】`／`【此生中断】` 之前；元信息 `世:` 带「续」、或本章第一个终点行是「终／寿终」的续章，从第一段起就在里头。里头每一段必须是 `【……】`，不是就计一段，每章报一行（段数与第一处）。里头句去掉括号照扫 `$bad`——括号不再等于「它在说话」，词表照管。**上线时报 23 行，正是还没改成【】的 23 章**（0003–0014、0016–0018、0021、0023–0026、0028–0030）；0001 末段与 0002 是试点，已过。这 23 行就是推开的待办，推完归零。
+
+**「穿插」（2026-10-07 作者裁，首例 0039）。** 卷纲写明「穿插里头某几回场面」、算模拟内文字的无世章，那几回照里头写成整段 `【……】`、写「你」（`03-正文/README.md` 第一节第 5 条）。这种章没有始终行，按原来的切法每一段 `【……】` 都算面板句：一章面板字数就过两百，每段再报一条选项超长。所以元信息「世」带「穿插」二字的章，整段的 `【……】` 走单独一支——不进面板字数、不查选项超长、不查旁白「你」，括号里的字照扫 `$bad`；始终行不走这一支，不是整段括号的现实段照旧按现实段查。**只认「穿插」二字**，别的无世章不受影响：一两句回想里头的话照旧是现实段、不加括号（README 修订 7）。
 
 **「章首日子」（2026-09-23 通道 1 加，判；2026-09-25 放宽到整个第一段）。** 09-25 起：第一段里出现月份（`[正一二三四五六七八九十冬腊]月`）、初几、廿几、月半，或「这一天是／今天是／醒过来是／这是里头第」，就报，命中的字放在方括号里。准据是作者 09-25 再裁「为什么很多开头第一段话都要带上日期了 请你修改 去掉这个日期」——09-22 之后各章把日子挪到第一段后半（「……没再问。这一天是十月十六。」），旧检查只看第一句，一条没报。**回放**：HEAD 2138a69 的 30 章报 12 条，正是 0004「初五」、0014「这一天是」、0021／0022「十月」、0023–0027「这一天是」、0028「醒过来是」、0029「这是里头第」、0030「冬月」，其余 18 章一条不报（「三十天他活过了」「白班第三天知道的那件事」「他醒过来就摸到了」不中）；十二章改完全树 0 条。以下是 09-23 旧口径的原文，留作来历：一章第一段的第一句，每个字都是日子用字（数字与正冬腊廿初第天月日夜）就报——「十月十六。」「初七。」「冬月。」「第八天。」都中，「三十天他活过了。」「初五还有好几天。」「月亮出来了。」都不中。准据是作者 2026-09-22 裁「很多章节把日期放在第一句话，不可以这样写，像记流水账，章节之间不连贯」，口径只在 `03-正文/README.md` 第三节「章首不以日期起句」一处，`.cursor/rules/chapter-opening.mdc` 是提醒。只查章首：章中「第三天。」起段是里头的记法，不查；一世跨两章的续章，第一句照查（README 修订 6）。**先扫后加**：上线时全树 0 条；拿改前的版本回放，3f42bf0 的 0023–0026 报 4 条、a2766ff^ 的 0012 与 0014–0020 报 8 条，一条不漏、一条不多。**它的来历**：规则 09-22 进了 rules，树上 0023–0026 四章照旧躺着、0027／0028 初稿照样日子起章——只写在规则里、扫描不查，总有一个会话没读到。
 
@@ -375,10 +382,10 @@ if (-not ($src -match '\$meta')) { throw '抽出来的不是那段扫描，停' 
 $fixture = Join-Path $env:TEMP ('workflow-probe-' + [guid]::NewGuid().ToString('N'))
 New-Item -ItemType Directory -Path $fixture | Out-Null
 $probePaths = New-Object 'System.Collections.Generic.List[string]'
-function Write-ProbeChapter($name, $lines, $declared = -1) {
+function Write-ProbeChapter($name, $lines, $declared = -1, $shi = '第一世') {
   $probeBody = $lines -join "`n`n"
   if ($declared -lt 0) { $declared = ($probeBody -replace '\s','').Length }
-  $probeHead = "---`n状态: 待审校`n字数: $declared`n世: 第一世`n对应大纲: 第 1 章`n待确认: 「头部探针」 概率 天命司`n---`n"
+  $probeHead = "---`n状态: 待审校`n字数: $declared`n世: $shi`n对应大纲: 第 1 章`n待确认: 「头部探针」 概率 天命司`n---`n"
   $probePath = Join-Path $fixture $name
   [IO.File]::WriteAllText($probePath, $probeHead + $probeBody, (New-Object Text.UTF8Encoding $false))
   $probePaths.Add($probePath)
@@ -391,6 +398,10 @@ try {
   $positive += @(1..20 | ForEach-Object { '【已带回：一柄旧木剑】' })
   Write-ProbeChapter '0001-正向探针.md' $positive 0
   Write-ProbeChapter '0002-反向探针.md' @('“你昨夜还疼吗？”', ('他守着井边。' * 350))
+  $weaveLines = @('他站着没动。','他往前进了半步，你看。','【你算这一步的概率。】')
+  $weaveLines += @(1..8 | ForEach-Object { '【你挑着空桶往回走，柴堆后头出来一个人，站在路当中。】' })
+  Write-ProbeChapter '0003-穿插探针.md' $weaveLines -1 '无世（穿插里头两回）'
+  Write-ProbeChapter '0004-穿插对照.md' $weaveLines -1 '无世'
   $bounds = @{189=7;190=6;200=6;201=4;360=4;361=1;840=1;841=0}
   foreach ($chapter in ($bounds.Keys | Sort-Object)) {
     Write-ProbeChapter ('{0:0000}-边界探针.md' -f $chapter) @('他记下天命司、太衍观、借命、算天盘、残片、穿麻的、莫争。')
@@ -404,12 +415,18 @@ try {
   if (($rows | Where-Object { $_ -match '^旁白你\s+0001-' }).Count -ne 1) { throw '模拟内或对话内的你被误抓' }
   if (($rows | Where-Object { $_ -match '^选项超长\s+0001-' }).Count -ne 1) { throw '模拟段被当作面板选项' }
   if (-not ($rows | Where-Object { $_ -match '^禁用词\s+0001-.*\[奖励\]' })) { throw '面板内禁用词未命中' }
+  if ($rows | Where-Object { $_ -match '^(面板超量|选项超长|里头无括号)\s+0003-' }) { throw '穿插章的里头场面被当成了面板句' }
+  if (-not ($rows | Where-Object { $_ -match '^禁用词\s+0003-.*\[概率\]' })) { throw '穿插场面里的禁用词未命中' }
+  if (@($rows | Where-Object { $_ -match '^旁白你\s+0003-' }).Count -ne 1) { throw '穿插场面里的你被误抓，或现实段的你漏了' }
+  foreach ($category in @('面板超量','选项超长')) {
+    if (-not ($rows | Where-Object { $_ -match ('^' + $category + '\s+0004-') })) { throw "穿插对照未命中：$category" }
+  }
   foreach ($chapter in ($bounds.Keys | Sort-Object)) {
     $pattern = '^出场太早\s+' + ('{0:0000}-' -f $chapter)
     $actual = @($rows | Where-Object { $_ -match $pattern }).Count
     if ($actual -ne $bounds[$chapter]) { throw "边界 $chapter 错误：$actual / 预期 $($bounds[$chapter])" }
   }
-  '反验通过：十类正向、元信息与对话反向、模拟段、八个出场边界章。'
+  '反验通过：十类正向、元信息与对话反向、模拟段、穿插章与对照、八个出场边界章。'
 } finally {
   foreach ($probePath in $probePaths) { Remove-Item -LiteralPath $probePath -Force -ErrorAction SilentlyContinue }
   Remove-Item -LiteralPath $fixture -Force -ErrorAction SilentlyContinue
@@ -617,3 +634,4 @@ try {
 | 24 | 2026-09-26 | 修复模拟段边界正则：始／终识别补入借命的 `世 · 借 · 始／终` 与 `寿终` 句式，避免卷三借命正文被当作现实段而跳过括号与面板门禁。 |
 | 25 | 2026-09-26 | 修复续章初始化条件：将首个终点的 `寿终` 与 `终` 同等视为模拟段起点，避免寿终续章的前置模拟段被跳过。 |
 | 26 | 2026-09-26 | 同步「里头无括号」说明：补入借命始句与寿终边界，确保文字规则与门禁正则一致。 |
+| 27 | 2026-10-07 | **作者裁「无世章穿插的里头场面进【】」进门禁**（首例 0039：卷纲第 39 章「中（穿插里头七回场面）」、卷纲待确认②「39 章穿插的里头场面算模拟内文字」）。代码块加 `$weave`——元信息「世」带「穿插」的章，整段 `【……】` 走单独一支：不进面板字数、不查选项超长与旁白「你」，括号里照扫 `$bad`；始终行与不是整段括号的现实段照旧。块下加「穿插」一段说明。反验脚本 `Write-ProbeChapter` 加 `$shi` 参数（默认「第一世」，原有探针不变），加 `0003-穿插探针`（整段括号八段＋括号内「概率」＋现实段一处「你」：不报面板超量、选项超长、里头无括号，报禁用词、旁白你 1 条）与 `0004-穿插对照`（同文、「世」不带穿插：报面板超量、选项超长——证明差别出在新分支）。从本文件抽出原样跑：反验通过；全树 38 章门禁 0 行，与改前一致。`03-正文/README.md` 第一节同日加第 5 条。登记：作者会话 |

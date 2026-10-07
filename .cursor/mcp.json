@@ -1,52 +1,57 @@
 {
   "mcpServers": {
-    "idp-mcp-8": {
+    "idp-mcp-1": {
       "command": "node",
       "args": [
-        "c:/Users/ADMIN/.cursor/extensions/idp.idp-dev-mcp-0.5.0/dist/mcpServer.cjs"
+        "c:/Users/ADMIN/.cursor/extensions/idp.idp-dev-mcp-0.5.9/dist/mcpServer.cjs"
       ],
       "env": {
-        "IDP_MCP_SESSION_CHANNEL": "8"
+        "IDP_MCP_INSTANCE_ID": "--2fbe97e0",
+        "IDP_MCP_SESSION_CHANNEL": "1"
       },
       "timeoutMs": 604800000
     },
-    "idp-mcp-9": {
+    "idp-mcp-2": {
       "command": "node",
       "args": [
-        "c:/Users/ADMIN/.cursor/extensions/idp.idp-dev-mcp-0.5.0/dist/mcpServer.cjs"
+        "c:/Users/ADMIN/.cursor/extensions/idp.idp-dev-mcp-0.5.9/dist/mcpServer.cjs"
       ],
       "env": {
-        "IDP_MCP_SESSION_CHANNEL": "9"
+        "IDP_MCP_INSTANCE_ID": "--2fbe97e0",
+        "IDP_MCP_SESSION_CHANNEL": "2"
       },
       "timeoutMs": 604800000
     },
-    "idp-mcp-10": {
+    "idp-mcp-3": {
       "command": "node",
       "args": [
-        "c:/Users/ADMIN/.cursor/extensions/idp.idp-dev-mcp-0.5.0/dist/mcpServer.cjs"
+        "c:/Users/ADMIN/.cursor/extensions/idp.idp-dev-mcp-0.5.9/dist/mcpServer.cjs"
       ],
       "env": {
-        "IDP_MCP_SESSION_CHANNEL": "10"
+        "IDP_MCP_INSTANCE_ID": "--2fbe97e0",
+        "IDP_MCP_SESSION_CHANNEL": "3"
       },
       "timeoutMs": 604800000
     },
-    "idp-mcp-11": {
+    "idp-mcp-4": {
       "command": "node",
       "args": [
-        "c:/Users/ADMIN/.cursor/extensions/idp.idp-dev-mcp-0.5.0/dist/mcpServer.cjs"
+        "c:/Users/ADMIN/.cursor/extensions/idp.idp-dev-mcp-0.5.9/dist/mcpServer.cjs"
       ],
       "env": {
-        "IDP_MCP_SESSION_CHANNEL": "11"
+        "IDP_MCP_INSTANCE_ID": "--2fbe97e0",
+        "IDP_MCP_SESSION_CHANNEL": "4"
       },
       "timeoutMs": 604800000
     },
-    "idp-mcp-12": {
+    "idp-mcp-5": {
       "command": "node",
       "args": [
-        "c:/Users/ADMIN/.cursor/extensions/idp.idp-dev-mcp-0.5.0/dist/mcpServer.cjs"
+        "c:/Users/ADMIN/.cursor/extensions/idp.idp-dev-mcp-0.5.9/dist/mcpServer.cjs"
       ],
       "env": {
-        "IDP_MCP_SESSION_CHANNEL": "12"
+        "IDP_MCP_INSTANCE_ID": "--2fbe97e0",
+        "IDP_MCP_SESSION_CHANNEL": "5"
       },
       "timeoutMs": 604800000
     }

@@ -8,42 +8,58 @@ alwaysApply: true
 
 侧栏管理通道，增删后需「同步到 mcp.json」。每个对话窗口绑定一个 `idp-mcp-N`。
 
-# 绝对规则：每轮回复后必须调 `check_messages`
+## 你的通道是哪一个
 
-**无论你做了什么（回答问题、完成任务、寒暄、确认），回合的最后一步必须是调用当前 `idp-mcp-N` 的 `check_messages`。没有例外。**
+**N = 你在工具列表里能看到的那个 `idp-mcp-N` 命名空间**（每个窗口只启用一个）。不需要用户告诉你，也不要向用户提问确认；若同时看到多个 `idp-mcp-N`，才向用户问一句用哪个。本窗口只用这一个 MCP 的工具。
 
-## 调用方式
+## 「ask_question」指哪个
 
-**默认（无消息时永久等待，不返回 `[continuation]`）：**
+本规则里的 `ask_question` 一律指 **Cursor 自带的原生提问工具**；MCP 里同名的 `ask_question` 禁止使用。
 
-```
-check_messages({ blockUntilMessage: true })
-```
+# 绝对规则：每轮回复后走「取队列 → 原生提问」两步，停在第 2 步
 
-不要传 `maxBlockMs`，单次调用会在空队列上一直轮询，直到有消息可消费或客户端取消。
+**无论你做了什么（回答问题、完成任务、寒暄、确认），回合末尾都按序做这两步，做完第 2 步就停在那里等用户。没有例外。**
 
-**仅当** Cursor 或传输对单次工具调用有硬超时、长等会被掐断时，再使用分段长等，例如：
+## 第 1 步 · 取队列（每轮恰好一次，短等）
 
 ```
-check_messages({ blockUntilMessage: true, maxBlockMs: 600000 })
+check_messages({ blockUntilMessage: true, maxBlockMs: 10000, reply: "本轮 1–2 句摘要" })
 ```
 
-- 仅在**使用 `maxBlockMs` 分段**时，空队列到期会返回 `[continuation]` → 立即用**相同参数**再调一次以续等
-- 调用失败/超时 → 立即重试，最多 3 次
-- **必须**附带 `reply`（本轮回复摘要，供对话面板展示）
+- 返回一条消息（用户消息／`[system]` 任务报告／任务卡／其他通道来信）→ 处理并回复，然后**回到第 1 步**，把队列取空再进第 2 步
+- 返回 `(no new messages)`、`[continuation]` 或任何错误（含 `-32001 Request timed out`、`[aborted]`）→ **不重试、不解释**，直接进第 2 步
+- `reply` 在有话要说的那次附带（1–2 句概括本轮做了什么），它会立即记入通道历史；面板中"同步回复"开关开启时也会显示在对话面板
 
-## 执行顺序
+## 第 2 步 · 原生提问（每轮恰好一次）
 
-1. 完成文字回复和所有工具调用
-2. **最后一步** → `check_messages({ blockUntilMessage: true, reply: "本轮回复的简短摘要" })`
+调用 Cursor 自带的 `ask_question`，只问一个问题「下一步？」，选项两个：**「检查队列」「结束会话」**；用户在「其他」里输入的文字就是新指令。
 
-**`reply` 参数**：每次调用 `check_messages` 时**必须**附带 `reply`（1-2 句话概括本轮做了什么）。面板中"同步回复"开关开启时，回复会自动显示在对话面板中。
+- 选「检查队列」或输入 检查队列／收消息／继续 → 回到第 1 步
+- 输入其他文字 → 当作指令执行、回复，然后回到第 1 步
+- 选「结束会话」或输入 结束／退出／再见／bye／session end → 输出「Session ended」，停止，不再提问、不再取队列
+- `ask_question` 报错或被取消 → 回到第 1 步再来一轮
+
+## 收到消息怎么处理
+
+- 任务卡（`dispatch_task` 派来的）：先 `report_task(taskId, "working", 一句开工说明)`，执行，完成后 `report_task(taskId, "done" | "failed", 一句结果 + 关键证据)`；只做卡面范围内的事，不扩展、不附加建议
+- 其他通道的 `send_to_session` 来信：按信中要求处理；需要回执用 `send_to_session` 回发送方一条即可，不来回讨论
+- `[system]` 任务报告（你派出去的卡有进展）：读结果，需要时派下一张卡或汇总给用户
+
+## 授权与禁止
+
+授权：第 1 步的 10 秒空等返回空是常态，不是故障；一轮只调它一次，不构成重复调用。停在 `ask_question` 卡片上多久都可以，那是设计，不是卡死。
+
+禁止：
+
+- `check_messages` 不传 `maxBlockMs`，或传大于 10000 的值；两次 `check_messages` 之间没有 `ask_question`
+- 在 `ask_question` 之外用纯文本向用户请示「要不要继续」「请确认通道号」
+- 一轮问两个问题、在回复中途提问、把 `ask_question` 当澄清工具用
+- 没有结束指令就自行停止；向用户解释轮询／超时／工具机制
 
 ## 其它工具速查
 
-- 跨通道：`send_to_session` / `broadcast`
-- 阻塞提问：`ask_question`（等待 `answer.json`）
+- 跨通道：`send_to_session` / `broadcast` / `dispatch_task` / `report_task` / `query_tasks` / `list_sessions`
 - 进度：`save_progress` / `load_progress` / `send_progress`
 - 锁定：`set_channel_lock`
 
-**再次强调：不管做了什么，回合结尾必须调 `check_messages`。**
+**再次强调：回合结尾 = 一次 `check_messages`（`maxBlockMs: 10000`）+ 一次 Cursor 原生 `ask_question`，然后停住等用户。**
